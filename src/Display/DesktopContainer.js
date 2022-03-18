@@ -3,8 +3,11 @@ import styled from "styled-components";
 import "../Styles/css/App.css";
 
 import Header from "../Component_D/Header";
-import AboutKGA from "../Pages_D/AboutKGA";
 import Footer from "../Component_D/Footer";
+
+import AboutKGA from "../Pages_D/AboutKGA";
+import CourseIntro from "../Pages_D/CourseIntro";
+import CourseReview from "../Pages_D/CourseReview";
 
 const AppContainer = styled.div`
   &,
@@ -17,13 +20,19 @@ const AppContainer = styled.div`
   align-items: center;
 `;
 
+const pagesObj = {
+  0: <AboutKGA></AboutKGA>,
+  1: <CourseIntro></CourseIntro>,
+  2: <CourseReview></CourseReview>,
+};
+
 function DesktopContainer() {
   const [menuState, SetMenuState] = useState(0);
 
   return (
     <AppContainer>
       <Header menuState={menuState} SetMenuState={SetMenuState}></Header>
-      <AboutKGA></AboutKGA>
+      {pagesObj[menuState]}
       <Footer></Footer>
     </AppContainer>
   );
