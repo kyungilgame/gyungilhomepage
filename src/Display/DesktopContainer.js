@@ -4,6 +4,7 @@ import "../Styles/css/App.css";
 
 import Header from "../Component_D/Header";
 import AboutKGA from "../Pages_D/AboutKGA";
+import Footer from "../Component_D/Footer";
 
 const AppContainer = styled.div`
   &,
@@ -23,6 +24,7 @@ function DesktopContainer() {
     <AppContainer>
       <Header menuState={menuState} SetMenuState={SetMenuState}></Header>
       <AboutKGA></AboutKGA>
+      <Footer></Footer>
     </AppContainer>
   );
 }

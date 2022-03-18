@@ -1,6 +1,8 @@
 import React, { useState, useEffect, useRef } from "react";
 
 import IntroductionSlide from "../Component_D/IntroductionSlide";
+import rightArrow from "../Image/rightArrow.png";
+import leftArrow from "../Image/leftArrow.png";
 
 import styled from "styled-components";
 
@@ -19,6 +21,12 @@ const Button = styled.button`
   font-size: 2.5vw;
   font-family: "SEBANG-Gothic-Regular";
   cursor: pointer;
+  background-size: contain;
+  background-position: center top;
+  background-repeat: no-repeat;
+  ${({ Image }) => {
+    return Image ? `background-image: url(${Image})` : null;
+  }}
 `;
 const SliderContainer = styled.div`
   width: 500vw;
@@ -27,7 +35,31 @@ const SliderContainer = styled.div`
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  background-color: pink;
+`;
+
+const SlideSelectorWrapper = styled.div`
+  width: 30vw;
+  height: 3vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+`;
+
+const SlideNotSelectedCircle = styled.div`
+  width: 1vw;
+  height: 1vw;
+  background-color: #f6f6f6;
+  border-radius: 1vw;
+  cursor: pointer;
+`;
+
+const SlideSelectedCircle = styled.div`
+  width: 3vw;
+  height: 1vw;
+  background-color: #00ffd6;
+  border-radius: 1vw;
+  cursor: pointer;
 `;
 
 const TOTAL_SLIDES = 6; // 7장 19명
@@ -60,31 +92,82 @@ export default function Index() {
   return (
     <div
       style={{
+        width: "100%",
+        height: "50vw",
         display: "flex",
-        flexDirection: "row",
-        justifyContent: "center",
+        flexDirection: "column",
+        justifyContent: "flex-start",
         alignItems: "center",
-        width: "85%",
-        backgroundColor: "green",
       }}
     >
-      <Button style={{ marginRight: "3vw" }} onClick={prevSlide}>
-        {"<"}
-      </Button>
-      <Container>
-        <SliderContainer ref={slideRef}>
-          <IntroductionSlide currentSlide={currentSlide} />
-          <IntroductionSlide currentSlide={currentSlide} />
-          <IntroductionSlide currentSlide={currentSlide} />
-          <IntroductionSlide currentSlide={currentSlide} />
-          <IntroductionSlide currentSlide={currentSlide} />
-          <IntroductionSlide currentSlide={currentSlide} />
-          <IntroductionSlide currentSlide={currentSlide} />
-        </SliderContainer>
-      </Container>
-      <Button style={{ marginLeft: "3vw" }} onClick={nextSlide}>
-        {">"}
-      </Button>
+      <div
+        style={{
+          display: "flex",
+          flexDirection: "row",
+          justifyContent: "center",
+          alignItems: "center",
+          width: "80%",
+        }}
+      >
+        <Button
+          style={{ marginRight: "3vw" }}
+          onClick={prevSlide}
+          Image={leftArrow}
+        ></Button>
+        <Container>
+          <SliderContainer ref={slideRef}>
+            <IntroductionSlide currentSlide={currentSlide} />
+            <IntroductionSlide currentSlide={currentSlide} />
+            <IntroductionSlide currentSlide={currentSlide} />
+            <IntroductionSlide currentSlide={currentSlide} />
+            <IntroductionSlide currentSlide={currentSlide} />
+            <IntroductionSlide currentSlide={currentSlide} />
+            <IntroductionSlide currentSlide={currentSlide} />
+          </SliderContainer>
+        </Container>
+        <Button
+          style={{ marginLeft: "3vw" }}
+          onClick={nextSlide}
+          Image={rightArrow}
+        ></Button>
+      </div>
+      <SlideSelectorWrapper>
+        {currentSlide === 0 ? (
+          <SlideSelectedCircle onClick={() => setCurrentSlide(0)} />
+        ) : (
+          <SlideNotSelectedCircle onClick={() => setCurrentSlide(0)} />
+        )}
+        {currentSlide === 1 ? (
+          <SlideSelectedCircle onClick={() => setCurrentSlide(1)} />
+        ) : (
+          <SlideNotSelectedCircle onClick={() => setCurrentSlide(1)} />
+        )}
+        {currentSlide === 2 ? (
+          <SlideSelectedCircle onClick={() => setCurrentSlide(2)} />
+        ) : (
+          <SlideNotSelectedCircle onClick={() => setCurrentSlide(2)} />
+        )}
+        {currentSlide === 3 ? (
+          <SlideSelectedCircle onClick={() => setCurrentSlide(3)} />
+        ) : (
+          <SlideNotSelectedCircle onClick={() => setCurrentSlide(3)} />
+        )}
+        {currentSlide === 4 ? (
+          <SlideSelectedCircle onClick={() => setCurrentSlide(4)} />
+        ) : (
+          <SlideNotSelectedCircle onClick={() => setCurrentSlide(4)} />
+        )}
+        {currentSlide === 5 ? (
+          <SlideSelectedCircle onClick={() => setCurrentSlide(5)} />
+        ) : (
+          <SlideNotSelectedCircle onClick={() => setCurrentSlide(5)} />
+        )}
+        {currentSlide === 6 ? (
+          <SlideSelectedCircle onClick={() => setCurrentSlide(6)} />
+        ) : (
+          <SlideNotSelectedCircle onClick={() => setCurrentSlide(6)} />
+        )}
+      </SlideSelectorWrapper>
     </div>
   );
 }

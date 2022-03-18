@@ -38,9 +38,19 @@ const ContentsBoxThreeContainer = styled.div`
 
 const ContentsBoxFourContainer = styled.div`
   width: 100%;
-  height: 40vw;
+  height: 50vw;
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #f0f0f0;
+`;
+
+const ContentsBoxFiveContainer = styled.div`
+  width: 100%;
+  height: 20vw;
+  display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   background-color: #f6f6f6;
@@ -89,7 +99,7 @@ const TextSizeSeven = styled.div`
   font-size: 4vw;
   color: #101010;
   margin-top: 5vw;
-  margin-bottom: 3vw;
+  margin-bottom: 2vw;
 `;
 
 const IntroduceBox = styled.div`
@@ -252,6 +262,20 @@ const AboutKGA = () => {
         <TextSizeSeven>KGA Teammates</TextSizeSeven>
         <IntroductionCarousel></IntroductionCarousel>
       </ContentsBoxFourContainer>
+      <ContentsBoxFiveContainer>
+        <div
+          style={{ width: "25%", height: "20vw", backgroundColor: "#f6f6f6" }}
+        ></div>
+        <div
+          style={{ width: "25%", height: "20vw", backgroundColor: "#f0f0f0" }}
+        ></div>
+        <div
+          style={{ width: "25%", height: "20vw", backgroundColor: "lightgray" }}
+        ></div>
+        <div
+          style={{ width: "25%", height: "20vw", backgroundColor: "gray" }}
+        ></div>
+      </ContentsBoxFiveContainer>
     </>
   );
 };

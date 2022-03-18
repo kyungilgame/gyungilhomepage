@@ -14,7 +14,7 @@ const HeaderContainer = styled.div`
   background-color: transparent;
 `;
 const ContentWrapper = styled.div`
-  width: 70%;
+  width: 80%;
   display: flex;
   flex-direction: row;
   justify-content: end;
