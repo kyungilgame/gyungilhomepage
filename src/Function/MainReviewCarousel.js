@@ -1,13 +1,13 @@
 import React, { useState, useEffect, useRef } from "react";
 
-import IntroductionSlide from "../Component_D/IntroductionSlide";
+import MainReviewSlide from "../Component_D/MainReviewSlide";
 import rightArrow from "../Image/rightArrow.png";
 import leftArrow from "../Image/leftArrow.png";
 
 import styled from "styled-components";
 
 const Container = styled.div`
-  width: 70%;
+  width: 90%;
   overflow: hidden; // 선을 넘어간 이미지들은 보이지 않도록 처리합니다.
 `;
 const Button = styled.button`
@@ -29,7 +29,7 @@ const Button = styled.button`
   }}
 `;
 const SliderContainer = styled.div`
-  width: 500vw;
+  width: 200%;
   height: 30vw;
   display: flex; //이미지들을 가로로 나열합니다.
   flex-direction: row;
@@ -49,7 +49,7 @@ const SlideSelectorWrapper = styled.div`
 const SlideNotSelectedCircle = styled.div`
   width: 1vw;
   height: 1vw;
-  background-color: #f6f6f6;
+  background-color: #f0f0f0;
   border-radius: 1vw;
   cursor: pointer;
 `;
@@ -62,9 +62,20 @@ const SlideSelectedCircle = styled.div`
   cursor: pointer;
 `;
 
+const ApplyBlackButton = styled.button`
+  all: unset;
+  width: 20vw;
+  height: 4vw;
+  background-color: #101010;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+`;
+
 const TOTAL_SLIDES = 6; // 7장 19명
 
-export default function IntroductionCarousel() {
+export default function MainReviewCarousel() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const slideRef = useRef(null);
 
@@ -86,7 +97,7 @@ export default function IntroductionCarousel() {
 
   useEffect(() => {
     slideRef.current.style.transition = "all 0.5s ease-in-out";
-    slideRef.current.style.transform = `translateX(-${currentSlide * 56}vw)`; // 백틱을 사용하여 슬라이드로 이동하는 애니메이션을 만듭니다.
+    slideRef.current.style.transform = `translateX(-${currentSlide * 17 * 3}%`; // 백틱을 사용하여 슬라이드로 이동하는 애니메이션을 만듭니다.
   }, [currentSlide]);
 
   return (
@@ -98,6 +109,7 @@ export default function IntroductionCarousel() {
         flexDirection: "column",
         justifyContent: "flex-start",
         alignItems: "center",
+        marginTop: "3vw",
       }}
     >
       <div
@@ -116,13 +128,7 @@ export default function IntroductionCarousel() {
         ></Button>
         <Container>
           <SliderContainer ref={slideRef}>
-            <IntroductionSlide currentSlide={currentSlide} />
-            <IntroductionSlide currentSlide={currentSlide} />
-            <IntroductionSlide currentSlide={currentSlide} />
-            <IntroductionSlide currentSlide={currentSlide} />
-            <IntroductionSlide currentSlide={currentSlide} />
-            <IntroductionSlide currentSlide={currentSlide} />
-            <IntroductionSlide currentSlide={currentSlide} />
+            <MainReviewSlide />
           </SliderContainer>
         </Container>
         <Button
@@ -168,6 +174,25 @@ export default function IntroductionCarousel() {
           <SlideNotSelectedCircle onClick={() => setCurrentSlide(6)} />
         )}
       </SlideSelectorWrapper>
+      <ApplyBlackButton>
+        <text
+          style={{
+            color: "#f6f6f6",
+            fontFamily: "SEBANG-Gothic-Bold",
+            fontSize: "1.7vw",
+          }}
+        >
+          더 많은 후기 보기
+        </text>
+        <text
+          style={{
+            color: "#f6f6f6",
+            fontFamily: "SEBANG-Gothic-Bold",
+            fontSize: "1.7vw",
+            marginLeft: "1.5vw",
+          }}
+        >{`>`}</text>
+      </ApplyBlackButton>
     </div>
   );
 }

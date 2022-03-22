@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from "react";
 
-import IntroductionSlide from "../Component_D/IntroductionSlide";
+import MainSlide from "../Component_D/MainSlide";
 import rightArrow from "../Image/rightArrow.png";
 import leftArrow from "../Image/leftArrow.png";
 
@@ -29,8 +29,8 @@ const Button = styled.button`
   }}
 `;
 const SliderContainer = styled.div`
-  width: 500vw;
-  height: 30vw;
+  width: 200%;
+  height: 25vw;
   display: flex; //이미지들을 가로로 나열합니다.
   flex-direction: row;
   justify-content: flex-start;
@@ -49,7 +49,7 @@ const SlideSelectorWrapper = styled.div`
 const SlideNotSelectedCircle = styled.div`
   width: 1vw;
   height: 1vw;
-  background-color: #f6f6f6;
+  background-color: #f0f0f0;
   border-radius: 1vw;
   cursor: pointer;
 `;
@@ -64,7 +64,7 @@ const SlideSelectedCircle = styled.div`
 
 const TOTAL_SLIDES = 6; // 7장 19명
 
-export default function IntroductionCarousel() {
+export default function MainCarousel() {
   const [currentSlide, setCurrentSlide] = useState(0);
   const slideRef = useRef(null);
 
@@ -98,6 +98,7 @@ export default function IntroductionCarousel() {
         flexDirection: "column",
         justifyContent: "flex-start",
         alignItems: "center",
+        marginTop: "3vw",
       }}
     >
       <div
@@ -116,13 +117,7 @@ export default function IntroductionCarousel() {
         ></Button>
         <Container>
           <SliderContainer ref={slideRef}>
-            <IntroductionSlide currentSlide={currentSlide} />
-            <IntroductionSlide currentSlide={currentSlide} />
-            <IntroductionSlide currentSlide={currentSlide} />
-            <IntroductionSlide currentSlide={currentSlide} />
-            <IntroductionSlide currentSlide={currentSlide} />
-            <IntroductionSlide currentSlide={currentSlide} />
-            <IntroductionSlide currentSlide={currentSlide} />
+            <MainSlide />
           </SliderContainer>
         </Container>
         <Button

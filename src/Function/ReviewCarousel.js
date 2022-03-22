@@ -1,13 +1,13 @@
 import React, { useState, useEffect, useRef } from "react";
 
-import IntroductionSlide from "../Component_D/IntroductionSlide";
 import rightArrow from "../Image/rightArrow.png";
 import leftArrow from "../Image/leftArrow.png";
+import ReviewSlide from "../Component_D/ReviewSlide";
 
 import styled from "styled-components";
 
 const Container = styled.div`
-  width: 70%;
+  width: 100%;
   overflow: hidden; // 선을 넘어간 이미지들은 보이지 않도록 처리합니다.
 `;
 const Button = styled.button`
@@ -30,7 +30,7 @@ const Button = styled.button`
 `;
 const SliderContainer = styled.div`
   width: 500vw;
-  height: 30vw;
+  height: 70vw;
   display: flex; //이미지들을 가로로 나열합니다.
   flex-direction: row;
   justify-content: flex-start;
@@ -38,8 +38,8 @@ const SliderContainer = styled.div`
 `;
 
 const SlideSelectorWrapper = styled.div`
-  width: 30vw;
-  height: 3vw;
+  width: 20vw;
+  height: 2vw;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -49,7 +49,7 @@ const SlideSelectorWrapper = styled.div`
 const SlideNotSelectedCircle = styled.div`
   width: 1vw;
   height: 1vw;
-  background-color: #f6f6f6;
+  background-color: #f0f0f0;
   border-radius: 1vw;
   cursor: pointer;
 `;
@@ -62,9 +62,9 @@ const SlideSelectedCircle = styled.div`
   cursor: pointer;
 `;
 
-const TOTAL_SLIDES = 6; // 7장 19명
+const TOTAL_SLIDES = 4; // 7장 19명
 
-export default function IntroductionCarousel() {
+export default function ReviewCarousel({ ReviewSelect }) {
   const [currentSlide, setCurrentSlide] = useState(0);
   const slideRef = useRef(null);
 
@@ -86,14 +86,14 @@ export default function IntroductionCarousel() {
 
   useEffect(() => {
     slideRef.current.style.transition = "all 0.5s ease-in-out";
-    slideRef.current.style.transform = `translateX(-${currentSlide * 56}vw)`; // 백틱을 사용하여 슬라이드로 이동하는 애니메이션을 만듭니다.
+    slideRef.current.style.transform = `translateX(-${currentSlide * 87}vw)`; // 백틱을 사용하여 슬라이드로 이동하는 애니메이션을 만듭니다.
   }, [currentSlide]);
 
   return (
     <div
       style={{
         width: "100%",
-        height: "50vw",
+        height: "70vw",
         display: "flex",
         flexDirection: "column",
         justifyContent: "flex-start",
@@ -106,27 +106,21 @@ export default function IntroductionCarousel() {
           flexDirection: "row",
           justifyContent: "center",
           alignItems: "center",
-          width: "80%",
+          width: "100%",
         }}
       >
         <Button
-          style={{ marginRight: "3vw" }}
+          style={{ marginRight: "1.5vw" }}
           onClick={prevSlide}
           Image={leftArrow}
         ></Button>
         <Container>
           <SliderContainer ref={slideRef}>
-            <IntroductionSlide currentSlide={currentSlide} />
-            <IntroductionSlide currentSlide={currentSlide} />
-            <IntroductionSlide currentSlide={currentSlide} />
-            <IntroductionSlide currentSlide={currentSlide} />
-            <IntroductionSlide currentSlide={currentSlide} />
-            <IntroductionSlide currentSlide={currentSlide} />
-            <IntroductionSlide currentSlide={currentSlide} />
+            <ReviewSlide ReviewSelect={ReviewSelect}></ReviewSlide>
           </SliderContainer>
         </Container>
         <Button
-          style={{ marginLeft: "3vw" }}
+          style={{ marginLeft: "1.5vw" }}
           onClick={nextSlide}
           Image={rightArrow}
         ></Button>
@@ -156,16 +150,6 @@ export default function IntroductionCarousel() {
           <SlideSelectedCircle onClick={() => setCurrentSlide(4)} />
         ) : (
           <SlideNotSelectedCircle onClick={() => setCurrentSlide(4)} />
-        )}
-        {currentSlide === 5 ? (
-          <SlideSelectedCircle onClick={() => setCurrentSlide(5)} />
-        ) : (
-          <SlideNotSelectedCircle onClick={() => setCurrentSlide(5)} />
-        )}
-        {currentSlide === 6 ? (
-          <SlideSelectedCircle onClick={() => setCurrentSlide(6)} />
-        ) : (
-          <SlideNotSelectedCircle onClick={() => setCurrentSlide(6)} />
         )}
       </SlideSelectorWrapper>
     </div>

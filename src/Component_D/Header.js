@@ -29,14 +29,15 @@ const MenuWrapper = styled.div`
   align-items: center;
 `;
 
-const MenuText = styled.div`
-  font-family: "SEBANG-Gothic-Regular";
-  font-size: 1vw;
-  color: #101010;
-  cursor: pointer;
-`;
-
 const Header = ({ menuState, SetMenuState }) => {
+  const MenuText = styled.div`
+    font-family: "SEBANG-Gothic-Regular";
+    font-size: 1vw;
+    cursor: pointer;
+    ${({ menuState }) => {
+      return menuState === 5 ? `color: #f6f6f6;` : `color: #101010;`;
+    }}
+  `;
   return (
     <HeaderContainer>
       <ContentWrapper>
@@ -45,6 +46,7 @@ const Header = ({ menuState, SetMenuState }) => {
             onClick={() => {
               SetMenuState(0);
             }}
+            menuState={menuState}
           >
             About KGA
           </MenuText>
@@ -54,6 +56,7 @@ const Header = ({ menuState, SetMenuState }) => {
             onClick={() => {
               SetMenuState(1);
             }}
+            menuState={menuState}
           >
             코스 소개
           </MenuText>
@@ -63,6 +66,7 @@ const Header = ({ menuState, SetMenuState }) => {
             onClick={() => {
               SetMenuState(2);
             }}
+            menuState={menuState}
           >
             수강 후기
           </MenuText>
@@ -73,6 +77,7 @@ const Header = ({ menuState, SetMenuState }) => {
               SetMenuState(3);
             }}
             style={{ marginRight: "1vw" }}
+            menuState={menuState}
           >
             Q{"&"}A
           </MenuText>
@@ -82,6 +87,7 @@ const Header = ({ menuState, SetMenuState }) => {
             onClick={() => {
               SetMenuState(4);
             }}
+            menuState={menuState}
           >
             지원하기
           </MenuText>
