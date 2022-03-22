@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import "../Styles/css/App.css";
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState } from "react";
 
 import ReactPlayer from "react-player/youtube";
 
@@ -88,14 +88,13 @@ const SelectionButtonSelected = styled.button`
   background-color: #00887c;
   border-radius: 2vw;
   font-family: "Pretendard-regular";
-  font-size: 1.5vw;
+  font-size: 1.2vw;
   color: #f6f6f6;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-color: #00887c;
-  border-width: 1vw;
   border: solid;
+  border-color: #00887c;
 `;
 
 const SelectionButtonNotSelected = styled.button`
@@ -109,7 +108,7 @@ const SelectionButtonNotSelected = styled.button`
   border-width: 0.1vw;
   border: solid;
   font-family: "Pretendard-regular";
-  font-size: 1.5vw;
+  font-size: 1.2vw;
   color: #00887c;
   display: flex;
   justify-content: center;
