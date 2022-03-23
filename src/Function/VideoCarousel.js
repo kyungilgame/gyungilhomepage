@@ -7,7 +7,7 @@ import leftArrow from "../Image/leftArrow.png";
 import styled from "styled-components";
 
 const Container = styled.div`
-  width: 70%;
+  width: 100%;
   overflow: hidden; // 선을 넘어간 이미지들은 보이지 않도록 처리합니다.
 `;
 const Button = styled.button`
@@ -29,8 +29,8 @@ const Button = styled.button`
   }}
 `;
 const SliderContainer = styled.div`
-  width: 500vw;
-  height: 19vw;
+  width: 200%;
+  height: 30vw;
   display: flex; //이미지들을 가로로 나열합니다.
   flex-direction: row;
   justify-content: flex-start;
@@ -86,7 +86,7 @@ export default function Index() {
 
   useEffect(() => {
     slideRef.current.style.transition = "all 0.5s ease-in-out";
-    slideRef.current.style.transform = `translateX(-${currentSlide * 56}vw)`; // 백틱을 사용하여 슬라이드로 이동하는 애니메이션을 만듭니다.
+    slideRef.current.style.transform = `translateX(-${currentSlide * 50}%)`; // 백틱을 사용하여 슬라이드로 이동하는 애니메이션을 만듭니다.
   }, [currentSlide]);
 
   return (
@@ -116,10 +116,7 @@ export default function Index() {
         ></Button>
         <Container>
           <SliderContainer ref={slideRef}>
-            <VideoSlide currentSlide={currentSlide} />
-            <VideoSlide currentSlide={currentSlide} />
-            <VideoSlide currentSlide={currentSlide} />
-            <VideoSlide currentSlide={currentSlide} />
+            <VideoSlide />
           </SliderContainer>
         </Container>
         <Button

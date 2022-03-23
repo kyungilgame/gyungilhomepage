@@ -1,7 +1,7 @@
 import { useMediaQuery } from "react-responsive";
 
 import DesktopContainer from "./Display/DesktopContainer";
-// import MobileContainer from "./Screen/MobileContainer";
+import MobileContainer from "./Display/MobileContainer";
 
 const Desktop = ({ children }) => {
   const isDesktop = useMediaQuery({ minWidth: 767 });
@@ -17,7 +17,9 @@ function App() {
       <Desktop>
         <DesktopContainer></DesktopContainer>
       </Desktop>
-      <Mobile>모바일</Mobile>
+      <Mobile>
+        <MobileContainer></MobileContainer>
+      </Mobile>
     </>
   );
 }

@@ -52,7 +52,7 @@ const ContentsBoxFourContainer = styled.div`
 
 const ContentsBoxFiveContainer = styled.div`
   width: 100%;
-  height: 35vw;
+  height: 40vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -129,14 +129,14 @@ const TextSizeTwo = styled.div`
 
 const TextSizeThree = styled.div`
   font-family: "SEBANG-Gothic-Bold";
-  font-size: 2vw;
+  font-size: 3vw;
   color: #101010;
   margin-top: 3vw;
 `;
 
 const TextSizeFour = styled.div`
   font-family: "SEBANG-Gothic-Bold";
-  font-size: 2vw;
+  font-size: 3vw;
   color: #101010;
   margin-top: 5vw;
 `;

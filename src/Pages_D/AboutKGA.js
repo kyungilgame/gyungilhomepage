@@ -38,7 +38,7 @@ const ContentsBoxThreeContainer = styled.div`
 
 const ContentsBoxFourContainer = styled.div`
   width: 100%;
-  height: 50vw;
+  height: 60vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
