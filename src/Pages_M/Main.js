@@ -1,14 +1,14 @@
 import styled from "styled-components";
 import "../Styles/css/App.css";
 
-import MainCarousel from "../Function/MainCarousel";
-import MainReviewCarousel from "../Function/MainReviewCarousel";
+import MainCarousel_M from "../Function/MainCarousel_M";
+import MainReviewCarousel_M from "../Function/MainReviewCarousel_M";
 
 import ReactPlayer from "react-player/youtube";
 
 const ContentsBoxOneContainer = styled.div`
   width: 100%;
-  height: 60vw;
+  height: 100vw;
   display: flex;
   position: absolute;
   top: 0;
@@ -21,7 +21,7 @@ const ContentsBoxOneContainer = styled.div`
 
 const ContentsBoxTwoContainer = styled.div`
   width: 100%;
-  height: 70vw;
+  height: 115vw;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -31,7 +31,7 @@ const ContentsBoxTwoContainer = styled.div`
 
 const ContentsBoxThreeContainer = styled.div`
   width: 100%;
-  height: 35vw;
+  height: 70vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -41,7 +41,7 @@ const ContentsBoxThreeContainer = styled.div`
 
 const ContentsBoxFourContainer = styled.div`
   width: 100%;
-  height: 55vw;
+  height: 80vw;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -61,7 +61,7 @@ const ContentsBoxFiveContainer = styled.div`
 
 const ContentsBoxSixContainer = styled.div`
   width: 100%;
-  height: 80vw;
+  height: 150vw;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -71,7 +71,7 @@ const ContentsBoxSixContainer = styled.div`
 
 const ContentsBoxSevenContainer = styled.div`
   width: 100%;
-  height: 45vw;
+  height: 80vw;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -81,7 +81,7 @@ const ContentsBoxSevenContainer = styled.div`
 
 const ContentsBoxEightContainer = styled.div`
   width: 100%;
-  height: 55vw;
+  height: 85vw;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -91,7 +91,7 @@ const ContentsBoxEightContainer = styled.div`
 
 const ContentsBoxNineContainer = styled.div`
   width: 100%;
-  height: 15vw;
+  height: 30vw;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -119,25 +119,27 @@ const TextSizeThree = styled.div`
 
 const TextSizeFour = styled.div`
   font-family: "SEBANG-Gothic-Regular";
-  font-size: 1.7vw;
+  font-size: 2.7vw;
   color: #101010;
-  margin-top: 63vw;
+  margin-top: 103vw;
+  z-index: 2;
 `;
 const TextSizeFive = styled.div`
   font-family: "SEBANG-Gothic-Bold";
-  font-size: 2.5vw;
+  font-size: 4.5vw;
   color: #101010;
+  margin-top: 1vw;
 `;
 
 const TextSizeSix = styled.div`
   font-family: "SEBANG-Gothic-Bold";
-  font-size: 2.5vw;
+  font-size: 3.5vw;
   color: #101010;
 `;
 
 const TextSizeSeven = styled.div`
   font-family: "SEBANG-Gothic-Bold";
-  font-size: 3.5vw;
+  font-size: 4.5vw;
   color: #101010;
 `;
 
@@ -149,13 +151,13 @@ const TextSizeEight = styled.div`
 
 const TextSizeNine = styled.div`
   font-family: "SEBANG-Gothic-Bold";
-  font-size: 3.5vw;
+  font-size: 4vw;
   color: #f6f6f6;
 `;
 
 const TextSizeTen = styled.div`
   font-family: "Pretendard-Regular";
-  font-size: 1vw;
+  font-size: 0.5vw;
   color: #f6f6f6;
 `;
 
@@ -179,19 +181,19 @@ const TextSizeThirteen = styled.div`
 
 const TextSizeFourteen = styled.div`
   font-family: "SEBANG-Gothic-Regular";
-  font-size: 2vw;
+  font-size: 3.5vw;
   color: #101010;
   margin-top: 8vw;
 `;
 const TextSizeFifteen = styled.div`
   font-family: "SEBANG-Gothic-Bold";
-  font-size: 3.5vw;
+  font-size: 5vw;
   color: #101010;
 `;
 
 const TextSizeSixteen = styled.div`
   font-family: "Pretendard-Bold";
-  font-size: 1.5vw;
+  font-size: 2.5vw;
   color: #101010;
   margin-top: 1vw;
 `;
@@ -206,6 +208,7 @@ const TextSizeEightteen = styled.div`
   font-family: "Pretendard-Regular";
   font-size: 1vw;
   color: #101010;
+  margin-top: 1vw;
 `;
 
 const TextSizeNineteen = styled.div`
@@ -216,29 +219,30 @@ const TextSizeNineteen = styled.div`
 
 const TextSizeTwenty = styled.div`
   font-family: "SEBANG-Gothic-Regular";
-  font-size: 2vw;
+  font-size: 4vw;
   color: #101010;
-  margin-top: 2vw;
+  margin-top: 5vw;
 `;
 const TextSizeTwentyOne = styled.div`
   font-family: "SEBANG-Gothic-Bold";
-  font-size: 3.5vw;
+  font-size: 6vw;
   color: #101010;
 `;
 
 const BlackBoxWrapper = styled.div`
-  width: 25vw;
-  height: 15vw;
+  width: 33vw;
+  height: 20vw;
   background-color: #101010;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin: 1vw;
 `;
 
 const ApplyButton = styled.button`
-  width: 15vw;
-  height: 2.5vw;
+  width: 25vw;
+  height: 3.5vw;
   background-color: #101010;
   border-radius: 1vw;
   border-color: #00ffd6;
@@ -248,8 +252,8 @@ const ApplyButton = styled.button`
 
 const ApplyBlackButton = styled.button`
   all: unset;
-  width: 20vw;
-  height: 4vw;
+  width: 30vw;
+  height: 6vw;
   background-color: #101010;
   display: flex;
   justify-content: center;
@@ -267,8 +271,8 @@ const MiddleTextBox = styled.div`
 `;
 
 const VideoPlayWrapper = styled.div`
-  width: 40vw;
-  height: 25vw;
+  width: 90%;
+  height: 60vw;
   display: flex;
   align-items: center;
   justify-items: center;
@@ -277,12 +281,12 @@ const VideoPlayWrapper = styled.div`
 `;
 
 const ColorBoxWrapper = styled.div`
-  width: 20vw;
-  height: 15vw;
+  width: 85%;
+  height: 20vw;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  justify-items: start;
+  align-items: center;
+  justify-items: flex-start;
   padding: 2vw;
   ${({ color }) => {
     return color ? `background-color: ${color}` : null;
@@ -290,8 +294,8 @@ const ColorBoxWrapper = styled.div`
 `;
 
 const MapWrapper = styled.div`
-  width: 60vw;
-  height: 40vw;
+  width: 95%;
+  height: 65vw;
   background-color: gray;
   margin: 1.5vw;
 `;
@@ -299,38 +303,7 @@ const MapWrapper = styled.div`
 const Main = () => {
   return (
     <>
-      <ContentsBoxOneContainer>
-        <div
-          style={{
-            width: "80%",
-            display: "flex",
-            flexDirection: "column",
-            justifyContent: "flex-start",
-            alignItems: "start",
-          }}
-        >
-          <TextSizeOne>KGA</TextSizeOne>
-          <TextSizeTwo>
-            Kyungil
-            <text style={{ color: "#00ffd6" }}>{` `}Game Academy</text>
-          </TextSizeTwo>
-          <div
-            style={{
-              width: "44vw",
-              height: "3.5vw",
-              backgroundColor: "#00ffd6",
-              marginTop: "0.5vw",
-              marginLeft: "0.5vw",
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "center",
-              alignItems: "center",
-            }}
-          >
-            <TextSizeThree>현업인들이 육성하는 최정예 교육기관</TextSizeThree>
-          </div>
-        </div>
-      </ContentsBoxOneContainer>
+      <ContentsBoxOneContainer></ContentsBoxOneContainer>
       <ContentsBoxTwoContainer>
         <TextSizeFour>처음인 당신도 시작할 수 있게</TextSizeFour>
         <TextSizeFive>최고의 개발자로 만들어 드립니다</TextSizeFive>
@@ -358,14 +331,14 @@ const Main = () => {
         ></div>
       </div>
       <ContentsBoxThreeContainer>
-        <MainCarousel></MainCarousel>
+        <MainCarousel_M></MainCarousel_M>
       </ContentsBoxThreeContainer>
       <ContentsBoxFourContainer>
         <TextSizeSix>KGA와 함께</TextSizeSix>
         <div
           style={{
-            width: "40vw",
-            height: "4.5vw",
+            width: "53vw",
+            height: "6vw",
             backgroundColor: "#00ffd6",
             display: "flex",
             justifyContent: "center",
@@ -377,9 +350,9 @@ const Main = () => {
         <div
           style={{
             width: "80vw",
-            height: "35vw",
+            height: "80vw",
             display: "flex",
-            flexDirection: "column",
+            flexDirection: "row",
             justifyContent: "flex-start",
             alignItems: "center",
             marginTop: "2vw",
@@ -387,10 +360,11 @@ const Main = () => {
         >
           <div
             style={{
-              width: "100%",
-              height: "50%",
+              width: "50%",
+              height: "100%",
               display: "flex",
-              justifyContent: "space-around",
+              flexDirection: "column",
+              justifyContent: "flex-start",
               alignItems: "center",
             }}
           >
@@ -421,10 +395,11 @@ const Main = () => {
           </div>
           <div
             style={{
-              width: "67%",
-              height: "50%",
+              width: "50%",
+              height: "100%",
               display: "flex",
-              justifyContent: "space-around",
+              flexDirection: "column",
+              justifyContent: "flex-start",
               alignItems: "center",
             }}
           >
@@ -479,8 +454,8 @@ const Main = () => {
         <VideoPlayWrapper>
           <ReactPlayer
             url="https://youtu.be/dR8YaZLBmTQ"
-            width="40vw"
-            height="25vw"
+            width="100%"
+            height="100%"
           />
         </VideoPlayWrapper>
         <TextSizeFourteen>취업 치트키</TextSizeFourteen>
@@ -488,9 +463,9 @@ const Main = () => {
         <div
           style={{
             width: "70%",
-            height: "25vw",
+            height: "75vw",
             display: "flex",
-            flexDirection: "row",
+            flexDirection: "column",
             justifyContent: "space-around",
             alignItems: "center",
           }}
@@ -498,20 +473,23 @@ const Main = () => {
           <ColorBoxWrapper color={"#b5fff3"}>
             <div
               style={{
-                width: "1.5vw",
-                height: "1.5vw",
+                width: "3vw",
+                height: "3vw",
                 backgroundColor: "#101010",
                 borderRadius: "2vw",
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
                 color: "#f6f6f6",
+                fontSize: "2vw",
               }}
             >
               1
             </div>
-            <TextSizeSixteen>프리부트 과정이 필요없는</TextSizeSixteen>
-            <TextSizeSeventeen>완성도 높은 커리큘럼</TextSizeSeventeen>
+            <TextSizeSixteen>
+              프리부트 과정이 필요없는 완성도 높은 커리큘럼
+            </TextSizeSixteen>
+
             <div
               style={{
                 width: "2vw",
@@ -531,20 +509,20 @@ const Main = () => {
           <ColorBoxWrapper color={"#73ffe8"}>
             <div
               style={{
-                width: "1.5vw",
-                height: "1.5vw",
+                width: "3vw",
+                height: "3vw",
                 backgroundColor: "#101010",
                 borderRadius: "2vw",
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
                 color: "#f6f6f6",
+                fontSize: "2vw",
               }}
             >
               2
             </div>
-            <TextSizeSixteen>수강료 부담 없이</TextSizeSixteen>
-            <TextSizeSeventeen>무료로 배우세요</TextSizeSeventeen>
+            <TextSizeSixteen>수강료 부담 없이 무료로 배우세요</TextSizeSixteen>
             <div
               style={{
                 width: "2vw",
@@ -561,20 +539,20 @@ const Main = () => {
           <ColorBoxWrapper color={"#00ffd6"}>
             <div
               style={{
-                width: "1.5vw",
-                height: "1.5vw",
+                width: "3vw",
+                height: "3vw",
                 backgroundColor: "#101010",
                 borderRadius: "2vw",
                 display: "flex",
                 justifyContent: "center",
                 alignItems: "center",
                 color: "#f6f6f6",
+                fontSize: "2vw",
               }}
             >
               3
             </div>
-            <TextSizeSixteen>취업할 때까지</TextSizeSixteen>
-            <TextSizeSeventeen>책임집니다</TextSizeSeventeen>
+            <TextSizeSixteen>취업할 때까지 책임집니다</TextSizeSixteen>
             <div
               style={{
                 width: "2vw",
@@ -595,7 +573,7 @@ const Main = () => {
             style={{
               color: "#f6f6f6",
               fontFamily: "SEBANG-Gothic-Bold",
-              fontSize: "1.7vw",
+              fontSize: "2.5vw",
             }}
           >
             상담 신청하기
@@ -605,13 +583,13 @@ const Main = () => {
               color: "#f6f6f6",
               fontFamily: "SEBANG-Gothic-Bold",
               fontSize: "1.7vw",
-              marginLeft: "1.5vw",
+              marginLeft: "2.5vw",
             }}
           >{`>`}</text>
         </ApplyBlackButton>
       </ContentsBoxSixContainer>
       <ContentsBoxSevenContainer>
-        <MainReviewCarousel></MainReviewCarousel>
+        <MainReviewCarousel_M></MainReviewCarousel_M>
       </ContentsBoxSevenContainer>
       <ContentsBoxEightContainer>
         <TextSizeFifteen>KGA 오시는 길</TextSizeFifteen>
@@ -631,7 +609,7 @@ const Main = () => {
             style={{
               color: "#f6f6f6",
               fontFamily: "SEBANG-Gothic-Bold",
-              fontSize: "1.7vw",
+              fontSize: "2.5vw",
             }}
           >
             지원하러가기
@@ -641,7 +619,7 @@ const Main = () => {
               color: "#f6f6f6",
               fontFamily: "SEBANG-Gothic-Bold",
               fontSize: "1.7vw",
-              marginLeft: "1.5vw",
+              marginLeft: "2.5vw",
             }}
           >{`>`}</text>
         </ApplyBlackButton>

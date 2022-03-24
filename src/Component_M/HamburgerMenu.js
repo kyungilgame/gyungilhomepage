@@ -2,14 +2,12 @@ import React from "react";
 import { slide as Menu } from "react-burger-menu";
 
 class HamburgerMenu extends React.Component {
-  showSettings(event) {
-    event.preventDefault();
-  }
-
   render() {
     // NOTE: You also need to provide styles, see https://github.com/negomi/react-burger-menu#styling
     return (
       <Menu
+        right
+        noOverlay
         styles={{
           bmBurgerButton: {
             position: "absolute",
@@ -34,30 +32,74 @@ class HamburgerMenu extends React.Component {
             fontSize: "5vw",
           },
           bmItemList: {
-            color: "green",
+            color: "#b8b7ad",
             padding: "0.8em",
             position: "fixed",
+            top: "15vw",
+            left: "60vw",
+            width: "50vw",
+          },
+          bmItem: {
+            display: "block",
+            color: "#00ffd6",
+            fontFamily: "SEBANG-Gothic-Regular",
+            marginTop: "1.5vw",
+          },
+          bmCrossButton: {
+            height: "10vw",
+            width: "10vw",
+            right: "85vw",
             top: "5vw",
           },
-          bmOverlay: {
-            background: "rgba(0, 0, 0, 0.3)",
-            height: "50%",
-            width: "20%",
-            marginLeft: "50%",
+          bmCross: {
+            background: "black",
           },
         }}
       >
-        <a id="home" className="menu-item" href="/">
-          Home
+        <a
+          onClick={() => {
+            this.props.SetMenuState(0);
+          }}
+          className="About KGA"
+          href="/"
+        >
+          About KGA
         </a>
-        <a id="about" className="menu-item" href="/about">
-          About
+        <a
+          onClick={() => {
+            this.props.SetMenuState(1);
+          }}
+          className="CourseIntro"
+          href="/"
+        >
+          코스 소개
         </a>
-        <a id="contact" className="menu-item" href="/contact">
-          Contact
+        <a
+          onClick={() => {
+            this.props.SetMenuState(2);
+          }}
+          className="CourseReview"
+          href="/"
+        >
+          수강 후기
         </a>
-        <a onClick={this.showSettings} className="menu-item--small" href="">
-          Settings
+        <a
+          onClick={() => {
+            this.props.SetMenuState(3);
+          }}
+          className="QNA"
+          href="/"
+        >
+          Q{`&`}A
+        </a>
+        <a
+          onClick={() => {
+            this.props.SetMenuState(4);
+          }}
+          className="Apply"
+          href="/"
+        >
+          지원하기
         </a>
       </Menu>
     );

@@ -5,7 +5,7 @@ import HamburgerMenu from "./HamburgerMenu";
 
 const HeaderContainer = styled.div`
   width: 100%;
-  height: 8vw;
+  height: 15vw;
   display: flex;
   position: absolute;
   top: 0;
@@ -32,19 +32,15 @@ const MenuWrapper = styled.div`
 `;
 
 const Header = ({ menuState, SetMenuState }) => {
-  const MenuText = styled.div`
-    font-family: "SEBANG-Gothic-Regular";
-    font-size: 1vw;
-    cursor: pointer;
-    ${({ menuState }) => {
-      return menuState === 5 ? `color: #f6f6f6;` : `color: #101010;`;
-    }}
-  `;
+  console.log(menuState);
   return (
     <HeaderContainer>
       <ContentWrapper>
         <MenuWrapper>
-          <HamburgerMenu></HamburgerMenu>
+          <HamburgerMenu
+            menuState={menuState}
+            SetMenuState={SetMenuState}
+          ></HamburgerMenu>
         </MenuWrapper>
       </ContentWrapper>
     </HeaderContainer>
@@ -52,55 +48,3 @@ const Header = ({ menuState, SetMenuState }) => {
 };
 
 export default Header;
-
-// <MenuWrapper>
-//       <MenuText
-//         onClick={() => {
-//           SetMenuState(0);
-//         }}
-//         menuState={menuState}
-//       >
-//         About KGA
-//       </MenuText>
-//     </MenuWrapper>
-//     <MenuWrapper>
-//       <MenuText
-//         onClick={() => {
-//           SetMenuState(1);
-//         }}
-//         menuState={menuState}
-//       >
-//         코스 소개
-//       </MenuText>
-//     </MenuWrapper>
-//     <MenuWrapper>
-//       <MenuText
-//         onClick={() => {
-//           SetMenuState(2);
-//         }}
-//         menuState={menuState}
-//       >
-//         수강 후기
-//       </MenuText>
-//     </MenuWrapper>
-//     <MenuWrapper>
-//       <MenuText
-//         onClick={() => {
-//           SetMenuState(3);
-//         }}
-//         style={{ marginRight: "1vw" }}
-//         menuState={menuState}
-//       >
-//         Q{"&"}A
-//       </MenuText>
-//     </MenuWrapper>
-//     <MenuWrapper>
-//       <MenuText
-//         onClick={() => {
-//           SetMenuState(4);
-//         }}
-//         menuState={menuState}
-//       >
-//         지원하기
-//       </MenuText>
-//     </MenuWrapper>

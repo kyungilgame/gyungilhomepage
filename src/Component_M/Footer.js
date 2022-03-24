@@ -9,7 +9,7 @@ import gyungilWhite from "../Image/gyungilWhite.png";
 
 const FooterContainer = styled.div`
   width: 100%;
-  height: 22vw;
+  height: 40vw;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -72,8 +72,8 @@ const Footer = () => {
       <div
         style={{
           color: "white",
-          width: "80%",
-          height: "15vw",
+          width: "90%",
+          height: "30vw",
           display: "flex",
           flexDirection: "row",
           justifyContent: "space-between",
@@ -83,13 +83,12 @@ const Footer = () => {
         <div
           style={{
             color: "white",
-            width: "30vw",
-            height: "20vw",
+            width: "60vw",
+            height: "25vw",
             display: "flex",
             flexDirection: "column",
             justifyContent: "flex-start",
             alignItems: "start",
-            marginTop: "8vw",
           }}
         >
           <div
@@ -130,7 +129,7 @@ const Footer = () => {
                 color: "#cecece",
               }}
             >
-              사업자번호:212-81-89247 | 통신판매허가번호:제 2020-서울강동-1360호
+              사업자번호:212-81-89247
             </text>
           </LineSizeOne>
           <LineSizeOne marginTop={"0.5vw"}>
@@ -139,24 +138,41 @@ const Footer = () => {
                 color: "#cecece",
               }}
             >
-              Tel:02-479-4050 | Fax:02-479-4056 | E-Mail:kigsnet@naver.com
+              통신판매허가번호:제 2020-서울강동-1360호
+            </text>
+          </LineSizeOne>
+          <LineSizeOne marginTop={"0.5vw"}>
+            <text
+              style={{
+                color: "#cecece",
+              }}
+            >
+              Tel:02-479-4050 | Fax:02-479-4056
+            </text>
+          </LineSizeOne>
+          <LineSizeOne marginTop={"0.5vw"}>
+            <text
+              style={{
+                color: "#cecece",
+              }}
+            >
+              E-Mail:kigsnet@naver.com
             </text>
           </LineSizeOne>
         </div>
         <div
           style={{
             width: "30vw",
-            height: "15vw",
-            marginTop: "7vw",
+            height: "22vw",
             display: "flex",
             flexDirection: "column",
             justifyContent: "flex-start",
-            alignItems: "end",
+            alignItems: "start",
           }}
         >
           <div
             style={{
-              width: "16vw",
+              width: "25vw",
               height: "2.5vw",
               display: "flex",
               flexDirection: "row",
@@ -173,7 +189,7 @@ const Footer = () => {
           </div>
           <div
             style={{
-              width: "16vw",
+              width: "25vw",
               height: "2.5vw",
               display: "flex",
               flexDirection: "row",
@@ -184,7 +200,7 @@ const Footer = () => {
             <LinkText as={"a"} href={"/"}>
               <text style={{ color: "white" }}>협력문의</text>
             </LinkText>
-            <LinkText as={"a"} href={"/"} marginLeft={"4.3vw"}>
+            <LinkText as={"a"} href={"/"} marginLeft={"5.3vw"}>
               <text style={{ color: "white" }}>프로게이머</text>
             </LinkText>
           </div>
@@ -193,12 +209,11 @@ const Footer = () => {
           style={{
             color: "white",
             width: "9vw",
-            height: "20vw",
+            height: "22vw",
             display: "flex",
             flexDirection: "column",
             justifyContent: "flex-start",
             alignItems: "start",
-            marginTop: "12vw",
           }}
         >
           <LineSizeTwo>
@@ -243,10 +258,9 @@ const Footer = () => {
       <div
         style={{
           color: "white",
-          width: "80%",
+          width: "90%",
           height: "0.1vw",
           backgroundColor: "#cecece",
-          marginTop: "2vw",
         }}
       ></div>
       <LineSizeOne marginTop={"1vw"}>
