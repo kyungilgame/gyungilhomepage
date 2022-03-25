@@ -99,24 +99,6 @@ const ContentsBoxNineContainer = styled.div`
   background-color: #00ffd6;
 `;
 
-const TextSizeOne = styled.div`
-  font-family: "SEBANG-Gothic-Bold";
-  font-size: 7.5vw;
-  color: #f6f6f6;
-  margin-top: 12vw;
-`;
-const TextSizeTwo = styled.div`
-  font-family: "SEBANG-Gothic-Regular";
-  font-size: 4vw;
-  color: #f6f6f6;
-`;
-
-const TextSizeThree = styled.div`
-  font-family: "SEBANG-Gothic-Regular";
-  font-size: 2.7vw;
-  color: #101010;
-`;
-
 const TextSizeFour = styled.div`
   font-family: "SEBANG-Gothic-Regular";
   font-size: 2.7vw;
@@ -196,12 +178,6 @@ const TextSizeSixteen = styled.div`
   font-size: 2.5vw;
   color: #101010;
   margin-top: 1vw;
-`;
-
-const TextSizeSeventeen = styled.div`
-  font-family: "Pretendard-Bold";
-  font-size: 1.5vw;
-  color: #101010;
 `;
 
 const TextSizeEightteen = styled.div`

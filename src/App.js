@@ -1,3 +1,4 @@
+import React, { useState, useEffect } from "react";
 import { useMediaQuery } from "react-responsive";
 
 import DesktopContainer from "./Display/DesktopContainer";
@@ -12,13 +13,20 @@ const Mobile = ({ children }) => {
   return isMobile ? children : null;
 };
 function App() {
+  const [menuState, SetMenuState] = useState(5);
   return (
     <>
       <Desktop>
-        <DesktopContainer></DesktopContainer>
+        <DesktopContainer
+          menuState={menuState}
+          SetMenuState={SetMenuState}
+        ></DesktopContainer>
       </Desktop>
       <Mobile>
-        <MobileContainer></MobileContainer>
+        <MobileContainer
+          menuState={menuState}
+          SetMenuState={SetMenuState}
+        ></MobileContainer>
       </Mobile>
     </>
   );

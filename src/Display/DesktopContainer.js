@@ -32,9 +32,7 @@ const pagesObj = {
   5: <Main></Main>,
 };
 
-function DesktopContainer() {
-  const [menuState, SetMenuState] = useState(5);
-
+function DesktopContainer({ menuState, SetMenuState }) {
   return (
     <AppContainer>
       <Header menuState={menuState} SetMenuState={SetMenuState}></Header>

@@ -6,6 +6,7 @@ import Header from "../Component_M/Header";
 import Footer from "../Component_M/Footer";
 
 import Main from "../Pages_M/Main";
+import AboutKGA from "../Pages_M/AboutKGA";
 
 const AppContainer = styled.div`
   &,
@@ -19,12 +20,11 @@ const AppContainer = styled.div`
 `;
 
 const pagesObj = {
+  0: <AboutKGA></AboutKGA>,
   5: <Main></Main>,
 };
 
-function DesktopContainer() {
-  const [menuState, SetMenuState] = useState(5);
-
+function DesktopContainer({ menuState, SetMenuState }) {
   return (
     <AppContainer>
       <Header menuState={menuState} SetMenuState={SetMenuState}></Header>
