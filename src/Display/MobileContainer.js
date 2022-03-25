@@ -7,6 +7,7 @@ import Footer from "../Component_M/Footer";
 
 import Main from "../Pages_M/Main";
 import AboutKGA from "../Pages_M/AboutKGA";
+import CourseIntro from "../Pages_M/CourseIntro";
 
 const AppContainer = styled.div`
   &,
@@ -21,6 +22,7 @@ const AppContainer = styled.div`
 
 const pagesObj = {
   0: <AboutKGA></AboutKGA>,
+  1: <CourseIntro></CourseIntro>,
   5: <Main></Main>,
 };
 
