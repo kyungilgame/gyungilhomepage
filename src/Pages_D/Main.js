@@ -4,6 +4,9 @@ import "../Styles/css/App.css";
 import MainCarousel from "../Function/MainCarousel";
 import MainReviewCarousel from "../Function/MainReviewCarousel";
 
+import BlackBoxRibone from "../Image/BlackBoxRibone.png";
+import GreenArrow from "../Image/GreenArrow.png";
+
 import ReactPlayer from "react-player/youtube";
 
 const ContentsBoxOneContainer = styled.div`
@@ -237,24 +240,29 @@ const BlackBoxWrapper = styled.div`
 `;
 
 const ApplyButton = styled.button`
-  width: 15vw;
+  width: 18vw;
   height: 2.5vw;
   background-color: #101010;
   border-radius: 1vw;
   border-color: #00ffd6;
   cursor: pointer;
   margin-top: 1.5vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 `;
 
 const ApplyBlackButton = styled.button`
   all: unset;
   width: 20vw;
   height: 4vw;
-  background-color: #101010;
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  background-color: #101010;
 `;
 
 const MiddleTextBox = styled.div`
@@ -294,6 +302,14 @@ const MapWrapper = styled.div`
   height: 40vw;
   background-color: gray;
   margin: 1.5vw;
+`;
+
+const ImageWrapper = styled.img`
+  width: 8vw;
+  height: 2vw;
+  position: relative;
+  bottom: 1.7vw;
+  left: 9.1vw;
 `;
 
 const Main = () => {
@@ -395,19 +411,29 @@ const Main = () => {
             }}
           >
             <BlackBoxWrapper>
+              <ImageWrapper src={BlackBoxRibone}></ImageWrapper>
               <TextSizeEight>국가기간전략훈련</TextSizeEight>
               <TextSizeNine>프로그래밍</TextSizeNine>
               <TextSizeTen>손 끝에서 구현되는 Unity 3D 게임</TextSizeTen>
               <ApplyButton>
                 <TextSizeEleven>자세히 보기</TextSizeEleven>
+                <img
+                  src={GreenArrow}
+                  style={{ width: "4vw", marginLeft: "1vw" }}
+                ></img>
               </ApplyButton>
             </BlackBoxWrapper>
             <BlackBoxWrapper>
+              <ImageWrapper src={BlackBoxRibone}></ImageWrapper>
               <TextSizeEight>국가기간전략훈련</TextSizeEight>
               <TextSizeNine>게임 기획</TextSizeNine>
               <TextSizeTen>게임 시놉시스부터 상용화까지</TextSizeTen>
               <ApplyButton>
                 <TextSizeEleven>자세히 보기</TextSizeEleven>
+                <img
+                  src={GreenArrow}
+                  style={{ width: "4vw", marginLeft: "1vw" }}
+                ></img>
               </ApplyButton>
             </BlackBoxWrapper>
             <BlackBoxWrapper>
@@ -416,6 +442,10 @@ const Main = () => {
               <TextSizeTen>비대면 시대의 핵심 기술</TextSizeTen>
               <ApplyButton>
                 <TextSizeEleven>자세히 보기</TextSizeEleven>
+                <img
+                  src={GreenArrow}
+                  style={{ width: "4vw", marginLeft: "1vw" }}
+                ></img>
               </ApplyButton>
             </BlackBoxWrapper>
           </div>
@@ -434,6 +464,10 @@ const Main = () => {
               <TextSizeTen>차별화 된 핀테크 개발자 되기</TextSizeTen>
               <ApplyButton>
                 <TextSizeEleven>자세히 보기</TextSizeEleven>
+                <img
+                  src={GreenArrow}
+                  style={{ width: "4vw", marginLeft: "1vw" }}
+                ></img>
               </ApplyButton>
             </BlackBoxWrapper>
             <BlackBoxWrapper>
@@ -442,6 +476,10 @@ const Main = () => {
               <TextSizeTen>미래 사회의 새로운 패러다임</TextSizeTen>
               <ApplyButton>
                 <TextSizeEleven>자세히 보기</TextSizeEleven>
+                <img
+                  src={GreenArrow}
+                  style={{ width: "4vw", marginLeft: "1vw" }}
+                ></img>
               </ApplyButton>
             </BlackBoxWrapper>
           </div>
