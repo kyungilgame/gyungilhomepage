@@ -2,8 +2,6 @@ import styled from "styled-components";
 import "../Styles/css/App.css";
 import React, { useState } from "react";
 
-import ReactPlayer from "react-player/youtube";
-
 import VideoCarousel from "../Function/VideoCarousel_M";
 import ReviewCarousel from "../Function/ReviewCarousel_M";
 
@@ -72,16 +70,6 @@ const ContentsBoxSixContainer = styled.div`
   justify-content: flex-start;
   align-items: center;
   background-color: #f6f6f6;
-`;
-
-const VideoPlayWrapper = styled.div`
-  width: 50vw;
-  height: 30vw;
-  display: flex;
-  align-items: center;
-  justify-items: center;
-  background-color: #101010;
-  margin-top: 8vw;
 `;
 
 const SelectionButtonSelected = styled.button`

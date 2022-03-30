@@ -421,6 +421,7 @@ const Main = () => {
                 <img
                   src={GreenArrow}
                   style={{ width: "4vw", marginLeft: "1vw" }}
+                  alt="greenarrow"
                 ></img>
               </ApplyButton>
             </BlackBoxWrapper>
@@ -434,6 +435,7 @@ const Main = () => {
                 <img
                   src={GreenArrow}
                   style={{ width: "4vw", marginLeft: "1vw" }}
+                  alt="greenarrow"
                 ></img>
               </ApplyButton>
             </BlackBoxWrapper>
@@ -446,6 +448,7 @@ const Main = () => {
                 <img
                   src={GreenArrow}
                   style={{ width: "4vw", marginLeft: "1vw" }}
+                  alt="greenarrow"
                 ></img>
               </ApplyButton>
             </BlackBoxWrapper>
@@ -468,6 +471,7 @@ const Main = () => {
                 <img
                   src={GreenArrow}
                   style={{ width: "4vw", marginLeft: "1vw" }}
+                  alt="greenarrow"
                 ></img>
               </ApplyButton>
             </BlackBoxWrapper>
@@ -480,6 +484,7 @@ const Main = () => {
                 <img
                   src={GreenArrow}
                   style={{ width: "4vw", marginLeft: "1vw" }}
+                  alt="greenarrow"
                 ></img>
               </ApplyButton>
             </BlackBoxWrapper>
