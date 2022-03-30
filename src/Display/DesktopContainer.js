@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React from "react";
 import styled from "styled-components";
 import "../Styles/css/App.css";
 
@@ -42,7 +42,7 @@ const LinkBoxOne = styled.button`
   position: fixed;
   width: 20vw;
   height: 5vw;
-  bottom: 50vw;
+  bottom: 30vw;
   margin-left: 80vw;
   background-size: contain;
   background-image: url(${LinkPhoneCall});
@@ -56,12 +56,13 @@ const LinkBoxTwo = styled.button`
   position: fixed;
   width: 20vw;
   height: 5vw;
-  bottom: 45vw;
+  bottom: 25vw;
   margin-left: 80vw;
   background-size: contain;
   background-image: url(${LinkArtclass});
   background-position: center center;
   background-repeat: no-repeat;
+  cursor: pointer;
 `;
 
 const LinkBoxThree = styled.button`
@@ -69,12 +70,13 @@ const LinkBoxThree = styled.button`
   position: fixed;
   width: 20vw;
   height: 5vw;
-  bottom: 40vw;
+  bottom: 20vw;
   margin-left: 80vw;
   background-size: contain;
   background-image: url(${LinkProgamer});
   background-position: center center;
   background-repeat: no-repeat;
+  cursor: pointer;
 `;
 
 function DesktopContainer({ menuState, SetMenuState }) {

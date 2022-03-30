@@ -44,6 +44,7 @@ const SlideSelectorWrapper = styled.div`
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  margin-top: 2vw;
 `;
 
 const SlideNotSelectedCircle = styled.div`
@@ -71,6 +72,7 @@ const ApplyBlackButton = styled.button`
   justify-content: center;
   align-items: center;
   cursor: pointer;
+  margin: 2vw;
 `;
 
 const TOTAL_SLIDES = 6; // 7장 19명

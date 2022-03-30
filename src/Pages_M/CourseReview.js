@@ -7,6 +7,9 @@ import ReactPlayer from "react-player/youtube";
 import VideoCarousel from "../Function/VideoCarousel_M";
 import ReviewCarousel from "../Function/ReviewCarousel_M";
 
+import ArrowDown from "../Image/ArrowDown.png";
+import ArrowUp from "../Image/ArrowUp.png";
+
 const ContentsBoxOneContainer = styled.div`
   width: 100%;
   height: 15vw;
@@ -161,8 +164,8 @@ const ArrowButton = styled.button`
   all: unset;
   cursor: pointer;
   width: 6vw;
-  height: 6vw;
-  margin-top: 2vw;
+  height: 5vw;
+  margin-top: 3.5vw;
   position: absolute;
   right: 10vw;
   background-size: contain;
@@ -176,8 +179,8 @@ const ArrowButton = styled.button`
 
 const CampanyWrapper = styled.div`
   width: 100%;
-  height: 30vw;
-  background-color: yellow;
+  height: 50vw;
+  background-color: #f6f6f6;
 `;
 
 const CourseReview = () => {
@@ -194,15 +197,26 @@ const CourseReview = () => {
       </ContentsBoxThreeContainer>
       <ContentsBoxFourContainer>
         <TextSizeThree>KGA 수료생을 선택한 기업</TextSizeThree>
-        <ArrowButton
-          onClick={() =>
-            CompanySelect === false
-              ? setCompanySelect(true)
-              : setCompanySelect(false)
-          }
-        >
-          버튼
-        </ArrowButton>
+
+        {CompanySelect === false ? (
+          <ArrowButton
+            onClick={() =>
+              CompanySelect === false
+                ? setCompanySelect(true)
+                : setCompanySelect(false)
+            }
+            Image={ArrowDown}
+          ></ArrowButton>
+        ) : (
+          <ArrowButton
+            onClick={() =>
+              CompanySelect === false
+                ? setCompanySelect(true)
+                : setCompanySelect(false)
+            }
+            Image={ArrowUp}
+          ></ArrowButton>
+        )}
         {CompanySelect && <CampanyWrapper />}
       </ContentsBoxFourContainer>
       <ContentsBoxFiveContainer>

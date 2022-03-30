@@ -62,6 +62,7 @@ const LinkBoxTwo = styled.button`
   background-image: url(${LinkMobileArt});
   background-position: center center;
   background-repeat: no-repeat;
+  cursor: pointer;
 `;
 
 const LinkBoxThree = styled.button`
@@ -75,6 +76,7 @@ const LinkBoxThree = styled.button`
   background-image: url(${LinkMobileGame});
   background-position: center center;
   background-repeat: no-repeat;
+  cursor: pointer;
 `;
 
 function DesktopContainer({ menuState, SetMenuState }) {

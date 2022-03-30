@@ -74,7 +74,7 @@ const ContentsBoxSixContainer = styled.div`
 
 const ContentsBoxSevenContainer = styled.div`
   width: 100%;
-  height: 45vw;
+  height: 50vw;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -263,6 +263,7 @@ const ApplyBlackButton = styled.button`
   align-items: center;
   cursor: pointer;
   background-color: #101010;
+  margin-top: 1vw;
 `;
 
 const MiddleTextBox = styled.div`
