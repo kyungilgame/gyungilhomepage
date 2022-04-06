@@ -10,61 +10,61 @@ import XButton from "../Image/XButton.png";
 
 const ContentsOneContainer = styled.div`
   position: fixed;
-  bottom: 1vw;
+  bottom: 5vw;
   width: 80%;
-  height: 15vw;
+  height: 25vw;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
   background-color: #f6f6f6;
   border-radius: 1vw;
-  background-size: 14vw 1.3vw;
+  background-size: 17vw 1.3vw;
   background-image: url(${CTAArrow});
-  background-position: right 54% bottom 65%;
+  background-position: right 54% bottom 73%;
   background-repeat: no-repeat;
   box-shadow: 0.1vw 0.1vw 0.1vw 0.1vw #00ffd6;
 `;
 
 const FirstLine = styled.div`
   font-family: "SEBANG-Gothic-Bold";
-  font-size: 2.5vw;
+  font-size: 3.5vw;
   color: #101010;
 `;
 
 const SecondLine = styled.div`
   font-family: "SEBANG-Gothic-Bold";
-  font-size: 2vw;
+  font-size: 2.5vw;
   color: #00887c;
 `;
 
 const ThirdLine = styled.div`
   font-family: "SEBANG-Gothic-Bold";
-  font-size: 2vw;
+  font-size: 2.1vw;
   color: #101010;
 `;
 
 const FourthLine = styled.div`
   font-family: "SEBANG-Gothic-Bold";
-  font-size: 1.5vw;
+  font-size: 3vw;
   color: #101010;
 `;
 
 const ApplyButton = styled.button`
   width: 60%;
-  height: 40%;
+  height: 30%;
   background-color: #00ffd6;
   border-color: #00ffd6;
   border-radius: 1vw;
-  margin-top: 0.5vw;
+  margin-top: 2vw;
   cursor: pointer;
 `;
 
 const CloseButton = styled.div`
-  width: 5vw;
-  height: 5vw;
+  width: 7vw;
+  height: 7vw;
   cursor: pointer;
-  background-size: 2vw 2vw;
+  background-size: 3vw 3vw;
   background-image: url(${XButton});
   background-position: right 40% bottom 80%;
   background-repeat: no-repeat;
@@ -73,7 +73,7 @@ const CloseButton = styled.div`
 const ImageContainer = styled.div`
   width: 90%;
   height: 90%;
-  background-size: 100% 80%;
+  background-size: 100% 50%;
   background-image: url(${CTARedImage});
   background-position: right 85% bottom 78%;
   background-repeat: no-repeat;

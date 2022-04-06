@@ -313,7 +313,7 @@ const ImageWrapper = styled.img`
   left: 9.1vw;
 `;
 
-const Main = () => {
+const Main = ({ menuState, SetMenuState }) => {
   return (
     <>
       <ContentsBoxOneContainer>
@@ -502,15 +502,15 @@ const Main = () => {
           }}
         >
           <MiddleTextBox>
-            <TextSizeTwelve>누적 수강생 수강생</TextSizeTwelve>
+            <TextSizeTwelve>누적 수강생</TextSizeTwelve>
             <TextSizeThirteen>10,000명</TextSizeThirteen>
           </MiddleTextBox>
           <MiddleTextBox>
-            <TextSizeTwelve>취업률</TextSizeTwelve>
-            <TextSizeThirteen>90%</TextSizeThirteen>
+            <TextSizeTwelve>직전 기수 취업률</TextSizeTwelve>
+            <TextSizeThirteen>91%</TextSizeThirteen>
           </MiddleTextBox>
           <MiddleTextBox>
-            <TextSizeTwelve>전체 평균 연봉</TextSizeTwelve>
+            <TextSizeTwelve>수료생 전체 평균 연봉</TextSizeTwelve>
             <TextSizeThirteen>3,500만원</TextSizeThirteen>
           </MiddleTextBox>
           <MiddleTextBox>
@@ -634,7 +634,10 @@ const Main = () => {
             </TextSizeEightteen>
           </ColorBoxWrapper>
         </div>
-        <ApplyBlackButton>
+        <ApplyBlackButton
+          as={"a"}
+          href={"https://forms.gle/bNkmRwr2wMwfHBZp7 "}
+        >
           <text
             style={{
               color: "#f6f6f6",
@@ -655,7 +658,10 @@ const Main = () => {
         </ApplyBlackButton>
       </ContentsBoxSixContainer>
       <ContentsBoxSevenContainer>
-        <MainReviewCarousel></MainReviewCarousel>
+        <MainReviewCarousel
+          menuState={menuState}
+          SetMenuState={SetMenuState}
+        ></MainReviewCarousel>
       </ContentsBoxSevenContainer>
       <ContentsBoxEightContainer>
         <TextSizeFifteen>KGA 오시는 길</TextSizeFifteen>
@@ -670,7 +676,10 @@ const Main = () => {
       <ContentsBoxNineContainer>
         <TextSizeTwenty>IT 인재로 급성장</TextSizeTwenty>
         <TextSizeTwentyOne>KGA와 함께라면 가능합니다</TextSizeTwentyOne>
-        <ApplyBlackButton>
+        <ApplyBlackButton
+          as={"a"}
+          href={"https://forms.gle/bNkmRwr2wMwfHBZp7 "}
+        >
           <text
             style={{
               color: "#f6f6f6",

@@ -1,8 +1,10 @@
 import styled from "styled-components";
 import "../Styles/css/App.css";
 
+import HeaderLogo from "../Image/HeaderLogo.png";
+
 const HeaderContainer = styled.div`
-  width: 100%;
+  width: 95%;
   height: 8vw;
   display: flex;
   position: absolute;
@@ -38,8 +40,26 @@ const Header = ({ menuState, SetMenuState }) => {
       return menuState === 5 ? `color: #f6f6f6;` : `color: #101010;`;
     }}
   `;
+
+  const LogoWrapper = styled.div`
+    width: 10vw;
+    height: 5vw;
+    cursor: pointer;
+    background-size: contain;
+    background-position: center top;
+    background-repeat: no-repeat;
+    ${({ Image }) => {
+      return Image ? `background-image: url(${Image})` : null;
+    }}
+  `;
   return (
     <HeaderContainer>
+      <LogoWrapper
+        Image={HeaderLogo}
+        onClick={() => {
+          SetMenuState(5);
+        }}
+      ></LogoWrapper>
       <ContentWrapper>
         <MenuWrapper>
           <MenuText

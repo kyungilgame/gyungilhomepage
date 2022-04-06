@@ -19,6 +19,7 @@ const ImageWrapper = styled.div`
   width: 10vw;
   height: 10vw;
   margin-top: 2vw;
+  margin-right: 1.5vw;
   background-size: contain;
   background-position: center top;
   background-repeat: no-repeat;
@@ -41,6 +42,13 @@ const TextTwo = styled.div`
   margin-top: 0.5vw;
 `;
 
+const TextThree = styled.div`
+  font-family: "SEBANG-Gothic-Regular";
+  font-size: 1vw;
+  color: #101010;
+  margin-top: 0.5vw;
+`;
+
 const TextBox = styled.div`
   font-family: "Pretendard-Regular";
   font-size: 1.2vw;
@@ -50,7 +58,13 @@ const TextBox = styled.div`
   margin-top: 0.2vw;
 `;
 
-export default function MainReviewPlain() {
+export default function MainReviewPlain({
+  image,
+  textOne,
+  textTwo,
+  texThree,
+  Contents,
+}) {
   return (
     <>
       <ItemWrapper>
@@ -64,11 +78,11 @@ export default function MainReviewPlain() {
             height: "15vw",
           }}
         >
-          <ImageWrapper Image={FaceImage}></ImageWrapper>
+          <ImageWrapper Image={image}></ImageWrapper>
           <div style={{ display: "flex", flexDirection: "column" }}>
-            <TextOne>홍길동</TextOne>
-            <TextTwo>KGA 블록체인 2기</TextTwo>
-            <TextTwo>프로그래머 / 회사명</TextTwo>
+            <TextOne>{textOne}</TextOne>
+            <TextTwo>{textTwo}</TextTwo>
+            <TextThree>{texThree}</TextThree>
           </div>
         </div>
 
@@ -80,12 +94,7 @@ export default function MainReviewPlain() {
             marginTop: "0.5vw",
           }}
         ></div>
-        <TextBox>
-          게임프로그래머를 꿈꿔왔지만 독학으로는 취업이 어려워 KGA에 오게
-          되었습니다. 저에게는 부족한 실력을 보강하고 협업 프로젝트 경험을 쌓을
-          수 있는 좋은 경험이었습니다. KGA에서 진행한 수업은 자세하고,
-          비전공자도 이해하기 쉽도록 수업이 맞춰져 있고
-        </TextBox>
+        <TextBox>{Contents}</TextBox>
       </ItemWrapper>
     </>
   );

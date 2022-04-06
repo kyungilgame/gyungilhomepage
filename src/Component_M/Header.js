@@ -2,9 +2,10 @@ import styled from "styled-components";
 import "../Styles/css/App.css";
 
 import HamburgerMenu from "./HamburgerMenu";
+import HeaderLogo from "../Image/HeaderLogo.png";
 
 const HeaderContainer = styled.div`
-  width: 100%;
+  width: 95%;
   height: 15vw;
   display: flex;
   position: absolute;
@@ -32,9 +33,25 @@ const MenuWrapper = styled.div`
 `;
 
 const Header = ({ menuState, SetMenuState }) => {
-  console.log(menuState);
+  const LogoWrapper = styled.div`
+    width: 15vw;
+    height: 8vw;
+    cursor: pointer;
+    background-size: contain;
+    background-position: center top;
+    background-repeat: no-repeat;
+    ${({ Image }) => {
+      return Image ? `background-image: url(${Image})` : null;
+    }}
+  `;
   return (
     <HeaderContainer>
+      <LogoWrapper
+        Image={HeaderLogo}
+        onClick={() => {
+          SetMenuState(5);
+        }}
+      ></LogoWrapper>
       <ContentWrapper>
         <MenuWrapper>
           <HamburgerMenu

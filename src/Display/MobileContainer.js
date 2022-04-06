@@ -28,15 +28,6 @@ const AppContainer = styled.div`
   align-items: center;
 `;
 
-const pagesObj = {
-  0: <AboutKGA></AboutKGA>,
-  1: <CourseIntro></CourseIntro>,
-  2: <CourseReview></CourseReview>,
-  3: <QA></QA>,
-  4: <Apply></Apply>,
-  5: <Main></Main>,
-};
-
 const LinkBoxOne = styled.button`
   all: unset;
   position: fixed;
@@ -80,6 +71,14 @@ const LinkBoxThree = styled.button`
 `;
 
 function DesktopContainer({ menuState, SetMenuState }) {
+  const pagesObj = {
+    0: <AboutKGA></AboutKGA>,
+    1: <CourseIntro></CourseIntro>,
+    2: <CourseReview></CourseReview>,
+    3: <QA></QA>,
+    4: <Apply></Apply>,
+    5: <Main menuState={menuState} SetMenuState={SetMenuState}></Main>,
+  };
   return (
     <AppContainer>
       <Header menuState={menuState} SetMenuState={SetMenuState}></Header>
@@ -88,7 +87,7 @@ function DesktopContainer({ menuState, SetMenuState }) {
       <LinkBoxOne></LinkBoxOne>
       <LinkBoxTwo></LinkBoxTwo>
       <LinkBoxThree></LinkBoxThree>
-      <Footer></Footer>
+      <Footer menuState={menuState} SetMenuState={SetMenuState}></Footer>
     </AppContainer>
   );
 }

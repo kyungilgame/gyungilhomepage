@@ -29,7 +29,7 @@ const Button = styled.button`
   }}
 `;
 const SliderContainer = styled.div`
-  width: 200%;
+  width: 600%;
   height: 30vw;
   display: flex; //이미지들을 가로로 나열합니다.
   flex-direction: row;
@@ -75,9 +75,9 @@ const ApplyBlackButton = styled.button`
   margin: 2vw;
 `;
 
-const TOTAL_SLIDES = 6; // 7장 19명
+const TOTAL_SLIDES = 5; // 7장 19명
 
-export default function MainReviewCarousel() {
+export default function MainReviewCarousel({ menuState, SetMenuState }) {
   const [currentSlide, setCurrentSlide] = useState(0);
   const slideRef = useRef(null);
 
@@ -99,7 +99,7 @@ export default function MainReviewCarousel() {
 
   useEffect(() => {
     slideRef.current.style.transition = "all 0.5s ease-in-out";
-    slideRef.current.style.transform = `translateX(-${currentSlide * 17 * 3}%`; // 백틱을 사용하여 슬라이드로 이동하는 애니메이션을 만듭니다.
+    slideRef.current.style.transform = `translateX(-${currentSlide * 16.7}%`; // 백틱을 사용하여 슬라이드로 이동하는 애니메이션을 만듭니다.
   }, [currentSlide]);
 
   return (
@@ -170,13 +170,13 @@ export default function MainReviewCarousel() {
         ) : (
           <SlideNotSelectedCircle onClick={() => setCurrentSlide(5)} />
         )}
-        {currentSlide === 6 ? (
-          <SlideSelectedCircle onClick={() => setCurrentSlide(6)} />
-        ) : (
-          <SlideNotSelectedCircle onClick={() => setCurrentSlide(6)} />
-        )}
       </SlideSelectorWrapper>
-      <ApplyBlackButton>
+      <ApplyBlackButton
+        onClick={() => {
+          SetMenuState(2);
+          window.scrollTo(0, 0);
+        }}
+      >
         <text
           style={{
             color: "#f6f6f6",

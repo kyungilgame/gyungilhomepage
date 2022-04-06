@@ -29,7 +29,7 @@ const Button = styled.button`
   }}
 `;
 const SliderContainer = styled.div`
-  width: 200%;
+  width: 300%;
   height: 25vw;
   display: flex; //이미지들을 가로로 나열합니다.
   flex-direction: row;
@@ -62,7 +62,7 @@ const SlideSelectedCircle = styled.div`
   cursor: pointer;
 `;
 
-const TOTAL_SLIDES = 6; // 7장 19명
+const TOTAL_SLIDES = 2; // 7장 19명
 
 export default function MainCarousel() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -141,26 +141,6 @@ export default function MainCarousel() {
           <SlideSelectedCircle onClick={() => setCurrentSlide(2)} />
         ) : (
           <SlideNotSelectedCircle onClick={() => setCurrentSlide(2)} />
-        )}
-        {currentSlide === 3 ? (
-          <SlideSelectedCircle onClick={() => setCurrentSlide(3)} />
-        ) : (
-          <SlideNotSelectedCircle onClick={() => setCurrentSlide(3)} />
-        )}
-        {currentSlide === 4 ? (
-          <SlideSelectedCircle onClick={() => setCurrentSlide(4)} />
-        ) : (
-          <SlideNotSelectedCircle onClick={() => setCurrentSlide(4)} />
-        )}
-        {currentSlide === 5 ? (
-          <SlideSelectedCircle onClick={() => setCurrentSlide(5)} />
-        ) : (
-          <SlideNotSelectedCircle onClick={() => setCurrentSlide(5)} />
-        )}
-        {currentSlide === 6 ? (
-          <SlideSelectedCircle onClick={() => setCurrentSlide(6)} />
-        ) : (
-          <SlideNotSelectedCircle onClick={() => setCurrentSlide(6)} />
         )}
       </SlideSelectorWrapper>
     </div>

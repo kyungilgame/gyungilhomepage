@@ -66,7 +66,7 @@ const ImageContainerTwo = styled.div`
   }}
 `;
 
-const Footer = () => {
+const Footer = ({ menuState, SetMenuState }) => {
   return (
     <FooterContainer>
       <div
@@ -180,10 +180,19 @@ const Footer = () => {
               alignItems: "start",
             }}
           >
-            <LinkText as={"a"} href={"/"}>
+            <LinkText
+              onClick={() => {
+                SetMenuState(1);
+                window.scrollTo(0, 0);
+              }}
+            >
               <text style={{ color: "white" }}>About KGA</text>
             </LinkText>
-            <LinkText as={"a"} href={"/"} marginLeft={"2vw"}>
+            <LinkText
+              as={"a"}
+              href={"https://www.kyungilart.com/"}
+              marginLeft={"2vw"}
+            >
               <text style={{ color: "white" }}>아트클래스</text>
             </LinkText>
           </div>
@@ -200,7 +209,11 @@ const Footer = () => {
             <LinkText as={"a"} href={"/"}>
               <text style={{ color: "white" }}>협력문의</text>
             </LinkText>
-            <LinkText as={"a"} href={"/"} marginLeft={"5.3vw"}>
+            <LinkText
+              as={"a"}
+              href={"https://www.kgaprogamer.com/"}
+              marginLeft={"5.3vw"}
+            >
               <text style={{ color: "white" }}>프로게이머</text>
             </LinkText>
           </div>
@@ -230,7 +243,7 @@ const Footer = () => {
           >
             <ImageContainer
               as={"a"}
-              href={"https://www.facebook.com/kyungilgame"}
+              href={"https://pf.kakao.com/_nsNxkM"}
               src={SNSkakao}
               target="_blank"
             ></ImageContainer>

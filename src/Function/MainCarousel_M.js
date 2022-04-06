@@ -12,8 +12,8 @@ const Container = styled.div`
 `;
 const Button = styled.button`
   all: unset;
-  width: 3vw;
-  height: 3vw;
+  width: 5vw;
+  height: 5vw;
   color: #101010;
   display: flex;
   justify-content: center;
@@ -29,7 +29,7 @@ const Button = styled.button`
   }}
 `;
 const SliderContainer = styled.div`
-  width: 200%;
+  width: 300%;
   height: 50vw;
   display: flex; //이미지들을 가로로 나열합니다.
   flex-direction: column;
@@ -44,7 +44,7 @@ const SlideSelectorWrapper = styled.div`
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  margin-top: 1vw;
+  margin-top: 3vw;
 `;
 
 const SlideNotSelectedCircle = styled.div`
@@ -63,7 +63,7 @@ const SlideSelectedCircle = styled.div`
   cursor: pointer;
 `;
 
-const TOTAL_SLIDES = 6; // 7장 19명
+const TOTAL_SLIDES = 2; // 7장 19명
 
 export default function MainCarousel() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -87,7 +87,7 @@ export default function MainCarousel() {
 
   useEffect(() => {
     slideRef.current.style.transition = "all 0.5s ease-in-out";
-    slideRef.current.style.transform = `translateX(-${currentSlide * 56}vw)`; // 백틱을 사용하여 슬라이드로 이동하는 애니메이션을 만듭니다.
+    slideRef.current.style.transform = `translateX(-${currentSlide * 33.333}%)`; // 백틱을 사용하여 슬라이드로 이동하는 애니메이션을 만듭니다.
   }, [currentSlide]);
 
   return (
@@ -142,26 +142,6 @@ export default function MainCarousel() {
           <SlideSelectedCircle onClick={() => setCurrentSlide(2)} />
         ) : (
           <SlideNotSelectedCircle onClick={() => setCurrentSlide(2)} />
-        )}
-        {currentSlide === 3 ? (
-          <SlideSelectedCircle onClick={() => setCurrentSlide(3)} />
-        ) : (
-          <SlideNotSelectedCircle onClick={() => setCurrentSlide(3)} />
-        )}
-        {currentSlide === 4 ? (
-          <SlideSelectedCircle onClick={() => setCurrentSlide(4)} />
-        ) : (
-          <SlideNotSelectedCircle onClick={() => setCurrentSlide(4)} />
-        )}
-        {currentSlide === 5 ? (
-          <SlideSelectedCircle onClick={() => setCurrentSlide(5)} />
-        ) : (
-          <SlideNotSelectedCircle onClick={() => setCurrentSlide(5)} />
-        )}
-        {currentSlide === 6 ? (
-          <SlideSelectedCircle onClick={() => setCurrentSlide(6)} />
-        ) : (
-          <SlideNotSelectedCircle onClick={() => setCurrentSlide(6)} />
         )}
       </SlideSelectorWrapper>
     </div>
