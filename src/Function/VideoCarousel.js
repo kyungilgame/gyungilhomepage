@@ -62,7 +62,7 @@ const SlideSelectedCircle = styled.div`
   cursor: pointer;
 `;
 
-const TOTAL_SLIDES = 3; // 7장 19명
+const TOTAL_SLIDES = 0; // 7장 19명
 
 export default function Index() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -125,28 +125,6 @@ export default function Index() {
           Image={rightArrow}
         ></Button>
       </div>
-      <SlideSelectorWrapper>
-        {currentSlide === 0 ? (
-          <SlideSelectedCircle onClick={() => setCurrentSlide(0)} />
-        ) : (
-          <SlideNotSelectedCircle onClick={() => setCurrentSlide(0)} />
-        )}
-        {currentSlide === 1 ? (
-          <SlideSelectedCircle onClick={() => setCurrentSlide(1)} />
-        ) : (
-          <SlideNotSelectedCircle onClick={() => setCurrentSlide(1)} />
-        )}
-        {currentSlide === 2 ? (
-          <SlideSelectedCircle onClick={() => setCurrentSlide(2)} />
-        ) : (
-          <SlideNotSelectedCircle onClick={() => setCurrentSlide(2)} />
-        )}
-        {currentSlide === 3 ? (
-          <SlideSelectedCircle onClick={() => setCurrentSlide(3)} />
-        ) : (
-          <SlideNotSelectedCircle onClick={() => setCurrentSlide(3)} />
-        )}
-      </SlideSelectorWrapper>
     </div>
   );
 }

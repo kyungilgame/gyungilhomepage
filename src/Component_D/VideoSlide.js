@@ -27,34 +27,10 @@ const EachItemWrapper = styled.div`
 export default function Slide() {
   return (
     <>
-      {" "}
       <ItemWrapper>
         <EachItemWrapper>
           <ReactPlayer
-            url="https://youtu.be/dR8YaZLBmTQ"
-            width="90%"
-            height="70%"
-          />
-        </EachItemWrapper>
-        <EachItemWrapper>
-          <ReactPlayer
-            url="https://youtu.be/dR8YaZLBmTQ"
-            width="90%"
-            height="70%"
-          />
-        </EachItemWrapper>
-        <EachItemWrapper>
-          <ReactPlayer
-            url="https://youtu.be/dR8YaZLBmTQ"
-            width="90%"
-            height="70%"
-          />
-        </EachItemWrapper>
-      </ItemWrapper>
-      <ItemWrapper>
-        <EachItemWrapper>
-          <ReactPlayer
-            url="https://youtu.be/dR8YaZLBmTQ"
+            url="https://youtu.be/n0KEoy53BRw"
             width="90%"
             height="70%"
           />
