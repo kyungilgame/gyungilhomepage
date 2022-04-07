@@ -44,8 +44,8 @@ const LinkText = styled.button`
 `;
 
 const ImageContainer = styled.div`
-  width: 2vw;
-  height: 2vw;
+  width: 5vw;
+  height: 5vw;
   background-size: contain;
   background-position: center center;
   background-repeat: no-repeat;
@@ -237,6 +237,7 @@ const Footer = ({ menuState, SetMenuState }) => {
               display: "flex",
               flexDirection: "row",
               width: "9vw",
+              height: "5vw",
               justifyContent: "space-between",
               marginTop: "1vw",
             }}
@@ -253,6 +254,17 @@ const Footer = ({ menuState, SetMenuState }) => {
               src={SNSfacebook}
               target="_blank"
             ></ImageContainer>
+          </div>
+          <div
+            style={{
+              display: "flex",
+              flexDirection: "row",
+              width: "9vw",
+              height: "5vw",
+              justifyContent: "space-between",
+              marginTop: "1vw",
+            }}
+          >
             <ImageContainer
               as={"a"}
               href={"https://www.instagram.com/kga_gameschool/"}

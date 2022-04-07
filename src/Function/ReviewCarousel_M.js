@@ -12,8 +12,8 @@ const Container = styled.div`
 `;
 const Button = styled.button`
   all: unset;
-  width: 3vw;
-  height: 3vw;
+  width: 5vw;
+  height: 5vw;
   color: #101010;
   display: flex;
   justify-content: center;

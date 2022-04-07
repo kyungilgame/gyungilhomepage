@@ -71,11 +71,11 @@ const CloseButton = styled.div`
 `;
 
 const ImageContainer = styled.div`
-  width: 90%;
-  height: 90%;
-  background-size: 100% 50%;
+  width: 100%;
+  height: 100%;
+  background-size: 100% 40%;
   background-image: url(${CTARedImage});
-  background-position: right 85% bottom 78%;
+  background-position: right 85% bottom 85%;
   background-repeat: no-repeat;
 `;
 
@@ -97,18 +97,20 @@ const BottomCTABar = () => {
       <div
         style={{
           width: "15%",
-          height: "80%",
+          height: "100%",
           display: "flex",
           flexDirection: "row",
           justifyContent: "center",
           alignItems: "center",
+
+          marginLeft: "2vw",
         }}
       >
         <ImageContainer></ImageContainer>
       </div>
       <div
         style={{
-          width: "60%",
+          width: "57%",
           height: "95%",
           display: "flex",
           flexDirection: "column",
@@ -145,7 +147,7 @@ const BottomCTABar = () => {
       <div
         style={{
           width: "15%",
-          height: "80%",
+          height: "100%",
           display: "flex",
           flexDirection: "row",
           justifyContent: "center",
@@ -154,7 +156,15 @@ const BottomCTABar = () => {
       >
         <ImageContainer></ImageContainer>
       </div>
-      <div style={{ width: "10%", height: "95%" }}>
+      <div
+        style={{
+          width: "6%",
+          height: "95%",
+          display: "flex",
+          justifyContent: "center",
+          marginLeft: "2vw",
+        }}
+      >
         <CloseButton
           onClick={() => {
             setCTAAtive(false);
