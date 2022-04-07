@@ -51,7 +51,7 @@ const TextOne = styled.div`
 
 const TextTwo = styled.div`
   font-family: "SEBANG-Gothic-Regular";
-  font-size: 1.2vw;
+  font-size: 2vw;
   color: #101010;
   margin-top: 0.5vw;
 `;
@@ -90,8 +90,8 @@ export default function AboutKGASlideSecond() {
                   alignItems: "center",
                 }}
               >
-                <TextOne>박병준</TextOne>
-                <TextTwo>대표</TextTwo>
+                <TextOne>오준환</TextOne>
+                <TextTwo>게임 프로그래밍</TextTwo>
               </div>
             </div>
 
@@ -104,12 +104,10 @@ export default function AboutKGASlideSecond() {
               }}
             ></div>
             <TextBox>
-              직업 교육에 거대한 변화의 물결이 오고 있습니다. 이 거대한 변화의
-              물결에 KGA가 다시 한번 항해의 닻을 올렸습니다. 지금까지 이룬
-              것들이 최선이라 자만하지 않고 늘 고민하고 연구하며 계속 답을
-              찾아가려고 합니다. 그러나 우리의 목표는 변함없습니다. 이 시대에
-              선한 영향력을 흘려 보내는 기업, 이 변화를 이끌어가는 기업으로
-              나아가고자 합니다. 그리고 함께 답을 찾아가는데 늘 열려있습니다.
+              함께 일할 ‘후배 프로그래머’를 가르친다는 마음가짐으로 교육을 하고
+              있다. 지식과 훈련의 균형을 중요하게 생각하고, 프로그래밍뿐만
+              아니라 게임 개발에 필요한 소양을 키우도록 지도한다. 취업을 넘어서
+              모두가 원하는 게임 프로그래머를 키우는 게 목표다.
             </TextBox>
           </ItemWrapper>
           <ItemWrapper>
@@ -132,8 +130,8 @@ export default function AboutKGASlideSecond() {
                   alignItems: "center",
                 }}
               >
-                <TextOne>양현석</TextOne>
-                <TextTwo>원장</TextTwo>
+                <TextOne>박경배</TextOne>
+                <TextTwo>블록체인</TextTwo>
               </div>
             </div>
 
@@ -146,12 +144,11 @@ export default function AboutKGASlideSecond() {
               }}
             ></div>
             <TextBox>
-              20년이 넘는 기간 동안 현장과 교육계에서 활동했습니다.
-              게임/블록체인/메타버스가 사람들의 삶의 경험을 바꾸어 나가는
-              21세기의 예술이자 철학이 될 수 있다고 생각합니다. 교육자로서의
-              정체성과 콘텐츠 크리에이터로서의 정체성 모두를 유지하고자 날마다
-              고군분투 중이며, KGA의 모든 멤버들도 현업에 강한 사명감 있는
-              교육자로 만들기를 원합니다.
+              Bitcoin 열기가 대한민국에 도래했을 때 블록체인에 관심을 갖고
+              알트코인 개발 회사에 입사해 블록체인의 매력에 빠져 들게 되었다.
+              4차 산업혁명이 중요한 가치를 가지게 될 시대, 미래를 짊어지게 될
+              젊은이들이 앞으로의 IT업계에서 시발 주자가 되어 이끌어나갈
+              원동력이 되길 바란다.
             </TextBox>
           </ItemWrapper>
           <ItemWrapper>
@@ -174,8 +171,8 @@ export default function AboutKGASlideSecond() {
                   alignItems: "center",
                 }}
               >
-                <TextOne>김재연</TextOne>
-                <TextTwo>부원장</TextTwo>
+                <TextOne>김진황</TextOne>
+                <TextTwo>프로그래밍</TextTwo>
               </div>
             </div>
 
@@ -188,11 +185,13 @@ export default function AboutKGASlideSecond() {
               }}
             ></div>
             <TextBox>
-              게임 개발과 인연을 맺은 지 어느덧 30년, 우리나라 게임 기획자의
-              1%가 저의 제자입니다. 항상 연구하고 시행착오를 극복하기 위해
-              노력했기에 가능했습니다. 인생의 중요한 시기에 취업을 위해 KGA를
-              찾아오는 학생들의 간절함을 이해 합니다. 그렇기에 "저는 KGA에서
-              교육을 받았습니다"라는 취업 만능 열쇠를 만듭니다.
+              나만의 공간을 창조하고 싶을 때, 우리는 다양한 방법을 떠올린다.
+              생각, 글쓰기, 그림 그리기, 건축… 내가 창조한 공간을 공유하고 싶을
+              때, 우리는 마찬가지로 다양한 방법을 사용한다. 대화, 보여주기,
+              시연, 출판…. 우리는 그 어느 때보다 손쉽게 창조하고 공유할 수 있는
+              시대에 살고 있다. 물론, 그 일은 생각보다 지루하고 잠들어 있는
+              논리력을 필요로 하는 작업일 수 있다. 그렇기에 노력할 가치가 있고
+              재미와 보람을 느낀다.
             </TextBox>
           </ItemWrapper>
           <ItemWrapper>
@@ -215,8 +214,8 @@ export default function AboutKGASlideSecond() {
                   alignItems: "center",
                 }}
               >
-                <TextOne>서혁준</TextOne>
-                <TextTwo>부원장</TextTwo>
+                <TextOne>김기원</TextOne>
+                <TextTwo>게임 기획</TextTwo>
               </div>
             </div>
 
@@ -229,11 +228,615 @@ export default function AboutKGASlideSecond() {
               }}
             ></div>
             <TextBox>
-              게임 개발과 인연을 맺은 지 어느덧 30년, 우리나라 게임 기획자의
-              1%가 저의 제자입니다. 항상 연구하고 시행착오를 극복하기 위해
-              노력했기에 가능했습니다. 인생의 중요한 시기에 취업을 위해 KGA를
-              찾아오는 학생들의 간절함을 이해 합니다. 그렇기에 "저는 KGA에서
-              교육을 받았습니다"라는 취업 만능 열쇠를 만듭니다.
+              게임은 선사시대부터 있었던 사피엔스 고유의 특성입니다.
+              게임 기획은 뇌 과학 이론까지 흘러가기도 합니다. 그래서,
+              게임 기획은 너무나 멋진 일이고, 그렇기에 실무 위주 스파르타 교육을
+              받아야만 합니다.
+              KGA는 전문 선수를 육성하는 시스템으로, 여러분이 기획자가 될 때까지
+              육성합니다. 기획자로 입문하고 싶은 분은 준비하실 건 별거 없습니다.
+              마음만 단단히 먹고 오시길 바랍니다. 그럼 기획자 될 수 있습니다.
+            </TextBox>
+          </ItemWrapper>
+          <ItemWrapper>
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "space-around",
+                alignItems: "center",
+                width: "95%",
+                height: "60%",
+              }}
+            >
+              <ImageWrapper Image={FaceImage}></ImageWrapper>
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                <TextOne>이창희</TextOne>
+                <TextTwo>프로그래밍</TextTwo>
+              </div>
+            </div>
+
+            <div
+              style={{
+                width: "90%",
+                height: "0.2vw",
+                backgroundColor: "#lightgray",
+                marginTop: "0.5vw",
+              }}
+            ></div>
+            <TextBox>
+              임베디드 전공으로 첫 코딩을 시작했다. 프로그래밍에는 단기간에
+              실력이 향상되는 편법이라는 것이 없다. 좋은 개발자의 조건은 최대한
+              코딩 하지 않고 결과를 낼 수 있는 능력, 시간을 지키는 것이라고
+              생각한다. 지식과 경험을 바탕으로 학생들을 지도하고 멘토링을 하면서
+              수강생들이 신입 개발자로서의 새로운 커리어를 시작할 수 있도록 함께
+              고민하고 노력한다.
+            </TextBox>
+          </ItemWrapper>
+          <ItemWrapper>
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "space-around",
+                alignItems: "center",
+                width: "95%",
+                height: "60%",
+              }}
+            >
+              <ImageWrapper Image={FaceImage}></ImageWrapper>
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                <TextOne>곽인구</TextOne>
+                <TextTwo>웹,앱,블록체인</TextTwo>
+              </div>
+            </div>
+
+            <div
+              style={{
+                width: "90%",
+                height: "0.2vw",
+                backgroundColor: "#lightgray",
+                marginTop: "0.5vw",
+              }}
+            ></div>
+            <TextBox>
+              ‘개발’이라는 것은 나를 위한 것이 아닌, 사용자를 위해서 만드는
+              것이라고 생각합니다. 나의 결과물이 다른 사람에게
+              즐거움과 편리함을 제공했을 때
+              짜릿함은 어떠한 말로도 표현 할 수 없습니다. 이러한 즐거움을 같이
+              느낄 수 있게 도와드리겠습니다.
+            </TextBox>
+          </ItemWrapper>
+          <ItemWrapper>
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "space-around",
+                alignItems: "center",
+                width: "95%",
+                height: "60%",
+              }}
+            >
+              <ImageWrapper Image={FaceImage}></ImageWrapper>
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                <TextOne>김건</TextOne>
+                <TextTwo>블록체인,웹,취업지원</TextTwo>
+              </div>
+            </div>
+
+            <div
+              style={{
+                width: "90%",
+                height: "0.2vw",
+                backgroundColor: "#lightgray",
+                marginTop: "0.5vw",
+              }}
+            ></div>
+            <TextBox>
+              빠르게 변하는 시대에 발 맞추기 위해 프로그래밍 공부를
+              시작했습니다. 꾸준한 시간 투자와 배우려는 자세가 개발자의 중요한
+              가치라고 생각합니다. KGA에서 새롭게 프로그래밍 공부를 시작하는
+              학생들이 지식을 잘 습득하고 취업할 수 있도록 지도하는 것이
+              목표입니다.
+            </TextBox>
+          </ItemWrapper>
+          <ItemWrapper>
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "space-around",
+                alignItems: "center",
+                width: "95%",
+                height: "60%",
+              }}
+            >
+              <ImageWrapper Image={FaceImage}></ImageWrapper>
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                <TextOne>김정택</TextOne>
+                <TextTwo>게임 프로그래밍</TextTwo>
+              </div>
+            </div>
+
+            <div
+              style={{
+                width: "90%",
+                height: "0.2vw",
+                backgroundColor: "#lightgray",
+                marginTop: "0.5vw",
+              }}
+            ></div>
+            <TextBox>
+              자신의 생각을 풀어나가는 것, 그것이 프로그램이라고 나는 단언할 수
+              있다. 나의 프로그래머로서의 길은 새로운 문제를 어떻게 풀어나갈지의
+              벽을 마주치는 것의 반복이었다. 이 벽을 부수는 것은 수많은 공부를
+              통한 체력 강화, 그리고 아이디어의 약점을 파악하는 것이다.
+              학생들에게 말한다. ‘매일 공부하여 어떤 벽을 만나더라도 부술 수
+              있는 체력과 아이디어를 가지도록 노력해야 한다.’
+            </TextBox>
+          </ItemWrapper>
+          <ItemWrapper>
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "space-around",
+                alignItems: "center",
+                width: "95%",
+                height: "60%",
+              }}
+            >
+              <ImageWrapper Image={FaceImage}></ImageWrapper>
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                <TextOne>임용규</TextOne>
+                <TextTwo>VR, 게임 프로그래밍</TextTwo>
+              </div>
+            </div>
+
+            <div
+              style={{
+                width: "90%",
+                height: "0.2vw",
+                backgroundColor: "#lightgray",
+                marginTop: "0.5vw",
+              }}
+            ></div>
+            <TextBox>
+              학생이 포기하지 않으면 포기하지 않는다. 개발자로서 삽질과 향상심의
+              마음가짐을 가장 중요하게 생각하고, 기본에 대해서는 같은 설명이라도
+              납득이 될 때까지 지도해줄 수 있는 끈기있는 교육자이다. 응용에
+              대해서는 스스로 깨우칠 수 있도록 방향성을 제시해주며, 기술교육대학
+              출신으로서 체계화된 교육방식과 실무지식으로 갖추어진 현업과 가까운
+              지도를 진행한다.
+            </TextBox>
+          </ItemWrapper>
+          <ItemWrapper>
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "space-around",
+                alignItems: "center",
+                width: "95%",
+                height: "60%",
+              }}
+            >
+              <ImageWrapper Image={FaceImage}></ImageWrapper>
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                <TextOne>정원</TextOne>
+                <TextTwo>게임 기획</TextTwo>
+              </div>
+            </div>
+
+            <div
+              style={{
+                width: "90%",
+                height: "0.2vw",
+                backgroundColor: "#lightgray",
+                marginTop: "0.5vw",
+              }}
+            ></div>
+            <TextBox>
+              여러 장르 게임을 만들어본 경험이 있는 기획자.
+              다양한 경험을 살려 게임기획자로서의 필요한 역량과 지식을 전달하기 위해 노력하고 있다.
+              끈기와 참을성을 가지고 어떤 학생이라도
+              포기하지 않으려는 마인드를 가지고 있으며, 학생들에게
+              기획자로서 게임을 만드는 즐거움을 알려주고 취업까지 연결
+              지을 수 있도록 노력하고 있다.
+            </TextBox>
+          </ItemWrapper>
+          <ItemWrapper>
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "space-around",
+                alignItems: "center",
+                width: "95%",
+                height: "60%",
+              }}
+            >
+              <ImageWrapper Image={FaceImage}></ImageWrapper>
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                <TextOne>조한별</TextOne>
+                <TextTwo>게임 프로그래밍</TextTwo>
+              </div>
+            </div>
+
+            <div
+              style={{
+                width: "90%",
+                height: "0.2vw",
+                backgroundColor: "#lightgray",
+                marginTop: "0.5vw",
+              }}
+            ></div>
+            <TextBox>
+              게임을 사랑하며 게임을 통해 다른 사람에게 행복을 주기 위해 게임
+              개발을 시작했다. 학생들의 기술과 소통 능력을 길러 취업까지
+              연계시키는 멘토링을 하고 있다. 취업을 하고 웃으며 학원을 나가는
+              수강생을 보면서 보람을 느낀다. 꾸준한 자기 개발과 노력은 결코
+              배신하지 않으며 더 품격 있는 개발자의 길로 인도해 줄 것이다.
+            </TextBox>
+          </ItemWrapper>
+          <ItemWrapper>
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "space-around",
+                alignItems: "center",
+                width: "95%",
+                height: "60%",
+              }}
+            >
+              <ImageWrapper Image={FaceImage}></ImageWrapper>
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                <TextOne>최선문</TextOne>
+                <TextTwo>게임 프로그래밍</TextTwo>
+              </div>
+            </div>
+
+            <div
+              style={{
+                width: "90%",
+                height: "0.2vw",
+                backgroundColor: "#lightgray",
+                marginTop: "0.5vw",
+              }}
+            ></div>
+            <TextBox>
+              시프트업에서 데스티니차일드 서버 프로그래머로 시작하여, 가르치는 것을 좋아해 교육자가 되었다.  '원하는 기업 골라서 가자'를 교육 철학으로 삼고 있으며, 학생의 니즈에 최대한 부합할 수 있도록 물심양면으로 애쓰고 있다.
+              비전공자도 충분히 프로그래밍을 잘할 수 있다고 믿으며, 학생의 성장하는 모습에 뿌듯함을 느끼고 있다.
+            </TextBox>
+          </ItemWrapper>
+          <ItemWrapper>
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "space-around",
+                alignItems: "center",
+                width: "95%",
+                height: "60%",
+              }}
+            >
+              <ImageWrapper Image={FaceImage}></ImageWrapper>
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                <TextOne>최성락</TextOne>
+                <TextTwo>게임 기획</TextTwo>
+              </div>
+            </div>
+
+            <div
+              style={{
+                width: "90%",
+                height: "0.2vw",
+                backgroundColor: "#lightgray",
+                marginTop: "0.5vw",
+              }}
+            ></div>
+            <TextBox>
+              내가 원하는 게임을 실제로 만드려면 어떻게 해야 할까? 이런 막연한
+              생각으로 개발에 뛰어든 지 오랜 시간이 지났다. 그 동안 많은 것을
+              얻고 몰랐던 지식들을 배워가며 여러 동료들도 생기게 되었다. 이제
+              이것들을 어떻게 전달할지 고민하는 것이 나의 새로운 목표가 되었다.
+            </TextBox>
+          </ItemWrapper>
+          <ItemWrapper>
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "space-around",
+                alignItems: "center",
+                width: "95%",
+                height: "60%",
+              }}
+            >
+              <ImageWrapper Image={FaceImage}></ImageWrapper>
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                <TextOne>최상문</TextOne>
+                <TextTwo>게임 프로그래밍</TextTwo>
+              </div>
+            </div>
+
+            <div
+              style={{
+                width: "90%",
+                height: "0.2vw",
+                backgroundColor: "#lightgray",
+                marginTop: "0.5vw",
+              }}
+            ></div>
+            <TextBox>
+              게임과 컴퓨터를 좋아하여 관련 학과를 전공 중, 프로그래밍의 재미를
+              알게 되었다. 월드 오브 워크래프트라는 게임에 빠지게 된 후, 대학을
+              졸업하고 진로를 걱정할 때 게임을 직접 만들어 보고 싶어 게임
+              프로그래밍의 길을 가게 되었다. 학생들에게 게임 프로그래밍의 재미와
+              스스로 개발을 할 수 있는 역량을 발휘할 수 있게 하는게 목표다.
+            </TextBox>
+          </ItemWrapper>
+          <ItemWrapper>
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "space-around",
+                alignItems: "center",
+                width: "95%",
+                height: "60%",
+              }}
+            >
+              <ImageWrapper Image={FaceImage}></ImageWrapper>
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                <TextOne>김예림</TextOne>
+                <TextTwo>매니저</TextTwo>
+              </div>
+            </div>
+
+            <div
+              style={{
+                width: "90%",
+                height: "0.2vw",
+                backgroundColor: "#lightgray",
+                marginTop: "0.5vw",
+              }}
+            ></div>
+            <TextBox>
+              '노력하는 자에게 인생은 미소 짓는다.' 여러분이 이루고자 하는
+              목표에 가까워 졌습니다. 항상 여러분들을 응원하도록 하겠습니다 :)
+            </TextBox>
+          </ItemWrapper>
+          <ItemWrapper>
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "space-around",
+                alignItems: "center",
+                width: "95%",
+                height: "60%",
+              }}
+            >
+              <ImageWrapper Image={FaceImage}></ImageWrapper>
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                <TextOne>황인경</TextOne>
+                <TextTwo>매니저</TextTwo>
+              </div>
+            </div>
+
+            <div
+              style={{
+                width: "90%",
+                height: "0.2vw",
+                backgroundColor: "#lightgray",
+                marginTop: "0.5vw",
+              }}
+            ></div>
+            <TextBox>
+              10년이 넘는 기간 동안 교육기관에 근무를 해오면서 쌓아온 약
+              5000여명의 직업상담 데이터를 기반으로 KGA를 찾아 주신 모든
+              분들에게 최선의 진로 탐색을 도와드리겠습니다.
+            </TextBox>
+          </ItemWrapper>
+          <ItemWrapper>
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "space-around",
+                alignItems: "center",
+                width: "95%",
+                height: "60%",
+              }}
+            >
+              <ImageWrapper Image={FaceImage}></ImageWrapper>
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                <TextOne>송재오</TextOne>
+                <TextTwo>매니저</TextTwo>
+              </div>
+            </div>
+
+            <div
+              style={{
+                width: "90%",
+                height: "0.2vw",
+                backgroundColor: "#lightgray",
+                marginTop: "0.5vw",
+              }}
+            ></div>
+            <TextBox>
+              꿈을 향해 1년이란 시간을 달리는 여러분을 위한 뉴스피드가
+              되어드리겠습니다 
+            </TextBox>
+          </ItemWrapper>
+          <ItemWrapper>
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "space-around",
+                alignItems: "center",
+                width: "95%",
+                height: "60%",
+              }}
+            >
+              <ImageWrapper Image={FaceImage}></ImageWrapper>
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                <TextOne>정지은</TextOne>
+                <TextTwo>매니저</TextTwo>
+              </div>
+            </div>
+
+            <div
+              style={{
+                width: "90%",
+                height: "0.2vw",
+                backgroundColor: "#lightgray",
+                marginTop: "0.5vw",
+              }}
+            ></div>
+            <TextBox>
+              무엇이든 물어보세요. 환한 미소로 답해 드리겠습니다. 하나부터
+              열까지 차근차근 설명해 드리겠습니다. 사소한 것도 좋으니 언제든
+              편하게 문의해 주세요.
+            </TextBox>
+          </ItemWrapper>
+          <ItemWrapper>
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "space-around",
+                alignItems: "center",
+                width: "95%",
+                height: "60%",
+              }}
+            >
+              <ImageWrapper Image={FaceImage}></ImageWrapper>
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                <TextOne>강명규</TextOne>
+                <TextTwo>매니저</TextTwo>
+              </div>
+            </div>
+
+            <div
+              style={{
+                width: "90%",
+                height: "0.2vw",
+                backgroundColor: "#lightgray",
+                marginTop: "0.5vw",
+              }}
+            ></div>
+            <TextBox>
+              여러분들의 목표달성을 위해 보이지 않는 곳에서 항상 서포트하고
+              있겠습니다.
             </TextBox>
           </ItemWrapper>
         </SlideColumnWrapper>

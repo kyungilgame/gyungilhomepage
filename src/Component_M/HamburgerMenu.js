@@ -109,10 +109,11 @@ const HamburgerMenu = ({ menuState, SetMenuState }) => {
         Q{`&`}A
       </a>
       <a
-        onClick={() => {
-          SetMenuState(4);
-          setIsOpen(false);
-        }}
+        // onClick={() => {
+        //   SetMenuState(4);
+        //   setIsOpen(false);
+        // }}
+        href="https://forms.gle/bNkmRwr2wMwfHBZp7 "
         className="Apply"
         style={{ cursor: "pointer" }}
       >

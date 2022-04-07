@@ -5,7 +5,7 @@ import FaceImage from "../Image/face/Anonymous.png";
 
 const ItemWrapper = styled.div`
   width: 95%;
-  height: 80%;
+  height: 90%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -51,7 +51,7 @@ const TextThree = styled.div`
 
 const TextBox = styled.div`
   font-family: "Pretendard-Regular";
-  font-size: 1.2vw;
+  font-size: 2vw;
   color: #101010;
   width: 80%;
   height: 55%;

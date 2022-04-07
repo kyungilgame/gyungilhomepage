@@ -12,7 +12,7 @@ const ContentsOneContainer = styled.div`
   position: fixed;
   bottom: 5vw;
   width: 80%;
-  height: 25vw;
+  height: 22vw;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
@@ -21,7 +21,7 @@ const ContentsOneContainer = styled.div`
   border-radius: 1vw;
   background-size: 17vw 1.3vw;
   background-image: url(${CTAArrow});
-  background-position: right 54% bottom 73%;
+  background-position: right 54% bottom 69%;
   background-repeat: no-repeat;
   box-shadow: 0.1vw 0.1vw 0.1vw 0.1vw #00ffd6;
 `;

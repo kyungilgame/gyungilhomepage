@@ -9,13 +9,13 @@ import leftArrow from "../Image/leftArrow.png";
 import styled from "styled-components";
 
 const Container = styled.div`
-  width: 90%;
+  width: 100%;
   overflow: hidden; // 선을 넘어간 이미지들은 보이지 않도록 처리합니다.
 `;
 const Button = styled.button`
   all: unset;
-  width: 3vw;
-  height: 3vw;
+  width: 5vw;
+  height: 5vw;
   color: #101010;
   display: flex;
   justify-content: center;
@@ -31,12 +31,15 @@ const Button = styled.button`
   }}
 `;
 const SliderContainer = styled.div`
-  width: 200%;
   height: 80vw;
   display: flex; //이미지들을 가로로 나열합니다.
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
+
+  ${({ first }) => {
+    return first ? `width: 200%` : `width: 950%`;
+  }}
 `;
 
 const SlideSelectorWrapper = styled.div`
@@ -49,11 +52,12 @@ const SlideSelectorWrapper = styled.div`
   margin-top: 3vw;
 `;
 
-const TOTAL_SLIDES = 3; // 7장 19명
-
 export default function AboutKGACarousel_M({ first }) {
   const [currentSlide, setCurrentSlide] = useState(0);
   const slideRef = useRef(null);
+
+  let TOTAL_SLIDES = 3;
+  first ? (TOTAL_SLIDES = 3) : (TOTAL_SLIDES = 18); // 7장 19명:
 
   const nextSlide = () => {
     if (currentSlide >= TOTAL_SLIDES) {
@@ -73,7 +77,12 @@ export default function AboutKGACarousel_M({ first }) {
 
   useEffect(() => {
     slideRef.current.style.transition = "all 0.5s ease-in-out";
-    slideRef.current.style.transform = `translateX(-${currentSlide * 50}%`; // 백틱을 사용하여 슬라이드로 이동하는 애니메이션을 만듭니다.
+
+    first
+      ? (slideRef.current.style.transform = `translateX(-${currentSlide * 50}%`)
+      : (slideRef.current.style.transform = `translateX(-${
+          currentSlide * 10.5
+        }%`);
   }, [currentSlide]);
 
   const SlideNotSelectedCircle = styled.div`
@@ -113,7 +122,7 @@ export default function AboutKGACarousel_M({ first }) {
           flexDirection: "row",
           justifyContent: "center",
           alignItems: "center",
-          width: "80%",
+          width: "90%",
         }}
       >
         <Button
@@ -122,7 +131,7 @@ export default function AboutKGACarousel_M({ first }) {
           Image={leftArrow}
         ></Button>
         <Container>
-          <SliderContainer ref={slideRef}>
+          <SliderContainer ref={slideRef} first={first}>
             {first === true ? <AboutKGASlideFirst /> : <AboutKGASlideSecond />}
           </SliderContainer>
         </Container>
@@ -132,52 +141,55 @@ export default function AboutKGACarousel_M({ first }) {
           Image={rightArrow}
         ></Button>
       </div>
-      <SlideSelectorWrapper>
-        {currentSlide === 0 ? (
-          <SlideSelectedCircle
-            onClick={() => setCurrentSlide(0)}
-            first={first}
-          />
-        ) : (
-          <SlideNotSelectedCircle
-            onClick={() => setCurrentSlide(0)}
-            first={first}
-          />
-        )}
-        {currentSlide === 1 ? (
-          <SlideSelectedCircle
-            onClick={() => setCurrentSlide(1)}
-            first={first}
-          />
-        ) : (
-          <SlideNotSelectedCircle
-            onClick={() => setCurrentSlide(1)}
-            first={first}
-          />
-        )}
-        {currentSlide === 2 ? (
-          <SlideSelectedCircle
-            onClick={() => setCurrentSlide(2)}
-            first={first}
-          />
-        ) : (
-          <SlideNotSelectedCircle
-            onClick={() => setCurrentSlide(2)}
-            first={first}
-          />
-        )}
-        {currentSlide === 3 ? (
-          <SlideSelectedCircle
-            onClick={() => setCurrentSlide(3)}
-            first={first}
-          />
-        ) : (
-          <SlideNotSelectedCircle
-            onClick={() => setCurrentSlide(3)}
-            first={first}
-          />
-        )}
-      </SlideSelectorWrapper>
+
+      {first === true ? (
+        <SlideSelectorWrapper>
+          {currentSlide === 0 ? (
+            <SlideSelectedCircle
+              onClick={() => setCurrentSlide(0)}
+              first={first}
+            />
+          ) : (
+            <SlideNotSelectedCircle
+              onClick={() => setCurrentSlide(0)}
+              first={first}
+            />
+          )}
+          {currentSlide === 1 ? (
+            <SlideSelectedCircle
+              onClick={() => setCurrentSlide(1)}
+              first={first}
+            />
+          ) : (
+            <SlideNotSelectedCircle
+              onClick={() => setCurrentSlide(1)}
+              first={first}
+            />
+          )}
+          {currentSlide === 2 ? (
+            <SlideSelectedCircle
+              onClick={() => setCurrentSlide(2)}
+              first={first}
+            />
+          ) : (
+            <SlideNotSelectedCircle
+              onClick={() => setCurrentSlide(2)}
+              first={first}
+            />
+          )}
+          {currentSlide === 3 ? (
+            <SlideSelectedCircle
+              onClick={() => setCurrentSlide(3)}
+              first={first}
+            />
+          ) : (
+            <SlideNotSelectedCircle
+              onClick={() => setCurrentSlide(3)}
+              first={first}
+            />
+          )}
+        </SlideSelectorWrapper>
+      ) : null}
     </div>
   );
 }

@@ -35,6 +35,12 @@ const EachItemName = styled.div`
   color: #101010;
   margin-top: 1vw;
 `;
+
+const EachItemCourse = styled.div`
+  font-family: "SEBANG-Gothic-Regular";
+  font-size: 1vw;
+  color: #101010;
+`;
 const EachItemComment = styled.div`
   font-family: "Pretendard-Regular";
   font-size: 0.7vw;
@@ -51,6 +57,7 @@ export default function Slide() {
         <EachItemWrapper>
           <EachItemImage></EachItemImage>
           <EachItemName>오준환</EachItemName>
+          <EachItemCourse>게임 프로그래밍</EachItemCourse>
           <EachItemComment>
             함께 일할 ‘후배 프로그래머’를 가르친다는 마음가짐으로 교육을 하고
             있다. 지식과 훈련의 균형을 중요하게 생각하고, 프로그래밍뿐만 아니라
@@ -61,6 +68,7 @@ export default function Slide() {
         <EachItemWrapper>
           <EachItemImage></EachItemImage>
           <EachItemName>박경배</EachItemName>
+          <EachItemCourse>블록체인</EachItemCourse>
           <EachItemComment>
             Bitcoin 열기가 대한민국에 도래했을 때 블록체인에 관심을 갖고
             알트코인 개발 회사에 입사해 블록체인의 매력에 빠져 들게 되었다. 4차
@@ -72,6 +80,7 @@ export default function Slide() {
         <EachItemWrapper>
           <EachItemImage></EachItemImage>
           <EachItemName>김진황</EachItemName>
+          <EachItemCourse>프로그래밍</EachItemCourse>
           <EachItemComment>
             나만의 공간을 창조하고 싶을 때, 우리는 다양한 방법을 떠올린다. 생각,
             글쓰기, 그림 그리기, 건축… 내가 창조한 공간을 공유하고 싶을 때,
@@ -87,6 +96,7 @@ export default function Slide() {
         <EachItemWrapper>
           <EachItemImage></EachItemImage>
           <EachItemName>김기원</EachItemName>
+          <EachItemCourse>게임 기획</EachItemCourse>
           <EachItemComment>
             게임은 선사시대부터 있었던 사피엔스 고유의 특성입니다. 게임 기획은
             뇌 과학 이론까지 흘러가기도 합니다. 그래서, 게임 기획은 너무나 멋진
@@ -99,6 +109,7 @@ export default function Slide() {
         <EachItemWrapper>
           <EachItemImage></EachItemImage>
           <EachItemName>이창희</EachItemName>
+          <EachItemCourse>프로그래밍</EachItemCourse>
           <EachItemComment>
             임베디드 전공으로 첫 코딩을 시작했다. 프로그래밍에는 단기간에 실력이
             향상되는 편법이라는 것이 없다. 좋은 개발자의 조건은 최대한 코딩 하지
@@ -111,6 +122,7 @@ export default function Slide() {
         <EachItemWrapper>
           <EachItemImage></EachItemImage>
           <EachItemName>곽인구</EachItemName>
+          <EachItemCourse>웹,앱,블록체인</EachItemCourse>
           <EachItemComment>
             ‘개발’이라는 것은 나를 위한 것이 아닌, 사용자를 위해서 만드는
             것이라고 생각합니다. 나의 결과물이 다른 사람에게 즐거움과 편리함을
@@ -123,6 +135,7 @@ export default function Slide() {
         <EachItemWrapper>
           <EachItemImage></EachItemImage>
           <EachItemName>김건</EachItemName>
+          <EachItemCourse>블록체인,웹,취업지원</EachItemCourse>
           <EachItemComment>
             빠르게 변하는 시대에 발 맞추기 위해 프로그래밍 공부를 시작했습니다.
             꾸준한 시간 투자와 배우려는 자세가 개발자의 중요한 가치라고
@@ -133,6 +146,7 @@ export default function Slide() {
         <EachItemWrapper>
           <EachItemImage></EachItemImage>
           <EachItemName>김정택</EachItemName>
+          <EachItemCourse>게임 프로그래밍</EachItemCourse>
           <EachItemComment>
             자신의 생각을 풀어나가는 것, 그것이 프로그램이라고 나는 단언할 수
             있다. 나의 프로그래머로서의 길은 새로운 문제를 어떻게 풀어나갈지의
@@ -145,6 +159,7 @@ export default function Slide() {
         <EachItemWrapper>
           <EachItemImage></EachItemImage>
           <EachItemName>임용규</EachItemName>
+          <EachItemCourse>VR,게임 프로그래밍</EachItemCourse>
           <EachItemComment>
             학생이 포기하지 않으면 포기하지 않는다. 개발자로서 삽질과 향상심의
             마음가짐을 가장 중요하게 생각하고, 기본에 대해서는 같은 설명이라도
@@ -159,6 +174,7 @@ export default function Slide() {
         <EachItemWrapper>
           <EachItemImage></EachItemImage>
           <EachItemName>정원</EachItemName>
+          <EachItemCourse>게임 기획</EachItemCourse>
           <EachItemComment>
             여러 장르 게임을 만들어본 경험이 있는 기획자.
             다양한 경험을 살려 게임기획자로서의 필요한 역량과 지식을 전달하기 위해 노력하고 있다.
@@ -171,6 +187,7 @@ export default function Slide() {
         <EachItemWrapper>
           <EachItemImage></EachItemImage>
           <EachItemName>조한별</EachItemName>
+          <EachItemCourse>게임 프로그래밍</EachItemCourse>
           <EachItemComment>
             게임을 사랑하며 게임을 통해 다른 사람에게 행복을 주기 위해 게임
             개발을 시작했다. 학생들의 기술과 소통 능력을 길러 취업까지
@@ -182,6 +199,7 @@ export default function Slide() {
         <EachItemWrapper>
           <EachItemImage></EachItemImage>
           <EachItemName>최선문</EachItemName>
+          <EachItemCourse>게임 프로그래밍</EachItemCourse>
           <EachItemComment>
             시프트업에서 데스티니차일드 서버 프로그래머로 시작하여, 가르치는 것을 좋아해 교육자가 되었다.  '원하는 기업 골라서 가자'를 교육 철학으로 삼고 있으며, 학생의 니즈에 최대한 부합할 수 있도록 물심양면으로 애쓰고 있다.
             비전공자도 충분히 프로그래밍을 잘할 수 있다고 믿으며, 학생의 성장하는 모습에 뿌듯함을 느끼고 있다.
@@ -193,6 +211,7 @@ export default function Slide() {
           <EachItemWrapper>
             <EachItemImage></EachItemImage>
             <EachItemName>최성락</EachItemName>
+            <EachItemCourse>게임 기획</EachItemCourse>
             <EachItemComment>
               내가 원하는 게임을 실제로 만드려면 어떻게 해야 할까? 이런 막연한
               생각으로 개발에 뛰어든 지 오랜 시간이 지났다. 그 동안 많은 것을
@@ -203,6 +222,7 @@ export default function Slide() {
           <EachItemWrapper>
             <EachItemImage></EachItemImage>
             <EachItemName>최상문</EachItemName>
+            <EachItemCourse>게임 프로그래밍</EachItemCourse>
             <EachItemComment>
               게임과 컴퓨터를 좋아하여 관련 학과를 전공 중, 프로그래밍의 재미를
               알게 되었다. 월드 오브 워크래프트라는 게임에 빠지게 된 후, 대학을
@@ -214,6 +234,7 @@ export default function Slide() {
           <EachItemWrapper>
             <EachItemImage></EachItemImage>
             <EachItemName>김예림</EachItemName>
+            <EachItemCourse>매니저</EachItemCourse>
             <EachItemComment>
               '노력하는 자에게 인생은 미소 짓는다.' 여러분이 이루고자 하는
               목표에 가까워 졌습니다. 항상 여러분들을 응원하도록 하겠습니다 :)
@@ -226,6 +247,7 @@ export default function Slide() {
           <EachItemWrapper>
             <EachItemImage></EachItemImage>
             <EachItemName>황인경</EachItemName>
+            <EachItemCourse>매니저</EachItemCourse>
             <EachItemComment>
               10년이 넘는 기간 동안 교육기관에 근무를 해오면서 쌓아온 약
               5000여명의 직업상담 데이터를 기반으로 KGA를 찾아 주신 모든
@@ -235,6 +257,7 @@ export default function Slide() {
           <EachItemWrapper>
             <EachItemImage></EachItemImage>
             <EachItemName>송재오</EachItemName>
+            <EachItemCourse>매니저</EachItemCourse>
             <EachItemComment>
               꿈을 향해 1년이란 시간을 달리는 여러분을 위한 뉴스피드가
               되어드리겠습니다 
@@ -243,6 +266,7 @@ export default function Slide() {
           <EachItemWrapper>
             <EachItemImage></EachItemImage>
             <EachItemName>정지은</EachItemName>
+            <EachItemCourse>매니저</EachItemCourse>
             <EachItemComment>
               무엇이든 물어보세요. 환한 미소로 답해 드리겠습니다. 하나부터
               열까지 차근차근 설명해 드리겠습니다. 사소한 것도 좋으니 언제든
@@ -255,13 +279,18 @@ export default function Slide() {
         <EachItemWrapper>
           <EachItemImage></EachItemImage>
           <EachItemName>강명규</EachItemName>
+          <EachItemCourse>매니저</EachItemCourse>
           <EachItemComment>
             여러분들의 목표달성을 위해 보이지 않는 곳에서 항상 서포트하고
             있겠습니다.
           </EachItemComment>
         </EachItemWrapper>
-        <EachItemWrapper></EachItemWrapper>
-        <EachItemWrapper></EachItemWrapper>
+        <EachItemWrapper
+          style={{ backgroundColor: "#f0f0f0" }}
+        ></EachItemWrapper>
+        <EachItemWrapper
+          style={{ backgroundColor: "#f0f0f0" }}
+        ></EachItemWrapper>
       </ItemWrapper>
     </>
   );

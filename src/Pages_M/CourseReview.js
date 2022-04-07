@@ -181,7 +181,7 @@ const CourseReview = () => {
       <ContentsBoxTwoContainer></ContentsBoxTwoContainer>
       <ContentsBoxThreeContainer>
         <TextSizeOne>블록체인 코스</TextSizeOne>
-        <TextSizeTwo>취업률 90% 달성!</TextSizeTwo>
+        <TextSizeTwo>취업률 91% 달성!</TextSizeTwo>
       </ContentsBoxThreeContainer>
       <ContentsBoxFourContainer>
         <TextSizeThree>KGA 수료생을 선택한 기업</TextSizeThree>

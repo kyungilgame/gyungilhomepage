@@ -30,7 +30,7 @@ const Button = styled.button`
 `;
 const SliderContainer = styled.div`
   width: 200%;
-  height: 30vw;
+  height: 25vw;
   display: flex; //이미지들을 가로로 나열합니다.
   flex-direction: row;
   justify-content: flex-start;
@@ -39,7 +39,7 @@ const SliderContainer = styled.div`
 
 const SlideSelectorWrapper = styled.div`
   width: 20vw;
-  height: 2vw;
+  height: 10vw;
   display: flex;
   flex-direction: row;
   justify-content: space-around;

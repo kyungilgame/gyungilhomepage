@@ -163,7 +163,7 @@ const CourseReview = () => {
       <ContentsBoxTwoContainer>
         <VideoPlayWrapper>
           <ReactPlayer
-            url="https://youtu.be/dR8YaZLBmTQ"
+            url="https://youtu.be/n0KEoy53BRw"
             width="50vw"
             height="30vw"
           />
@@ -171,7 +171,7 @@ const CourseReview = () => {
       </ContentsBoxTwoContainer>
       <ContentsBoxThreeContainer>
         <TextSizeOne>블록체인 코스</TextSizeOne>
-        <TextSizeTwo>취업률 90% 달성!</TextSizeTwo>
+        <TextSizeTwo>취업률 91% 달성!</TextSizeTwo>
       </ContentsBoxThreeContainer>
       <ContentsBoxFourContainer>
         <TextSizeThree>KGA 수료생을 선택한 기업</TextSizeThree>

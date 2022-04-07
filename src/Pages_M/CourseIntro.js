@@ -139,10 +139,11 @@ const CourseIntro = () => {
           수강생들은 매일 오전 주어진 문제를 해결하며 기초를 다지고,
         </TextSizeTwo>
         <TextSizeTwo>
-          오후 시간에는 자습을 진행하는데 대부분의 시간을 투자합니다.
+          오후 시간에는 실습과 과제, 프로젝트 기반 훈련을 진행하는데 대부분의
+          시간을 투자합니다.
         </TextSizeTwo>
         <TextSizeTwo>
-          앞으로의 학습 방향성을 체트하며, 과제 진행 중 문제가 있을 땐
+          앞으로의 학습 방향성을 체크하며, 과제 진행 중 문제가 있을 땐
         </TextSizeTwo>
         <TextSizeTwo>상주하는 멘토와 함께 문제를 해결합니다.</TextSizeTwo>
         <TextSizeTwo>
@@ -150,7 +151,7 @@ const CourseIntro = () => {
           있습니다.
         </TextSizeTwo>
         <TextSizeTwo marginTop={"2vw"}>
-          부트캠프 기수당 수강생은 30명 수준으로 진행하고 있습니다.
+          부트캠프 기수 당 수강생은 30명 수준으로 진행하고 있습니다.
         </TextSizeTwo>
       </ContentsBoxTwoContainer>
       <ContentsBoxThreeContainer>

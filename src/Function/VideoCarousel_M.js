@@ -38,12 +38,13 @@ const SliderContainer = styled.div`
 `;
 
 const SlideSelectorWrapper = styled.div`
-  width: 20vw;
+  width: 40vw;
   height: 2vw;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
+  margin-top: 3vw;
 `;
 
 const SlideNotSelectedCircle = styled.div`

@@ -135,25 +135,30 @@ const AboutKGA = () => {
       <ContentsBoxTwoContainer>
         <TextSizeOne>ABOUT KGA</TextSizeOne>
         <TextSizeTwo style={{ marginTop: "1vw" }}>
-          게임업계를 가면 비전이 없다고 손가락질 받던 시절부터,
+          경일게임아카데미는 청년들이 자신의 꿈을 이루기 위해 얼마나 많은 고민
+          끝에 저희를 찾아오는지 알고 있습니다.
         </TextSizeTwo>
         <TextSizeTwo>
-          VR/AR이 메타버스라는 새로운 시대의 흐름을 만나기 훨씬 이전부터,
+          교육 기간은 반년 남짓이지만 이 시간이 한 청년의 인생에서는 두 번 내기
+          힘든 인생의 유일한 기회임을 잘 알고 있습니다.
         </TextSizeTwo>
         <TextSizeTwo>
-          블록체인은 미래가 없는 기술이라며 외면 받던 시절부터,
+          게임, VR, 블록체인, 메타버스 분야에 공허한 구호와 허황된 비전들이
+          얼마나 많이 난무하는 지,
         </TextSizeTwo>
         <TextSizeTwo>
-          우리는 미래의 새로운 길을 열어갈 IT 콘텐츠 분야의 직업교육을 묵묵히
-          수행해 오며
+          그로 인해 많은 청년들이 상처받고 꿈을 접게 되는지도 잘 알고 있습니다.
         </TextSizeTwo>
         <TextSizeTwo>
-          성공과 실패, 시행착오와 좌절, 그리고 도전을 통해 인재들이 가야 할 길을
-          닦고 만들어 왔습니다.
+          그렇기에 KGA는 청년의 시간과 꿈이 가진 무게감을 공감하며 모두가
+          목적지에 도달할 수 있도록
         </TextSizeTwo>
         <TextSizeTwo>
-          우리는 청년들이 미래의 IT 업계와 콘텐츠 업계를 이끌어가 인정받을 수
-          있도록 끊임없이 노력할 것입니다.
+          날마다 과거와 현재의 성과에 만족하지 않고 청년들이 가야 할 길을 닦고
+          만들어 가고 있습니다.
+        </TextSizeTwo>
+        <TextSizeTwo>
+          청년의 짐을 함께 지고 험난한 길을 함께 걷겠습니다.
         </TextSizeTwo>
       </ContentsBoxTwoContainer>
       <ContentsBoxThreeContainer>

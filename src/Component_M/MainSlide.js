@@ -45,7 +45,7 @@ const TextSizeOne = styled.div`
 
 const TextSizeTwo = styled.div`
   font-family: "SEBANG-Gothic-Regular";
-  font-size: 1vw;
+  font-size: 2vw;
   color: #101010;
 `;
 

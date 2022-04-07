@@ -139,7 +139,7 @@ const TextSizeNine = styled.div`
 
 const TextSizeTen = styled.div`
   font-family: "Pretendard-Regular";
-  font-size: 0.5vw;
+  font-size: 2vw;
   color: #f6f6f6;
 `;
 
