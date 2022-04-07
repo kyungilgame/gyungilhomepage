@@ -91,7 +91,7 @@ const AboutKGA = () => {
         <TextSizeTwo>
           두 번 내기 힘든 인생의 유일한 기회임을 잘 알고 있습니다.
         </TextSizeTwo>
-        <TextSizeTwo>
+        <TextSizeTwo style={{ marginTop: "1vw" }}>
           게임, VR, 블록체인, 메타버스 분야에 공허한 구호와 허황된 비전들이
           얼마나 많이 난무하는 지,
         </TextSizeTwo>
@@ -106,7 +106,7 @@ const AboutKGA = () => {
           날마다 과거와 현재의 성과에 만족하지 않고 청년들이 가야 할 길을 닦고
           만들어 가고 있습니다.
         </TextSizeTwo>
-        <TextSizeTwo>
+        <TextSizeTwo style={{ marginTop: "1vw" }}>
           청년의 짐을 함께 지고 험난한 길을 함께 걷겠습니다.
         </TextSizeTwo>
       </ContentsBoxTwoContainer>

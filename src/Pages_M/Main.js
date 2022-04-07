@@ -3,6 +3,7 @@ import "../Styles/css/App.css";
 
 import MainCarousel_M from "../Function/MainCarousel_M";
 import MainReviewCarousel_M from "../Function/MainReviewCarousel_M";
+import BlackBoxRibone from "../Image/BlackBoxRibone.png";
 
 import ReactPlayer from "react-player/youtube";
 
@@ -41,7 +42,7 @@ const ContentsBoxThreeContainer = styled.div`
 
 const ContentsBoxFourContainer = styled.div`
   width: 100%;
-  height: 80vw;
+  height: 90vw;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -104,7 +105,6 @@ const TextSizeFour = styled.div`
   font-size: 2.7vw;
   color: #101010;
   margin-top: 103vw;
-  z-index: 2;
 `;
 const TextSizeFive = styled.div`
   font-family: "SEBANG-Gothic-Bold";
@@ -127,7 +127,7 @@ const TextSizeSeven = styled.div`
 
 const TextSizeEight = styled.div`
   font-family: "SEBANG-Gothic-Regular";
-  font-size: 1.5vw;
+  font-size: 2vw;
   color: #00ffd6;
 `;
 
@@ -151,7 +151,7 @@ const TextSizeEleven = styled.div`
 
 const TextSizeTwelve = styled.div`
   font-family: "SEBANG-Gothic-Regular";
-  font-size: 1.2vw;
+  font-size: 2vw;
   color: #101010;
 `;
 
@@ -159,6 +159,7 @@ const TextSizeThirteen = styled.div`
   font-family: "SEBANG-Gothic-Bold";
   font-size: 3vw;
   color: #00887c;
+  margin-top: 1vw;
 `;
 
 const TextSizeFourteen = styled.div`
@@ -182,14 +183,14 @@ const TextSizeSixteen = styled.div`
 
 const TextSizeEightteen = styled.div`
   font-family: "Pretendard-Regular";
-  font-size: 1vw;
+  font-size: 2vw;
   color: #101010;
   margin-top: 1vw;
 `;
 
 const TextSizeNineteen = styled.div`
   font-family: "Pretendard-Regular";
-  font-size: 1.5vw;
+  font-size: 2vw;
   color: #101010;
 `;
 
@@ -213,7 +214,7 @@ const BlackBoxWrapper = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin: 1vw;
+  margin: 3vw;
 `;
 
 const ApplyButton = styled.button`
@@ -276,6 +277,14 @@ const MapWrapper = styled.div`
   margin: 1.5vw;
 `;
 
+const ImageWrapper = styled.img`
+  width: 10vw;
+  height: 3vw;
+  position: relative;
+  bottom: 3.6vw;
+  left: 12.2vw;
+`;
+
 const Main = ({ menuState, SetMenuState }) => {
   return (
     <>
@@ -288,7 +297,7 @@ const Main = ({ menuState, SetMenuState }) => {
         style={{
           width: "100%",
           height: "3vw",
-          backgroundColor: "#f4f4f4",
+          backgroundColor: "#f6f6f6",
           display: "flex",
           flexDirection: "column",
           justifyContent: "flex-start",
@@ -345,6 +354,7 @@ const Main = ({ menuState, SetMenuState }) => {
             }}
           >
             <BlackBoxWrapper>
+              <ImageWrapper src={BlackBoxRibone}></ImageWrapper>
               <TextSizeEight>국가기간전략훈련</TextSizeEight>
               <TextSizeNine>프로그래밍</TextSizeNine>
               <TextSizeTen>손 끝에서 구현되는 Unity 3D 게임</TextSizeTen>
@@ -353,6 +363,7 @@ const Main = ({ menuState, SetMenuState }) => {
               </ApplyButton>
             </BlackBoxWrapper>
             <BlackBoxWrapper>
+              <ImageWrapper src={BlackBoxRibone}></ImageWrapper>
               <TextSizeEight>국가기간전략훈련</TextSizeEight>
               <TextSizeNine>게임 기획</TextSizeNine>
               <TextSizeTen>게임 시놉시스부터 상용화까지</TextSizeTen>
@@ -361,7 +372,9 @@ const Main = ({ menuState, SetMenuState }) => {
               </ApplyButton>
             </BlackBoxWrapper>
             <BlackBoxWrapper>
-              <TextSizeEight>국가기간전략훈련</TextSizeEight>
+              <TextSizeEight style={{ marginTop: "3vw" }}>
+                국가기간전략훈련
+              </TextSizeEight>
               <TextSizeNine>AR / VR</TextSizeNine>
               <TextSizeTen>비대면 시대의 핵심 기술</TextSizeTen>
               <ApplyButton>
@@ -380,7 +393,9 @@ const Main = ({ menuState, SetMenuState }) => {
             }}
           >
             <BlackBoxWrapper>
-              <TextSizeEight>K-디지털 트레이닝</TextSizeEight>
+              <TextSizeEight style={{ marginTop: "3vw" }}>
+                K-디지털 트레이닝
+              </TextSizeEight>
               <TextSizeNine>블록체인</TextSizeNine>
               <TextSizeTen>차별화 된 핀테크 개발자 되기</TextSizeTen>
               <ApplyButton>
@@ -388,7 +403,9 @@ const Main = ({ menuState, SetMenuState }) => {
               </ApplyButton>
             </BlackBoxWrapper>
             <BlackBoxWrapper>
-              <TextSizeEight>K-디지털 트레이닝</TextSizeEight>
+              <TextSizeEight style={{ marginTop: "3vw" }}>
+                K-디지털 트레이닝
+              </TextSizeEight>
               <TextSizeNine>메타버스</TextSizeNine>
               <TextSizeTen>미래 사회의 새로운 패러다임</TextSizeTen>
               <ApplyButton>
@@ -468,7 +485,7 @@ const Main = ({ menuState, SetMenuState }) => {
 
             <div
               style={{
-                width: "2vw",
+                width: "5vw",
                 height: "0.2vw",
                 backgroundColor: "#101010",
                 marginTop: "1vw",
@@ -501,7 +518,7 @@ const Main = ({ menuState, SetMenuState }) => {
             <TextSizeSixteen>수강료 부담 없이 무료로 배우세요</TextSizeSixteen>
             <div
               style={{
-                width: "2vw",
+                width: "5vw",
                 height: "0.2vw",
                 backgroundColor: "#101010",
                 marginTop: "1vw",
@@ -531,7 +548,7 @@ const Main = ({ menuState, SetMenuState }) => {
             <TextSizeSixteen>취업할 때까지 책임집니다</TextSizeSixteen>
             <div
               style={{
-                width: "2vw",
+                width: "5vw",
                 height: "0.2vw",
                 backgroundColor: "#101010",
                 marginTop: "1vw",

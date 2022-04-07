@@ -31,11 +31,11 @@ const SelectionButtonSelected = styled.button`
   all: unset;
   cursor: pointer;
   width: 15vw;
-  height: 3vw;
+  height: 5vw;
   background-color: #00887c;
   border-radius: 2vw;
   font-family: "Pretendard-regular";
-  font-size: 1.3vw;
+  font-size: 3vw;
   color: #f6f6f6;
   display: flex;
   justify-content: center;
@@ -48,14 +48,14 @@ const SelectionButtonNotSelected = styled.button`
   all: unset;
   cursor: pointer;
   width: 15vw;
-  height: 3vw;
+  height: 5vw;
   background-color: #f6f6f6;
   border-radius: 2vw;
   border-color: #00887c;
   border-width: 0.1vw;
   border: solid;
   font-family: "Pretendard-regular";
-  font-size: 1.3vw;
+  font-size: 3vw;
   color: #00887c;
   display: flex;
   justify-content: center;
@@ -138,8 +138,8 @@ const QA = () => {
         <TextSizeOne>자주 묻는 질문</TextSizeOne>
         <div
           style={{
-            width: "60%",
-            height: "10vw",
+            width: "100%",
+            height: "15vw",
             display: "flex",
             flexDirection: "column",
             justifyContent: "center",

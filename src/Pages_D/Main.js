@@ -356,7 +356,7 @@ const Main = ({ menuState, SetMenuState }) => {
         style={{
           width: "100%",
           height: "3vw",
-          backgroundColor: "#f4f4f4",
+          backgroundColor: "#f6f6f6",
           display: "flex",
           flexDirection: "column",
           justifyContent: "flex-start",
@@ -440,7 +440,9 @@ const Main = ({ menuState, SetMenuState }) => {
               </ApplyButton>
             </BlackBoxWrapper>
             <BlackBoxWrapper>
-              <TextSizeEight>국가기간전략훈련</TextSizeEight>
+              <TextSizeEight style={{ marginTop: "2vw" }}>
+                국가기간전략훈련
+              </TextSizeEight>
               <TextSizeNine>AR / VR</TextSizeNine>
               <TextSizeTen>비대면 시대의 핵심 기술</TextSizeTen>
               <ApplyButton>
@@ -463,7 +465,9 @@ const Main = ({ menuState, SetMenuState }) => {
             }}
           >
             <BlackBoxWrapper>
-              <TextSizeEight>K-디지털 트레이닝</TextSizeEight>
+              <TextSizeEight style={{ marginTop: "2vw" }}>
+                K-디지털 트레이닝
+              </TextSizeEight>
               <TextSizeNine>블록체인</TextSizeNine>
               <TextSizeTen>차별화 된 핀테크 개발자 되기</TextSizeTen>
               <ApplyButton>
@@ -476,7 +480,9 @@ const Main = ({ menuState, SetMenuState }) => {
               </ApplyButton>
             </BlackBoxWrapper>
             <BlackBoxWrapper>
-              <TextSizeEight>K-디지털 트레이닝</TextSizeEight>
+              <TextSizeEight style={{ marginTop: "2vw" }}>
+                K-디지털 트레이닝
+              </TextSizeEight>
               <TextSizeNine>메타버스</TextSizeNine>
               <TextSizeTen>미래 사회의 새로운 패러다임</TextSizeTen>
               <ApplyButton>

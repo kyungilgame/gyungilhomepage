@@ -40,7 +40,6 @@ export default function ReviewSlide({ ReviewSelect }) {
       return (
         <SlideWrapper>
           <SlideColumnWrapper>
-            {" "}
             <ReviewVideo></ReviewVideo>
           </SlideColumnWrapper>
         </SlideWrapper>

@@ -76,37 +76,37 @@ const SelectionButtonSelected = styled.button`
   all: unset;
   cursor: pointer;
   width: 15vw;
-  height: 3vw;
+  height: 5vw;
   background-color: #00887c;
   border-radius: 2vw;
   font-family: "Pretendard-regular";
-  font-size: 1.2vw;
+  font-size: 3vw;
   color: #f6f6f6;
   display: flex;
   justify-content: center;
   align-items: center;
   border: solid;
   border-color: #00887c;
-  margin-left: 1vw;
+  margin-left: 5vw;
 `;
 
 const SelectionButtonNotSelected = styled.button`
   all: unset;
   cursor: pointer;
   width: 15vw;
-  height: 3vw;
+  height: 5vw;
   background-color: #f6f6f6;
   border-radius: 2vw;
   border-color: #00887c;
   border-width: 0.1vw;
   border: solid;
   font-family: "Pretendard-regular";
-  font-size: 1.2vw;
+  font-size: 3vw;
   color: #00887c;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-left: 1vw;
+  margin-left: 5vw;
 `;
 
 const TextSizeOne = styled.div`
@@ -218,21 +218,22 @@ const CourseReview = () => {
         <TextSizeSix>GDB 챌린저 수강후기</TextSizeSix>
         <div
           style={{
-            width: "80%",
-            height: "10vw",
+            width: "90%",
+            height: "15vw",
             display: "flex",
             flexDirection: "column",
             justifyContent: "center",
             alignItems: "center",
+            marginTop: "2vw",
           }}
         >
           <div
             style={{
-              width: "90%",
+              width: "100%",
               height: "50%",
               display: "flex",
               flexDirection: "row",
-              justifyContent: "flex-start",
+              justifyContent: "center",
               alignItems: "center",
             }}
           >
@@ -255,11 +256,17 @@ const CourseReview = () => {
               </SelectionButtonNotSelected>
             )}
             {ReviewSelect === 2 ? (
-              <SelectionButtonSelected onClick={() => setReviewSelect(2)}>
+              <SelectionButtonSelected
+                style={{ fontSize: "2.5vw" }}
+                onClick={() => setReviewSelect(2)}
+              >
                 #프로그래머
               </SelectionButtonSelected>
             ) : (
-              <SelectionButtonNotSelected onClick={() => setReviewSelect(2)}>
+              <SelectionButtonNotSelected
+                style={{ fontSize: "2.5vw" }}
+                onClick={() => setReviewSelect(2)}
+              >
                 #프로그래머
               </SelectionButtonNotSelected>
             )}
@@ -275,11 +282,11 @@ const CourseReview = () => {
           </div>
           <div
             style={{
-              width: "90%",
+              width: "100%",
               height: "50%",
               display: "flex",
               flexDirection: "row",
-              justifyContent: "flex-start",
+              justifyContent: "center",
               alignItems: "center",
             }}
           >
