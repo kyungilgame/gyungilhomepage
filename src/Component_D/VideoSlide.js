@@ -37,7 +37,7 @@ export default function Slide() {
         </EachItemWrapper>
         <EachItemWrapper>
           <ReactPlayer
-            url="https://youtu.be/dR8YaZLBmTQ"
+            url="https://www.youtube.com/watch?v=PBpC_W-UP6c"
             width="90%"
             height="70%"
           />
