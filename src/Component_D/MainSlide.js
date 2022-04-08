@@ -1,6 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 
+import MainCarouselImageOne from "../Image/Photo/MainCarouselImageOne.png";
+import MainCarouselImageTwo from "../Image/Photo/MainCarouselImageTwo.png";
+import MainCarouselImageThree from "../Image/Photo/MainCarouselImageThree.png";
+
 const SlideWrapper = styled.div`
   width: 100%;
   height: 100%;
@@ -25,6 +29,12 @@ const ImageContainer = styled.div`
   height: 60%;
   background-color: gray;
   border-radius: 1vw;
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  ${({ Image }) => {
+    return Image ? `background-image: url(${Image})` : null;
+  }}
 `;
 
 const ContentContainer = styled.div`
@@ -53,7 +63,7 @@ export default function MainSlide() {
   return (
     <SlideWrapper>
       <SlideColumnWrapper>
-        <ImageContainer></ImageContainer>
+        <ImageContainer Image={MainCarouselImageOne}></ImageContainer>
       </SlideColumnWrapper>
       <SlideColumnWrapper>
         <ContentContainer>
@@ -70,7 +80,7 @@ export default function MainSlide() {
         </ContentContainer>
       </SlideColumnWrapper>
       <SlideColumnWrapper>
-        <ImageContainer></ImageContainer>
+        <ImageContainer Image={MainCarouselImageTwo}></ImageContainer>
       </SlideColumnWrapper>
       <SlideColumnWrapper>
         <ContentContainer>
@@ -88,7 +98,7 @@ export default function MainSlide() {
         </ContentContainer>
       </SlideColumnWrapper>
       <SlideColumnWrapper>
-        <ImageContainer></ImageContainer>
+        <ImageContainer Image={MainCarouselImageThree}></ImageContainer>
       </SlideColumnWrapper>
       <SlideColumnWrapper>
         <ContentContainer>
