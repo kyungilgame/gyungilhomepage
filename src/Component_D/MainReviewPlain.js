@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-import FaceImage from "../Image/face/Anonymous.png";
+// import FaceImage from "../Image/face/Anonymous.png";
 
 const ItemWrapper = styled.div`
   width: 80%;

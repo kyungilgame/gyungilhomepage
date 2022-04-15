@@ -19,17 +19,15 @@ const ContentsBoxOneContainer = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  background-color: gray;
 `;
 
 const ContentsBoxTwoContainer = styled.div`
   width: 100%;
-  height: 70vw;
+  height: 65vw;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: flex-end;
   align-items: center;
-  background-color: #00ffd6;
 `;
 
 const ContentsBoxThreeContainer = styled.div`
@@ -124,7 +122,6 @@ const TextSizeFour = styled.div`
   font-family: "SEBANG-Gothic-Regular";
   font-size: 1.7vw;
   color: #101010;
-  margin-top: 63vw;
 `;
 const TextSizeFive = styled.div`
   font-family: "SEBANG-Gothic-Bold";
@@ -349,8 +346,20 @@ const Main = ({ menuState, SetMenuState }) => {
         </div>
       </ContentsBoxOneContainer>
       <ContentsBoxTwoContainer>
-        <TextSizeFour>처음인 당신도 시작할 수 있게</TextSizeFour>
-        <TextSizeFive>최고의 개발자로 만들어 드립니다</TextSizeFive>
+        <div
+          style={{
+            width: "100%",
+            height: "10vw",
+            backgroundColor: "#00ffd6",
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <TextSizeFour>처음인 당신도 시작할 수 있게</TextSizeFour>
+          <TextSizeFive>최고의 개발자로 만들어 드립니다</TextSizeFive>
+        </div>
       </ContentsBoxTwoContainer>
       <div
         style={{
