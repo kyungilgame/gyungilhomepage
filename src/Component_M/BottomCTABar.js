@@ -58,6 +58,10 @@ const ApplyButton = styled.button`
   border-radius: 1vw;
   margin-top: 2vw;
   cursor: pointer;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 `;
 
 const CloseButton = styled.div`

@@ -57,6 +57,10 @@ const ApplyButton = styled.button`
   border-color: #00ffd6;
   border-radius: 1vw;
   margin-top: 0.5vw;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
   cursor: pointer;
 `;
 
