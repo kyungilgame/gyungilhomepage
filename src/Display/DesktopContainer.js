@@ -85,12 +85,18 @@ function DesktopContainer({ menuState, SetMenuState }) {
   return (
     <AppContainer>
       <Header menuState={menuState} SetMenuState={SetMenuState}></Header>
-      {/* {menuState === 5 ? <BackVideo /> : null} */}
+      {menuState === 5 ? <BackVideo /> : null}
       {pagesObj[menuState]}
       <BottomCTABar></BottomCTABar>
-      <LinkBoxOne></LinkBoxOne>
-      <LinkBoxTwo></LinkBoxTwo>
-      <LinkBoxThree></LinkBoxThree>
+      <LinkBoxOne
+        as={"a"}
+        href={"http://www.kiweb.or.kr/?view=pc"}
+      ></LinkBoxOne>
+      <LinkBoxTwo as={"a"} href={"https://www.kyungilart.com/"}></LinkBoxTwo>
+      <LinkBoxThree
+        as={"a"}
+        href={"https://www.kgaprogamer.com/"}
+      ></LinkBoxThree>
       <Footer menuState={menuState} SetMenuState={SetMenuState}></Footer>
     </AppContainer>
   );

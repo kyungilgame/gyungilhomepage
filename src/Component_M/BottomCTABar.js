@@ -119,7 +119,7 @@ const BottomCTABar = () => {
         }}
       >
         <FirstLine style={{ marginTop: "1vw" }}>
-          AR/VR 5기 선착순 모집
+          웹개발 3기 선착순 모집
         </FirstLine>
         <SecondLine>수강료 9,438,000원 {`\u00A0\u00A0`} 0원</SecondLine>
         <div
@@ -140,7 +140,7 @@ const BottomCTABar = () => {
           </ThirdLine>
           <ThirdLine>{`\u00A0\u00A0`}남았어요!</ThirdLine>
         </div>
-        <ApplyButton>
+        <ApplyButton as={"a"} href={"https://forms.gle/WH2rjkEM8rR6AjA79"}>
           <FourthLine>수강신청하기 {`\u00A0 >`}</FourthLine>
         </ApplyButton>
       </div>

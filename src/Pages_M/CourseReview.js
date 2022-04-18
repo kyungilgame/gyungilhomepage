@@ -8,6 +8,8 @@ import ReviewCarousel from "../Function/ReviewCarousel_M";
 import ArrowDown from "../Image/ArrowDown.png";
 import ArrowUp from "../Image/ArrowUp.png";
 
+import CompanysLogos from "../Image/CompanysLogos.png";
+
 const ContentsBoxOneContainer = styled.div`
   width: 100%;
   height: 15vw;
@@ -167,8 +169,12 @@ const ArrowButton = styled.button`
 
 const CampanyWrapper = styled.div`
   width: 100%;
-  height: 50vw;
+  height: 70vw;
   background-color: #f6f6f6;
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-image: url(${CompanysLogos});
 `;
 
 const CourseReview = () => {

@@ -7,6 +7,8 @@ import ReactPlayer from "react-player/youtube";
 import VideoCarousel from "../Function/VideoCarousel";
 import ReviewCarousel from "../Function/ReviewCarousel";
 
+import CompanysLogos from "../Image/CompanysLogos.png";
+
 const ContentsBoxOneContainer = styled.div`
   width: 100%;
   height: 8vw;
@@ -42,7 +44,7 @@ const ContentsBoxThreeContainer = styled.div`
 
 const ContentsBoxFourContainer = styled.div`
   width: 100%;
-  height: 35vw;
+  height: 50vw;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -154,6 +156,16 @@ const TextSizeSix = styled.div`
   color: #101010;
 `;
 
+const CompanyImage = styled.div`
+  width: 60vw;
+  height: 50vw;
+  margin-top: 3vw;
+  background-size: contain;
+  background-position: center top;
+  background-repeat: no-repeat;
+  background-image: url(${CompanysLogos});
+`;
+
 const CourseReview = () => {
   const [ReviewSelect, setReviewSelect] = useState(0);
   const [InterviewSelect, setInterviewSelect] = useState(0);
@@ -175,6 +187,7 @@ const CourseReview = () => {
       </ContentsBoxThreeContainer>
       <ContentsBoxFourContainer>
         <TextSizeThree>KGA 수료생을 선택한 기업</TextSizeThree>
+        <CompanyImage></CompanyImage>
       </ContentsBoxFourContainer>
       <ContentsBoxFiveContainer>
         <TextSizeFour>수강생 후기 인터뷰</TextSizeFour>

@@ -4,6 +4,7 @@ import "../Styles/css/App.css";
 import MainCarousel_M from "../Function/MainCarousel_M";
 import MainReviewCarousel_M from "../Function/MainReviewCarousel_M";
 import BlackBoxRibone from "../Image/BlackBoxRibone.png";
+import RecrutingLabel from "../Image/RecrutingLabel.png";
 
 import ReactPlayer from "react-player/youtube";
 
@@ -17,17 +18,15 @@ const ContentsBoxOneContainer = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  background-color: gray;
 `;
 
 const ContentsBoxTwoContainer = styled.div`
   width: 100%;
-  height: 115vw;
+  height: 54vw;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  background-color: #00ffd6;
 `;
 
 const ContentsBoxThreeContainer = styled.div`
@@ -225,6 +224,11 @@ const ApplyButton = styled.button`
   border-color: #00ffd6;
   cursor: pointer;
   margin-top: 1.5vw;
+  border: 2px solid #00ffd6;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 `;
 
 const ApplyBlackButton = styled.button`
@@ -281,7 +285,7 @@ const ImageWrapper = styled.img`
   width: 10vw;
   height: 3vw;
   position: relative;
-  bottom: 3.6vw;
+  bottom: 2.1vw;
   left: 12.2vw;
 `;
 
@@ -293,6 +297,24 @@ const Main = ({ menuState, SetMenuState }) => {
         <TextSizeFour>처음인 당신도 시작할 수 있게</TextSizeFour>
         <TextSizeFive>최고의 개발자로 만들어 드립니다</TextSizeFive>
       </ContentsBoxTwoContainer>
+      <div
+        style={{
+          width: "100%",
+          height: "15vw",
+          backgroundColor: "#00ffd6",
+          display: "flex",
+          flexDirection: "column",
+          justifyContent: "center",
+          alignItems: "center",
+        }}
+      >
+        <text style={{ fontFamily: "SEBANG-Gothic-Regular" }}>
+          처음인 당신도 시작할 수 있게
+        </text>
+        <text style={{ fontFamily: "SEBANG-Gothic-Bold", fontSize: "5vw" }}>
+          최고의 개발자로 만들어 드립니다
+        </text>
+      </div>
       <div
         style={{
           width: "100%",
@@ -354,7 +376,6 @@ const Main = ({ menuState, SetMenuState }) => {
             }}
           >
             <BlackBoxWrapper>
-              <ImageWrapper src={BlackBoxRibone}></ImageWrapper>
               <TextSizeEight>국가기간전략훈련</TextSizeEight>
               <TextSizeNine>프로그래밍</TextSizeNine>
               <TextSizeTen>손 끝에서 구현되는 Unity 3D 게임</TextSizeTen>
@@ -363,7 +384,6 @@ const Main = ({ menuState, SetMenuState }) => {
               </ApplyButton>
             </BlackBoxWrapper>
             <BlackBoxWrapper>
-              <ImageWrapper src={BlackBoxRibone}></ImageWrapper>
               <TextSizeEight>국가기간전략훈련</TextSizeEight>
               <TextSizeNine>게임 기획</TextSizeNine>
               <TextSizeTen>게임 시놉시스부터 상용화까지</TextSizeTen>
@@ -372,12 +392,11 @@ const Main = ({ menuState, SetMenuState }) => {
               </ApplyButton>
             </BlackBoxWrapper>
             <BlackBoxWrapper>
-              <TextSizeEight style={{ marginTop: "3vw" }}>
-                국가기간전략훈련
-              </TextSizeEight>
+              <ImageWrapper src={RecrutingLabel}></ImageWrapper>
+              <TextSizeEight style={{}}>국가기간전략훈련</TextSizeEight>
               <TextSizeNine>AR / VR</TextSizeNine>
               <TextSizeTen>비대면 시대의 핵심 기술</TextSizeTen>
-              <ApplyButton>
+              <ApplyButton as={"a"} href={"https://kgavr.oopy.io"}>
                 <TextSizeEleven>자세히 보기</TextSizeEleven>
               </ApplyButton>
             </BlackBoxWrapper>
@@ -393,22 +412,28 @@ const Main = ({ menuState, SetMenuState }) => {
             }}
           >
             <BlackBoxWrapper>
-              <TextSizeEight style={{ marginTop: "3vw" }}>
-                K-디지털 트레이닝
-              </TextSizeEight>
+              <ImageWrapper src={RecrutingLabel}></ImageWrapper>
+              <TextSizeEight style={{}}>K-디지털 트레이닝</TextSizeEight>
               <TextSizeNine>블록체인</TextSizeNine>
               <TextSizeTen>차별화 된 핀테크 개발자 되기</TextSizeTen>
-              <ApplyButton>
+              <ApplyButton as={"a"} href={" http://landing.kiweb.or.kr/"}>
                 <TextSizeEleven>자세히 보기</TextSizeEleven>
               </ApplyButton>
             </BlackBoxWrapper>
             <BlackBoxWrapper>
-              <TextSizeEight style={{ marginTop: "3vw" }}>
-                K-디지털 트레이닝
-              </TextSizeEight>
+              <TextSizeEight style={{}}>K-디지털 트레이닝</TextSizeEight>
               <TextSizeNine>메타버스</TextSizeNine>
               <TextSizeTen>미래 사회의 새로운 패러다임</TextSizeTen>
-              <ApplyButton>
+              <ApplyButton as={"a"} href={"  https://kgaplan.oopy.io"}>
+                <TextSizeEleven>자세히 보기</TextSizeEleven>
+              </ApplyButton>
+            </BlackBoxWrapper>
+            <BlackBoxWrapper>
+              <ImageWrapper src={RecrutingLabel}></ImageWrapper>
+              <TextSizeEight style={{}}>국가기간전략훈련</TextSizeEight>
+              <TextSizeNine>웹개발</TextSizeNine>
+              <TextSizeTen>공공데이터 개발자 되기</TextSizeTen>
+              <ApplyButton as={"a"} href={" https://kgaweb.oopy.io"}>
                 <TextSizeEleven>자세히 보기</TextSizeEleven>
               </ApplyButton>
             </BlackBoxWrapper>
@@ -563,7 +588,8 @@ const Main = ({ menuState, SetMenuState }) => {
         </div>
         <ApplyBlackButton
           as={"a"}
-          href={"https://forms.gle/bNkmRwr2wMwfHBZp7 "}
+          href={"https://forms.gle/2Kj9iAUN7HJsE7su9"}
+          target={"_blank"}
         >
           <text
             style={{
@@ -605,8 +631,9 @@ const Main = ({ menuState, SetMenuState }) => {
         <TextSizeTwentyOne>KGA와 함께라면 가능합니다</TextSizeTwentyOne>
         <ApplyBlackButton
           as={"a"}
-          href={"https://forms.gle/bNkmRwr2wMwfHBZp7 "}
+          href={"https://forms.gle/2Kj9iAUN7HJsE7su9"}
           style={{ marginTop: "4vw" }}
+          target={"_blank"}
         >
           <text
             style={{

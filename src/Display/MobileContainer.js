@@ -17,6 +17,8 @@ import LinkMobileArt from "../Image/LinkMobileArt.png";
 import LinkMobileGame from "../Image/LinkMobileGame.png";
 import LinkMobilePhone from "../Image/LinkMobilePhone.png";
 
+import BackVideo from "../Function/BackVideo";
+
 const AppContainer = styled.div`
   &,
   & * {
@@ -82,11 +84,15 @@ function DesktopContainer({ menuState, SetMenuState }) {
   return (
     <AppContainer>
       <Header menuState={menuState} SetMenuState={SetMenuState}></Header>
+      {menuState === 5 ? <BackVideo /> : null}
       {pagesObj[menuState]}
       <BottomCTABar></BottomCTABar>
-      <LinkBoxOne></LinkBoxOne>
-      <LinkBoxTwo></LinkBoxTwo>
-      <LinkBoxThree></LinkBoxThree>
+      <LinkBoxOne as={"a"} href={"tel:02-479-4050"}></LinkBoxOne>
+      <LinkBoxTwo as={"a"} href={"https://www.kyungilart.com/"}></LinkBoxTwo>
+      <LinkBoxThree
+        as={"a"}
+        href={"https://www.kgaprogamer.com/"}
+      ></LinkBoxThree>
       <Footer menuState={menuState} SetMenuState={SetMenuState}></Footer>
     </AppContainer>
   );
