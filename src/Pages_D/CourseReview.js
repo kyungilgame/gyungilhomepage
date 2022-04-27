@@ -44,7 +44,7 @@ const ContentsBoxThreeContainer = styled.div`
 
 const ContentsBoxFourContainer = styled.div`
   width: 100%;
-  height: 50vw;
+  height: 70vw;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -157,10 +157,10 @@ const TextSizeSix = styled.div`
 `;
 
 const CompanyImage = styled.div`
-  width: 60vw;
-  height: 50vw;
+  width: 80vw;
+  height: 80vw;
   margin-top: 3vw;
-  background-size: contain;
+  background-size: 100% 100%;
   background-position: center top;
   background-repeat: no-repeat;
   background-image: url(${CompanysLogos});
