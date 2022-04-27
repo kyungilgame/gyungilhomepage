@@ -33,7 +33,7 @@ const AppContainer = styled.div`
 const LinkBoxOne = styled.button`
   all: unset;
   position: fixed;
-  width: 20vw;
+  width: 14vw;
   height: 5vw;
   bottom: 30vw;
   margin-left: 80vw;
@@ -47,9 +47,9 @@ const LinkBoxOne = styled.button`
 const LinkBoxTwo = styled.button`
   all: unset;
   position: fixed;
-  width: 20vw;
+  width: 14vw;
   height: 5vw;
-  bottom: 25vw;
+  bottom: 26vw;
   margin-left: 80vw;
   background-size: contain;
   background-image: url(${LinkArtclass});
@@ -61,9 +61,9 @@ const LinkBoxTwo = styled.button`
 const LinkBoxThree = styled.button`
   all: unset;
   position: fixed;
-  width: 20vw;
+  width: 14vw;
   height: 5vw;
-  bottom: 20vw;
+  bottom: 22vw;
   margin-left: 80vw;
   background-size: contain;
   background-image: url(${LinkProgamer});

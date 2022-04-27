@@ -32,9 +32,9 @@ const Timer = ({ hoursMinSecs }) => {
   return (
     <text style={{ color: "red", marginLeft: "0.5vw" }}>{`${hrs
       .toString()
-      .padStart(2, "0")}: ${mins.toString().padStart(2, "0")}: ${secs
+      .padStart(2, "0")}시 ${mins.toString().padStart(2, "0")}분 ${secs
       .toString()
-      .padStart(2, "0")}`}</text>
+      .padStart(2, "0")}초`}</text>
   );
 };
 

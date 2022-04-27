@@ -190,7 +190,7 @@ const Footer = ({ menuState, SetMenuState }) => {
               alignItems: "start",
             }}
           >
-            <LinkText as={"a"} href={"/"}>
+            <LinkText as={"a"} href={"https://forms.gle/gWUnjYGM5PXUfudU6"}>
               <text style={{ color: "white" }}>협력문의</text>
             </LinkText>
             <LinkText

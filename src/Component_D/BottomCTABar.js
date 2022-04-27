@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import "../Styles/css/App.css";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Timer from "../Function/Timer";
 
 import CTARedImage from "../Image/CTARedImage.png";
@@ -11,36 +11,36 @@ import XButton from "../Image/XButton.png";
 const ContentsOneContainer = styled.div`
   position: fixed;
   bottom: 1vw;
-  width: 70%;
-  height: 10vw;
+  width: 55%;
+  height: 7vw;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
   background-color: #f6f6f6;
   border-radius: 1vw;
-  background-size: 14vw 1.3vw;
+  /* background-size: 14vw 1.3vw;
   background-image: url(${CTAArrow});
   background-position: right 71% bottom 45%;
-  background-repeat: no-repeat;
+  background-repeat: no-repeat; */
   box-shadow: 0.1vw 0.1vw 0.1vw 0.1vw #00ffd6;
 `;
 
 const FirstLine = styled.div`
   font-family: "SEBANG-Gothic-Bold";
-  font-size: 2.5vw;
+  font-size: 1.5vw;
   color: #101010;
 `;
 
 const SecondLine = styled.div`
   font-family: "SEBANG-Gothic-Bold";
-  font-size: 2vw;
+  font-size: 1.2vw;
   color: #00887c;
 `;
 
 const ThirdLine = styled.div`
   font-family: "SEBANG-Gothic-Bold";
-  font-size: 2vw;
+  font-size: 1.6vw;
   color: #101010;
 `;
 
@@ -83,7 +83,7 @@ const ImageContainer = styled.div`
   background-repeat: no-repeat;
 `;
 
-const dday = new Date("April 30, 2022, 0:00:00").getTime();
+const dday = new Date("May 16, 2022, 0:00:00").getTime();
 
 const today = new Date().getTime(); // 밀리 초 단위
 const gap = dday - today;
@@ -96,7 +96,29 @@ const hoursMinSecs = { hours: hour, minutes: min, seconds: sec };
 
 const BottomCTABar = () => {
   const [CTAAtive, setCTAAtive] = useState(true);
-  return CTAAtive === true ? (
+
+  const [closeButtonActive, setCloseButtonActive] = useState(false);
+
+  const [scroll, setScroll] = useState(0);
+  const handleFollow = () => {
+    setScroll(window.pageYOffset);
+  };
+
+  useEffect(() => {
+    const watch = () => {
+      window.addEventListener("scroll", handleFollow);
+    };
+    watch();
+    return () => {
+      window.removeEventListener("scroll", handleFollow);
+    };
+  });
+  useEffect(() => {
+    scroll < 250 ? setCTAAtive(false) : setCTAAtive(true);
+  }, [scroll]);
+
+  // CTA 버튼 화면 최상단에서는 없애기
+  return CTAAtive === true && closeButtonActive === false ? (
     <ContentsOneContainer>
       <div
         style={{
@@ -123,7 +145,7 @@ const BottomCTABar = () => {
         <FirstLine style={{ marginTop: "1vw" }}>
           웹개발 3기 선착순 모집
         </FirstLine>
-        <SecondLine>수강료 9,438,000원 {`\u00A0\u00A0`} 0원</SecondLine>
+        {/* <SecondLine>수강료 9,438,000원 {`\u00A0\u00A0`} 0원</SecondLine> */}
         <div
           style={{
             display: "flex",
@@ -154,13 +176,13 @@ const BottomCTABar = () => {
         }}
       >
         <ApplyButton as={"a"} href={"https://forms.gle/WH2rjkEM8rR6AjA79"}>
-          <FourthLine>수강신청하기 {`\u00A0 >`}</FourthLine>
+          <FourthLine>수강신청 {`\u00A0 >`}</FourthLine>
         </ApplyButton>
       </div>
       <div style={{ width: "10%", height: "95%" }}>
         <CloseButton
           onClick={() => {
-            setCTAAtive(false);
+            setCloseButtonActive(true);
           }}
         ></CloseButton>
       </div>

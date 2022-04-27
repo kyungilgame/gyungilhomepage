@@ -23,7 +23,7 @@ const EachItemWrapper = styled.div`
 `;
 
 const EachItemImage = styled.div`
-  width: 70%;
+  width: 60%;
   height: 40%;
   background-color: gray;
   margin-top: 2vw;
@@ -67,14 +67,15 @@ export default function Slide() {
         </EachItemWrapper>
         <EachItemWrapper>
           <EachItemImage></EachItemImage>
-          <EachItemName>박경배</EachItemName>
-          <EachItemCourse>블록체인</EachItemCourse>
+          <EachItemName>이창희</EachItemName>
+          <EachItemCourse>프로그래밍</EachItemCourse>
           <EachItemComment>
-            Bitcoin 열기가 대한민국에 도래했을 때 블록체인에 관심을 갖고
-            알트코인 개발 회사에 입사해 블록체인의 매력에 빠져 들게 되었다. 4차
-            산업혁명이 중요한 가치를 가지게 될 시대, 미래를 짊어지게 될
-            젊은이들이 앞으로의 IT업계에서 시발 주자가 되어 이끌어나갈 원동력이
-            되길 바란다.
+            임베디드 전공으로 첫 코딩을 시작했다. 프로그래밍에는 단기간에 실력이
+            향상되는 편법이라는 것이 없다. 좋은 개발자의 조건은 최대한 코딩 하지
+            않고 결과를 낼 수 있는 능력, 시간을 지키는 것이라고 생각한다. 지식과
+            경험을 바탕으로 학생들을 지도하고 멘토링을 하면서 수강생들이 신입
+            개발자로서의 새로운 커리어를 시작할 수 있도록 함께 고민하고
+            노력한다.
           </EachItemComment>
         </EachItemWrapper>
         <EachItemWrapper>
@@ -108,16 +109,9 @@ export default function Slide() {
         </EachItemWrapper>
         <EachItemWrapper>
           <EachItemImage></EachItemImage>
-          <EachItemName>이창희</EachItemName>
-          <EachItemCourse>프로그래밍</EachItemCourse>
-          <EachItemComment>
-            임베디드 전공으로 첫 코딩을 시작했다. 프로그래밍에는 단기간에 실력이
-            향상되는 편법이라는 것이 없다. 좋은 개발자의 조건은 최대한 코딩 하지
-            않고 결과를 낼 수 있는 능력, 시간을 지키는 것이라고 생각한다. 지식과
-            경험을 바탕으로 학생들을 지도하고 멘토링을 하면서 수강생들이 신입
-            개발자로서의 새로운 커리어를 시작할 수 있도록 함께 고민하고
-            노력한다.
-          </EachItemComment>
+          <EachItemName>최영묵</EachItemName>
+          <EachItemCourse>게임 프로그래밍</EachItemCourse>
+          <EachItemComment></EachItemComment>
         </EachItemWrapper>
         <EachItemWrapper>
           <EachItemImage></EachItemImage>
@@ -221,33 +215,8 @@ export default function Slide() {
           </EachItemWrapper>
           <EachItemWrapper>
             <EachItemImage></EachItemImage>
-            <EachItemName>최상문</EachItemName>
-            <EachItemCourse>게임 프로그래밍</EachItemCourse>
-            <EachItemComment>
-              게임과 컴퓨터를 좋아하여 관련 학과를 전공 중, 프로그래밍의 재미를
-              알게 되었다. 월드 오브 워크래프트라는 게임에 빠지게 된 후, 대학을
-              졸업하고 진로를 걱정할 때 게임을 직접 만들어 보고 싶어 게임
-              프로그래밍의 길을 가게 되었다. 학생들에게 게임 프로그래밍의 재미와
-              스스로 개발을 할 수 있는 역량을 발휘할 수 있게 하는게 목표다.
-            </EachItemComment>
-          </EachItemWrapper>
-          <EachItemWrapper>
-            <EachItemImage></EachItemImage>
-            <EachItemName>김예림</EachItemName>
-            <EachItemCourse>매니저</EachItemCourse>
-            <EachItemComment>
-              '노력하는 자에게 인생은 미소 짓는다.' 여러분이 이루고자 하는
-              목표에 가까워 졌습니다. 항상 여러분들을 응원하도록 하겠습니다 :)
-            </EachItemComment>
-          </EachItemWrapper>
-        </ItemWrapper>
-      </ItemWrapper>
-      <ItemWrapper>
-        <ItemWrapper>
-          <EachItemWrapper>
-            <EachItemImage></EachItemImage>
             <EachItemName>황인경</EachItemName>
-            <EachItemCourse>매니저</EachItemCourse>
+            <EachItemCourse>Administrative Staff</EachItemCourse>
             <EachItemComment>
               10년이 넘는 기간 동안 교육기관에 근무를 해오면서 쌓아온 약
               5000여명의 직업상담 데이터를 기반으로 KGA를 찾아 주신 모든
@@ -256,8 +225,27 @@ export default function Slide() {
           </EachItemWrapper>
           <EachItemWrapper>
             <EachItemImage></EachItemImage>
+            <EachItemName>김태완</EachItemName>
+            <EachItemCourse>Empolyment Support</EachItemCourse>
+            <EachItemComment></EachItemComment>
+          </EachItemWrapper>
+        </ItemWrapper>
+      </ItemWrapper>
+      <ItemWrapper>
+        <ItemWrapper>
+          <EachItemWrapper>
+            <EachItemImage></EachItemImage>
+            <EachItemName>강명규</EachItemName>
+            <EachItemCourse>Administrative Staff</EachItemCourse>
+            <EachItemComment>
+              여러분들의 목표달성을 위해 보이지 않는 곳에서 항상 서포트하고
+              있겠습니다.
+            </EachItemComment>
+          </EachItemWrapper>
+          <EachItemWrapper>
+            <EachItemImage></EachItemImage>
             <EachItemName>송재오</EachItemName>
-            <EachItemCourse>매니저</EachItemCourse>
+            <EachItemCourse>Administrative Staff</EachItemCourse>
             <EachItemComment>
               꿈을 향해 1년이란 시간을 달리는 여러분을 위한 뉴스피드가
               되어드리겠습니다 
@@ -266,7 +254,7 @@ export default function Slide() {
           <EachItemWrapper>
             <EachItemImage></EachItemImage>
             <EachItemName>정지은</EachItemName>
-            <EachItemCourse>매니저</EachItemCourse>
+            <EachItemCourse>Administrative Staff</EachItemCourse>
             <EachItemComment>
               무엇이든 물어보세요. 환한 미소로 답해 드리겠습니다. 하나부터
               열까지 차근차근 설명해 드리겠습니다. 사소한 것도 좋으니 언제든
@@ -278,12 +266,9 @@ export default function Slide() {
       <ItemWrapper>
         <EachItemWrapper>
           <EachItemImage></EachItemImage>
-          <EachItemName>강명규</EachItemName>
-          <EachItemCourse>매니저</EachItemCourse>
-          <EachItemComment>
-            여러분들의 목표달성을 위해 보이지 않는 곳에서 항상 서포트하고
-            있겠습니다.
-          </EachItemComment>
+          <EachItemName>한소연</EachItemName>
+          <EachItemCourse>Administrative Staff</EachItemCourse>
+          <EachItemComment></EachItemComment>
         </EachItemWrapper>
         <EachItemWrapper
           style={{ backgroundColor: "#f0f0f0" }}

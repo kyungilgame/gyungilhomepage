@@ -54,7 +54,7 @@ const TextSizeOne = styled.div`
 `;
 
 const TextSizeTwo = styled.div`
-  font-family: "SEBANG-Gothic-Regular";
+  font-family: "Pretendard-Regular";
   font-size: 1vw;
   color: #101010;
 `;
@@ -85,8 +85,7 @@ export default function MainSlide() {
       <SlideColumnWrapper>
         <ContentContainer>
           <TextSizeOne>
-            게임 개발, 디지털 아트, 프로게이머, 블록체인, 메타버스시대의
-            최전선에 서 있는 날카로운 교육 라인업
+            변화의 최전선에 서 있는 날카로운 교육 라인업
           </TextSizeOne>
           <div style={{ marginTop: "2vw" }}></div>
           <TextSizeTwo>
@@ -103,8 +102,7 @@ export default function MainSlide() {
       <SlideColumnWrapper>
         <ContentContainer>
           <TextSizeOne>
-            비전공자와 초보자를 위한 교육으로 시작해 전공자들도 만족하는 심화
-            수준으로 마무리하는 커리큘럼
+            초보자를 위한 기초 교육부터 실무 위주 심화 교육까지, 완벽한 커리큘럼
           </TextSizeOne>
           <div style={{ marginTop: "2vw" }}></div>
           <TextSizeTwo>

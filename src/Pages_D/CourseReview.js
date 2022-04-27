@@ -182,8 +182,8 @@ const CourseReview = () => {
         </VideoPlayWrapper>
       </ContentsBoxTwoContainer>
       <ContentsBoxThreeContainer>
-        <TextSizeOne>블록체인 코스</TextSizeOne>
-        <TextSizeTwo>취업률 91% 달성!</TextSizeTwo>
+        {/* <TextSizeOne>블록체인 코스</TextSizeOne>
+        <TextSizeTwo>취업률 91% 달성!</TextSizeTwo> */}
       </ContentsBoxThreeContainer>
       <ContentsBoxFourContainer>
         <TextSizeThree>KGA 수료생을 선택한 기업</TextSizeThree>
@@ -194,8 +194,8 @@ const CourseReview = () => {
         <VideoCarousel></VideoCarousel>
       </ContentsBoxFiveContainer>
       <ContentsBoxSixContainer>
-        <TextSizeFive>여러분 또래의 취업 성공담을 확인하세요</TextSizeFive>
-        <TextSizeSix>GDB 챌린저 수강후기</TextSizeSix>
+        {/* <TextSizeFive>여러분 선배의 취업 성공담을 확인하세요</TextSizeFive> */}
+        <TextSizeSix>생생 수강 후기</TextSizeSix>
         <div
           style={{
             width: "70%",

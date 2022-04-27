@@ -3,6 +3,8 @@ import "../Styles/css/App.css";
 
 import AboutKGACarousel_M from "../Function/AboutKGACarousel_M";
 
+//https://github.com/farbenmeer/react-spring-slider
+
 const ContentsBoxOneContainer = styled.div`
   width: 100%;
   height: 15vw;
@@ -78,7 +80,7 @@ const AboutKGA = () => {
     <>
       <ContentsBoxOneContainer></ContentsBoxOneContainer>
       <ContentsBoxTwoContainer>
-        <TextSizeOne>ABOUT KGA</TextSizeOne>
+        <TextSizeOne>about KGA</TextSizeOne>
         <TextSizeTwo style={{ marginTop: "3vw" }}>
           경일게임아카데미는 청년들이 자신의 꿈을 이루기 위해
         </TextSizeTwo>

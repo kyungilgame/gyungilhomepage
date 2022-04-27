@@ -23,6 +23,8 @@ const SlideRowWrapper = styled.div`
   background-color: #f6f6f6;
 `;
 
+// Size는 메인 페이지 기준으로 작성해줄 것
+
 export default function ReviewSlide({ ReviewSelect }) {
   switch (ReviewSelect) {
     case 0:

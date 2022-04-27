@@ -365,7 +365,7 @@ const styles = {
   // titleTextColor: "blue",
   // titleTextSize: '48px',
   // rowTitleColor: "blue",
-  rowTitleTextSize: "1.5vw",
+  rowTitleTextSize: "1.2vw",
   // rowContentColor: 'grey',
   rowContentTextSize: "1vw",
   rowContentPaddingTop: "0.5vw",
@@ -458,12 +458,12 @@ const QA = () => {
               flexDirection: "row",
               marginTop: "2vw",
               justifyContent: "center",
-              alignItems: "center",
+              alignItems: "start",
             }}
           >
             {ReviewSelect === 0 ? (
               <>
-                <div style={{ width: "50%" }}>
+                <div style={{ width: "40%" }}>
                   <Faq
                     data={dataAllOne}
                     styles={styles}
@@ -472,7 +472,7 @@ const QA = () => {
                     }}
                   />
                 </div>
-                <div style={{ width: "50%" }}>
+                <div style={{ width: "40%" }}>
                   <Faq
                     data={dataAllTwo}
                     styles={styles}

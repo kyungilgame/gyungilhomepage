@@ -3,6 +3,7 @@ import "../Styles/css/App.css";
 
 import HamburgerMenu from "./HamburgerMenu";
 import HeaderLogo from "../Image/HeaderLogo.png";
+import gyunilWhite from "../Image/gyungilWhite.png";
 
 const HeaderContainer = styled.div`
   width: 95%;
@@ -46,12 +47,21 @@ const Header = ({ menuState, SetMenuState }) => {
   `;
   return (
     <HeaderContainer>
-      <LogoWrapper
-        Image={HeaderLogo}
-        onClick={() => {
-          SetMenuState(5);
-        }}
-      ></LogoWrapper>
+      {menuState === 5 ? (
+        <LogoWrapper
+          Image={gyunilWhite}
+          onClick={() => {
+            SetMenuState(5);
+          }}
+        ></LogoWrapper>
+      ) : (
+        <LogoWrapper
+          Image={HeaderLogo}
+          onClick={() => {
+            SetMenuState(5);
+          }}
+        ></LogoWrapper>
+      )}
       <ContentWrapper>
         <MenuWrapper>
           <HamburgerMenu

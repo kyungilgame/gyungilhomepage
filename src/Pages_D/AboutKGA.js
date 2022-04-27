@@ -3,6 +3,13 @@ import "../Styles/css/App.css";
 
 import IntroductionCarousel from "../Function/IntroductionCarousel";
 
+import NewImage1 from "../Image/NewImage1.png";
+import NewImage2 from "../Image/NewImage2.png";
+import NewImage3 from "../Image/NewImage3.png";
+import NewImage4 from "../Image/NewImage4.png";
+
+//https://github.com/farbenmeer/react-spring-slider
+
 const ContentsBoxOneContainer = styled.div`
   width: 100%;
   height: 8vw;
@@ -53,7 +60,7 @@ const ContentsBoxFiveContainer = styled.div`
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  background-color: #f6f6f6;
+  background-color: #f0f0f0;
 `;
 
 const TextSizeOne = styled.div`
@@ -133,7 +140,7 @@ const AboutKGA = () => {
     <>
       <ContentsBoxOneContainer></ContentsBoxOneContainer>
       <ContentsBoxTwoContainer>
-        <TextSizeOne>ABOUT KGA</TextSizeOne>
+        <TextSizeOne>about KGA</TextSizeOne>
         <TextSizeTwo style={{ marginTop: "1vw" }}>
           경일게임아카데미는 청년들이 자신의 꿈을 이루기 위해 얼마나 많은 고민
           끝에 저희를 찾아오는지 알고 있습니다.
@@ -167,7 +174,7 @@ const AboutKGA = () => {
           <IntroduceBoxImage></IntroduceBoxImage>
           <IntroduceBoxInnerWrapper>
             <TextSizeFour>박병준</TextSizeFour>
-            <TextSizeFive>대표</TextSizeFive>
+            <TextSizeFive>C.E.O</TextSizeFive>
             <TextSizeSix style={{ marginTop: "1vw" }}>
               직업 교육에 거대한 변화의 물결이 오고 있습니다. 이 거대한 변화의
               물결에 KGA가 다시 한번 항해의 닻을
@@ -189,7 +196,7 @@ const AboutKGA = () => {
         <IntroduceBox>
           <IntroduceBoxInnerWrapper style={{ alignItems: "end" }}>
             <TextSizeFour>양현석</TextSizeFour>
-            <TextSizeFive>원장</TextSizeFive>
+            <TextSizeFive>President</TextSizeFive>
             <div
               style={{
                 display: "flex",
@@ -219,7 +226,7 @@ const AboutKGA = () => {
           <IntroduceBoxImage></IntroduceBoxImage>
           <IntroduceBoxInnerWrapper>
             <TextSizeFour>김재연</TextSizeFour>
-            <TextSizeFive>부원장</TextSizeFive>
+            <TextSizeFive>Vice-President</TextSizeFive>
             <TextSizeSix style={{ marginTop: "1vw" }}>
               게임 개발과 인연을 맺은 지 어느덧 30년, 우리나라 게임 기획자의
               1%가 저의 제자입니다. 항상 연구하고
@@ -237,7 +244,7 @@ const AboutKGA = () => {
         <IntroduceBox>
           <IntroduceBoxInnerWrapper style={{ alignItems: "end" }}>
             <TextSizeFour>서혁준</TextSizeFour>
-            <TextSizeFive>부원장</TextSizeFive>
+            <TextSizeFive>Vice-President</TextSizeFive>
             <div
               style={{
                 display: "flex",
@@ -269,16 +276,44 @@ const AboutKGA = () => {
       </ContentsBoxFourContainer>
       <ContentsBoxFiveContainer>
         <div
-          style={{ width: "25%", height: "20vw", backgroundColor: "#f6f6f6" }}
+          style={{
+            width: "25%",
+            height: "20vw",
+            backgroundSize: "contain",
+            backgroundImage: `url(${NewImage1})`,
+            backgroundPosition: "center center",
+            backgroundRepeat: "no-repeat",
+          }}
         ></div>
         <div
-          style={{ width: "25%", height: "20vw", backgroundColor: "#f0f0f0" }}
+          style={{
+            width: "25%",
+            height: "20vw",
+            backgroundSize: "contain",
+            backgroundImage: `url(${NewImage2})`,
+            backgroundPosition: "center center",
+            backgroundRepeat: "no-repeat",
+          }}
         ></div>
         <div
-          style={{ width: "25%", height: "20vw", backgroundColor: "lightgray" }}
+          style={{
+            width: "25%",
+            height: "20vw",
+            backgroundSize: "contain",
+            backgroundImage: `url(${NewImage3})`,
+            backgroundPosition: "center center",
+            backgroundRepeat: "no-repeat",
+          }}
         ></div>
         <div
-          style={{ width: "25%", height: "20vw", backgroundColor: "gray" }}
+          style={{
+            width: "25%",
+            height: "20vw",
+            backgroundSize: "contain",
+            backgroundImage: `url(${NewImage4})`,
+            backgroundPosition: "center center",
+            backgroundRepeat: "no-repeat",
+          }}
         ></div>
       </ContentsBoxFiveContainer>
     </>

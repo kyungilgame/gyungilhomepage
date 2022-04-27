@@ -76,7 +76,7 @@ const HamburgerMenu = ({ menuState, SetMenuState }) => {
         className="About KGA"
         style={{ cursor: "pointer" }}
       >
-        About KGA
+        about KGA
       </a>
       <a
         onClick={() => {

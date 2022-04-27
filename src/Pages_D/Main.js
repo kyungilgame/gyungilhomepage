@@ -113,6 +113,7 @@ const TextSizeTwo = styled.div`
   font-family: "SEBANG-Gothic-Regular";
   font-size: 4vw;
   color: #f6f6f6;
+  margin-top: 33vw;
 `;
 
 const TextSizeThree = styled.div`
@@ -146,7 +147,7 @@ const TextSizeSeven = styled.div`
 
 const TextSizeEight = styled.div`
   font-family: "SEBANG-Gothic-Regular";
-  font-size: 1.5vw;
+  font-size: 1vw;
   color: #00ffd6;
 `;
 
@@ -230,7 +231,7 @@ const TextSizeTwentyOne = styled.div`
 `;
 
 const BlackBoxWrapper = styled.div`
-  width: 25vw;
+  width: 20vw;
   height: 15vw;
   background-color: #101010;
   display: flex;
@@ -315,7 +316,7 @@ const ImageWrapper = styled.img`
   height: 2vw;
   position: relative;
   bottom: 2vw;
-  left: 9.1vw;
+  left: 6.6vw;
 `;
 
 const Main = ({ menuState, SetMenuState }) => {
@@ -331,7 +332,6 @@ const Main = ({ menuState, SetMenuState }) => {
             alignItems: "start",
           }}
         >
-          <TextSizeOne>KGA</TextSizeOne>
           <TextSizeTwo>
             Kyungil
             <text style={{ color: "#00ffd6" }}>{` `}Game Academy</text>
@@ -421,7 +421,7 @@ const Main = ({ menuState, SetMenuState }) => {
         >
           <div
             style={{
-              width: "100%",
+              width: "80%",
               height: "50%",
               display: "flex",
               justifyContent: "space-around",
@@ -475,7 +475,7 @@ const Main = ({ menuState, SetMenuState }) => {
           </div>
           <div
             style={{
-              width: "100%",
+              width: "80%",
               height: "50%",
               display: "flex",
               justifyContent: "space-around",
@@ -726,7 +726,7 @@ const Main = ({ menuState, SetMenuState }) => {
               fontSize: "1.7vw",
             }}
           >
-            지원하러가기
+            지원하기
           </text>
           <text
             style={{

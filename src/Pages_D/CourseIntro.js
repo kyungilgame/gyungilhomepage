@@ -6,6 +6,7 @@ import backImage_metabus from "../Image/backImage_metabus.png";
 import backImage_planing from "../Image/backImage_planing.png";
 import backImage_programing from "../Image/backImage_programing.png";
 import backImage_VRAR from "../Image/backImage_VRAR.png";
+import backImage_WEB from "../Image/backImage_WEB.png";
 
 const ContentsBoxOneContainer = styled.div`
   width: 100%;
@@ -367,7 +368,46 @@ const CourseIntro = () => {
               바로가기
             </ApplyButton>
           </CourseWrapper>
-          <CourseWrapperEmpty></CourseWrapperEmpty>
+          <CourseWrapper image={backImage_WEB}>
+            <div
+              style={{
+                width: "20vw",
+                height: "2vw",
+                display: "flex",
+                justifyContent: "flex-start",
+                flexDirection: "row",
+              }}
+            >
+              <TextSizeFour>Course</TextSizeFour>
+            </div>
+            <div
+              style={{
+                width: "20vw",
+                height: "4vw",
+                display: "flex",
+                justifyContent: "flex-start",
+                flexDirection: "row",
+              }}
+            >
+              <TextSizeThree>웹개발</TextSizeThree>
+            </div>
+            <div
+              style={{
+                width: "20vw",
+                height: "1.1vw",
+                display: "flex",
+                justifyContent: "flex-start",
+                flexDirection: "row",
+              }}
+            >
+              <TextSizeFive>
+                공공데이터-민간데이터 기반 융합 SW개발자 되기
+              </TextSizeFive>
+            </div>
+            <ApplyButton as={"a"} href={"https://kgaweb.oopy.io/"}>
+              바로가기
+            </ApplyButton>
+          </CourseWrapper>
         </CourseLineContainer>
       </ContentsBoxThreeContainer>
     </>

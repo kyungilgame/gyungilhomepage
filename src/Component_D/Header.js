@@ -1,7 +1,9 @@
 import styled from "styled-components";
 import "../Styles/css/App.css";
+import React, { useState, useEffect } from "react";
 
 import HeaderLogo from "../Image/HeaderLogo.png";
+import gyunilWhite from "../Image/gyungilWhite.png";
 
 const HeaderContainer = styled.div`
   width: 95%;
@@ -54,12 +56,22 @@ const Header = ({ menuState, SetMenuState }) => {
   `;
   return (
     <HeaderContainer>
-      <LogoWrapper
-        Image={HeaderLogo}
-        onClick={() => {
-          SetMenuState(5);
-        }}
-      ></LogoWrapper>
+      {menuState === 5 ? (
+        <LogoWrapper
+          Image={gyunilWhite}
+          onClick={() => {
+            SetMenuState(5);
+          }}
+        ></LogoWrapper>
+      ) : (
+        <LogoWrapper
+          Image={HeaderLogo}
+          onClick={() => {
+            SetMenuState(5);
+          }}
+        ></LogoWrapper>
+      )}
+
       <ContentWrapper>
         <MenuWrapper>
           <MenuText
@@ -68,7 +80,7 @@ const Header = ({ menuState, SetMenuState }) => {
             }}
             menuState={menuState}
           >
-            About KGA
+            about KGA
           </MenuText>
         </MenuWrapper>
         <MenuWrapper>
