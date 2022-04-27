@@ -6,6 +6,8 @@ import MainReviewCarousel_M from "../Function/MainReviewCarousel_M";
 import BlackBoxRibone from "../Image/BlackBoxRibone.png";
 import RecrutingLabel from "../Image/RecrutingLabel.png";
 
+import MapImage from "../Image/mapImage.png";
+
 import ReactPlayer from "react-player/youtube";
 
 const ContentsBoxOneContainer = styled.div`
@@ -275,10 +277,14 @@ const ColorBoxWrapper = styled.div`
 `;
 
 const MapWrapper = styled.div`
-  width: 90vw;
+  width: 65vw;
   height: 65vw;
-  background-color: gray;
+
   margin: 1.5vw;
+  background-size: contain;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-image: url(${MapImage});
 `;
 
 const ImageWrapper = styled.img`

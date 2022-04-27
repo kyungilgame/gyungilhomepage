@@ -281,7 +281,7 @@ const CourseIntro = () => {
                 비대면 시대 가장 채용 수요가 높은 개발자로 성장하기
               </TextSizeFive>
             </div>
-            <ApplyButton as={"a"} href={"/"}>
+            <ApplyButton as={"a"} href={"https://kgavr.oopy.io"}>
               바로가기
             </ApplyButton>
           </CourseWrapper>
@@ -321,7 +321,7 @@ const CourseIntro = () => {
                 기초부터 탄탄한 블록체인 선두주자 되기
               </TextSizeFive>
             </div>
-            <ApplyButton as={"a"} href={"/"}>
+            <ApplyButton as={"a"} href={"http://landing.kiweb.or.kr/"}>
               바로가기
             </ApplyButton>
           </CourseWrapper>
@@ -363,7 +363,7 @@ const CourseIntro = () => {
                 4차 산업 기술의 정점에 선 넓고 높은 시야의 파이어니어
               </TextSizeFive>
             </div>
-            <ApplyButton as={"a"} href={"/"}>
+            <ApplyButton as={"a"} href={"https://kgaplan.oopy.io"}>
               바로가기
             </ApplyButton>
           </CourseWrapper>
