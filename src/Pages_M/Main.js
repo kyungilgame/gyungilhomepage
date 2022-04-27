@@ -279,7 +279,6 @@ const ColorBoxWrapper = styled.div`
 const MapWrapper = styled.div`
   width: 65vw;
   height: 65vw;
-
   margin: 1.5vw;
   background-size: contain;
   background-position: center center;

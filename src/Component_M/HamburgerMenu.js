@@ -113,9 +113,10 @@ const HamburgerMenu = ({ menuState, SetMenuState }) => {
         //   SetMenuState(4);
         //   setIsOpen(false);
         // }}
-        href="https://forms.gle/bNkmRwr2wMwfHBZp7 "
+        href="https://forms.gle/Xj9q3QqjQs1qWy2D7 "
         className="Apply"
         style={{ cursor: "pointer" }}
+        target="_blank"
       >
         지원하기
       </a>
