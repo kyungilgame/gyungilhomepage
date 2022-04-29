@@ -6,7 +6,7 @@ import MainReviewCarousel_M from "../Function/MainReviewCarousel_M";
 import BlackBoxRibone from "../Image/BlackBoxRibone.png";
 import RecrutingLabel from "../Image/RecrutingLabel.png";
 
-import MapImage from "../Image/mapImage.png";
+import MapImage from "../Function/Map";
 
 import ReactPlayer from "react-player/youtube";
 
@@ -128,7 +128,7 @@ const TextSizeSeven = styled.div`
 
 const TextSizeEight = styled.div`
   font-family: "SEBANG-Gothic-Regular";
-  font-size: 2vw;
+  font-size: 1.5vw;
   color: #00ffd6;
 `;
 
@@ -623,7 +623,9 @@ const Main = ({ menuState, SetMenuState }) => {
       </ContentsBoxSevenContainer>
       <ContentsBoxEightContainer>
         <TextSizeFifteen>KGA 오시는 길</TextSizeFifteen>
-        <MapWrapper></MapWrapper>
+        <MapWrapper>
+          <MapImage></MapImage>
+        </MapWrapper>
         <TextSizeNineteen>
           서울시 강동구 올림픽로 651 예경빌딩 4층 경일게임아카데미
         </TextSizeNineteen>

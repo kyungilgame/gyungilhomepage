@@ -6,6 +6,7 @@ import backImage_metabus from "../Image/backImage_metabus.png";
 import backImage_planing from "../Image/backImage_planing.png";
 import backImage_programing from "../Image/backImage_programing.png";
 import backImage_VRAR from "../Image/backImage_VRAR.png";
+import backImage_WEB from "../Image/backImage_WEB.png";
 
 const ContentsBoxOneContainer = styled.div`
   width: 100%;
@@ -32,7 +33,7 @@ const ContentsBoxTwoContainer = styled.div`
 
 const ContentsBoxThreeContainer = styled.div`
   width: 100%;
-  height: 180vw;
+  height: 220vw;
   background-color: #f0f0f0;
   display: flex;
   flex-direction: column;
@@ -88,7 +89,7 @@ const TextSizeFour = styled.div`
 
 const TextSizeFive = styled.div`
   font-family: "Pretendard-Regular";
-  font-size: 1vw;
+  font-size: 2vw;
   color: #101010;
 `;
 
@@ -187,7 +188,7 @@ const CourseIntro = () => {
               flexDirection: "row",
             }}
           >
-            <TextSizeFive style={{ marginTop: "0.5vw" }}>
+            <TextSizeFive style={{ marginTop: "1vw" }}>
               게임 프로그래머 커리어를 바로 시작할 수 있는 부트캠프
             </TextSizeFive>
           </div>
@@ -227,7 +228,7 @@ const CourseIntro = () => {
               flexDirection: "row",
             }}
           >
-            <TextSizeFive style={{ marginTop: "0.5vw" }}>
+            <TextSizeFive style={{ marginTop: "1vw" }}>
               게임 기획자 지망생이 반드시 거쳐야 할 코스
             </TextSizeFive>
           </div>
@@ -268,7 +269,7 @@ const CourseIntro = () => {
               flexDirection: "row",
             }}
           >
-            <TextSizeFive style={{ marginTop: "0.5vw" }}>
+            <TextSizeFive style={{ marginTop: "1vw" }}>
               비대면 시대 가장 채용 수요가 높은 개발자로 성장하기
             </TextSizeFive>
           </div>
@@ -308,7 +309,7 @@ const CourseIntro = () => {
               flexDirection: "row",
             }}
           >
-            <TextSizeFive style={{ marginTop: "0.5vw" }}>
+            <TextSizeFive style={{ marginTop: "1vw" }}>
               기초부터 탄탄한 블록체인 선두주자 되기
             </TextSizeFive>
           </div>
@@ -349,11 +350,52 @@ const CourseIntro = () => {
               flexDirection: "row",
             }}
           >
-            <TextSizeFive style={{ marginTop: "0.5vw" }}>
+            <TextSizeFive style={{ marginTop: "1vw" }}>
               4차 산업 기술의 정점에 선 넓고 높은 시야의 파이어니어
             </TextSizeFive>
           </div>
           <ApplyButton as={"a"} href={"https://kgaplan.oopy.io"}>
+            바로가기
+          </ApplyButton>
+        </CourseWrapper>
+
+        <CourseWrapper image={backImage_WEB}>
+          <div
+            style={{
+              width: "80%",
+              height: "5vw",
+              display: "flex",
+              justifyContent: "flex-start",
+              flexDirection: "row",
+            }}
+          >
+            <TextSizeFour>Course</TextSizeFour>
+          </div>
+          <div
+            style={{
+              width: "80%",
+              height: "5vw",
+              display: "flex",
+              justifyContent: "flex-start",
+              flexDirection: "row",
+            }}
+          >
+            <TextSizeThree>웹개발</TextSizeThree>
+          </div>
+          <div
+            style={{
+              width: "80%",
+              height: "1.1vw",
+              display: "flex",
+              justifyContent: "flex-start",
+              flexDirection: "row",
+            }}
+          >
+            <TextSizeFive style={{ marginTop: "1vw" }}>
+              공공데이터-민간데이터 기반 융합 SW개발자 되기
+            </TextSizeFive>
+          </div>
+          <ApplyButton as={"a"} href={"https://kgaweb.oopy.io"}>
             바로가기
           </ApplyButton>
         </CourseWrapper>

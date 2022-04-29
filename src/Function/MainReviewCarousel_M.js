@@ -49,7 +49,7 @@ const SlideSelectorWrapper = styled.div`
 const SlideNotSelectedCircle = styled.div`
   width: 1vw;
   height: 1vw;
-  background-color: #f0f0f0;
+  background-color: lightgray;
   border-radius: 1vw;
   cursor: pointer;
 `;

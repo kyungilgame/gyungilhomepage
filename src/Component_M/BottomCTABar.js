@@ -40,7 +40,7 @@ const SecondLine = styled.div`
 
 const ThirdLine = styled.div`
   font-family: "SEBANG-Gothic-Bold";
-  font-size: 2.1vw;
+  font-size: 1.9vw;
   color: #101010;
 `;
 

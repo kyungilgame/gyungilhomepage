@@ -52,7 +52,7 @@ const TextBox = styled.div`
   font-family: "Pretendard-Regular";
   font-size: 0.9vw;
   color: #101010;
-  width: 90%;
+  width: 80%;
   height: 55%;
   margin-top: 0.2vw;
 `;

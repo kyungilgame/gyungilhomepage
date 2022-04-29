@@ -2,6 +2,8 @@ import styled from "styled-components";
 import "../Styles/css/App.css";
 import React, { useState } from "react";
 
+import ReactPlayer from "react-player/youtube";
+
 import VideoCarousel from "../Function/VideoCarousel_M";
 import ReviewCarousel from "../Function/ReviewCarousel_M";
 
@@ -177,6 +179,16 @@ const CampanyWrapper = styled.div`
   background-image: url(${CompanysLogos});
 `;
 
+const VideoPlayWrapper = styled.div`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-items: center;
+  background-color: #101010;
+  margin-top: 8vw;
+`;
+
 const CourseReview = () => {
   const [ReviewSelect, setReviewSelect] = useState(0);
   const [CompanySelect, setCompanySelect] = useState(false);
@@ -184,7 +196,16 @@ const CourseReview = () => {
   return (
     <>
       <ContentsBoxOneContainer></ContentsBoxOneContainer>
-      <ContentsBoxTwoContainer></ContentsBoxTwoContainer>
+      <ContentsBoxTwoContainer>
+        {" "}
+        <VideoPlayWrapper>
+          <ReactPlayer
+            url="https://youtu.be/n0KEoy53BRw"
+            width="100%"
+            height="80%"
+          />
+        </VideoPlayWrapper>
+      </ContentsBoxTwoContainer>
       <ContentsBoxThreeContainer>
         <TextSizeOne>블록체인 코스</TextSizeOne>
         <TextSizeTwo>취업률 91% 달성!</TextSizeTwo>

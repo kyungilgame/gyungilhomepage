@@ -12,7 +12,7 @@ const ContentsOneContainer = styled.div`
   position: fixed;
   bottom: 1vw;
   width: 55%;
-  height: 7vw;
+  height: 6vw;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;

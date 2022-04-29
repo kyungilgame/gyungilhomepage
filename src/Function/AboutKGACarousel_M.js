@@ -92,7 +92,7 @@ export default function AboutKGACarousel_M({ first }) {
     cursor: pointer;
     ${({ first }) => {
       return first === true
-        ? `background-color: #f0f0f0`
+        ? `background-color: lightgray`
         : `background-color: #f6f6f6`;
     }}
   `;

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 import "../Styles/css/App.css";
 
@@ -73,6 +73,26 @@ const LinkBoxThree = styled.button`
 `;
 
 function DesktopContainer({ menuState, SetMenuState }) {
+  const [CTAAtive, setCTAAtive] = useState(true);
+  const [scroll, setScroll] = useState(0);
+
+  const handleFollow = () => {
+    setScroll(window.pageYOffset);
+  };
+
+  useEffect(() => {
+    const watch = () => {
+      window.addEventListener("scroll", handleFollow);
+    };
+    watch();
+    return () => {
+      window.removeEventListener("scroll", handleFollow);
+    };
+  });
+  useEffect(() => {
+    scroll < 250 ? setCTAAtive(false) : setCTAAtive(true);
+  }, [scroll]);
+
   const pagesObj = {
     0: <AboutKGA></AboutKGA>,
     1: <CourseIntro></CourseIntro>,
@@ -88,15 +108,26 @@ function DesktopContainer({ menuState, SetMenuState }) {
       {menuState === 5 ? <BackVideo /> : null}
       {pagesObj[menuState]}
       <BottomCTABar></BottomCTABar>
-      <LinkBoxOne
-        as={"a"}
-        href={"http://www.kiweb.or.kr/?view=pc"}
-      ></LinkBoxOne>
-      <LinkBoxTwo as={"a"} href={"https://www.kyungilart.com/"}></LinkBoxTwo>
-      <LinkBoxThree
-        as={"a"}
-        href={"https://www.kgaprogamer.com/"}
-      ></LinkBoxThree>
+      {CTAAtive === true ? (
+        <>
+          {" "}
+          <LinkBoxOne
+            as={"a"}
+            href={"http://www.kiweb.or.kr/?view=pc"}
+          ></LinkBoxOne>
+          <LinkBoxTwo
+            as={"a"}
+            href={"https://www.kyungilart.com/"}
+          ></LinkBoxTwo>
+          <LinkBoxThree
+            as={"a"}
+            href={"https://www.kgaprogamer.com/"}
+          ></LinkBoxThree>{" "}
+        </>
+      ) : (
+        <></>
+      )}
+
       <Footer menuState={menuState} SetMenuState={SetMenuState}></Footer>
     </AppContainer>
   );

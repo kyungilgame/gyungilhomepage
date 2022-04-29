@@ -8,7 +8,7 @@ import BlackBoxRibone from "../Image/BlackBoxRibone.png";
 import RecrutingLabel from "../Image/RecrutingLabel.png";
 import GreenArrow from "../Image/GreenArrow.png";
 
-import MapImage from "../Image/mapImage.png";
+import MapImage from "../Function/Map";
 
 import ReactPlayer from "react-player/youtube";
 
@@ -85,7 +85,7 @@ const ContentsBoxSevenContainer = styled.div`
 
 const ContentsBoxEightContainer = styled.div`
   width: 100%;
-  height: 55vw;
+  height: 50vw;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -301,14 +301,10 @@ const ColorBoxWrapper = styled.div`
 `;
 
 const MapWrapper = styled.div`
-  width: 40vw;
-  height: 40vw;
+  width: 50%;
+  height: 90%;
   background-color: gray;
   margin: 1.5vw;
-  background-size: contain;
-  background-position: center center;
-  background-repeat: no-repeat;
-  background-image: url(${MapImage});
 `;
 
 const ImageWrapper = styled.img`
@@ -703,7 +699,9 @@ const Main = ({ menuState, SetMenuState }) => {
       </ContentsBoxSevenContainer>
       <ContentsBoxEightContainer>
         <TextSizeFifteen>KGA 오시는 길</TextSizeFifteen>
-        <MapWrapper></MapWrapper>
+        <MapWrapper>
+          <MapImage></MapImage>
+        </MapWrapper>
         <TextSizeNineteen>
           서울시 강동구 올림픽로 651 예경빌딩 4층 경일게임아카데미
         </TextSizeNineteen>

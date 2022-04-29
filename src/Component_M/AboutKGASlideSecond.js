@@ -130,8 +130,8 @@ export default function AboutKGASlideSecond() {
                   alignItems: "center",
                 }}
               >
-                <TextOne>박경배</TextOne>
-                <TextTwo>블록체인</TextTwo>
+                <TextOne>이창희</TextOne>
+                <TextTwo>프로그래밍</TextTwo>
               </div>
             </div>
 
@@ -144,11 +144,12 @@ export default function AboutKGASlideSecond() {
               }}
             ></div>
             <TextBox>
-              Bitcoin 열기가 대한민국에 도래했을 때 블록체인에 관심을 갖고
-              알트코인 개발 회사에 입사해 블록체인의 매력에 빠져 들게 되었다.
-              4차 산업혁명이 중요한 가치를 가지게 될 시대, 미래를 짊어지게 될
-              젊은이들이 앞으로의 IT업계에서 시발 주자가 되어 이끌어나갈
-              원동력이 되길 바란다.
+              임베디드 전공으로 첫 코딩을 시작했다. 프로그래밍에는 단기간에
+              실력이 향상되는 편법이라는 것이 없다. 좋은 개발자의 조건은 최대한
+              코딩 하지 않고 결과를 낼 수 있는 능력, 시간을 지키는 것이라고
+              생각한다. 지식과 경험을 바탕으로 학생들을 지도하고 멘토링을 하면서
+              수강생들이 신입 개발자로서의 새로운 커리어를 시작할 수 있도록 함께
+              고민하고 노력한다.
             </TextBox>
           </ItemWrapper>
           <ItemWrapper>
@@ -228,13 +229,12 @@ export default function AboutKGASlideSecond() {
               }}
             ></div>
             <TextBox>
-              게임은 선사시대부터 있었던 사피엔스 고유의 특성입니다.
-              게임 기획은 뇌 과학 이론까지 흘러가기도 합니다. 그래서,
-              게임 기획은 너무나 멋진 일이고, 그렇기에 실무 위주 스파르타 교육을
-              받아야만 합니다.
-              KGA는 전문 선수를 육성하는 시스템으로, 여러분이 기획자가 될 때까지
-              육성합니다. 기획자로 입문하고 싶은 분은 준비하실 건 별거 없습니다.
-              마음만 단단히 먹고 오시길 바랍니다. 그럼 기획자 될 수 있습니다.
+              게임은 선사시대부터 있었던 사피엔스 고유의 특성입니다. 게임 기획은
+              뇌 과학 이론까지 흘러가기도 합니다. 그래서, 게임 기획은 너무나
+              멋진 일이고, 그렇기에 실무 위주 스파르타 교육을 받아야만 합니다.
+              KGA는 전문 선수를 육성하는 시스템으로, 여러분이 기획자가 될 때까지
+              육성합니다. 기획자로 입문하고 싶은 분은 준비하실 건 별거 없습니다.
+              마음만 단단히 먹고 오시길 바랍니다. 그럼 기획자 될 수 있습니다.
             </TextBox>
           </ItemWrapper>
           <ItemWrapper>
@@ -257,8 +257,8 @@ export default function AboutKGASlideSecond() {
                   alignItems: "center",
                 }}
               >
-                <TextOne>이창희</TextOne>
-                <TextTwo>프로그래밍</TextTwo>
+                <TextOne>최영묵</TextOne>
+                <TextTwo>게임 프로그래밍</TextTwo>
               </div>
             </div>
 
@@ -270,14 +270,7 @@ export default function AboutKGASlideSecond() {
                 marginTop: "0.5vw",
               }}
             ></div>
-            <TextBox>
-              임베디드 전공으로 첫 코딩을 시작했다. 프로그래밍에는 단기간에
-              실력이 향상되는 편법이라는 것이 없다. 좋은 개발자의 조건은 최대한
-              코딩 하지 않고 결과를 낼 수 있는 능력, 시간을 지키는 것이라고
-              생각한다. 지식과 경험을 바탕으로 학생들을 지도하고 멘토링을 하면서
-              수강생들이 신입 개발자로서의 새로운 커리어를 시작할 수 있도록 함께
-              고민하고 노력한다.
-            </TextBox>
+            <TextBox></TextBox>
           </ItemWrapper>
           <ItemWrapper>
             <div
@@ -626,87 +619,8 @@ export default function AboutKGASlideSecond() {
                   alignItems: "center",
                 }}
               >
-                <TextOne>최상문</TextOne>
-                <TextTwo>게임 프로그래밍</TextTwo>
-              </div>
-            </div>
-
-            <div
-              style={{
-                width: "90%",
-                height: "0.2vw",
-                backgroundColor: "#lightgray",
-                marginTop: "0.5vw",
-              }}
-            ></div>
-            <TextBox>
-              게임과 컴퓨터를 좋아하여 관련 학과를 전공 중, 프로그래밍의 재미를
-              알게 되었다. 월드 오브 워크래프트라는 게임에 빠지게 된 후, 대학을
-              졸업하고 진로를 걱정할 때 게임을 직접 만들어 보고 싶어 게임
-              프로그래밍의 길을 가게 되었다. 학생들에게 게임 프로그래밍의 재미와
-              스스로 개발을 할 수 있는 역량을 발휘할 수 있게 하는게 목표다.
-            </TextBox>
-          </ItemWrapper>
-          <ItemWrapper>
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "space-around",
-                alignItems: "center",
-                width: "95%",
-                height: "60%",
-              }}
-            >
-              <ImageWrapper Image={FaceImage}></ImageWrapper>
-              <div
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  justifyContent: "center",
-                  alignItems: "center",
-                }}
-              >
-                <TextOne>김예림</TextOne>
-                <TextTwo>매니저</TextTwo>
-              </div>
-            </div>
-
-            <div
-              style={{
-                width: "90%",
-                height: "0.2vw",
-                backgroundColor: "#lightgray",
-                marginTop: "0.5vw",
-              }}
-            ></div>
-            <TextBox>
-              '노력하는 자에게 인생은 미소 짓는다.' 여러분이 이루고자 하는
-              목표에 가까워 졌습니다. 항상 여러분들을 응원하도록 하겠습니다 :)
-            </TextBox>
-          </ItemWrapper>
-          <ItemWrapper>
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "space-around",
-                alignItems: "center",
-                width: "95%",
-                height: "60%",
-              }}
-            >
-              <ImageWrapper Image={FaceImage}></ImageWrapper>
-              <div
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  justifyContent: "center",
-                  alignItems: "center",
-                }}
-              >
                 <TextOne>황인경</TextOne>
-                <TextTwo>매니저</TextTwo>
+                <TextTwo>Administrative Staff</TextTwo>
               </div>
             </div>
 
@@ -744,8 +658,81 @@ export default function AboutKGASlideSecond() {
                   alignItems: "center",
                 }}
               >
+                <TextOne>김태완</TextOne>
+                <TextTwo>Empolyment Support</TextTwo>
+              </div>
+            </div>
+
+            <div
+              style={{
+                width: "90%",
+                height: "0.2vw",
+                backgroundColor: "#lightgray",
+                marginTop: "0.5vw",
+              }}
+            ></div>
+            <TextBox></TextBox>
+          </ItemWrapper>
+          <ItemWrapper>
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "space-around",
+                alignItems: "center",
+                width: "95%",
+                height: "60%",
+              }}
+            >
+              <ImageWrapper Image={FaceImage}></ImageWrapper>
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                <TextOne>강명규</TextOne>
+                <TextTwo>Administrative Staff</TextTwo>
+              </div>
+            </div>
+
+            <div
+              style={{
+                width: "90%",
+                height: "0.2vw",
+                backgroundColor: "#lightgray",
+                marginTop: "0.5vw",
+              }}
+            ></div>
+            <TextBox>
+              여러분들의 목표달성을 위해 보이지 않는 곳에서 항상 서포트하고
+              있겠습니다.
+            </TextBox>
+          </ItemWrapper>
+          <ItemWrapper>
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "space-around",
+                alignItems: "center",
+                width: "95%",
+                height: "60%",
+              }}
+            >
+              <ImageWrapper Image={FaceImage}></ImageWrapper>
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
                 <TextOne>송재오</TextOne>
-                <TextTwo>매니저</TextTwo>
+                <TextTwo>Administrative Staff</TextTwo>
               </div>
             </div>
 
@@ -783,7 +770,7 @@ export default function AboutKGASlideSecond() {
                 }}
               >
                 <TextOne>정지은</TextOne>
-                <TextTwo>매니저</TextTwo>
+                <TextTwo>Administrative Staff</TextTwo>
               </div>
             </div>
 
@@ -821,8 +808,8 @@ export default function AboutKGASlideSecond() {
                   alignItems: "center",
                 }}
               >
-                <TextOne>강명규</TextOne>
-                <TextTwo>매니저</TextTwo>
+                <TextOne>한소연</TextOne>
+                <TextTwo>Administrative Staff</TextTwo>
               </div>
             </div>
 
@@ -834,10 +821,7 @@ export default function AboutKGASlideSecond() {
                 marginTop: "0.5vw",
               }}
             ></div>
-            <TextBox>
-              여러분들의 목표달성을 위해 보이지 않는 곳에서 항상 서포트하고
-              있겠습니다.
-            </TextBox>
+            <TextBox></TextBox>
           </ItemWrapper>
         </SlideColumnWrapper>
       </SlideWrapper>

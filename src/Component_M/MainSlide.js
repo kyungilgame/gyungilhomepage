@@ -44,7 +44,7 @@ const TextSizeOne = styled.div`
 `;
 
 const TextSizeTwo = styled.div`
-  font-family: "SEBANG-Gothic-Regular";
+  font-family: "Pretendard-Regular";
   font-size: 2vw;
   color: #101010;
 `;
@@ -55,7 +55,7 @@ export default function MainSlide() {
       <SlideRowWrapper>
         <ImageContainer></ImageContainer>
         <ContentContainer>
-          <TextSizeOne>① 취업률 1위, 상위 0.8%, 89.5%</TextSizeOne>
+          <TextSizeOne>취업률 1위, 상위 0.8%, 89.5%</TextSizeOne>
           <TextSizeOne>8년간 지속해 온 압도적인 교육 성과</TextSizeOne>
 
           <div style={{ marginTop: "2vw" }}></div>
@@ -72,7 +72,7 @@ export default function MainSlide() {
         <ImageContainer></ImageContainer>
         <ContentContainer>
           <TextSizeOne>
-            ② 게임 개발, 디지털 아트, 프로게이머, 블록체인,
+            게임 개발, 디지털 아트, 프로게이머, 블록체인,
           </TextSizeOne>
           <TextSizeOne>
             메타버스 시대의 최전선에 서 있는 날카로운 교육 라인업
@@ -91,7 +91,7 @@ export default function MainSlide() {
         <ImageContainer></ImageContainer>
         <ContentContainer>
           <TextSizeOne>
-            ③ 비전공자와 초보자를 위한 교육으로 시작해 전공자들도
+            비전공자와 초보자를 위한 교육으로 시작해 전공자들도
           </TextSizeOne>
           <TextSizeOne>만족하는 심화 수준으로 마무리하는 커리큘럼</TextSizeOne>
 

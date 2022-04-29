@@ -128,7 +128,7 @@ export default function MainCarousel() {
         ></Button>
       </div>
       <SlideSelectorWrapper>
-        {currentSlide === 0 ? (
+        {/* {currentSlide === 0 ? (
           <SlideSelectedCircle onClick={() => setCurrentSlide(0)} />
         ) : (
           <SlideNotSelectedCircle onClick={() => setCurrentSlide(0)} />
@@ -142,7 +142,7 @@ export default function MainCarousel() {
           <SlideSelectedCircle onClick={() => setCurrentSlide(2)} />
         ) : (
           <SlideNotSelectedCircle onClick={() => setCurrentSlide(2)} />
-        )}
+        )} */}
       </SlideSelectorWrapper>
     </div>
   );
