@@ -32,7 +32,6 @@ const ContentsBoxTwoContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: gray;
 `;
 
 const ContentsBoxThreeContainer = styled.div`
@@ -185,7 +184,7 @@ const VideoPlayWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-items: center;
-  background-color: #101010;
+  /* background-color: #101010; */
   margin-top: 8vw;
 `;
 
@@ -197,12 +196,11 @@ const CourseReview = () => {
     <>
       <ContentsBoxOneContainer></ContentsBoxOneContainer>
       <ContentsBoxTwoContainer>
-        {" "}
         <VideoPlayWrapper>
           <ReactPlayer
             url="https://youtu.be/n0KEoy53BRw"
             width="100%"
-            height="80%"
+            height="85%"
           />
         </VideoPlayWrapper>
       </ContentsBoxTwoContainer>

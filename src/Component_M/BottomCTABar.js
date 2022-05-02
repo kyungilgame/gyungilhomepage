@@ -24,6 +24,7 @@ const ContentsOneContainer = styled.div`
   background-position: right 54% bottom 69%;
   background-repeat: no-repeat;
   box-shadow: 0.1vw 0.1vw 0.1vw 0.1vw #00ffd6;
+  z-index: 2;
 `;
 
 const FirstLine = styled.div`
@@ -40,7 +41,7 @@ const SecondLine = styled.div`
 
 const ThirdLine = styled.div`
   font-family: "SEBANG-Gothic-Bold";
-  font-size: 1.9vw;
+  font-size: 1.8vw;
   color: #101010;
 `;
 

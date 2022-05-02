@@ -24,6 +24,7 @@ const ContentsOneContainer = styled.div`
   background-position: right 71% bottom 45%;
   background-repeat: no-repeat; */
   box-shadow: 0.1vw 0.1vw 0.1vw 0.1vw #00ffd6;
+  z-index: 2;
 `;
 
 const FirstLine = styled.div`
