@@ -85,7 +85,7 @@ const ContentsBoxSevenContainer = styled.div`
 
 const ContentsBoxEightContainer = styled.div`
   width: 100%;
-  height: 50vw;
+  height: 55vw;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -215,6 +215,7 @@ const TextSizeEightteen = styled.div`
 const TextSizeNineteen = styled.div`
   font-family: "Pretendard-Regular";
   font-size: 1.5vw;
+  margin-top: 1vw;
   color: #101010;
 `;
 
@@ -302,7 +303,7 @@ const ColorBoxWrapper = styled.div`
 
 const MapWrapper = styled.div`
   width: 50%;
-  height: 90%;
+  height: 40vw;
   background-color: gray;
   margin: 1.5vw;
 `;
