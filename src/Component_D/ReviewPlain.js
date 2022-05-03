@@ -4,14 +4,14 @@ import styled from "styled-components";
 import FaceImage from "../Image/face/Anonymous.png";
 
 const ItemWrapper = styled.div`
-  width: 5%;
+  width: 4.5%;
   height: 90%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   background-color: #f6f6f6;
-  margin-left: 4vw;
+  margin-left: 2vw;
   box-shadow: 0.2vw 0.2vw 0.2vw 0.2vw lightgray;
   border-radius: 1.5vw;
 `;

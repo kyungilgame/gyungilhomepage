@@ -5,14 +5,14 @@ import FaceImage from "../Image/face/Anonymous.png";
 import rightArrow from "../Image/rightArrow.png";
 
 const ItemWrapper = styled.div`
-  width: 5%;
+  width: 4.5%;
   height: 90%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   background-color: #f6f6f6;
-  margin-left: 4vw;
+  margin-left: 2vw;
   box-shadow: 0.2vw 0.2vw 0.2vw 0.2vw lightgray;
   border-radius: 1.5vw;
 `;
@@ -33,7 +33,7 @@ const TextOne = styled.div`
   font-family: "SEBANG-Gothic-Bold";
   font-size: 1.5vw;
   color: #101010;
-  margin-top: 1vw;
+  margin-top: 5vw;
 `;
 
 const TextTwo = styled.div`
@@ -64,7 +64,7 @@ const Button = styled.button`
   height: 7%;
   background-color: #00ffd6;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
   border-radius: 0.5vw;
   margin-top: 0.3vw;
@@ -75,7 +75,6 @@ export default function ReviewVideo() {
   return (
     <>
       <ItemWrapper>
-        <ImageWrapper Image={FaceImage}></ImageWrapper>
         <TextOne>GDB 김도형 챌린저</TextOne>
         <TextTwo>VR 콘텐츠 개발자 입사</TextTwo>
         <div
@@ -94,11 +93,16 @@ export default function ReviewVideo() {
         <TextThree>전업 디자이너</TextThree>
         <TextThree>현업 게임 개발자</TextThree>
         <Button>
-          <div style={{ width: "1vw" }}></div>
-          <text style={{ color: "#101010", fontSize: "1.2vw" }}>
+          <text
+            style={{
+              color: "#101010",
+              fontSize: "1.2vw",
+              fontFamily: "SEBANG-Gothic-Bold",
+            }}
+          >
             인터뷰 보러가기
           </text>
-          <img src={rightArrow} style={{ width: "1vw", height: "1vw" }}></img>
+          {/* <img src={rightArrow} style={{ width: "1vw", height: "1vw" }}></img> */}
         </Button>
       </ItemWrapper>
     </>

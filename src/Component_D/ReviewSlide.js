@@ -83,6 +83,86 @@ export default function ReviewSlide({ ReviewSelect }) {
         </SlideWrapper>
       );
       break;
+    case 2:
+      return (
+        <SlideWrapper>
+          <SlideRowWrapper>
+            <ReviewVideo></ReviewVideo>
+            <ReviewVideo></ReviewVideo>
+            <ReviewVideo></ReviewVideo>
+          </SlideRowWrapper>
+          <SlideRowWrapper>
+            <ReviewVideo></ReviewVideo>
+            <ReviewVideo></ReviewVideo>
+            <ReviewPlain></ReviewPlain>
+          </SlideRowWrapper>
+        </SlideWrapper>
+      );
+      break;
+    case 3:
+      return (
+        <SlideWrapper>
+          <SlideRowWrapper>
+            <ReviewVideo></ReviewVideo>
+            <ReviewVideo></ReviewVideo>
+            <ReviewVideo></ReviewVideo>
+          </SlideRowWrapper>
+          <SlideRowWrapper>
+            <ReviewVideo></ReviewVideo>
+            <ReviewVideo></ReviewVideo>
+            <ReviewPlain></ReviewPlain>
+          </SlideRowWrapper>
+        </SlideWrapper>
+      );
+      break;
+    case 4:
+      return (
+        <SlideWrapper>
+          <SlideRowWrapper>
+            <ReviewVideo></ReviewVideo>
+            <ReviewVideo></ReviewVideo>
+            <ReviewVideo></ReviewVideo>
+          </SlideRowWrapper>
+          <SlideRowWrapper>
+            <ReviewVideo></ReviewVideo>
+            <ReviewVideo></ReviewVideo>
+            <ReviewPlain></ReviewPlain>
+          </SlideRowWrapper>
+        </SlideWrapper>
+      );
+      break;
+    case 5:
+      return (
+        <SlideWrapper>
+          <SlideRowWrapper>
+            <ReviewVideo></ReviewVideo>
+            <ReviewVideo></ReviewVideo>
+            <ReviewVideo></ReviewVideo>
+          </SlideRowWrapper>
+          <SlideRowWrapper>
+            <ReviewVideo></ReviewVideo>
+            <ReviewVideo></ReviewVideo>
+            <ReviewPlain></ReviewPlain>
+          </SlideRowWrapper>
+        </SlideWrapper>
+      );
+      break;
+    case 6:
+      return (
+        <SlideWrapper>
+          <SlideRowWrapper>
+            <ReviewVideo></ReviewVideo>
+            <ReviewVideo></ReviewVideo>
+            <ReviewVideo></ReviewVideo>
+          </SlideRowWrapper>
+          <SlideRowWrapper>
+            <ReviewVideo></ReviewVideo>
+            <ReviewVideo></ReviewVideo>
+            <ReviewPlain></ReviewPlain>
+          </SlideRowWrapper>
+        </SlideWrapper>
+      );
+      break;
     default:
   }
 }
