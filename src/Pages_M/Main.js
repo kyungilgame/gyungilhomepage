@@ -63,7 +63,7 @@ const ContentsBoxFiveContainer = styled.div`
 
 const ContentsBoxSixContainer = styled.div`
   width: 100%;
-  height: 150vw;
+  height: 170vw;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
