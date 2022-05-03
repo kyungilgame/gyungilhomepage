@@ -6,6 +6,8 @@ import ReviewSlide from "../Component_D/ReviewSlide";
 
 import styled from "styled-components";
 
+// 2번째 페이지 74번
+
 const Container = styled.div`
   width: 100%;
   overflow: hidden; // 선을 넘어간 이미지들은 보이지 않도록 처리합니다.
@@ -126,7 +128,7 @@ export default function ReviewCarousel({ ReviewSelect }) {
         ></Button>
       </div>
       <SlideSelectorWrapper>
-        {currentSlide === 0 ? (
+        {/* {currentSlide === 0 ? (
           <SlideSelectedCircle onClick={() => setCurrentSlide(0)} />
         ) : (
           <SlideNotSelectedCircle onClick={() => setCurrentSlide(0)} />
@@ -150,7 +152,7 @@ export default function ReviewCarousel({ ReviewSelect }) {
           <SlideSelectedCircle onClick={() => setCurrentSlide(4)} />
         ) : (
           <SlideNotSelectedCircle onClick={() => setCurrentSlide(4)} />
-        )}
+        )} */}
       </SlideSelectorWrapper>
     </div>
   );

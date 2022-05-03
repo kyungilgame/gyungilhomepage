@@ -1,8 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 
-import FaceImage from "../Image/face/Anonymous.png";
-
 const ItemWrapper = styled.div`
   width: 4.5%;
   height: 90%;
@@ -14,18 +12,6 @@ const ItemWrapper = styled.div`
   margin-left: 2vw;
   box-shadow: 0.2vw 0.2vw 0.2vw 0.2vw lightgray;
   border-radius: 1.5vw;
-`;
-
-const ImageWrapper = styled.div`
-  width: 6vw;
-  height: 6vw;
-  margin-top: 2vw;
-  background-size: contain;
-  background-position: center top;
-  background-repeat: no-repeat;
-  ${({ Image }) => {
-    return Image ? `background-image: url(${Image})` : null;
-  }}
 `;
 
 const TextOne = styled.div`
