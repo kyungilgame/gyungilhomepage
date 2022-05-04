@@ -150,8 +150,8 @@ const AboutKGA = () => {
           힘든 인생의 유일한 기회임을 잘 알고 있습니다.
         </TextSizeTwo>
         <TextSizeTwo style={{ marginTop: "1vw" }}>
-          게임, VR, 블록체인, 메타버스 분야에 공허한 구호와 허황된 비전들이
-          얼마나 많이 난무하는 지,
+          게임, VR, 블록체인, 메타버스, 웹개발 분야에 공허한 구호와 허황된
+          비전들이 얼마나 많이 난무하는 지,
         </TextSizeTwo>
         <TextSizeTwo>
           그로 인해 많은 청년들이 상처받고 꿈을 접게 되는지도 잘 알고 있습니다.
@@ -254,16 +254,15 @@ const AboutKGA = () => {
               }}
             >
               <TextSizeSix style={{ marginTop: "1vw" }}>
-                게임 개발과 인연을 맺은 지 어느덧 30년, 우리나라 게임 기획자의
-                1%가 저의 제자입니다. 항상 연구하고
+                직업 컨설팅 및 멘토로서 현 KGA Vice-president입니다. 저는
+                '막연함'이 아닌 '확실함'으로
               </TextSizeSix>
               <TextSizeSix>
-                시행착오를 극복하기 위해 노력했기에 가능했습니다. 인생의 중요한
-                시기에 취업을 위해 KGA를 찾아오는
+                여러분들에게 확신을 주고 싶습니다.미래에 대한 불안감을 가진
+                청년들에게 응원의 메시지를 전합니다.
               </TextSizeSix>
               <TextSizeSix>
-                학생들의 간절함을 이해 합니다. 그렇기에 "저는 KGA에서 교육을
-                받았습니다"라는 취업 만능 열쇠를 만듭니다.
+                반드시 취업할 수 있는 KGA에서 여러분의 꿈을 시작하세요!
               </TextSizeSix>
             </div>
           </IntroduceBoxInnerWrapper>

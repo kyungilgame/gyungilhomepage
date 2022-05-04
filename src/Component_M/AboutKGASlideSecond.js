@@ -90,8 +90,8 @@ export default function AboutKGASlideSecond() {
                   alignItems: "center",
                 }}
               >
-                <TextOne>오준환</TextOne>
-                <TextTwo>게임 프로그래밍</TextTwo>
+                <TextOne>김기원</TextOne>
+                <TextTwo>게임 기획</TextTwo>
               </div>
             </div>
 
@@ -104,10 +104,12 @@ export default function AboutKGASlideSecond() {
               }}
             ></div>
             <TextBox>
-              함께 일할 ‘후배 프로그래머’를 가르친다는 마음가짐으로 교육을 하고
-              있다. 지식과 훈련의 균형을 중요하게 생각하고, 프로그래밍뿐만
-              아니라 게임 개발에 필요한 소양을 키우도록 지도한다. 취업을 넘어서
-              모두가 원하는 게임 프로그래머를 키우는 게 목표다.
+              게임은 선사시대부터 있었던 사피엔스 고유의 특성입니다. 게임 기획은
+              뇌 과학 이론까지 흘러가기도 합니다. 그래서, 게임 기획은 너무나
+              멋진 일이고, 그렇기에 실무 위주 스파르타 교육을 받아야만 합니다.
+              KGA는 전문 선수를 육성하는 시스템으로, 여러분이 기획자가 될 때까지
+              육성합니다. 기획자로 입문하고 싶은 분은 준비하실 건 별거 없습니다.
+              마음만 단단히 먹고 오시길 바랍니다. 그럼 기획자 될 수 있습니다.
             </TextBox>
           </ItemWrapper>
           <ItemWrapper>
@@ -172,6 +174,47 @@ export default function AboutKGASlideSecond() {
                   alignItems: "center",
                 }}
               >
+                <TextOne>오준환</TextOne>
+                <TextTwo>게임 프로그래밍</TextTwo>
+              </div>
+            </div>
+
+            <div
+              style={{
+                width: "90%",
+                height: "0.2vw",
+                backgroundColor: "#lightgray",
+                marginTop: "0.5vw",
+              }}
+            ></div>
+            <TextBox>
+              함께 일할 ‘후배 프로그래머’를 가르친다는 마음가짐으로 교육을 하고
+              있다. 지식과 훈련의 균형을 중요하게 생각하고, 프로그래밍뿐만
+              아니라 게임 개발에 필요한 소양을 키우도록 지도한다. 취업을 넘어서
+              모두가 원하는 게임 프로그래머를 키우는 게 목표다.
+            </TextBox>
+          </ItemWrapper>
+
+          <ItemWrapper>
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "space-around",
+                alignItems: "center",
+                width: "95%",
+                height: "60%",
+              }}
+            >
+              <ImageWrapper Image={FaceImage}></ImageWrapper>
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
                 <TextOne>김진황</TextOne>
                 <TextTwo>프로그래밍</TextTwo>
               </div>
@@ -195,48 +238,7 @@ export default function AboutKGASlideSecond() {
               재미와 보람을 느낀다.
             </TextBox>
           </ItemWrapper>
-          <ItemWrapper>
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "space-around",
-                alignItems: "center",
-                width: "95%",
-                height: "60%",
-              }}
-            >
-              <ImageWrapper Image={FaceImage}></ImageWrapper>
-              <div
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  justifyContent: "center",
-                  alignItems: "center",
-                }}
-              >
-                <TextOne>김기원</TextOne>
-                <TextTwo>게임 기획</TextTwo>
-              </div>
-            </div>
 
-            <div
-              style={{
-                width: "90%",
-                height: "0.2vw",
-                backgroundColor: "#lightgray",
-                marginTop: "0.5vw",
-              }}
-            ></div>
-            <TextBox>
-              게임은 선사시대부터 있었던 사피엔스 고유의 특성입니다. 게임 기획은
-              뇌 과학 이론까지 흘러가기도 합니다. 그래서, 게임 기획은 너무나
-              멋진 일이고, 그렇기에 실무 위주 스파르타 교육을 받아야만 합니다.
-              KGA는 전문 선수를 육성하는 시스템으로, 여러분이 기획자가 될 때까지
-              육성합니다. 기획자로 입문하고 싶은 분은 준비하실 건 별거 없습니다.
-              마음만 단단히 먹고 오시길 바랍니다. 그럼 기획자 될 수 있습니다.
-            </TextBox>
-          </ItemWrapper>
           <ItemWrapper>
             <div
               style={{
@@ -746,7 +748,7 @@ export default function AboutKGASlideSecond() {
             ></div>
             <TextBox>
               꿈을 향해 1년이란 시간을 달리는 여러분을 위한 뉴스피드가
-              되어드리겠습니다 
+              되어드리겠습니다.
             </TextBox>
           </ItemWrapper>
           <ItemWrapper>

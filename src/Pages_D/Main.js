@@ -670,7 +670,7 @@ const Main = ({ menuState, SetMenuState }) => {
         </div>
         <ApplyBlackButton
           as={"a"}
-          href={"https://forms.gle/2Kj9iAUN7HJsE7su9"}
+          href={"https://forms.gle/ZkEsq78YRdn8PR3U9"}
           target={"_blank"}
         >
           <text

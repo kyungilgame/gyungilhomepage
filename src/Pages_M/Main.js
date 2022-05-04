@@ -289,9 +289,25 @@ const MapWrapper = styled.div`
 const ImageWrapper = styled.img`
   width: 10vw;
   height: 3vw;
-  position: relative;
-  bottom: 2.1vw;
-  left: 12.2vw;
+  position: absolute;
+  right: 11.7vw;
+  top: 156vw;
+`;
+
+const ImageWrapperOne = styled.img`
+  width: 10vw;
+  height: 3vw;
+  position: absolute;
+  right: 51.7vw;
+  top: 207.7vw;
+`;
+
+const ImageWrapperTwo = styled.img`
+  width: 10vw;
+  height: 3vw;
+  position: absolute;
+  right: 11.7vw;
+  top: 207.7vw;
 `;
 
 const Main = ({ menuState, SetMenuState }) => {
@@ -397,7 +413,7 @@ const Main = ({ menuState, SetMenuState }) => {
               </ApplyButton>
             </BlackBoxWrapper>
             <BlackBoxWrapper>
-              <ImageWrapper src={RecrutingLabel}></ImageWrapper>
+              <ImageWrapperOne src={RecrutingLabel}></ImageWrapperOne>
               <TextSizeEight style={{}}>국가기간전략훈련</TextSizeEight>
               <TextSizeNine>AR / VR</TextSizeNine>
               <TextSizeTen>비대면 시대의 핵심 기술</TextSizeTen>
@@ -434,7 +450,7 @@ const Main = ({ menuState, SetMenuState }) => {
               </ApplyButton>
             </BlackBoxWrapper>
             <BlackBoxWrapper>
-              <ImageWrapper src={RecrutingLabel}></ImageWrapper>
+              <ImageWrapperTwo src={RecrutingLabel}></ImageWrapperTwo>
               <TextSizeEight style={{}}>국가기간전략훈련</TextSizeEight>
               <TextSizeNine>웹개발</TextSizeNine>
               <TextSizeTen>공공데이터 개발자 되기</TextSizeTen>
@@ -593,7 +609,7 @@ const Main = ({ menuState, SetMenuState }) => {
         </div>
         <ApplyBlackButton
           as={"a"}
-          href={"https://forms.gle/2Kj9iAUN7HJsE7su9"}
+          href={"https://forms.gle/ZkEsq78YRdn8PR3U9"}
           target={"_blank"}
         >
           <text
