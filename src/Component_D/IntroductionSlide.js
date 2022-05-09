@@ -1,11 +1,29 @@
 import React from "react";
 import styled from "styled-components";
 
+import Kimgeon from "../Image/Empoloee/Kimgeon.png";
+import KwakIngoo from "../Image/Empoloee/KwakIngoo.png";
+import Choiseonmoon from "../Image/Empoloee/Choiseonmoon.png";
+import Choisunglak from "../Image/Empoloee/Choisunglak.png";
+import Hansoyeon from "../Image/Empoloee/Hansoyeon.png";
+import HwangIngyung from "../Image/Empoloee/HwangIngyung.png";
+import Jeongjieun from "../Image/Empoloee/Jeongjieun.png";
+import Joehanbyul from "../Image/Empoloee/Joehanbyul.png";
+import Kangmyunggyu from "../Image/Empoloee/Kangmyunggyu.png";
+import Kimjinhwang from "../Image/Empoloee/Kimjinhwang.png";
+import Kimjungtaek from "../Image/Empoloee/Kimjungtaek.png";
+import Kimkiwon from "../Image/Empoloee/Kimkiwon.png";
+import Kimtaewan from "../Image/Empoloee/Kimtaewan.png";
+import Leechanghee from "../Image/Empoloee/Leechanghee.png";
+import Limyonggyu from "../Image/Empoloee/Limyonggyu.png";
+import Ohjunhwan from "../Image/Empoloee/Ohjunhwan.png";
+import Songjaeoh from "../Image/Empoloee/Songjaeoh.png";
+
 // props로 현재 슬라이드 숫자를 받고 return을 각
 // 슬라이드 수에 맞게 반환한다.
 const ItemWrapper = styled.div`
   width: 100%;
-  height: 35vw;
+  height: 40vw;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -14,7 +32,7 @@ const ItemWrapper = styled.div`
 
 const EachItemWrapper = styled.div`
   width: 27%;
-  height: 30vw;
+  height: 40vw;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -23,15 +41,20 @@ const EachItemWrapper = styled.div`
 `;
 
 const EachItemImage = styled.div`
-  width: 60%;
-  height: 40%;
-  background-color: gray;
-  margin-top: 2vw;
+  width: 85%;
+  height: 55%;
+  margin-top: 1vw;
+  background-size: contain;
+  background-position: center top;
+  background-repeat: no-repeat;
+  ${({ Image }) => {
+    return Image ? `background-image: url(${Image})` : null;
+  }}
 `;
 
 const EachItemName = styled.div`
   font-family: "SEBANG-Gothic-Bold";
-  font-size: 1.5vw;
+  font-size: 1.2vw;
   color: #101010;
   margin-top: 1vw;
 `;
@@ -43,10 +66,10 @@ const EachItemCourse = styled.div`
 `;
 const EachItemComment = styled.div`
   font-family: "Pretendard-Regular";
-  font-size: 0.7vw;
+  font-size: 0.9vw;
   color: #101010;
-  width: 70%;
-  height: 40%;
+  width: 80%;
+  height: 25%;
   margin-top: 1vw;
 `;
 
@@ -55,7 +78,7 @@ export default function Slide() {
     <>
       <ItemWrapper>
         <EachItemWrapper>
-          <EachItemImage></EachItemImage>
+          <EachItemImage Image={Kimkiwon}></EachItemImage>
           <EachItemName>김기원</EachItemName>
           <EachItemCourse>게임 기획</EachItemCourse>
           <EachItemComment>
@@ -69,7 +92,7 @@ export default function Slide() {
         </EachItemWrapper>
 
         <EachItemWrapper>
-          <EachItemImage></EachItemImage>
+          <EachItemImage Image={Leechanghee}></EachItemImage>
           <EachItemName>이창희</EachItemName>
           <EachItemCourse>프로그래밍</EachItemCourse>
           <EachItemComment>
@@ -82,7 +105,7 @@ export default function Slide() {
           </EachItemComment>
         </EachItemWrapper>
         <EachItemWrapper>
-          <EachItemImage></EachItemImage>
+          <EachItemImage Image={Ohjunhwan}></EachItemImage>
           <EachItemName>오준환</EachItemName>
           <EachItemCourse>게임 프로그래밍</EachItemCourse>
           <EachItemComment>
@@ -95,7 +118,7 @@ export default function Slide() {
       </ItemWrapper>
       <ItemWrapper>
         <EachItemWrapper>
-          <EachItemImage></EachItemImage>
+          <EachItemImage Image={Kimjinhwang}></EachItemImage>
           <EachItemName>김진황</EachItemName>
           <EachItemCourse>프로그래밍</EachItemCourse>
           <EachItemComment>
@@ -109,13 +132,18 @@ export default function Slide() {
           </EachItemComment>
         </EachItemWrapper>
         <EachItemWrapper>
-          <EachItemImage></EachItemImage>
-          <EachItemName>최영묵</EachItemName>
-          <EachItemCourse>게임 프로그래밍</EachItemCourse>
-          <EachItemComment></EachItemComment>
+          <EachItemImage Image={Choisunglak}></EachItemImage>
+          <EachItemName>최성락</EachItemName>
+          <EachItemCourse>게임 기획</EachItemCourse>
+          <EachItemComment>
+            내가 원하는 게임을 실제로 만드려면 어떻게 해야 할까? 이런 막연한
+            생각으로 개발에 뛰어든 지 오랜 시간이 지났다. 그 동안 많은 것을 얻고
+            몰랐던 지식들을 배워가며 여러 동료들도 생기게 되었다. 이제 이것들을
+            어떻게 전달할지 고민하는 것이 나의 새로운 목표가 되었다.
+          </EachItemComment>
         </EachItemWrapper>
         <EachItemWrapper>
-          <EachItemImage></EachItemImage>
+          <EachItemImage Image={KwakIngoo}></EachItemImage>
           <EachItemName>곽인구</EachItemName>
           <EachItemCourse>웹,앱,블록체인</EachItemCourse>
           <EachItemComment>
@@ -128,7 +156,7 @@ export default function Slide() {
       </ItemWrapper>
       <ItemWrapper>
         <EachItemWrapper>
-          <EachItemImage></EachItemImage>
+          <EachItemImage Image={Kimgeon}></EachItemImage>
           <EachItemName>김건</EachItemName>
           <EachItemCourse>블록체인,웹,취업지원</EachItemCourse>
           <EachItemComment>
@@ -139,7 +167,7 @@ export default function Slide() {
           </EachItemComment>
         </EachItemWrapper>
         <EachItemWrapper>
-          <EachItemImage></EachItemImage>
+          <EachItemImage Image={Kimjungtaek}></EachItemImage>
           <EachItemName>김정택</EachItemName>
           <EachItemCourse>게임 프로그래밍</EachItemCourse>
           <EachItemComment>
@@ -152,7 +180,7 @@ export default function Slide() {
           </EachItemComment>
         </EachItemWrapper>
         <EachItemWrapper>
-          <EachItemImage></EachItemImage>
+          <EachItemImage Image={Limyonggyu}></EachItemImage>
           <EachItemName>임용규</EachItemName>
           <EachItemCourse>VR,게임 프로그래밍</EachItemCourse>
           <EachItemComment>
@@ -167,20 +195,16 @@ export default function Slide() {
       </ItemWrapper>
       <ItemWrapper>
         <EachItemWrapper>
-          <EachItemImage></EachItemImage>
-          <EachItemName>정원</EachItemName>
-          <EachItemCourse>게임 기획</EachItemCourse>
+          <EachItemImage Image={Choiseonmoon}></EachItemImage>
+          <EachItemName>최선문</EachItemName>
+          <EachItemCourse>게임 프로그래밍</EachItemCourse>
           <EachItemComment>
-            여러 장르 게임을 만들어본 경험이 있는 기획자.
-            다양한 경험을 살려 게임기획자로서의 필요한 역량과 지식을 전달하기 위해 노력하고 있다.
-            끈기와 참을성을 가지고 어떤 학생이라도
-            포기하지 않으려는 마인드를 가지고 있으며, 학생들에게
-            기획자로서 게임을 만드는 즐거움을 알려주고 취업까지 연결
-            지을 수 있도록 노력하고 있다.
+            시프트업에서 데스티니차일드 서버 프로그래머로 시작하여, 가르치는 것을 좋아해 교육자가 되었다.  '원하는 기업 골라서 가자'를 교육 철학으로 삼고 있으며, 학생의 니즈에 최대한 부합할 수 있도록 물심양면으로 애쓰고 있다.
+            비전공자도 충분히 프로그래밍을 잘할 수 있다고 믿으며, 학생의 성장하는 모습에 뿌듯함을 느끼고 있다.
           </EachItemComment>
         </EachItemWrapper>
         <EachItemWrapper>
-          <EachItemImage></EachItemImage>
+          <EachItemImage Image={Joehanbyul}></EachItemImage>
           <EachItemName>조한별</EachItemName>
           <EachItemCourse>게임 프로그래밍</EachItemCourse>
           <EachItemComment>
@@ -191,31 +215,14 @@ export default function Slide() {
             배신하지 않으며 더 품격 있는 개발자의 길로 인도해 줄 것이다.
           </EachItemComment>
         </EachItemWrapper>
-        <EachItemWrapper>
-          <EachItemImage></EachItemImage>
-          <EachItemName>최선문</EachItemName>
-          <EachItemCourse>게임 프로그래밍</EachItemCourse>
-          <EachItemComment>
-            시프트업에서 데스티니차일드 서버 프로그래머로 시작하여, 가르치는 것을 좋아해 교육자가 되었다.  '원하는 기업 골라서 가자'를 교육 철학으로 삼고 있으며, 학생의 니즈에 최대한 부합할 수 있도록 물심양면으로 애쓰고 있다.
-            비전공자도 충분히 프로그래밍을 잘할 수 있다고 믿으며, 학생의 성장하는 모습에 뿌듯함을 느끼고 있다.
-          </EachItemComment>
-        </EachItemWrapper>
+        <EachItemWrapper
+          style={{ backgroundColor: "#f0f0f0" }}
+        ></EachItemWrapper>
       </ItemWrapper>
       <ItemWrapper>
         <ItemWrapper>
           <EachItemWrapper>
-            <EachItemImage></EachItemImage>
-            <EachItemName>최성락</EachItemName>
-            <EachItemCourse>게임 기획</EachItemCourse>
-            <EachItemComment>
-              내가 원하는 게임을 실제로 만드려면 어떻게 해야 할까? 이런 막연한
-              생각으로 개발에 뛰어든 지 오랜 시간이 지났다. 그 동안 많은 것을
-              얻고 몰랐던 지식들을 배워가며 여러 동료들도 생기게 되었다. 이제
-              이것들을 어떻게 전달할지 고민하는 것이 나의 새로운 목표가 되었다.
-            </EachItemComment>
-          </EachItemWrapper>
-          <EachItemWrapper>
-            <EachItemImage></EachItemImage>
+            <EachItemImage Image={HwangIngyung}></EachItemImage>
             <EachItemName>황인경</EachItemName>
             <EachItemCourse>Administrative Staff</EachItemCourse>
             <EachItemComment>
@@ -225,35 +232,16 @@ export default function Slide() {
             </EachItemComment>
           </EachItemWrapper>
           <EachItemWrapper>
-            <EachItemImage></EachItemImage>
+            <EachItemImage Image={Kimtaewan}></EachItemImage>
             <EachItemName>김태완</EachItemName>
             <EachItemCourse>Empolyment Support</EachItemCourse>
-            <EachItemComment></EachItemComment>
-          </EachItemWrapper>
-        </ItemWrapper>
-      </ItemWrapper>
-      <ItemWrapper>
-        <ItemWrapper>
-          <EachItemWrapper>
-            <EachItemImage></EachItemImage>
-            <EachItemName>강명규</EachItemName>
-            <EachItemCourse>Administrative Staff</EachItemCourse>
             <EachItemComment>
-              여러분들의 목표달성을 위해 보이지 않는 곳에서 항상 서포트하고
-              있겠습니다.
+              경일게임아카데미 과정을 성공적으로 수료하신 분들의 취업을
+              응원합니다!
             </EachItemComment>
           </EachItemWrapper>
           <EachItemWrapper>
-            <EachItemImage></EachItemImage>
-            <EachItemName>송재오</EachItemName>
-            <EachItemCourse>Administrative Staff</EachItemCourse>
-            <EachItemComment>
-              꿈을 향해 1년이란 시간을 달리는 여러분을 위한 뉴스피드가
-              되어드리겠습니다.
-            </EachItemComment>
-          </EachItemWrapper>
-          <EachItemWrapper>
-            <EachItemImage></EachItemImage>
+            <EachItemImage Image={Jeongjieun}></EachItemImage>
             <EachItemName>정지은</EachItemName>
             <EachItemCourse>Administrative Staff</EachItemCourse>
             <EachItemComment>
@@ -265,12 +253,39 @@ export default function Slide() {
         </ItemWrapper>
       </ItemWrapper>
       <ItemWrapper>
-        <EachItemWrapper>
-          <EachItemImage></EachItemImage>
-          <EachItemName>한소연</EachItemName>
-          <EachItemCourse>Administrative Staff</EachItemCourse>
-          <EachItemComment></EachItemComment>
-        </EachItemWrapper>
+        <ItemWrapper>
+          <EachItemWrapper>
+            <EachItemImage Image={Kangmyunggyu}></EachItemImage>
+            <EachItemName>강명규</EachItemName>
+            <EachItemCourse>Administrative Staff</EachItemCourse>
+            <EachItemComment>
+              여러분들의 목표달성을 위해 보이지 않는 곳에서 항상 서포트하고
+              있겠습니다.
+            </EachItemComment>
+          </EachItemWrapper>
+          <EachItemWrapper>
+            <EachItemImage Image={Songjaeoh}></EachItemImage>
+            <EachItemName>송재오</EachItemName>
+            <EachItemCourse>Administrative Staff</EachItemCourse>
+            <EachItemComment>
+              꿈을 향해 1년이란 시간을 달리는 여러분을 위한 뉴스피드가
+              되어드리겠습니다.
+            </EachItemComment>
+          </EachItemWrapper>
+          <EachItemWrapper>
+            <EachItemImage Image={Hansoyeon}></EachItemImage>
+            <EachItemName>한소연</EachItemName>
+            <EachItemCourse>Administrative Staff</EachItemCourse>
+            <EachItemComment>
+              아자아자 무엇이든 열심히 안내해드릴 수 있는 사람이 되겠습니다.
+            </EachItemComment>
+          </EachItemWrapper>
+        </ItemWrapper>
+      </ItemWrapper>
+      <ItemWrapper>
+        <EachItemWrapper
+          style={{ backgroundColor: "#f0f0f0" }}
+        ></EachItemWrapper>
         <EachItemWrapper
           style={{ backgroundColor: "#f0f0f0" }}
         ></EachItemWrapper>

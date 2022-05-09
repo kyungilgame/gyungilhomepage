@@ -31,12 +31,12 @@ const Button = styled.button`
   }}
 `;
 const SliderContainer = styled.div`
-  height: 80vw;
+  height: 115vw;
   display: flex; //이미지들을 가로로 나열합니다.
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-
+  background-color: coral;
   ${({ first }) => {
     return first ? `width: 200%` : `width: 950%`;
   }}
@@ -57,7 +57,7 @@ export default function AboutKGACarousel_M({ first }) {
   const slideRef = useRef(null);
 
   let TOTAL_SLIDES = 3;
-  first ? (TOTAL_SLIDES = 3) : (TOTAL_SLIDES = 18); // 7장 19명:
+  first ? (TOTAL_SLIDES = 3) : (TOTAL_SLIDES = 16); // 7장 19명:
 
   const nextSlide = () => {
     if (currentSlide >= TOTAL_SLIDES) {
@@ -114,6 +114,7 @@ export default function AboutKGACarousel_M({ first }) {
         flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
+        marginTop: "10vw",
       }}
     >
       <div

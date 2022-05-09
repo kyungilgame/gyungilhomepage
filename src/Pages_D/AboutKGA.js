@@ -8,6 +8,11 @@ import NewImage2 from "../Image/NewImage2.png";
 import NewImage3 from "../Image/NewImage3.png";
 import NewImage4 from "../Image/NewImage4.png";
 
+import Kimjaeyeon from "../Image/Empoloee/Kimjaeyeon.png";
+import Parkbyungjun from "../Image/Empoloee/Parkbyungjun.png";
+import Seohyeokjun from "../Image/Empoloee/Seohyeokjun.png";
+import Anonymous from "../Image/Empoloee/Anonymous.png";
+
 //https://github.com/farbenmeer/react-spring-slider
 
 const ContentsBoxOneContainer = styled.div`
@@ -35,7 +40,7 @@ const ContentsBoxTwoContainer = styled.div`
 
 const ContentsBoxThreeContainer = styled.div`
   width: 100%;
-  height: 80vw;
+  height: 150vw;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -97,7 +102,7 @@ const TextSizeFive = styled.div`
 
 const TextSizeSix = styled.div`
   font-family: "Pretendard-Regular";
-  font-size: 1vw;
+  font-size: 1.3vw;
   color: #101010;
 `;
 
@@ -110,16 +115,16 @@ const TextSizeSeven = styled.div`
 `;
 
 const IntroduceBox = styled.div`
-  width: 60vw;
-  height: 20vw;
+  width: 70vw;
+  height: 35vw;
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
   align-items: right;
 `;
 const IntroduceBoxInnerWrapper = styled.div`
-  width: 50vw;
-  height: 12vw;
+  width: 45vw;
+  height: 15vw;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -129,10 +134,14 @@ const IntroduceBoxInnerWrapper = styled.div`
 `;
 
 const IntroduceBoxImage = styled.div`
-  width: 10vw;
-  height: 10vw;
-  background-color: #f0f0f0;
-  border-radius: 5vw;
+  width: 20vw;
+  height: 25vw;
+  background-size: contain;
+  background-position: center top;
+  background-repeat: no-repeat;
+  ${({ Image }) => {
+    return Image ? `background-image: url(${Image})` : null;
+  }}
 `;
 
 const AboutKGA = () => {
@@ -170,30 +179,26 @@ const AboutKGA = () => {
       </ContentsBoxTwoContainer>
       <ContentsBoxThreeContainer>
         <TextSizeThree>KGA를 만든 사람들</TextSizeThree>
-        <IntroduceBox style={{ justifyContent: "flex-end" }}>
-          <IntroduceBoxImage></IntroduceBoxImage>
+        <IntroduceBox
+          style={{ justifyContent: "flex-end", alignItems: "center" }}
+        >
+          <IntroduceBoxImage Image={Parkbyungjun}></IntroduceBoxImage>
           <IntroduceBoxInnerWrapper>
             <TextSizeFour>박병준</TextSizeFour>
             <TextSizeFive>C.E.O</TextSizeFive>
             <TextSizeSix style={{ marginTop: "1vw" }}>
               직업 교육에 거대한 변화의 물결이 오고 있습니다. 이 거대한 변화의
-              물결에 KGA가 다시 한번 항해의 닻을
-            </TextSizeSix>
-            <TextSizeSix>
-              올렸습니다. 지금까지 이룬 것들이 최선이라 자만하지 않고 늘
-              고민하고 연구하며 계속 답을 찾아가려고
-            </TextSizeSix>
-            <TextSizeSix>
-              합니다. 그러나 우리의 목표는 변함없습니다. 이 시대에 선한 영향력을
-              흘려 보내는 기업, 이 변화를 이끌어가는
-            </TextSizeSix>
-            <TextSizeSix>
-              기업으로 나아가고자 합니다. 그리고 함께 답을 찾아가는데 늘
-              열려있습니다.
+              물결에 KGA가 다시 한번 항해의 닻을 올렸습니다. 지금까지 이룬
+              것들이 최선이라 자만하지 않고 늘 고민하고 연구하며 계속 답을
+              찾아가려고 합니다. 그러나 우리의 목표는 변함없습니다. 이 시대에
+              선한 영향력을 흘려 보내는 기업, 이 변화를 이끌어가는 기업으로
+              나아가고자 합니다. 그리고 함께 답을 찾아가는데 늘 열려있습니다.
             </TextSizeSix>
           </IntroduceBoxInnerWrapper>
         </IntroduceBox>
-        <IntroduceBox>
+        <IntroduceBox
+          style={{ justifyContent: "center", alignItems: "center" }}
+        >
           <IntroduceBoxInnerWrapper style={{ alignItems: "end" }}>
             <TextSizeFour>양현석</TextSizeFour>
             <TextSizeFive>President</TextSizeFive>
@@ -207,42 +212,38 @@ const AboutKGA = () => {
             >
               <TextSizeSix style={{ marginTop: "1vw" }}>
                 20년이 넘는 기간 동안 현장과 교육계에서 활동했습니다.
-                게임/블록체인/메타버스가 사람들의 삶의 경험을
+                게임/블록체인/메타버스가 사람들의 삶의 경험을 바꾸어 나가는
+                21세기의 예술이자 철학이 될 수 있다고 생각합니다. 교육자로서의
+                정체성과 콘텐츠 크리에이터로서의 정체성 모두를 유지하고자 날마다
+                고군분투 중이며, KGA의 모든 멤버들도 현업에 강한 사명감 있는
+                교육자로 만들기를 원합니다.
               </TextSizeSix>
-              <TextSizeSix>
-                바꾸어 나가는 21세기의 예술이자 철학이 될 수 있다고 생각합니다.
-                교육자로서의 정체성과 콘텐츠
-              </TextSizeSix>
-              <TextSizeSix>
-                크리에이터로서의 정체성 모두를 유지하고자 날마다 고군분투
-                중이며, KGA의 모든 멤버들도 현업에 강한
-              </TextSizeSix>
-              <TextSizeSix>사명감 있는 교육자로 만들기를 원합니다.</TextSizeSix>
             </div>
           </IntroduceBoxInnerWrapper>
-          <IntroduceBoxImage></IntroduceBoxImage>
+          <IntroduceBoxImage Image={Anonymous}></IntroduceBoxImage>
         </IntroduceBox>
-        <IntroduceBox style={{ justifyContent: "flex-end" }}>
-          <IntroduceBoxImage></IntroduceBoxImage>
+        <IntroduceBox
+          style={{ justifyContent: "flex-end", alignItems: "center" }}
+        >
+          <IntroduceBoxImage Image={Kimjaeyeon}></IntroduceBoxImage>
           <IntroduceBoxInnerWrapper>
             <TextSizeFour>김재연</TextSizeFour>
             <TextSizeFive>Vice-President</TextSizeFive>
             <TextSizeSix style={{ marginTop: "1vw" }}>
               게임 개발과 인연을 맺은 지 어느덧 30년, 우리나라 게임 기획자의
-              1%가 저의 제자입니다. 항상 연구하고
-            </TextSizeSix>
-            <TextSizeSix>
-              시행착오를 극복하기 위해 노력했기에 가능했습니다. 인생의 중요한
-              시기에 취업을 위해 KGA를 찾아오는
-            </TextSizeSix>
-            <TextSizeSix>
-              학생들의 간절함을 이해 합니다. 그렇기에 "저는 KGA에서 교육을
-              받았습니다"라는 취업 만능 열쇠를 만듭니다.
+              1%가 저의 제자입니다. 항상 연구하고 시행착오를 극복하기 위해
+              노력했기에 가능했습니다. 인생의 중요한 시기에 취업을 위해 KGA를
+              찾아오는 학생들의 간절함을 이해 합니다. 그렇기에 "저는 KGA에서
+              교육을 받았습니다"라는 취업 만능 열쇠를 만듭니다.
             </TextSizeSix>
           </IntroduceBoxInnerWrapper>
         </IntroduceBox>
-        <IntroduceBox>
-          <IntroduceBoxInnerWrapper style={{ alignItems: "end" }}>
+        <IntroduceBox
+          style={{ justifyContent: "center", alignItems: "center" }}
+        >
+          <IntroduceBoxInnerWrapper
+            style={{ alignItems: "end", justifyContent: "center" }}
+          >
             <TextSizeFour>서혁준</TextSizeFour>
             <TextSizeFive>Vice-President</TextSizeFive>
             <div
@@ -255,18 +256,14 @@ const AboutKGA = () => {
             >
               <TextSizeSix style={{ marginTop: "1vw" }}>
                 직업 컨설팅 및 멘토로서 현 KGA Vice-president입니다. 저는
-                '막연함'이 아닌 '확실함'으로
-              </TextSizeSix>
-              <TextSizeSix>
-                여러분들에게 확신을 주고 싶습니다.미래에 대한 불안감을 가진
-                청년들에게 응원의 메시지를 전합니다.
-              </TextSizeSix>
-              <TextSizeSix>
-                반드시 취업할 수 있는 KGA에서 여러분의 꿈을 시작하세요!
+                '막연함'이 아닌 '확실함'으로 여러분들에게 확신을 주고
+                싶습니다.미래에 대한 불안감을 가진 청년들에게 응원의 메시지를
+                전합니다. 반드시 취업할 수 있는 KGA에서 여러분의 꿈을
+                시작하세요!
               </TextSizeSix>
             </div>
           </IntroduceBoxInnerWrapper>
-          <IntroduceBoxImage></IntroduceBoxImage>
+          <IntroduceBoxImage Image={Seohyeokjun}></IntroduceBoxImage>
         </IntroduceBox>
       </ContentsBoxThreeContainer>
       <ContentsBoxFourContainer>

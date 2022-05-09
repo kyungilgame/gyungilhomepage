@@ -35,7 +35,7 @@ const LinkBoxOne = styled.button`
   position: fixed;
   width: 15vw;
   height: 15vw;
-  bottom: 70vw;
+  bottom: 60vw;
   margin-left: 80vw;
   background-size: contain;
   background-image: url(${LinkMobilePhone});
@@ -49,7 +49,7 @@ const LinkBoxTwo = styled.button`
   position: fixed;
   width: 15vw;
   height: 15vw;
-  bottom: 55vw;
+  bottom: 45vw;
   margin-left: 80vw;
   background-size: contain;
   background-image: url(${LinkMobileArt});
@@ -63,7 +63,7 @@ const LinkBoxThree = styled.button`
   position: fixed;
   width: 15vw;
   height: 15vw;
-  bottom: 40vw;
+  bottom: 30vw;
   margin-left: 80vw;
   background-size: contain;
   background-image: url(${LinkMobileGame});

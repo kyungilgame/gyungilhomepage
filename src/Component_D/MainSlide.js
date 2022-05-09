@@ -106,7 +106,7 @@ export default function MainSlide() {
           </TextSizeOne>
           <div style={{ marginTop: "2vw" }}></div>
           <TextSizeTwo>
-            KGA는 좋은 개발자가 되는 길은 빠르지도, 편하지도 않다고 새각합니다.
+            KGA는 좋은 개발자가 되는 길은 빠르지도, 편하지도 않다고 생각합니다.
             제대로 개발을 배워왔거나 개발의 즐거움을 아는 전공자들도 많지 않다고
             생각합니다. 기초의 기초부터 제대로 가르치고 훈련시키며 학생과 KGA
             멤버가 함께 고생해 가며, 기본기와 경험을 갖춘, 개발의 즐거움을 아는

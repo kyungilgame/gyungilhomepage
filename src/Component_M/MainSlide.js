@@ -1,6 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 
+import MainCarouselImageOne from "../Image/Photo/MainCarouselImageOne.png";
+import MainCarouselImageTwo from "../Image/Photo/MainCarouselImageTwo.png";
+import MainCarouselImageThree from "../Image/Photo/MainCarouselImageThree.png";
+
 const SlideWrapper = styled.div`
   width: 100%;
   height: 100%;
@@ -25,6 +29,12 @@ const ImageContainer = styled.div`
   height: 55%;
   background-color: gray;
   border-radius: 3vw;
+  background-size: cover;
+  background-position: center top;
+  background-repeat: no-repeat;
+  ${({ Image }) => {
+    return Image ? `background-image: url(${Image})` : null;
+  }}
 `;
 
 const ContentContainer = styled.div`
@@ -53,7 +63,7 @@ export default function MainSlide() {
   return (
     <SlideWrapper>
       <SlideRowWrapper>
-        <ImageContainer></ImageContainer>
+        <ImageContainer Image={MainCarouselImageOne}></ImageContainer>
         <ContentContainer>
           <TextSizeOne>취업률 1위, 상위 0.8%, 89.5%</TextSizeOne>
           <TextSizeOne>8년간 지속해 온 압도적인 교육 성과</TextSizeOne>
@@ -69,7 +79,7 @@ export default function MainSlide() {
         </ContentContainer>
       </SlideRowWrapper>
       <SlideRowWrapper>
-        <ImageContainer></ImageContainer>
+        <ImageContainer Image={MainCarouselImageTwo}></ImageContainer>
         <ContentContainer>
           <TextSizeOne>
             게임 개발, 디지털 아트, 프로게이머, 블록체인,
@@ -88,16 +98,15 @@ export default function MainSlide() {
         </ContentContainer>
       </SlideRowWrapper>
       <SlideRowWrapper>
-        <ImageContainer></ImageContainer>
+        <ImageContainer Image={MainCarouselImageThree}></ImageContainer>
         <ContentContainer>
           <TextSizeOne>
             비전공자와 초보자를 위한 교육으로 시작해 전공자들도
           </TextSizeOne>
           <TextSizeOne>만족하는 심화 수준으로 마무리하는 커리큘럼</TextSizeOne>
-
           <div style={{ marginTop: "2vw" }}></div>
           <TextSizeTwo>
-            KGA는 좋은 개발자가 되는 길은 빠르지도, 편하지도 않다고 새각합니다.
+            KGA는 좋은 개발자가 되는 길은 빠르지도, 편하지도 않다고 생각합니다.
             제대로 개발을 배워왔거나 개발의 즐거움을 아는 전공자들도 많지 않다고
             생각합니다. 기초의 기초부터 제대로 가르치고 훈련시키며 학생과 KGA
             멤버가 함께 고생해 가며, 기본기와 경험을 갖춘, 개발의 즐거움을 아는

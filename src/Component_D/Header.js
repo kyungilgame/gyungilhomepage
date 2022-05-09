@@ -44,8 +44,8 @@ const Header = ({ menuState, SetMenuState }) => {
   `;
 
   const LogoWrapper = styled.div`
-    width: 10vw;
-    height: 5vw;
+    width: 6vw;
+    height: 4vw;
     cursor: pointer;
     background-size: contain;
     background-position: center top;

@@ -45,6 +45,51 @@ export default function ReviewSlide({ ReviewSelect }) {
         </SlideWrapper>
       );
       break;
+    case 2:
+      return (
+        <SlideWrapper>
+          <SlideColumnWrapper>
+            <ReviewVideo></ReviewVideo>
+          </SlideColumnWrapper>
+        </SlideWrapper>
+      );
+      break;
+    case 3:
+      return (
+        <SlideWrapper>
+          <SlideColumnWrapper>
+            <ReviewVideo></ReviewVideo>
+          </SlideColumnWrapper>
+        </SlideWrapper>
+      );
+      break;
+    case 4:
+      return (
+        <SlideWrapper>
+          <SlideColumnWrapper>
+            <ReviewVideo></ReviewVideo>
+          </SlideColumnWrapper>
+        </SlideWrapper>
+      );
+      break;
+    case 5:
+      return (
+        <SlideWrapper>
+          <SlideColumnWrapper>
+            <ReviewVideo></ReviewVideo>
+          </SlideColumnWrapper>
+        </SlideWrapper>
+      );
+      break;
+    case 6:
+      return (
+        <SlideWrapper>
+          <SlideColumnWrapper>
+            <ReviewVideo></ReviewVideo>
+          </SlideColumnWrapper>
+        </SlideWrapper>
+      );
+      break;
     default:
   }
 }

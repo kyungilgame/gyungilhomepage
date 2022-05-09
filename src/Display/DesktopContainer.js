@@ -35,7 +35,7 @@ const LinkBoxOne = styled.button`
   position: fixed;
   width: 14vw;
   height: 5vw;
-  bottom: 30vw;
+  bottom: 11vw;
   margin-left: 80vw;
   background-size: contain;
   background-image: url(${LinkPhoneCall});
@@ -49,7 +49,7 @@ const LinkBoxTwo = styled.button`
   position: fixed;
   width: 14vw;
   height: 5vw;
-  bottom: 26vw;
+  bottom: 7vw;
   margin-left: 80vw;
   background-size: contain;
   background-image: url(${LinkArtclass});
@@ -63,7 +63,7 @@ const LinkBoxThree = styled.button`
   position: fixed;
   width: 14vw;
   height: 5vw;
-  bottom: 22vw;
+  bottom: 3vw;
   margin-left: 80vw;
   background-size: contain;
   background-image: url(${LinkProgamer});
@@ -90,7 +90,7 @@ function DesktopContainer({ menuState, SetMenuState }) {
     };
   });
   useEffect(() => {
-    scroll < 250 ? setCTAAtive(false) : setCTAAtive(true);
+    scroll < 500 ? setCTAAtive(false) : setCTAAtive(true);
   }, [scroll]);
 
   const pagesObj = {
@@ -110,7 +110,6 @@ function DesktopContainer({ menuState, SetMenuState }) {
       <BottomCTABar></BottomCTABar>
       {CTAAtive === true ? (
         <>
-          {" "}
           <LinkBoxOne
             as={"a"}
             href={"http://www.kiweb.or.kr/?view=pc"}

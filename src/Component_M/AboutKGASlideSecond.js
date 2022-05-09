@@ -3,6 +3,24 @@ import styled from "styled-components";
 
 import FaceImage from "../Image/face/Anonymous.png";
 
+import Kimgeon from "../Image/Empoloee/Kimgeon.png";
+import KwakIngoo from "../Image/Empoloee/KwakIngoo.png";
+import Choiseonmoon from "../Image/Empoloee/Choiseonmoon.png";
+import Choisunglak from "../Image/Empoloee/Choisunglak.png";
+import Hansoyeon from "../Image/Empoloee/Hansoyeon.png";
+import HwangIngyung from "../Image/Empoloee/HwangIngyung.png";
+import Jeongjieun from "../Image/Empoloee/Jeongjieun.png";
+import Joehanbyul from "../Image/Empoloee/Joehanbyul.png";
+import Kangmyunggyu from "../Image/Empoloee/Kangmyunggyu.png";
+import Kimjinhwang from "../Image/Empoloee/Kimjinhwang.png";
+import Kimjungtaek from "../Image/Empoloee/Kimjungtaek.png";
+import Kimkiwon from "../Image/Empoloee/Kimkiwon.png";
+import Kimtaewan from "../Image/Empoloee/Kimtaewan.png";
+import Leechanghee from "../Image/Empoloee/Leechanghee.png";
+import Limyonggyu from "../Image/Empoloee/Limyonggyu.png";
+import Ohjunhwan from "../Image/Empoloee/Ohjunhwan.png";
+import Songjaeoh from "../Image/Empoloee/Songjaeoh.png";
+
 const SlideWrapper = styled.div`
   width: 100%;
   height: 100%;
@@ -34,31 +52,32 @@ const ItemWrapper = styled.div`
 
 const ImageWrapper = styled.div`
   width: 50vw;
-  height: 50vw;
+  height: 65vw;
   margin-top: 2vw;
   background-size: contain;
   background-position: center top;
   background-repeat: no-repeat;
-  background-color: gray;
+  ${({ Image }) => {
+    return Image ? `background-image: url(${Image})` : null;
+  }}
 `;
 
 const TextOne = styled.div`
   font-family: "SEBANG-Gothic-Bold";
-  font-size: 4vw;
+  font-size: 6vw;
   color: #101010;
-  margin-top: 1vw;
 `;
 
 const TextTwo = styled.div`
   font-family: "SEBANG-Gothic-Regular";
-  font-size: 2vw;
+  font-size: 2.5vw;
   color: #101010;
   margin-top: 0.5vw;
 `;
 
 const TextBox = styled.div`
   font-family: "Pretendard-Regular";
-  font-size: 2.2vw;
+  font-size: 2.5vw;
   color: #101010;
   width: 90%;
   height: 30%;
@@ -78,10 +97,10 @@ export default function AboutKGASlideSecond() {
                 justifyContent: "space-around",
                 alignItems: "center",
                 width: "95%",
-                height: "60%",
+                height: "95%",
               }}
             >
-              <ImageWrapper Image={FaceImage}></ImageWrapper>
+              <ImageWrapper Image={Kimkiwon}></ImageWrapper>
               <div
                 style={{
                   display: "flex",
@@ -120,10 +139,10 @@ export default function AboutKGASlideSecond() {
                 justifyContent: "space-around",
                 alignItems: "center",
                 width: "95%",
-                height: "60%",
+                height: "95%",
               }}
             >
-              <ImageWrapper Image={FaceImage}></ImageWrapper>
+              <ImageWrapper Image={Leechanghee}></ImageWrapper>
               <div
                 style={{
                   display: "flex",
@@ -162,10 +181,10 @@ export default function AboutKGASlideSecond() {
                 justifyContent: "space-around",
                 alignItems: "center",
                 width: "95%",
-                height: "60%",
+                height: "95%",
               }}
             >
-              <ImageWrapper Image={FaceImage}></ImageWrapper>
+              <ImageWrapper Image={Ohjunhwan}></ImageWrapper>
               <div
                 style={{
                   display: "flex",
@@ -203,10 +222,10 @@ export default function AboutKGASlideSecond() {
                 justifyContent: "space-around",
                 alignItems: "center",
                 width: "95%",
-                height: "60%",
+                height: "95%",
               }}
             >
-              <ImageWrapper Image={FaceImage}></ImageWrapper>
+              <ImageWrapper Image={Kimjinhwang}></ImageWrapper>
               <div
                 style={{
                   display: "flex",
@@ -238,7 +257,6 @@ export default function AboutKGASlideSecond() {
               재미와 보람을 느낀다.
             </TextBox>
           </ItemWrapper>
-
           <ItemWrapper>
             <div
               style={{
@@ -247,10 +265,10 @@ export default function AboutKGASlideSecond() {
                 justifyContent: "space-around",
                 alignItems: "center",
                 width: "95%",
-                height: "60%",
+                height: "95%",
               }}
             >
-              <ImageWrapper Image={FaceImage}></ImageWrapper>
+              <ImageWrapper Image={Choisunglak}></ImageWrapper>
               <div
                 style={{
                   display: "flex",
@@ -259,8 +277,8 @@ export default function AboutKGASlideSecond() {
                   alignItems: "center",
                 }}
               >
-                <TextOne>최영묵</TextOne>
-                <TextTwo>게임 프로그래밍</TextTwo>
+                <TextOne>최성락</TextOne>
+                <TextTwo>게임 기획</TextTwo>
               </div>
             </div>
 
@@ -272,8 +290,14 @@ export default function AboutKGASlideSecond() {
                 marginTop: "0.5vw",
               }}
             ></div>
-            <TextBox></TextBox>
+            <TextBox>
+              내가 원하는 게임을 실제로 만드려면 어떻게 해야 할까? 이런 막연한
+              생각으로 개발에 뛰어든 지 오랜 시간이 지났다. 그 동안 많은 것을
+              얻고 몰랐던 지식들을 배워가며 여러 동료들도 생기게 되었다. 이제
+              이것들을 어떻게 전달할지 고민하는 것이 나의 새로운 목표가 되었다.
+            </TextBox>
           </ItemWrapper>
+
           <ItemWrapper>
             <div
               style={{
@@ -282,10 +306,10 @@ export default function AboutKGASlideSecond() {
                 justifyContent: "space-around",
                 alignItems: "center",
                 width: "95%",
-                height: "60%",
+                height: "95%",
               }}
             >
-              <ImageWrapper Image={FaceImage}></ImageWrapper>
+              <ImageWrapper Image={KwakIngoo}></ImageWrapper>
               <div
                 style={{
                   display: "flex",
@@ -323,10 +347,10 @@ export default function AboutKGASlideSecond() {
                 justifyContent: "space-around",
                 alignItems: "center",
                 width: "95%",
-                height: "60%",
+                height: "95%",
               }}
             >
-              <ImageWrapper Image={FaceImage}></ImageWrapper>
+              <ImageWrapper Image={Kimgeon}></ImageWrapper>
               <div
                 style={{
                   display: "flex",
@@ -364,10 +388,10 @@ export default function AboutKGASlideSecond() {
                 justifyContent: "space-around",
                 alignItems: "center",
                 width: "95%",
-                height: "60%",
+                height: "95%",
               }}
             >
-              <ImageWrapper Image={FaceImage}></ImageWrapper>
+              <ImageWrapper Image={Kimjungtaek}></ImageWrapper>
               <div
                 style={{
                   display: "flex",
@@ -406,10 +430,10 @@ export default function AboutKGASlideSecond() {
                 justifyContent: "space-around",
                 alignItems: "center",
                 width: "95%",
-                height: "60%",
+                height: "95%",
               }}
             >
-              <ImageWrapper Image={FaceImage}></ImageWrapper>
+              <ImageWrapper Image={Limyonggyu}></ImageWrapper>
               <div
                 style={{
                   display: "flex",
@@ -440,48 +464,7 @@ export default function AboutKGASlideSecond() {
               지도를 진행한다.
             </TextBox>
           </ItemWrapper>
-          <ItemWrapper>
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "space-around",
-                alignItems: "center",
-                width: "95%",
-                height: "60%",
-              }}
-            >
-              <ImageWrapper Image={FaceImage}></ImageWrapper>
-              <div
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  justifyContent: "center",
-                  alignItems: "center",
-                }}
-              >
-                <TextOne>정원</TextOne>
-                <TextTwo>게임 기획</TextTwo>
-              </div>
-            </div>
 
-            <div
-              style={{
-                width: "90%",
-                height: "0.2vw",
-                backgroundColor: "#lightgray",
-                marginTop: "0.5vw",
-              }}
-            ></div>
-            <TextBox>
-              여러 장르 게임을 만들어본 경험이 있는 기획자.
-              다양한 경험을 살려 게임기획자로서의 필요한 역량과 지식을 전달하기 위해 노력하고 있다.
-              끈기와 참을성을 가지고 어떤 학생이라도
-              포기하지 않으려는 마인드를 가지고 있으며, 학생들에게
-              기획자로서 게임을 만드는 즐거움을 알려주고 취업까지 연결
-              지을 수 있도록 노력하고 있다.
-            </TextBox>
-          </ItemWrapper>
           <ItemWrapper>
             <div
               style={{
@@ -490,10 +473,10 @@ export default function AboutKGASlideSecond() {
                 justifyContent: "space-around",
                 alignItems: "center",
                 width: "95%",
-                height: "60%",
+                height: "95%",
               }}
             >
-              <ImageWrapper Image={FaceImage}></ImageWrapper>
+              <ImageWrapper Image={Joehanbyul}></ImageWrapper>
               <div
                 style={{
                   display: "flex",
@@ -531,10 +514,10 @@ export default function AboutKGASlideSecond() {
                 justifyContent: "space-around",
                 alignItems: "center",
                 width: "95%",
-                height: "60%",
+                height: "95%",
               }}
             >
-              <ImageWrapper Image={FaceImage}></ImageWrapper>
+              <ImageWrapper Image={Choiseonmoon}></ImageWrapper>
               <div
                 style={{
                   display: "flex",
@@ -561,46 +544,9 @@ export default function AboutKGASlideSecond() {
               비전공자도 충분히 프로그래밍을 잘할 수 있다고 믿으며, 학생의 성장하는 모습에 뿌듯함을 느끼고 있다.
             </TextBox>
           </ItemWrapper>
-          <ItemWrapper>
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "column",
-                justifyContent: "space-around",
-                alignItems: "center",
-                width: "95%",
-                height: "60%",
-              }}
-            >
-              <ImageWrapper Image={FaceImage}></ImageWrapper>
-              <div
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  justifyContent: "center",
-                  alignItems: "center",
-                }}
-              >
-                <TextOne>최성락</TextOne>
-                <TextTwo>게임 기획</TextTwo>
-              </div>
-            </div>
+          {/*  */}
 
-            <div
-              style={{
-                width: "90%",
-                height: "0.2vw",
-                backgroundColor: "#lightgray",
-                marginTop: "0.5vw",
-              }}
-            ></div>
-            <TextBox>
-              내가 원하는 게임을 실제로 만드려면 어떻게 해야 할까? 이런 막연한
-              생각으로 개발에 뛰어든 지 오랜 시간이 지났다. 그 동안 많은 것을
-              얻고 몰랐던 지식들을 배워가며 여러 동료들도 생기게 되었다. 이제
-              이것들을 어떻게 전달할지 고민하는 것이 나의 새로운 목표가 되었다.
-            </TextBox>
-          </ItemWrapper>
+          {/*  */}
           <ItemWrapper>
             <div
               style={{
@@ -609,10 +555,10 @@ export default function AboutKGASlideSecond() {
                 justifyContent: "space-around",
                 alignItems: "center",
                 width: "95%",
-                height: "60%",
+                height: "95%",
               }}
             >
-              <ImageWrapper Image={FaceImage}></ImageWrapper>
+              <ImageWrapper Image={HwangIngyung}></ImageWrapper>
               <div
                 style={{
                   display: "flex",
@@ -648,10 +594,10 @@ export default function AboutKGASlideSecond() {
                 justifyContent: "space-around",
                 alignItems: "center",
                 width: "95%",
-                height: "60%",
+                height: "95%",
               }}
             >
-              <ImageWrapper Image={FaceImage}></ImageWrapper>
+              <ImageWrapper Image={Kimtaewan}></ImageWrapper>
               <div
                 style={{
                   display: "flex",
@@ -673,8 +619,12 @@ export default function AboutKGASlideSecond() {
                 marginTop: "0.5vw",
               }}
             ></div>
-            <TextBox></TextBox>
+            <TextBox>
+              경일게임아카데미 과정을 성공적으로 수료하신 분들의 취업을
+              응원합니다!
+            </TextBox>
           </ItemWrapper>
+
           <ItemWrapper>
             <div
               style={{
@@ -683,10 +633,50 @@ export default function AboutKGASlideSecond() {
                 justifyContent: "space-around",
                 alignItems: "center",
                 width: "95%",
-                height: "60%",
+                height: "95%",
               }}
             >
-              <ImageWrapper Image={FaceImage}></ImageWrapper>
+              <ImageWrapper Image={Jeongjieun}></ImageWrapper>
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                <TextOne>정지은</TextOne>
+                <TextTwo>Administrative Staff</TextTwo>
+              </div>
+            </div>
+
+            <div
+              style={{
+                width: "90%",
+                height: "0.2vw",
+                backgroundColor: "#lightgray",
+                marginTop: "0.5vw",
+              }}
+            ></div>
+            <TextBox>
+              무엇이든 물어보세요. 환한 미소로 답해 드리겠습니다. 하나부터
+              열까지 차근차근 설명해 드리겠습니다. 사소한 것도 좋으니 언제든
+              편하게 문의해 주세요.
+            </TextBox>
+          </ItemWrapper>
+
+          <ItemWrapper>
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "space-around",
+                alignItems: "center",
+                width: "95%",
+                height: "95%",
+              }}
+            >
+              <ImageWrapper Image={Kangmyunggyu}></ImageWrapper>
               <div
                 style={{
                   display: "flex",
@@ -721,10 +711,10 @@ export default function AboutKGASlideSecond() {
                 justifyContent: "space-around",
                 alignItems: "center",
                 width: "95%",
-                height: "60%",
+                height: "95%",
               }}
             >
-              <ImageWrapper Image={FaceImage}></ImageWrapper>
+              <ImageWrapper Image={Songjaeoh}></ImageWrapper>
               <div
                 style={{
                   display: "flex",
@@ -751,6 +741,7 @@ export default function AboutKGASlideSecond() {
               되어드리겠습니다.
             </TextBox>
           </ItemWrapper>
+
           <ItemWrapper>
             <div
               style={{
@@ -759,10 +750,10 @@ export default function AboutKGASlideSecond() {
                 justifyContent: "space-around",
                 alignItems: "center",
                 width: "95%",
-                height: "60%",
+                height: "95%",
               }}
             >
-              <ImageWrapper Image={FaceImage}></ImageWrapper>
+              <ImageWrapper Image={Hansoyeon}></ImageWrapper>
               <div
                 style={{
                   display: "flex",
@@ -771,7 +762,7 @@ export default function AboutKGASlideSecond() {
                   alignItems: "center",
                 }}
               >
-                <TextOne>정지은</TextOne>
+                <TextOne>한소연</TextOne>
                 <TextTwo>Administrative Staff</TextTwo>
               </div>
             </div>
@@ -785,11 +776,10 @@ export default function AboutKGASlideSecond() {
               }}
             ></div>
             <TextBox>
-              무엇이든 물어보세요. 환한 미소로 답해 드리겠습니다. 하나부터
-              열까지 차근차근 설명해 드리겠습니다. 사소한 것도 좋으니 언제든
-              편하게 문의해 주세요.
+              아자아자 무엇이든 열심히 안내해드릴 수 있는 사람이 되겠습니다.
             </TextBox>
           </ItemWrapper>
+
           <ItemWrapper>
             <div
               style={{
@@ -801,7 +791,7 @@ export default function AboutKGASlideSecond() {
                 height: "60%",
               }}
             >
-              <ImageWrapper Image={FaceImage}></ImageWrapper>
+              <ImageWrapper></ImageWrapper>
               <div
                 style={{
                   display: "flex",
@@ -810,8 +800,44 @@ export default function AboutKGASlideSecond() {
                   alignItems: "center",
                 }}
               >
-                <TextOne>한소연</TextOne>
-                <TextTwo>Administrative Staff</TextTwo>
+                <TextOne></TextOne>
+                <TextTwo></TextTwo>
+              </div>
+            </div>
+
+            <div
+              style={{
+                width: "90%",
+                height: "0.2vw",
+                backgroundColor: "#lightgray",
+                marginTop: "0.5vw",
+              }}
+            ></div>
+            <TextBox></TextBox>
+          </ItemWrapper>
+
+          <ItemWrapper>
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "space-around",
+                alignItems: "center",
+                width: "95%",
+                height: "60%",
+              }}
+            >
+              <ImageWrapper></ImageWrapper>
+              <div
+                style={{
+                  display: "flex",
+                  flexDirection: "column",
+                  justifyContent: "center",
+                  alignItems: "center",
+                }}
+              >
+                <TextOne></TextOne>
+                <TextTwo></TextTwo>
               </div>
             </div>
 

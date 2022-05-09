@@ -3,6 +3,11 @@ import styled from "styled-components";
 
 import FaceImage from "../Image/face/Anonymous.png";
 
+import Kimjaeyeon from "../Image/Empoloee/Kimjaeyeon.png";
+import Parkbyungjun from "../Image/Empoloee/Parkbyungjun.png";
+import Seohyeokjun from "../Image/Empoloee/Seohyeokjun.png";
+import Anonymous from "../Image/Empoloee/Anonymous.png";
+
 const SlideWrapper = styled.div`
   width: 100%;
   height: 100%;
@@ -33,8 +38,8 @@ const ItemWrapper = styled.div`
 `;
 
 const ImageWrapper = styled.div`
-  width: 25vw;
-  height: 25vw;
+  width: 50vw;
+  height: 65vw;
   margin-top: 2vw;
   background-size: contain;
   background-position: center top;
@@ -46,21 +51,20 @@ const ImageWrapper = styled.div`
 
 const TextOne = styled.div`
   font-family: "SEBANG-Gothic-Bold";
-  font-size: 4vw;
+  font-size: 6vw;
   color: #101010;
-  margin-top: 1vw;
 `;
 
 const TextTwo = styled.div`
   font-family: "SEBANG-Gothic-Regular";
-  font-size: 1.2vw;
+  font-size: 2.5vw;
   color: #101010;
   margin-top: 0.5vw;
 `;
 
 const TextBox = styled.div`
   font-family: "Pretendard-Regular";
-  font-size: 2.2vw;
+  font-size: 2.5vw;
   color: #101010;
   width: 90%;
   height: 30%;
@@ -80,10 +84,10 @@ export default function AboutKGASlideFirst() {
                 justifyContent: "space-around",
                 alignItems: "center",
                 width: "95%",
-                height: "60%",
+                height: "95%",
               }}
             >
-              <ImageWrapper Image={FaceImage}></ImageWrapper>
+              <ImageWrapper Image={Parkbyungjun}></ImageWrapper>
               <div
                 style={{
                   display: "flex",
@@ -122,10 +126,10 @@ export default function AboutKGASlideFirst() {
                 justifyContent: "space-around",
                 alignItems: "center",
                 width: "95%",
-                height: "60%",
+                height: "95%",
               }}
             >
-              <ImageWrapper Image={FaceImage}></ImageWrapper>
+              <ImageWrapper Image={Anonymous}></ImageWrapper>
               <div
                 style={{
                   display: "flex",
@@ -164,10 +168,10 @@ export default function AboutKGASlideFirst() {
                 justifyContent: "space-around",
                 alignItems: "center",
                 width: "95%",
-                height: "60%",
+                height: "95%",
               }}
             >
-              <ImageWrapper Image={FaceImage}></ImageWrapper>
+              <ImageWrapper Image={Kimjaeyeon}></ImageWrapper>
               <div
                 style={{
                   display: "flex",
@@ -205,10 +209,10 @@ export default function AboutKGASlideFirst() {
                 justifyContent: "space-around",
                 alignItems: "center",
                 width: "95%",
-                height: "60%",
+                height: "95%",
               }}
             >
-              <ImageWrapper Image={FaceImage}></ImageWrapper>
+              <ImageWrapper Image={Seohyeokjun}></ImageWrapper>
               <div
                 style={{
                   display: "flex",
