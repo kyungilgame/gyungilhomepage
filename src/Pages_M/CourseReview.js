@@ -149,6 +149,7 @@ const TextSizeSix = styled.div`
   font-family: "SEBANG-Gothic-Bold";
   font-size: 6vw;
   color: #101010;
+  margin-top: 10vw;
 `;
 
 const ArrowButton = styled.button`
@@ -239,8 +240,7 @@ const CourseReview = () => {
         <VideoCarousel></VideoCarousel>
       </ContentsBoxFiveContainer>
       <ContentsBoxSixContainer>
-        <TextSizeFive>여러분 또래의 취업 성공담을 확인하세요</TextSizeFive>
-        <TextSizeSix>GDB 챌린저 수강후기</TextSizeSix>
+        <TextSizeSix>생생 수강 후기</TextSizeSix>
         <div
           style={{
             width: "90%",

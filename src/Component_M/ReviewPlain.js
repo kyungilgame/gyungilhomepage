@@ -29,9 +29,9 @@ const ImageWrapper = styled.div`
 
 const TextOne = styled.div`
   font-family: "SEBANG-Gothic-Bold";
-  font-size: 2.5vw;
+  font-size: 3vw;
   color: #101010;
-  margin-top: 1vw;
+  margin-top: 7vw;
 `;
 
 const TextTwo = styled.div`
@@ -43,7 +43,7 @@ const TextTwo = styled.div`
 
 const TextBox = styled.div`
   font-family: "Pretendard-Regular";
-  font-size: 2vw;
+  font-size: 2.3vw;
   color: #101010;
   width: 80%;
   height: 55%;
@@ -54,7 +54,7 @@ export default function ReviewPlain() {
   return (
     <>
       <ItemWrapper>
-        <ImageWrapper Image={FaceImage}></ImageWrapper>
+        {/* <ImageWrapper Image={FaceImage}></ImageWrapper> */}
         <TextOne>GDB 김도형 챌린저</TextOne>
         <TextTwo>VR 콘텐츠 개발자 입사</TextTwo>
         <div

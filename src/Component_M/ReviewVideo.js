@@ -17,41 +17,29 @@ const ItemWrapper = styled.div`
   border-radius: 1.5vw;
 `;
 
-const ImageWrapper = styled.div`
-  width: 15vw;
-  height: 15vw;
-  margin-top: 2vw;
-  background-size: contain;
-  background-position: center top;
-  background-repeat: no-repeat;
-  ${({ Image }) => {
-    return Image ? `background-image: url(${Image})` : null;
-  }}
-`;
-
 const TextOne = styled.div`
   font-family: "SEBANG-Gothic-Bold";
-  font-size: 1.5vw;
+  font-size: 3vw;
   color: #101010;
-  margin-top: 1vw;
+  margin-top: 7vw;
 `;
 
 const TextTwo = styled.div`
   font-family: "SEBANG-Gothic-Regular";
-  font-size: 1.2vw;
+  font-size: 2.2vw;
   color: #101010;
   margin-top: 0.5vw;
 `;
 
 const TextThree = styled.div`
   font-family: "SEBANG-Gothic-Bold";
-  font-size: 1.4vw;
+  font-size: 2.2vw;
   color: #101010;
 `;
 
 const TextBox = styled.div`
   font-family: "Pretendard-Regular";
-  font-size: 1.3vw;
+  font-size: 2.3vw;
   color: #101010;
   width: 80%;
   height: 35%;
@@ -75,7 +63,6 @@ export default function ReviewVideo() {
   return (
     <>
       <ItemWrapper>
-        <ImageWrapper Image={FaceImage}></ImageWrapper>
         <TextOne>GDB 김도형 챌린저</TextOne>
         <TextTwo>VR 콘텐츠 개발자 입사</TextTwo>
         <div
@@ -94,11 +81,16 @@ export default function ReviewVideo() {
         <TextThree>전업 디자이너</TextThree>
         <TextThree>현업 게임 개발자</TextThree>
         <Button>
-          <div style={{ width: "1vw" }}></div>
-          <text style={{ color: "#101010", fontSize: "1.2vw" }}>
+          <text
+            style={{
+              color: "#101010",
+              fontSize: "2.2vw",
+              fontFamily: "SEBANG-Gothic-Bold",
+            }}
+          >
             인터뷰 보러가기
           </text>
-          <img src={rightArrow} style={{ width: "1vw", height: "1vw" }}></img>
+          {/* <img src={rightArrow} style={{ width: "1vw", height: "1vw" }}></img> */}
         </Button>
       </ItemWrapper>
     </>

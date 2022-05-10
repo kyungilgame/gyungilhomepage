@@ -473,7 +473,7 @@ const Main = ({ menuState, SetMenuState }) => {
         >
           <MiddleTextBox>
             <TextSizeTwelve>누적 수강생</TextSizeTwelve>
-            <TextSizeThirteen>10,000명</TextSizeThirteen>
+            <TextSizeThirteen>2,100명</TextSizeThirteen>
           </MiddleTextBox>
           <MiddleTextBox>
             <TextSizeTwelve>직전 기수 취업률</TextSizeTwelve>

@@ -17,18 +17,6 @@ const ItemWrapper = styled.div`
   border-radius: 1.5vw;
 `;
 
-const ImageWrapper = styled.div`
-  width: 6vw;
-  height: 6vw;
-  margin-top: 2vw;
-  background-size: contain;
-  background-position: center top;
-  background-repeat: no-repeat;
-  ${({ Image }) => {
-    return Image ? `background-image: url(${Image})` : null;
-  }}
-`;
-
 const TextOne = styled.div`
   font-family: "SEBANG-Gothic-Bold";
   font-size: 1.5vw;
