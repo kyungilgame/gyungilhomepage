@@ -360,7 +360,7 @@ export default function AboutKGASlideSecond() {
                 }}
               >
                 <TextOne>김건</TextOne>
-                <TextTwo>블록체인,웹,취업지원</TextTwo>
+                <TextTwo>웹,취업지원</TextTwo>
               </div>
             </div>
 

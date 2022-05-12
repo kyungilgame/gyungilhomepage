@@ -158,7 +158,7 @@ export default function Slide() {
         <EachItemWrapper>
           <EachItemImage Image={Kimgeon}></EachItemImage>
           <EachItemName>김건</EachItemName>
-          <EachItemCourse>블록체인,웹,취업지원</EachItemCourse>
+          <EachItemCourse>웹,취업지원</EachItemCourse>
           <EachItemComment>
             빠르게 변하는 시대에 발 맞추기 위해 프로그래밍 공부를 시작했습니다.
             꾸준한 시간 투자와 배우려는 자세가 개발자의 중요한 가치라고
