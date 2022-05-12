@@ -42,8 +42,8 @@ export default function ReviewPlain() {
     <>
       <ItemWrapper>
         {/* <ImageWrapper Image={FaceImage}></ImageWrapper> */}
-        <TextOne>GDB 김도형 챌린저</TextOne>
-        <TextTwo>VR 콘텐츠 개발자 입사</TextTwo>
+        <TextOne>최*령</TextOne>
+        <TextTwo>게임프로그래밍</TextTwo>
         <div
           style={{
             width: "90%",
@@ -53,12 +53,9 @@ export default function ReviewPlain() {
           }}
         ></div>
         <TextBox>
-          게임프로그래머를 꿈꿔왔지만 독학으로는 취업이 어려워 KGA에 오게
-          되었습니다. 저에게는 부족한 실력을 보강하고 협업 프로젝트 경험을 쌓을
-          수 있는 좋은 경험이었습니다. KGA에서 진행한 수업은 자세하고,
-          비전공자도 이해하기 쉽도록 수업이 맞춰져 있고, 무엇보다 팀 프로젝트
-          경험을 할 수 있다는 것이 좋았습니다. 늦었다고 생각하지 마시고,
-          끈질기게 부딪치고 도전하면 꼭 취업의 길은 열려있다고 생각합니다.
+          저도 했으니 여러분도 할 수 있습니다. 화이팅 하시고 팁을 드리자면
+          학원에서 하는 것이 전부가 아닌 집에서도 투자하셔서 학업성취도를 올리는
+          것이 굉장히 중요할 거 같습니다.
         </TextBox>
       </ItemWrapper>
     </>
