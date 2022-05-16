@@ -31,7 +31,7 @@ const Button = styled.button`
   }}
 `;
 const SliderContainer = styled.div`
-  width: 500vw;
+  width: 9000vw;
   height: 70vw;
   display: flex; //이미지들을 가로로 나열합니다.
   flex-direction: row;

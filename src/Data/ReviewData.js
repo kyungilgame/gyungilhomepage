@@ -1,4 +1,4 @@
-const reviewData = [
+export const reviewData = [
   {
     name: "신범식",
     course: "게임기획",
@@ -3618,7 +3618,7 @@ const reviewData = [
   },
 ];
 
-const reviewDataWithURL = [
+export const reviewDataWithURL = [
   {
     name: "남궁영빈",
     course: "게임프로그래밍",
