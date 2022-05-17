@@ -31,7 +31,7 @@ const Button = styled.button`
   }}
 `;
 const SliderContainer = styled.div`
-  width: 9000vw;
+  width: 9500vw;
   height: 70vw;
   display: flex; //이미지들을 가로로 나열합니다.
   flex-direction: row;
@@ -64,7 +64,7 @@ const SlideSelectedCircle = styled.div`
   cursor: pointer;
 `;
 
-const TOTAL_SLIDES = 4; // 7장 19명
+const TOTAL_SLIDES = 100; // 7장 19명
 
 export default function ReviewCarousel({ ReviewSelect }) {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -88,7 +88,7 @@ export default function ReviewCarousel({ ReviewSelect }) {
 
   useEffect(() => {
     slideRef.current.style.transition = "all 0.5s ease-in-out";
-    slideRef.current.style.transform = `translateX(-${currentSlide * 87}vw)`; // 백틱을 사용하여 슬라이드로 이동하는 애니메이션을 만듭니다.
+    slideRef.current.style.transform = `translateX(-${currentSlide * 75.0}vw)`; // 백틱을 사용하여 슬라이드로 이동하는 애니메이션을 만듭니다.
   }, [currentSlide]);
 
   return (

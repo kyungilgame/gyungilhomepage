@@ -125,7 +125,7 @@ export default function ReviewCarousel({ ReviewSelect }) {
           Image={rightArrow}
         ></Button>
       </div>
-      <SlideSelectorWrapper>
+      {/* <SlideSelectorWrapper>
         {currentSlide === 0 ? (
           <SlideSelectedCircle onClick={() => setCurrentSlide(0)} />
         ) : (
@@ -151,7 +151,7 @@ export default function ReviewCarousel({ ReviewSelect }) {
         ) : (
           <SlideNotSelectedCircle onClick={() => setCurrentSlide(4)} />
         )}
-      </SlideSelectorWrapper>
+      </SlideSelectorWrapper> */}
     </div>
   );
 }

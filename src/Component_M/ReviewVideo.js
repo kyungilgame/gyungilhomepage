@@ -55,32 +55,26 @@ const Button = styled.button`
   justify-content: space-around;
   align-items: center;
   border-radius: 0.5vw;
-  margin-top: 0.3vw;
+  margin-top: 13vw;
   cursor: pointer;
 `;
 
-export default function ReviewVideo() {
+export default function ReviewVideo({ name, course, text, url }) {
   return (
     <>
       <ItemWrapper>
-        <TextOne>GDB 김도형 챌린저</TextOne>
-        <TextTwo>VR 콘텐츠 개발자 입사</TextTwo>
+        <TextOne>{name}</TextOne>
+        <TextTwo>{course}</TextTwo>
         <div
           style={{
             width: "90%",
             height: "0.2vw",
-            backgroundColor: "#lightgray",
+            backgroundColor: "lightgray",
             marginTop: "0.5vw",
           }}
         ></div>
-        <TextBox>
-          게임프로그래머를 꿈꿔왔지만 독학으로는 취업이 어려워 KGA에 오게
-          되었습니다. 저에게는 부족한 실력을 보강하고 협업 프로젝트 경험을 쌓을
-          수 있는 좋은 경험이었습니다.
-        </TextBox>
-        <TextThree>전업 디자이너</TextThree>
-        <TextThree>현업 게임 개발자</TextThree>
-        <Button>
+        <TextBox>{text}</TextBox>
+        <Button as={"a"} href={url} target={"_blank"}>
           <text
             style={{
               color: "#101010",

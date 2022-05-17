@@ -69,7 +69,7 @@ export default function ReviewVideo({ name, course, text, url }) {
           style={{
             width: "90%",
             height: "0.2vw",
-            backgroundColor: "#lightgray",
+            backgroundColor: "lightgray",
             marginTop: "0.5vw",
           }}
         ></div>

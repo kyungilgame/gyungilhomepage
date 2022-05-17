@@ -50,29 +50,22 @@ const TextBox = styled.div`
   margin-top: 0.5vw;
 `;
 
-export default function ReviewPlain() {
+export default function ReviewPlain({ name, course, text }) {
   return (
     <>
       <ItemWrapper>
         {/* <ImageWrapper Image={FaceImage}></ImageWrapper> */}
-        <TextOne>GDB 김도형 챌린저</TextOne>
-        <TextTwo>VR 콘텐츠 개발자 입사</TextTwo>
+        <TextOne>{name}</TextOne>
+        <TextTwo>{course}</TextTwo>
         <div
           style={{
             width: "90%",
             height: "0.2vw",
-            backgroundColor: "#lightgray",
+            backgroundColor: "lightgray",
             marginTop: "0.5vw",
           }}
         ></div>
-        <TextBox>
-          게임프로그래머를 꿈꿔왔지만 독학으로는 취업이 어려워 KGA에 오게
-          되었습니다. 저에게는 부족한 실력을 보강하고 협업 프로젝트 경험을 쌓을
-          수 있는 좋은 경험이었습니다. KGA에서 진행한 수업은 자세하고,
-          비전공자도 이해하기 쉽도록 수업이 맞춰져 있고, 무엇보다 팀 프로젝트
-          경험을 할 수 있다는 것이 좋았습니다. 늦었다고 생각하지 마시고,
-          끈질기게 부딪치고 도전하면 꼭 취업의 길은 열려있다고 생각합니다.
-        </TextBox>
+        <TextBox>{text}</TextBox>
       </ItemWrapper>
     </>
   );

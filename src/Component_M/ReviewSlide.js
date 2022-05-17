@@ -1,8 +1,10 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import styled from "styled-components";
 
 import ReviewPlain from "./ReviewPlain";
 import ReviewVideo from "./ReviewVideo";
+
+import { reviewData, reviewDataWithURL } from "../Data/ReviewData";
 
 const SlideWrapper = styled.div`
   width: 100%;
@@ -23,16 +25,65 @@ const SlideColumnWrapper = styled.div`
 `;
 
 export default function ReviewSlide({ ReviewSelect }) {
+  const [sectionAll, setSectionAll] = useState(reviewData);
+  const [sectionOne, setSectionOne] = useState([]);
+  const [sectionTwo, setSectionTwo] = useState([]);
+  const [sectionThree, setSectionThree] = useState([]);
+  const [sectionFour, setSectionFour] = useState([]);
+  const [sectionFive, setSectionFive] = useState(reviewDataWithURL);
+
+  const [sectionOneUrl, setSectionOneUrl] = useState([]);
+  const [sectionTwoUrl, setSectionTwoUrl] = useState([]);
+  const [sectionThreeUrl, setSectionThreeUrl] = useState([]);
+  const [sectionFourUrl, setSectionFourUrl] = useState([]);
+  const [sectionFiveUrl, setSectionFiveUrl] = useState([]);
+
+  useEffect(() => {
+    setSectionOne(
+      sectionAll.filter((element) => element.course === "게임기획")
+    );
+    setSectionTwo(
+      sectionAll.filter((element) => element.course === "게임프로그래밍")
+    );
+    setSectionThree(sectionAll.filter((element) => element.course === "VRAR"));
+    setSectionFour(
+      sectionAll.filter((element) => element.course === "블록체인")
+    );
+    setSectionFive(
+      sectionAll.filter((element) => element.course === "메타버스")
+    );
+  }, []);
+  useEffect(() => {
+    setSectionOneUrl(
+      sectionFive.filter((element) => element.course === "게임기획")
+    );
+    setSectionTwoUrl(
+      sectionFive.filter((element) => element.course === "게임프로그래밍")
+    );
+    setSectionThreeUrl(
+      sectionFive.filter((element) => element.course === "VRAR")
+    );
+    setSectionFourUrl(
+      sectionFive.filter((element) => element.course === "블록체인")
+    );
+    setSectionFiveUrl(
+      sectionFive.filter((element) => element.course === "메타버스")
+    );
+  }, []);
+
   switch (ReviewSelect) {
     case 0:
       return (
         <SlideWrapper>
-          <SlideColumnWrapper>
-            <ReviewPlain></ReviewPlain>
-          </SlideColumnWrapper>
-          <SlideColumnWrapper>
-            <ReviewPlain></ReviewPlain>
-          </SlideColumnWrapper>
+          {sectionOne.map((element) => (
+            <SlideColumnWrapper>
+              <ReviewPlain
+                name={element.name}
+                course={element.course}
+                text={element.text}
+              ></ReviewPlain>
+            </SlideColumnWrapper>
+          ))}
         </SlideWrapper>
       );
       break;
