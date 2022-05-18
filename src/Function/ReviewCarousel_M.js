@@ -29,7 +29,7 @@ const Button = styled.button`
   }}
 `;
 const SliderContainer = styled.div`
-  width: 500vw;
+  width: 45000vw;
   height: 70vw;
   display: flex; //이미지들을 가로로 나열합니다.
   flex-direction: row;
@@ -37,32 +37,7 @@ const SliderContainer = styled.div`
   align-items: center;
 `;
 
-const SlideSelectorWrapper = styled.div`
-  width: 20vw;
-  height: 2vw;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-around;
-  align-items: center;
-`;
-
-const SlideNotSelectedCircle = styled.div`
-  width: 1vw;
-  height: 1vw;
-  background-color: lightgray;
-  border-radius: 1vw;
-  cursor: pointer;
-`;
-
-const SlideSelectedCircle = styled.div`
-  width: 3vw;
-  height: 1vw;
-  background-color: #00ffd6;
-  border-radius: 1vw;
-  cursor: pointer;
-`;
-
-const TOTAL_SLIDES = 4; // 7장 19명
+const TOTAL_SLIDES = 800; // 7장 19명
 
 export default function ReviewCarousel({ ReviewSelect }) {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -86,7 +61,9 @@ export default function ReviewCarousel({ ReviewSelect }) {
 
   useEffect(() => {
     slideRef.current.style.transition = "all 0.5s ease-in-out";
-    slideRef.current.style.transform = `translateX(-${currentSlide * 12}%)`; // 백틱을 사용하여 슬라이드로 이동하는 애니메이션을 만듭니다.
+    slideRef.current.style.transform = `translateX(-${
+      currentSlide * 0.13141
+    }%)`; // 백틱을 사용하여 슬라이드로 이동하는 애니메이션을 만듭니다.
   }, [currentSlide]);
 
   return (

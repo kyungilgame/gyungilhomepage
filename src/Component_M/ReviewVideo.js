@@ -39,7 +39,7 @@ const TextThree = styled.div`
 
 const TextBox = styled.div`
   font-family: "Pretendard-Regular";
-  font-size: 2.3vw;
+  font-size: 2vw;
   color: #101010;
   width: 80%;
   height: 35%;
