@@ -15,7 +15,7 @@ const SlideWrapper = styled.div`
   align-items: center;
 `;
 const SlideColumnWrapper = styled.div`
-  width: 15%;
+  width: 0.5%;
   height: 100%;
   display: flex;
   flex-direction: row;
@@ -25,7 +25,7 @@ const SlideColumnWrapper = styled.div`
 `;
 
 const SlideColumnWrapperOne = styled.div`
-  width: 0.1307%;
+  width: 0.13%;
   height: 100%;
   display: flex;
   flex-direction: row;
@@ -55,7 +55,7 @@ const SlideColumnWrapperThree = styled.div`
 `;
 
 const SlideColumnWrapperFour = styled.div`
-  width: 0.1307%;
+  width: 0.135%;
   height: 100%;
   display: flex;
   flex-direction: row;
