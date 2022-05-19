@@ -1,10 +1,14 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import styled from "styled-components";
 
 import ReviewPlain from "./ReviewPlain";
 import ReviewVideo from "./ReviewVideo";
 
 import { reviewData, reviewDataWithURL } from "../Data/ReviewData";
+
+import "../Styles/css/App.css";
+
+import ScrollContainer from "react-indiana-drag-scroll";
 
 const SlideWrapper = styled.div`
   width: 100%;
@@ -46,7 +50,7 @@ const CaseOneSlideRowWrapper = styled.div`
 `;
 
 const CaseOneSlideRowWrapperTwo = styled.div`
-  width: 50%;
+  width: 50.25%;
   height: 50%;
   display: flex;
   flex-direction: row;
@@ -173,6 +177,14 @@ export default function ReviewSlide({ ReviewSelect }) {
   const [sectionFourTwo, setSectionFourTwo] = useState([]);
   const [sectionFiveTwo, setSectionFiveTwo] = useState([]);
   const [sectionUrlTwo, setSectionUrlTwo] = useState([]);
+
+  const container = useRef(null);
+
+  useEffect(() => {
+    if (container.current) {
+      container.current.scrollTo(0, Math.random() * 5000);
+    }
+  }, []);
 
   useEffect(() => {
     setSectionAll(
@@ -365,44 +377,46 @@ export default function ReviewSlide({ ReviewSelect }) {
   switch (ReviewSelect) {
     case 0:
       return (
-        <SlideWrapper>
-          <SlideRowWrapper>
-            {sectionAll.map((element) =>
-              element.url ? (
-                <ReviewVideo
-                  name={element.name}
-                  course={element.course}
-                  text={element.text}
-                  url={element.url}
-                ></ReviewVideo>
-              ) : (
-                <ReviewPlain
-                  name={element.name}
-                  course={element.course}
-                  text={element.text}
-                ></ReviewPlain>
-              )
-            )}
-          </SlideRowWrapper>
-          <SlideRowWrapperTwo>
-            {sectionAllTwo.map((element) =>
-              element.url ? (
-                <ReviewVideo
-                  name={element.name}
-                  course={element.course}
-                  text={element.text}
-                  url={element.url}
-                ></ReviewVideo>
-              ) : (
-                <ReviewPlain
-                  name={element.name}
-                  course={element.course}
-                  text={element.text}
-                ></ReviewPlain>
-              )
-            )}
-          </SlideRowWrapperTwo>
-        </SlideWrapper>
+        <ScrollContainer innerRef={container}>
+          <SlideWrapper>
+            <SlideRowWrapper>
+              {sectionAll.map((element) =>
+                element.url ? (
+                  <ReviewVideo
+                    name={element.name}
+                    course={element.course}
+                    text={element.text}
+                    url={element.url}
+                  ></ReviewVideo>
+                ) : (
+                  <ReviewPlain
+                    name={element.name}
+                    course={element.course}
+                    text={element.text}
+                  ></ReviewPlain>
+                )
+              )}
+            </SlideRowWrapper>
+            <SlideRowWrapperTwo>
+              {sectionAllTwo.map((element) =>
+                element.url ? (
+                  <ReviewVideo
+                    name={element.name}
+                    course={element.course}
+                    text={element.text}
+                    url={element.url}
+                  ></ReviewVideo>
+                ) : (
+                  <ReviewPlain
+                    name={element.name}
+                    course={element.course}
+                    text={element.text}
+                  ></ReviewPlain>
+                )
+              )}
+            </SlideRowWrapperTwo>
+          </SlideWrapper>
+        </ScrollContainer>
       );
       break;
     case 1:

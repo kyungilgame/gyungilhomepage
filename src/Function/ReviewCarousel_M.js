@@ -37,7 +37,7 @@ const SliderContainer = styled.div`
   align-items: center;
 `;
 
-const TOTAL_SLIDES = 800; // 7장 19명
+const TOTAL_SLIDES = 140; // 7장 19명
 
 export default function ReviewCarousel({ ReviewSelect }) {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -102,33 +102,6 @@ export default function ReviewCarousel({ ReviewSelect }) {
           Image={rightArrow}
         ></Button>
       </div>
-      {/* <SlideSelectorWrapper>
-        {currentSlide === 0 ? (
-          <SlideSelectedCircle onClick={() => setCurrentSlide(0)} />
-        ) : (
-          <SlideNotSelectedCircle onClick={() => setCurrentSlide(0)} />
-        )}
-        {currentSlide === 1 ? (
-          <SlideSelectedCircle onClick={() => setCurrentSlide(1)} />
-        ) : (
-          <SlideNotSelectedCircle onClick={() => setCurrentSlide(1)} />
-        )}
-        {currentSlide === 2 ? (
-          <SlideSelectedCircle onClick={() => setCurrentSlide(2)} />
-        ) : (
-          <SlideNotSelectedCircle onClick={() => setCurrentSlide(2)} />
-        )}
-        {currentSlide === 3 ? (
-          <SlideSelectedCircle onClick={() => setCurrentSlide(3)} />
-        ) : (
-          <SlideNotSelectedCircle onClick={() => setCurrentSlide(3)} />
-        )}
-        {currentSlide === 4 ? (
-          <SlideSelectedCircle onClick={() => setCurrentSlide(4)} />
-        ) : (
-          <SlideNotSelectedCircle onClick={() => setCurrentSlide(4)} />
-        )}
-      </SlideSelectorWrapper> */}
     </div>
   );
 }

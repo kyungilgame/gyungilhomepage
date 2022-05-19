@@ -117,18 +117,6 @@ const SelectionButtonNotSelected = styled.button`
   align-items: center;
 `;
 
-const TextSizeOne = styled.div`
-  font-family: "SEBANG-Gothic-Regular";
-  font-size: 1.5vw;
-  color: #101010;
-`;
-
-const TextSizeTwo = styled.div`
-  font-family: "SEBANG-Gothic-Bold";
-  font-size: 2vw;
-  color: #101010;
-`;
-
 const TextSizeThree = styled.div`
   font-family: "SEBANG-Gothic-Bold";
   font-size: 3vw;
@@ -139,13 +127,6 @@ const TextSizeThree = styled.div`
 const TextSizeFour = styled.div`
   font-family: "SEBANG-Gothic-Bold";
   font-size: 3vw;
-  color: #101010;
-  margin-top: 5vw;
-`;
-
-const TextSizeFive = styled.div`
-  font-family: "SEBANG-Gothic-Regular";
-  font-size: 2vw;
   color: #101010;
   margin-top: 5vw;
 `;
@@ -168,7 +149,7 @@ const CompanyImage = styled.div`
 
 const CourseReview = () => {
   const [ReviewSelect, setReviewSelect] = useState(0);
-  const [InterviewSelect, setInterviewSelect] = useState(0);
+
   return (
     <>
       <ContentsBoxOneContainer></ContentsBoxOneContainer>
@@ -181,10 +162,7 @@ const CourseReview = () => {
           />
         </VideoPlayWrapper>
       </ContentsBoxTwoContainer>
-      <ContentsBoxThreeContainer>
-        {/* <TextSizeOne>블록체인 코스</TextSizeOne>
-        <TextSizeTwo>취업률 91% 달성!</TextSizeTwo> */}
-      </ContentsBoxThreeContainer>
+      <ContentsBoxThreeContainer></ContentsBoxThreeContainer>
       <ContentsBoxFourContainer>
         <TextSizeThree>KGA 수료생을 선택한 기업</TextSizeThree>
         <CompanyImage></CompanyImage>
@@ -194,7 +172,6 @@ const CourseReview = () => {
         <VideoCarousel></VideoCarousel>
       </ContentsBoxFiveContainer>
       <ContentsBoxSixContainer>
-        {/* <TextSizeFive>여러분 선배의 취업 성공담을 확인하세요</TextSizeFive> */}
         <TextSizeSix>생생 수강 후기</TextSizeSix>
         <div
           style={{
