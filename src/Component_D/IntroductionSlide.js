@@ -215,22 +215,19 @@ export default function Slide() {
             배신하지 않으며 더 품격 있는 개발자의 길로 인도해 줄 것이다.
           </EachItemComment>
         </EachItemWrapper>
-        <EachItemWrapper
-          style={{ backgroundColor: "#f0f0f0" }}
-        ></EachItemWrapper>
+        <EachItemWrapper>
+          <EachItemImage Image={HwangIngyung}></EachItemImage>
+          <EachItemName>황인경</EachItemName>
+          <EachItemCourse>Administrative Staff</EachItemCourse>
+          <EachItemComment>
+            10년이 넘는 기간 동안 교육기관에 근무를 해오면서 쌓아온 약
+            5000여명의 직업상담 데이터를 기반으로 KGA를 찾아 주신 모든 분들에게
+            최선의 진로 탐색을 도와드리겠습니다.
+          </EachItemComment>
+        </EachItemWrapper>
       </ItemWrapper>
       <ItemWrapper>
         <ItemWrapper>
-          <EachItemWrapper>
-            <EachItemImage Image={HwangIngyung}></EachItemImage>
-            <EachItemName>황인경</EachItemName>
-            <EachItemCourse>Administrative Staff</EachItemCourse>
-            <EachItemComment>
-              10년이 넘는 기간 동안 교육기관에 근무를 해오면서 쌓아온 약
-              5000여명의 직업상담 데이터를 기반으로 KGA를 찾아 주신 모든
-              분들에게 최선의 진로 탐색을 도와드리겠습니다.
-            </EachItemComment>
-          </EachItemWrapper>
           <EachItemWrapper>
             <EachItemImage Image={Kimtaewan}></EachItemImage>
             <EachItemName>김태완</EachItemName>
@@ -250,10 +247,6 @@ export default function Slide() {
               편하게 문의해 주세요.
             </EachItemComment>
           </EachItemWrapper>
-        </ItemWrapper>
-      </ItemWrapper>
-      <ItemWrapper>
-        <ItemWrapper>
           <EachItemWrapper>
             <EachItemImage Image={Kangmyunggyu}></EachItemImage>
             <EachItemName>강명규</EachItemName>
@@ -263,6 +256,10 @@ export default function Slide() {
               있겠습니다.
             </EachItemComment>
           </EachItemWrapper>
+        </ItemWrapper>
+      </ItemWrapper>
+      <ItemWrapper>
+        <ItemWrapper>
           <EachItemWrapper>
             <EachItemImage Image={Songjaeoh}></EachItemImage>
             <EachItemName>송재오</EachItemName>
@@ -280,18 +277,10 @@ export default function Slide() {
               아자아자 무엇이든 열심히 안내해드릴 수 있는 사람이 되겠습니다.
             </EachItemComment>
           </EachItemWrapper>
+          <EachItemWrapper
+            style={{ backgroundColor: "#f0f0f0" }}
+          ></EachItemWrapper>
         </ItemWrapper>
-      </ItemWrapper>
-      <ItemWrapper>
-        <EachItemWrapper
-          style={{ backgroundColor: "#f0f0f0" }}
-        ></EachItemWrapper>
-        <EachItemWrapper
-          style={{ backgroundColor: "#f0f0f0" }}
-        ></EachItemWrapper>
-        <EachItemWrapper
-          style={{ backgroundColor: "#f0f0f0" }}
-        ></EachItemWrapper>
       </ItemWrapper>
     </>
   );
