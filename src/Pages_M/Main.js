@@ -291,7 +291,7 @@ const ImageWrapper = styled.img`
   height: 3vw;
   position: absolute;
   right: 11.7vw;
-  top: 156vw;
+  top: 161vw;
 `;
 
 const ImageWrapperOne = styled.img`
@@ -299,7 +299,7 @@ const ImageWrapperOne = styled.img`
   height: 3vw;
   position: absolute;
   right: 51.7vw;
-  top: 207.7vw;
+  top: 213vw;
 `;
 
 const ImageWrapperTwo = styled.img`
@@ -307,7 +307,7 @@ const ImageWrapperTwo = styled.img`
   height: 3vw;
   position: absolute;
   right: 11.7vw;
-  top: 207.7vw;
+  top: 213vw;
 `;
 
 const Main = ({ menuState, SetMenuState }) => {
