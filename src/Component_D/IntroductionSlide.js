@@ -22,7 +22,7 @@ import Songjaeoh from "../Image/Empoloee/Songjaeoh.png";
 // props로 현재 슬라이드 숫자를 받고 return을 각
 // 슬라이드 수에 맞게 반환한다.
 const ItemWrapper = styled.div`
-  width: 100%;
+  width: 600%;
   height: 40vw;
   display: flex;
   flex-direction: row;
@@ -220,7 +220,7 @@ export default function Slide() {
         <EachItemWrapper>
           <EachItemImage Image={HwangIngyung}></EachItemImage>
           <EachItemName>황인경</EachItemName>
-          <EachItemCourse>Administrative Staff</EachItemCourse>
+          <EachItemCourse>Recruit Team Leader</EachItemCourse>
           <EachItemComment>
             10년이 넘는 기간 동안 교육기관에 근무를 해오면서 쌓아온 약
             5000여명의 직업상담 데이터를 기반으로 KGA를 찾아 주신 모든 분들에게
@@ -242,7 +242,7 @@ export default function Slide() {
           <EachItemWrapper>
             <EachItemImage Image={Jeongjieun}></EachItemImage>
             <EachItemName>정지은</EachItemName>
-            <EachItemCourse>Administrative Staff</EachItemCourse>
+            <EachItemCourse>Recruit Manager</EachItemCourse>
             <EachItemComment>
               무엇이든 물어보세요. 환한 미소로 답해 드리겠습니다. 하나부터
               열까지 차근차근 설명해 드리겠습니다. 사소한 것도 좋으니 언제든
@@ -274,7 +274,7 @@ export default function Slide() {
           <EachItemWrapper>
             <EachItemImage Image={Hansoyeon}></EachItemImage>
             <EachItemName>한소연</EachItemName>
-            <EachItemCourse>Administrative Staff</EachItemCourse>
+            <EachItemCourse>Recruit Manager</EachItemCourse>
             <EachItemComment>
               아자아자 무엇이든 열심히 안내해드릴 수 있는 사람이 되겠습니다.
             </EachItemComment>

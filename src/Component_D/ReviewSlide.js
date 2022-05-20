@@ -17,6 +17,7 @@ const SlideWrapper = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   align-items: start;
+  cursor: grabbing;
 `;
 
 const SlideRowWrapper = styled.div`
@@ -397,7 +398,6 @@ export default function ReviewSlide({ ReviewSelect }) {
                 )
               )}
             </SlideRowWrapper>
-
             <SlideRowWrapperTwo>
               {sectionAllTwo.map((element) =>
                 element.url ? (

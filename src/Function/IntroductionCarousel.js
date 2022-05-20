@@ -6,6 +6,8 @@ import leftArrow from "../Image/leftArrow.png";
 
 import styled from "styled-components";
 
+import Draggable from "react-draggable";
+
 const Container = styled.div`
   width: 100%;
   overflow: hidden; // 선을 넘어간 이미지들은 보이지 않도록 처리합니다.
@@ -117,9 +119,11 @@ export default function IntroductionCarousel() {
           Image={leftArrow}
         ></Button>
         <Container>
-          <SliderContainer ref={slideRef}>
-            <IntroductionSlide />
-          </SliderContainer>
+          <Draggable axis="x">
+            <SliderContainer ref={slideRef}>
+              <IntroductionSlide />
+            </SliderContainer>
+          </Draggable>
         </Container>
         <Button
           style={{ marginLeft: "3vw" }}
@@ -128,7 +132,7 @@ export default function IntroductionCarousel() {
         ></Button>
       </div>
       <SlideSelectorWrapper>
-        {currentSlide === 0 ? (
+        {/* {currentSlide === 0 ? (
           <SlideSelectedCircle onClick={() => setCurrentSlide(0)} />
         ) : (
           <SlideNotSelectedCircle onClick={() => setCurrentSlide(0)} />
@@ -157,7 +161,7 @@ export default function IntroductionCarousel() {
           <SlideSelectedCircle onClick={() => setCurrentSlide(5)} />
         ) : (
           <SlideNotSelectedCircle onClick={() => setCurrentSlide(5)} />
-        )}
+        )} */}
       </SlideSelectorWrapper>
     </div>
   );

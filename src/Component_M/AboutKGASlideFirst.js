@@ -6,7 +6,7 @@ import FaceImage from "../Image/face/Anonymous.png";
 import Kimjaeyeon from "../Image/Empoloee/Kimjaeyeon.png";
 import Parkbyungjun from "../Image/Empoloee/Parkbyungjun.png";
 import Seohyeokjun from "../Image/Empoloee/Seohyeokjun.png";
-import Anonymous from "../Image/Empoloee/Anonymous.png";
+import YangHyunseok from "../Image/Empoloee/YangHyunseok.png";
 
 const SlideWrapper = styled.div`
   width: 100%;
@@ -129,7 +129,7 @@ export default function AboutKGASlideFirst() {
                 height: "95%",
               }}
             >
-              <ImageWrapper Image={Anonymous}></ImageWrapper>
+              <ImageWrapper Image={YangHyunseok}></ImageWrapper>
               <div
                 style={{
                   display: "flex",

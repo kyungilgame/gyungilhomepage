@@ -11,7 +11,7 @@ import NewImage4 from "../Image/NewImage4.png";
 import Kimjaeyeon from "../Image/Empoloee/Kimjaeyeon.png";
 import Parkbyungjun from "../Image/Empoloee/Parkbyungjun.png";
 import Seohyeokjun from "../Image/Empoloee/Seohyeokjun.png";
-import Anonymous from "../Image/Empoloee/Anonymous.png";
+import YangHyunseok from "../Image/Empoloee/YangHyunseok.png";
 
 //https://github.com/farbenmeer/react-spring-slider
 
@@ -220,7 +220,7 @@ const AboutKGA = () => {
               </TextSizeSix>
             </div>
           </IntroduceBoxInnerWrapper>
-          <IntroduceBoxImage Image={Anonymous}></IntroduceBoxImage>
+          <IntroduceBoxImage Image={YangHyunseok}></IntroduceBoxImage>
         </IntroduceBox>
         <IntroduceBox
           style={{ justifyContent: "flex-end", alignItems: "center" }}
