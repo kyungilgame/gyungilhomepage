@@ -10,8 +10,7 @@ import styled from "styled-components";
 
 const Container = styled.div`
   width: 100%;
-  overflow-y: hidden; // 선을 넘어간 이미지들은 보이지 않도록 처리합니다.
-  overflow-x: scroll;
+  overflow: hidden; // 선을 넘어간 이미지들은 보이지 않도록 처리합니다.
 `;
 const Button = styled.button`
   all: unset;

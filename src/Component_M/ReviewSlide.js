@@ -6,6 +6,8 @@ import ReviewVideo from "./ReviewVideo";
 
 import { reviewData, reviewDataWithURL } from "../Data/ReviewData";
 
+import Draggable, { DraggableCore } from "react-draggable";
+
 const SlideWrapper = styled.div`
   width: 100%;
   height: 60vw;
@@ -129,28 +131,30 @@ export default function ReviewSlide({ ReviewSelect }) {
   switch (ReviewSelect) {
     case 0:
       return (
-        <SlideWrapper>
-          {sectionAll.map((element) =>
-            element.url ? (
-              <SlideColumnWrapper>
-                <ReviewVideo
-                  name={element.name}
-                  course={element.course}
-                  text={element.text}
-                  url={element.url}
-                ></ReviewVideo>
-              </SlideColumnWrapper>
-            ) : (
-              <SlideColumnWrapper>
-                <ReviewPlain
-                  name={element.name}
-                  course={element.course}
-                  text={element.text}
-                ></ReviewPlain>
-              </SlideColumnWrapper>
-            )
-          )}
-        </SlideWrapper>
+        <Draggable axis="x">
+          <SlideWrapper>
+            {sectionAll.map((element) =>
+              element.url ? (
+                <SlideColumnWrapper>
+                  <ReviewVideo
+                    name={element.name}
+                    course={element.course}
+                    text={element.text}
+                    url={element.url}
+                  ></ReviewVideo>
+                </SlideColumnWrapper>
+              ) : (
+                <SlideColumnWrapper>
+                  <ReviewPlain
+                    name={element.name}
+                    course={element.course}
+                    text={element.text}
+                  ></ReviewPlain>
+                </SlideColumnWrapper>
+              )
+            )}
+          </SlideWrapper>
+        </Draggable>
       );
       break;
     case 1:

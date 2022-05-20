@@ -90,7 +90,6 @@ export default function Slide() {
             마음만 단단히 먹고 오시길 바랍니다. 그럼 기획자 될 수 있습니다.
           </EachItemComment>
         </EachItemWrapper>
-
         <EachItemWrapper>
           <EachItemImage Image={Leechanghee}></EachItemImage>
           <EachItemName>이창희</EachItemName>
@@ -199,8 +198,11 @@ export default function Slide() {
           <EachItemName>최선문</EachItemName>
           <EachItemCourse>게임 프로그래밍</EachItemCourse>
           <EachItemComment>
-            시프트업에서 데스티니차일드 서버 프로그래머로 시작하여, 가르치는 것을 좋아해 교육자가 되었다.  '원하는 기업 골라서 가자'를 교육 철학으로 삼고 있으며, 학생의 니즈에 최대한 부합할 수 있도록 물심양면으로 애쓰고 있다.
-            비전공자도 충분히 프로그래밍을 잘할 수 있다고 믿으며, 학생의 성장하는 모습에 뿌듯함을 느끼고 있다.
+            시프트업에서 데스티니차일드 서버 프로그래머로 시작하여, 가르치는
+            것을 좋아해 교육자가 되었다. '원하는 기업 골라서 가자'를 교육
+            철학으로 삼고 있으며, 학생의 니즈에 최대한 부합할 수 있도록
+            물심양면으로 애쓰고 있다. 비전공자도 충분히 프로그래밍을 잘할 수
+            있다고 믿으며, 학생의 성장하는 모습에 뿌듯함을 느끼고 있다.
           </EachItemComment>
         </EachItemWrapper>
         <EachItemWrapper>

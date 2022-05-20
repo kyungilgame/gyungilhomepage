@@ -8,7 +8,7 @@ import { reviewData, reviewDataWithURL } from "../Data/ReviewData";
 
 import "../Styles/css/App.css";
 
-import ScrollContainer from "react-indiana-drag-scroll";
+import Draggable, { DraggableCore } from "react-draggable";
 
 const SlideWrapper = styled.div`
   width: 100%;
@@ -377,7 +377,7 @@ export default function ReviewSlide({ ReviewSelect }) {
   switch (ReviewSelect) {
     case 0:
       return (
-        <ScrollContainer innerRef={container}>
+        <Draggable axis="x">
           <SlideWrapper>
             <SlideRowWrapper>
               {sectionAll.map((element) =>
@@ -397,6 +397,7 @@ export default function ReviewSlide({ ReviewSelect }) {
                 )
               )}
             </SlideRowWrapper>
+
             <SlideRowWrapperTwo>
               {sectionAllTwo.map((element) =>
                 element.url ? (
@@ -416,259 +417,271 @@ export default function ReviewSlide({ ReviewSelect }) {
               )}
             </SlideRowWrapperTwo>
           </SlideWrapper>
-        </ScrollContainer>
+        </Draggable>
       );
       break;
     case 1:
       return (
-        <SlideWrapper>
-          <CaseOneSlideRowWrapper>
-            {sectionOne.map((element) =>
-              element.url ? (
-                <ReviewVideo
-                  name={element.name}
-                  course={element.course}
-                  text={element.text}
-                  url={element.url}
-                ></ReviewVideo>
-              ) : (
-                <ReviewPlain
-                  name={element.name}
-                  course={element.course}
-                  text={element.text}
-                ></ReviewPlain>
-              )
-            )}
-          </CaseOneSlideRowWrapper>
-          <CaseOneSlideRowWrapperTwo>
-            {sectionOneTwo.map((element) =>
-              element.url ? (
-                <ReviewVideo
-                  name={element.name}
-                  course={element.course}
-                  text={element.text}
-                  url={element.url}
-                ></ReviewVideo>
-              ) : (
-                <ReviewPlain
-                  name={element.name}
-                  course={element.course}
-                  text={element.text}
-                ></ReviewPlain>
-              )
-            )}
-          </CaseOneSlideRowWrapperTwo>
-        </SlideWrapper>
+        <Draggable axis="x">
+          <SlideWrapper>
+            <CaseOneSlideRowWrapper>
+              {sectionOne.map((element) =>
+                element.url ? (
+                  <ReviewVideo
+                    name={element.name}
+                    course={element.course}
+                    text={element.text}
+                    url={element.url}
+                  ></ReviewVideo>
+                ) : (
+                  <ReviewPlain
+                    name={element.name}
+                    course={element.course}
+                    text={element.text}
+                  ></ReviewPlain>
+                )
+              )}
+            </CaseOneSlideRowWrapper>
+            <CaseOneSlideRowWrapperTwo>
+              {sectionOneTwo.map((element) =>
+                element.url ? (
+                  <ReviewVideo
+                    name={element.name}
+                    course={element.course}
+                    text={element.text}
+                    url={element.url}
+                  ></ReviewVideo>
+                ) : (
+                  <ReviewPlain
+                    name={element.name}
+                    course={element.course}
+                    text={element.text}
+                  ></ReviewPlain>
+                )
+              )}
+            </CaseOneSlideRowWrapperTwo>
+          </SlideWrapper>
+        </Draggable>
       );
       break;
     case 2:
       return (
-        <SlideWrapper>
-          <CaseTwoSlideRowWrapper>
-            {sectionTwo.map((element) =>
-              element.url ? (
-                <ReviewVideo
-                  name={element.name}
-                  course={element.course}
-                  text={element.text}
-                  url={element.url}
-                ></ReviewVideo>
-              ) : (
-                <ReviewPlain
-                  name={element.name}
-                  course={element.course}
-                  text={element.text}
-                ></ReviewPlain>
-              )
-            )}
-          </CaseTwoSlideRowWrapper>
-          <CaseTwoSlideRowWrapperTwo>
-            {sectionTwoTwo.map((element) =>
-              element.url ? (
-                <ReviewVideo
-                  name={element.name}
-                  course={element.course}
-                  text={element.text}
-                  url={element.url}
-                ></ReviewVideo>
-              ) : (
-                <ReviewPlain
-                  name={element.name}
-                  course={element.course}
-                  text={element.text}
-                ></ReviewPlain>
-              )
-            )}
-          </CaseTwoSlideRowWrapperTwo>
-        </SlideWrapper>
+        <Draggable axis="x">
+          <SlideWrapper>
+            <CaseTwoSlideRowWrapper>
+              {sectionTwo.map((element) =>
+                element.url ? (
+                  <ReviewVideo
+                    name={element.name}
+                    course={element.course}
+                    text={element.text}
+                    url={element.url}
+                  ></ReviewVideo>
+                ) : (
+                  <ReviewPlain
+                    name={element.name}
+                    course={element.course}
+                    text={element.text}
+                  ></ReviewPlain>
+                )
+              )}
+            </CaseTwoSlideRowWrapper>
+            <CaseTwoSlideRowWrapperTwo>
+              {sectionTwoTwo.map((element) =>
+                element.url ? (
+                  <ReviewVideo
+                    name={element.name}
+                    course={element.course}
+                    text={element.text}
+                    url={element.url}
+                  ></ReviewVideo>
+                ) : (
+                  <ReviewPlain
+                    name={element.name}
+                    course={element.course}
+                    text={element.text}
+                  ></ReviewPlain>
+                )
+              )}
+            </CaseTwoSlideRowWrapperTwo>
+          </SlideWrapper>
+        </Draggable>
       );
       break;
     case 3:
       return (
-        <SlideWrapper>
-          <CaseThreeSlideRowWrapper>
-            {sectionThree.map((element) =>
-              element.url ? (
-                <ReviewVideo
-                  name={element.name}
-                  course={element.course}
-                  text={element.text}
-                  url={element.url}
-                ></ReviewVideo>
-              ) : (
-                <ReviewPlain
-                  name={element.name}
-                  course={element.course}
-                  text={element.text}
-                ></ReviewPlain>
-              )
-            )}
-          </CaseThreeSlideRowWrapper>
-          <CaseThreeSlideRowWrapperTwo>
-            {sectionThreeTwo.map((element) =>
-              element.url ? (
-                <ReviewVideo
-                  name={element.name}
-                  course={element.course}
-                  text={element.text}
-                  url={element.url}
-                ></ReviewVideo>
-              ) : (
-                <ReviewPlain
-                  name={element.name}
-                  course={element.course}
-                  text={element.text}
-                ></ReviewPlain>
-              )
-            )}
-          </CaseThreeSlideRowWrapperTwo>
-        </SlideWrapper>
+        <Draggable axis="x">
+          <SlideWrapper>
+            <CaseThreeSlideRowWrapper>
+              {sectionThree.map((element) =>
+                element.url ? (
+                  <ReviewVideo
+                    name={element.name}
+                    course={element.course}
+                    text={element.text}
+                    url={element.url}
+                  ></ReviewVideo>
+                ) : (
+                  <ReviewPlain
+                    name={element.name}
+                    course={element.course}
+                    text={element.text}
+                  ></ReviewPlain>
+                )
+              )}
+            </CaseThreeSlideRowWrapper>
+            <CaseThreeSlideRowWrapperTwo>
+              {sectionThreeTwo.map((element) =>
+                element.url ? (
+                  <ReviewVideo
+                    name={element.name}
+                    course={element.course}
+                    text={element.text}
+                    url={element.url}
+                  ></ReviewVideo>
+                ) : (
+                  <ReviewPlain
+                    name={element.name}
+                    course={element.course}
+                    text={element.text}
+                  ></ReviewPlain>
+                )
+              )}
+            </CaseThreeSlideRowWrapperTwo>
+          </SlideWrapper>
+        </Draggable>
       );
       break;
     case 4:
       return (
-        <SlideWrapper>
-          <CaseFourSlideRowWrapper>
-            {sectionFour.map((element) =>
-              element.url ? (
-                <ReviewVideo
-                  name={element.name}
-                  course={element.course}
-                  text={element.text}
-                  url={element.url}
-                ></ReviewVideo>
-              ) : (
-                <ReviewPlain
-                  name={element.name}
-                  course={element.course}
-                  text={element.text}
-                ></ReviewPlain>
-              )
-            )}
-          </CaseFourSlideRowWrapper>
-          <CaseFourSlideRowWrapperTwo>
-            {sectionFourTwo.map((element) =>
-              element.url ? (
-                <ReviewVideo
-                  name={element.name}
-                  course={element.course}
-                  text={element.text}
-                  url={element.url}
-                ></ReviewVideo>
-              ) : (
-                <ReviewPlain
-                  name={element.name}
-                  course={element.course}
-                  text={element.text}
-                ></ReviewPlain>
-              )
-            )}
-          </CaseFourSlideRowWrapperTwo>
-        </SlideWrapper>
+        <Draggable axis="x">
+          <SlideWrapper>
+            <CaseFourSlideRowWrapper>
+              {sectionFour.map((element) =>
+                element.url ? (
+                  <ReviewVideo
+                    name={element.name}
+                    course={element.course}
+                    text={element.text}
+                    url={element.url}
+                  ></ReviewVideo>
+                ) : (
+                  <ReviewPlain
+                    name={element.name}
+                    course={element.course}
+                    text={element.text}
+                  ></ReviewPlain>
+                )
+              )}
+            </CaseFourSlideRowWrapper>
+            <CaseFourSlideRowWrapperTwo>
+              {sectionFourTwo.map((element) =>
+                element.url ? (
+                  <ReviewVideo
+                    name={element.name}
+                    course={element.course}
+                    text={element.text}
+                    url={element.url}
+                  ></ReviewVideo>
+                ) : (
+                  <ReviewPlain
+                    name={element.name}
+                    course={element.course}
+                    text={element.text}
+                  ></ReviewPlain>
+                )
+              )}
+            </CaseFourSlideRowWrapperTwo>
+          </SlideWrapper>
+        </Draggable>
       );
       break;
     case 5:
       return (
-        <SlideWrapper>
-          <CaseFiveSlideRowWrapper>
-            {sectionFive.map((element) =>
-              element.url ? (
-                <ReviewVideo
-                  name={element.name}
-                  course={element.course}
-                  text={element.text}
-                  url={element.url}
-                ></ReviewVideo>
-              ) : (
-                <ReviewPlain
-                  name={element.name}
-                  course={element.course}
-                  text={element.text}
-                ></ReviewPlain>
-              )
-            )}
-          </CaseFiveSlideRowWrapper>
-          <CaseFiveSlideRowWrapperTwo>
-            {sectionFiveTwo.map((element) =>
-              element.url ? (
-                <ReviewVideo
-                  name={element.name}
-                  course={element.course}
-                  text={element.text}
-                  url={element.url}
-                ></ReviewVideo>
-              ) : (
-                <ReviewPlain
-                  name={element.name}
-                  course={element.course}
-                  text={element.text}
-                ></ReviewPlain>
-              )
-            )}
-          </CaseFiveSlideRowWrapperTwo>
-        </SlideWrapper>
+        <Draggable axis="x">
+          <SlideWrapper>
+            <CaseFiveSlideRowWrapper>
+              {sectionFive.map((element) =>
+                element.url ? (
+                  <ReviewVideo
+                    name={element.name}
+                    course={element.course}
+                    text={element.text}
+                    url={element.url}
+                  ></ReviewVideo>
+                ) : (
+                  <ReviewPlain
+                    name={element.name}
+                    course={element.course}
+                    text={element.text}
+                  ></ReviewPlain>
+                )
+              )}
+            </CaseFiveSlideRowWrapper>
+            <CaseFiveSlideRowWrapperTwo>
+              {sectionFiveTwo.map((element) =>
+                element.url ? (
+                  <ReviewVideo
+                    name={element.name}
+                    course={element.course}
+                    text={element.text}
+                    url={element.url}
+                  ></ReviewVideo>
+                ) : (
+                  <ReviewPlain
+                    name={element.name}
+                    course={element.course}
+                    text={element.text}
+                  ></ReviewPlain>
+                )
+              )}
+            </CaseFiveSlideRowWrapperTwo>
+          </SlideWrapper>
+        </Draggable>
       );
       break;
     case 6:
       return (
-        <SlideWrapper>
-          <CaseSixSlideRowWrapper>
-            {sectionUrl.map((element) =>
-              element.url ? (
-                <ReviewVideo
-                  name={element.name}
-                  course={element.course}
-                  text={element.text}
-                  url={element.url}
-                ></ReviewVideo>
-              ) : (
-                <ReviewPlain
-                  name={element.name}
-                  course={element.course}
-                  text={element.text}
-                ></ReviewPlain>
-              )
-            )}
-          </CaseSixSlideRowWrapper>
-          <CaseSixSlideRowWrapperTwo>
-            {sectionUrlTwo.map((element) =>
-              element.url ? (
-                <ReviewVideo
-                  name={element.name}
-                  course={element.course}
-                  text={element.text}
-                  url={element.url}
-                ></ReviewVideo>
-              ) : (
-                <ReviewPlain
-                  name={element.name}
-                  course={element.course}
-                  text={element.text}
-                ></ReviewPlain>
-              )
-            )}
-          </CaseSixSlideRowWrapperTwo>
-        </SlideWrapper>
+        <Draggable axis="x">
+          <SlideWrapper>
+            <CaseSixSlideRowWrapper>
+              {sectionUrl.map((element) =>
+                element.url ? (
+                  <ReviewVideo
+                    name={element.name}
+                    course={element.course}
+                    text={element.text}
+                    url={element.url}
+                  ></ReviewVideo>
+                ) : (
+                  <ReviewPlain
+                    name={element.name}
+                    course={element.course}
+                    text={element.text}
+                  ></ReviewPlain>
+                )
+              )}
+            </CaseSixSlideRowWrapper>
+            <CaseSixSlideRowWrapperTwo>
+              {sectionUrlTwo.map((element) =>
+                element.url ? (
+                  <ReviewVideo
+                    name={element.name}
+                    course={element.course}
+                    text={element.text}
+                    url={element.url}
+                  ></ReviewVideo>
+                ) : (
+                  <ReviewPlain
+                    name={element.name}
+                    course={element.course}
+                    text={element.text}
+                  ></ReviewPlain>
+                )
+              )}
+            </CaseSixSlideRowWrapperTwo>
+          </SlideWrapper>
+        </Draggable>
       );
       break;
     default:
