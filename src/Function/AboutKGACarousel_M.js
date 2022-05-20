@@ -36,7 +36,7 @@ const SliderContainer = styled.div`
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  background-color: coral;
+  cursor: grabbing;
   ${({ first }) => {
     return first ? `width: 200%` : `width: 950%`;
   }}
