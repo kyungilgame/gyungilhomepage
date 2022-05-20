@@ -49,6 +49,13 @@ const TextThree = styled.div`
   margin-top: 0.5vw;
 `;
 
+const TextFour = styled.div`
+  font-family: "SEBANG-Gothic-Regular";
+  font-size: 1vw;
+  color: #101010;
+  margin-top: 0.5vw;
+`;
+
 const TextBox = styled.div`
   font-family: "Pretendard-Regular";
   font-size: 2vw;
@@ -63,6 +70,7 @@ export default function MainReviewPlain({
   textOne,
   textTwo,
   texThree,
+  textFour,
   Contents,
 }) {
   return (
@@ -83,6 +91,7 @@ export default function MainReviewPlain({
             <TextOne>{textOne}</TextOne>
             <TextTwo>{textTwo}</TextTwo>
             <TextThree>{texThree}</TextThree>
+            <TextFour>{textFour}</TextFour>
           </div>
         </div>
 

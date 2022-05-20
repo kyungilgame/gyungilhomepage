@@ -6,6 +6,8 @@ import leftArrow from "../Image/leftArrow.png";
 
 import styled from "styled-components";
 
+import Draggable from "react-draggable";
+
 const Container = styled.div`
   width: 90%;
   overflow: hidden; // 선을 넘어간 이미지들은 보이지 않도록 처리합니다.
@@ -74,7 +76,7 @@ const ApplyBlackButton = styled.button`
   margin-top: 3vw;
 `;
 
-const TOTAL_SLIDES = 6; // 7장 19명
+const TOTAL_SLIDES = 9; // 7장 19명
 
 export default function MainReviewCarousel({ menuState, SetMenuState }) {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -128,9 +130,11 @@ export default function MainReviewCarousel({ menuState, SetMenuState }) {
           Image={leftArrow}
         ></Button>
         <Container>
-          <SliderContainer ref={slideRef}>
-            <MainReviewSlide />
-          </SliderContainer>
+          <Draggable axis="x">
+            <SliderContainer ref={slideRef}>
+              <MainReviewSlide />
+            </SliderContainer>
+          </Draggable>
         </Container>
         <Button
           style={{ marginLeft: "3vw" }}
@@ -173,6 +177,21 @@ export default function MainReviewCarousel({ menuState, SetMenuState }) {
           <SlideSelectedCircle onClick={() => setCurrentSlide(6)} />
         ) : (
           <SlideNotSelectedCircle onClick={() => setCurrentSlide(6)} />
+        )}
+        {currentSlide === 7 ? (
+          <SlideSelectedCircle onClick={() => setCurrentSlide(7)} />
+        ) : (
+          <SlideNotSelectedCircle onClick={() => setCurrentSlide(7)} />
+        )}
+        {currentSlide === 8 ? (
+          <SlideSelectedCircle onClick={() => setCurrentSlide(8)} />
+        ) : (
+          <SlideNotSelectedCircle onClick={() => setCurrentSlide(8)} />
+        )}
+        {currentSlide === 9 ? (
+          <SlideSelectedCircle onClick={() => setCurrentSlide(9)} />
+        ) : (
+          <SlideNotSelectedCircle onClick={() => setCurrentSlide(9)} />
         )}
       </SlideSelectorWrapper>
       <ApplyBlackButton

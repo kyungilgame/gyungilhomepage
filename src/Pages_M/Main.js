@@ -3,7 +3,7 @@ import "../Styles/css/App.css";
 
 import MainCarousel_M from "../Function/MainCarousel_M";
 import MainReviewCarousel_M from "../Function/MainReviewCarousel_M";
-import BlackBoxRibone from "../Image/BlackBoxRibone.png";
+
 import RecrutingLabel from "../Image/RecrutingLabel.png";
 
 import MapImage from "../Function/Map";
@@ -33,7 +33,7 @@ const ContentsBoxTwoContainer = styled.div`
 
 const ContentsBoxThreeContainer = styled.div`
   width: 100%;
-  height: 70vw;
+  height: 75vw;
   display: flex;
   flex-direction: column;
   justify-content: center;
