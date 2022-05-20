@@ -8,7 +8,7 @@ import { reviewData, reviewDataWithURL } from "../Data/ReviewData";
 
 import "../Styles/css/App.css";
 
-import Draggable, { DraggableCore } from "react-draggable";
+import Draggable from "react-draggable";
 
 const SlideWrapper = styled.div`
   width: 100%;
