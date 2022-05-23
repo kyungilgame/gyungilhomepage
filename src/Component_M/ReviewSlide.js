@@ -15,7 +15,7 @@ const SlideWrapper = styled.div`
   flex-direction: row;
   justify-content: flex-start;
   align-items: center;
-  cursor: grab;
+  cursor: grabbing;
 `;
 const SlideColumnWrapper = styled.div`
   width: 0.5%;

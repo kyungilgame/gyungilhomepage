@@ -1,8 +1,6 @@
 import React from "react";
 import styled from "styled-components";
 
-import FaceImage from "../Image/face/Anonymous.png";
-
 import Kimjaeyeon from "../Image/Empoloee/Kimjaeyeon.png";
 import Parkbyungjun from "../Image/Empoloee/Parkbyungjun.png";
 import Seohyeokjun from "../Image/Empoloee/Seohyeokjun.png";
