@@ -4,7 +4,6 @@ import "../Styles/css/App.css";
 import MainCarousel from "../Function/MainCarousel";
 import MainReviewCarousel from "../Function/MainReviewCarousel";
 
-import BlackBoxRibone from "../Image/BlackBoxRibone.png";
 import RecrutingLabel from "../Image/RecrutingLabel.png";
 import GreenArrow from "../Image/GreenArrow.png";
 
@@ -317,6 +316,9 @@ const ImageWrapper = styled.img`
 `;
 
 const Main = ({ menuState, SetMenuState }) => {
+  const textOne = "처음인 당신도 시작할 수 있게";
+  const textTwo = "최고의 개발자로 만들어 드립니다";
+
   return (
     <>
       <ContentsBoxOneContainer>
@@ -362,8 +364,8 @@ const Main = ({ menuState, SetMenuState }) => {
             alignItems: "center",
           }}
         >
-          <TextSizeFour>처음인 당신도 시작할 수 있게</TextSizeFour>
-          <TextSizeFive>최고의 개발자로 만들어 드립니다</TextSizeFive>
+          <TextSizeFour>{textOne}</TextSizeFour>
+          <TextSizeFive>{textTwo}</TextSizeFive>
         </div>
       </ContentsBoxTwoContainer>
       <div

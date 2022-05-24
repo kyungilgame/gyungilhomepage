@@ -130,11 +130,11 @@ export default function MainReviewCarousel({ menuState, SetMenuState }) {
           Image={leftArrow}
         ></Button>
         <Container>
-          <Draggable axis="x">
-            <SliderContainer ref={slideRef}>
-              <MainReviewSlide />
-            </SliderContainer>
-          </Draggable>
+          <SliderContainer ref={slideRef}>
+            <Draggable axis="x">
+              <MainReviewSlide />{" "}
+            </Draggable>
+          </SliderContainer>
         </Container>
         <Button
           style={{ marginLeft: "3vw" }}

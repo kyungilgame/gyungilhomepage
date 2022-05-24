@@ -19,6 +19,8 @@ import Limyonggyu from "../Image/Empoloee/Limyonggyu.png";
 import Ohjunhwan from "../Image/Empoloee/Ohjunhwan.png";
 import Songjaeoh from "../Image/Empoloee/Songjaeoh.png";
 
+import Draggable from "react-draggable";
+
 // props로 현재 슬라이드 숫자를 받고 return을 각
 // 슬라이드 수에 맞게 반환한다.
 const ItemWrapper = styled.div`
