@@ -72,7 +72,7 @@ const LinkBoxThree = styled.button`
   cursor: pointer;
 `;
 
-function DesktopContainer({ menuState, SetMenuState }) {
+function MobileContainer({ menuState, SetMenuState }) {
   const pagesObj = {
     0: <AboutKGA></AboutKGA>,
     1: <CourseIntro></CourseIntro>,
@@ -98,4 +98,4 @@ function DesktopContainer({ menuState, SetMenuState }) {
   );
 }
 
-export default DesktopContainer;
+export default MobileContainer;

@@ -433,7 +433,7 @@ const Main = ({ menuState, SetMenuState }) => {
               </TextSizeEight>
               <TextSizeNine>프로그래밍</TextSizeNine>
               <TextSizeTen>손 끝에서 구현되는 Unity 3D 게임</TextSizeTen>
-              <ApplyButton>
+              <ApplyButton as={"a"} href={"https://kgaprogramming.oopy.io/"}>
                 <TextSizeEleven>자세히 보기</TextSizeEleven>
                 <img
                   src={GreenArrow}
@@ -448,7 +448,7 @@ const Main = ({ menuState, SetMenuState }) => {
               </TextSizeEight>
               <TextSizeNine>게임 기획</TextSizeNine>
               <TextSizeTen>게임 시놉시스부터 상용화까지</TextSizeTen>
-              <ApplyButton>
+              <ApplyButton as={"a"} href={"https://kgadesign.oopy.io/"}>
                 <TextSizeEleven>자세히 보기</TextSizeEleven>
                 <img
                   src={GreenArrow}

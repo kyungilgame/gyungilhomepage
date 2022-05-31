@@ -131,9 +131,7 @@ export default function MainReviewCarousel({ menuState, SetMenuState }) {
         ></Button>
         <Container>
           <SliderContainer ref={slideRef}>
-            <Draggable axis="x">
-              <MainReviewSlide />{" "}
-            </Draggable>
+            <MainReviewSlide />
           </SliderContainer>
         </Container>
         <Button
