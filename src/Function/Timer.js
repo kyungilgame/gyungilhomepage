@@ -32,9 +32,9 @@ const Timer = ({ countDate }) => {
     return () => clearInterval(timerId);
   });
 
-  React.useEffect(() => {
-    console.log(DAYS, HRS, MINS, SECS);
-  }, [SECS]);
+  // React.useEffect(() => {
+  //   console.log(DAYS, HRS, MINS, SECS);
+  // }, [SECS]);
 
   return (
     <>
