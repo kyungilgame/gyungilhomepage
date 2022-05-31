@@ -2,22 +2,25 @@ import React from "react";
 import styled from "styled-components";
 import "../Styles/css/App.css";
 
-const Timer = ({ hoursMinSecs }) => {
-  const { hours = 0, minutes = 0, seconds = 60 } = hoursMinSecs;
-  const [[hrs, mins, secs], setTime] = React.useState([
+const Timer = ({ countDate }) => {
+  const { days = 0, hours = 0, minutes = 0, seconds = 60 } = countDate;
+  const [[DAYS, HRS, MINS, SECS], setTime] = React.useState([
+    days,
     hours,
     minutes,
     seconds,
   ]);
 
   const tick = () => {
-    if (hrs === 0 && mins === 0 && secs === 0) reset();
-    else if (mins === 0 && secs === 0) {
-      setTime([hrs - 1, 59, 59]);
-    } else if (secs === 0) {
-      setTime([hrs, mins - 1, 59]);
+    if (DAYS === 0 && HRS === 0 && MINS === 0 && SECS === 0) reset();
+    else if (HRS === 0 && MINS === 0 && SECS === 0) {
+      setTime([DAYS - 1, 23, 59, 59]);
+    } else if (MINS === 0 && SECS === 0) {
+      setTime([DAYS, HRS - 1, 59, 59]);
+    } else if (SECS === 0) {
+      setTime([DAYS, HRS, MINS - 1, 59]);
     } else {
-      setTime([hrs, mins, secs - 1]);
+      setTime([DAYS, HRS, MINS, SECS - 1]);
     }
   };
 
@@ -29,12 +32,22 @@ const Timer = ({ hoursMinSecs }) => {
     return () => clearInterval(timerId);
   });
 
+  React.useEffect(() => {
+    console.log(DAYS, HRS, MINS, SECS);
+  }, [SECS]);
+
   return (
-    <text style={{ color: "red", marginLeft: "0.5vw" }}>{`${hrs
-      .toString()
-      .padStart(2, "0")}시 ${mins.toString().padStart(2, "0")}분 ${secs
-      .toString()
-      .padStart(2, "0")}초`}</text>
+    <>
+      <text
+        style={{ color: "red" }}
+      >{`${DAYS.toString()}일 ${HRS.toString().padStart(
+        2,
+        "0"
+      )}시 ${MINS.toString().padStart(2, "0")}분 ${SECS.toString().padStart(
+        2,
+        "0"
+      )}초`}</text>
+    </>
   );
 };
 

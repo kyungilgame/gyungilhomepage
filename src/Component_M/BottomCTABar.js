@@ -84,16 +84,16 @@ const ImageContainer = styled.div`
   background-repeat: no-repeat;
 `;
 
-const dday = new Date("June 8, 2022, 0:00:00").getTime();
+const dday = new Date("2022-06-08, 00:00:00").getTime();
 
 const today = new Date().getTime(); // 밀리 초 단위
 const gap = dday - today;
-const day = Math.ceil(gap / (1000 * 60 * 60 * 24));
-const hour = Math.ceil((gap % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-const min = Math.ceil((gap % (1000 * 60 * 60)) / (1000 * 60));
-const sec = Math.ceil((gap % (1000 * 60)) / 1000);
+const day = Math.floor(gap / (1000 * 60 * 60 * 24));
+const hour = Math.floor((gap % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+const min = Math.floor((gap % (1000 * 60 * 60)) / (1000 * 60));
+const sec = Math.floor((gap % (1000 * 60)) / 1000);
 
-const hoursMinSecs = { hours: hour, minutes: min, seconds: sec };
+const countDate = { days: day, hours: hour, minutes: min, seconds: sec };
 
 const BottomCTABar = () => {
   const [CTAAtive, setCTAAtive] = useState(true);
@@ -123,10 +123,9 @@ const BottomCTABar = () => {
           alignItems: "center",
         }}
       >
-        <FirstLine style={{ marginTop: "1vw" }}>
-          웹개발 3기 선착순 모집
-        </FirstLine>
-        <SecondLine>수강료 9,438,000원 {`\u00A0\u00A0`} 0원</SecondLine>
+        <FirstLine style={{ marginTop: "1vw" }}>과정 마감까지</FirstLine>
+
+        {/* <SecondLine>수강료 9,438,000원 {`\u00A0\u00A0`} 0원</SecondLine> */}
         <div
           style={{
             display: "flex",
@@ -136,12 +135,9 @@ const BottomCTABar = () => {
             alignItems: "center",
           }}
         >
-          <ThirdLine>마감까지</ThirdLine>
+          {/* <ThirdLine>마감까지</ThirdLine> */}
           <ThirdLine>
-            <text style={{ color: "red", marginLeft: "0.5vw" }}>
-              {`${day}`}일
-            </text>
-            <Timer hoursMinSecs={hoursMinSecs}></Timer>
+            <Timer countDate={countDate}></Timer>
           </ThirdLine>
           <ThirdLine>{`\u00A0\u00A0`}남았어요!</ThirdLine>
         </div>
