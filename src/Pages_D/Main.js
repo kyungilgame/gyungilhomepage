@@ -558,7 +558,7 @@ const Main = ({ menuState, SetMenuState }) => {
       <ContentsBoxSixContainer>
         <VideoPlayWrapper>
           <ReactPlayer
-            url="https://youtu.be/dR8YaZLBmTQ"
+            url="https://youtu.be/T8TpB1C-mVs"
             width="40vw"
             height="25vw"
           />
