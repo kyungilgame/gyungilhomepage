@@ -127,7 +127,7 @@ const Header = ({ menuState, SetMenuState }) => {
                   fontFamily: "SEBANG-Gothic-Regular",
                   color: "#f6f6f6",
                 }}
-                href="https://forms.gle/Xj9q3QqjQs1qWy2D7 "
+                href="https://forms.gle/Xj9q3QqjQs1qWy2D7"
                 target="_blank"
               >
                 지원하기
@@ -138,7 +138,7 @@ const Header = ({ menuState, SetMenuState }) => {
                   fontFamily: "SEBANG-Gothic-Regular",
                   color: "#101010",
                 }}
-                href="https://forms.gle/Xj9q3QqjQs1qWy2D7 "
+                href="https://forms.gle/Xj9q3QqjQs1qWy2D7"
                 target="_blank"
               >
                 지원하기

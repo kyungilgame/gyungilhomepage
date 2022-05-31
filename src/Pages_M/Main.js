@@ -654,7 +654,7 @@ const Main = ({ menuState, SetMenuState }) => {
         <TextSizeTwentyOne>KGA와 함께라면 가능합니다</TextSizeTwentyOne>
         <ApplyBlackButton
           as={"a"}
-          href={"https://forms.gle/2Kj9iAUN7HJsE7su9"}
+          href={"https://forms.gle/Xj9q3QqjQs1qWy2D7"}
           style={{ marginTop: "4vw" }}
           target={"_blank"}
         >
