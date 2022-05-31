@@ -141,7 +141,7 @@ const BottomCTABar = () => {
           </ThirdLine>
           <ThirdLine>{`\u00A0\u00A0`}남았어요!</ThirdLine>
         </div>
-        <ApplyButton as={"a"} href={"https://forms.gle/WH2rjkEM8rR6AjA79"}>
+        <ApplyButton as={"a"} href={"https://forms.gle/j846cmmRtftkoXge7"}>
           <FourthLine>수강신청하기 {`\u00A0 >`}</FourthLine>
         </ApplyButton>
       </div>
