@@ -116,12 +116,13 @@ const Header = ({ menuState, SetMenuState }) => {
         </MenuWrapper>
         <MenuWrapper>
           <MenuText
-          // onClick={() => {
-          //   SetMenuState(4);
-          // }}
-          // menuState={menuState}
+            onClick={() => {
+              SetMenuState(4);
+            }}
+            menuState={menuState}
           >
-            {menuState === 5 ? (
+            지원하기
+            {/* {menuState === 5 ? (
               <a
                 style={{
                   fontFamily: "SEBANG-Gothic-Regular",
@@ -143,7 +144,7 @@ const Header = ({ menuState, SetMenuState }) => {
               >
                 지원하기
               </a>
-            )}
+            )} */}
           </MenuText>
         </MenuWrapper>
       </ContentWrapper>
