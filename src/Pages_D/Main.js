@@ -278,8 +278,8 @@ const MiddleTextBox = styled.div`
 `;
 
 const VideoPlayWrapper = styled.div`
-  width: 40vw;
-  height: 25vw;
+  width: 62.7vw;
+  height: 41vw;
   display: flex;
   align-items: center;
   justify-items: center;
@@ -559,8 +559,8 @@ const Main = ({ menuState, SetMenuState }) => {
         <VideoPlayWrapper>
           <ReactPlayer
             url="https://youtu.be/T8TpB1C-mVs"
-            width="40vw"
-            height="25vw"
+            width="100%"
+            height="100%"
           />
         </VideoPlayWrapper>
         <TextSizeFourteen>취업 치트키</TextSizeFourteen>
