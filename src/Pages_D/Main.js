@@ -25,7 +25,7 @@ const ContentsBoxOneContainer = styled.div`
 
 const ContentsBoxTwoContainer = styled.div`
   width: 100%;
-  height: 65vw;
+  height: 63vw;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
@@ -356,7 +356,7 @@ const Main = ({ menuState, SetMenuState }) => {
         <div
           style={{
             width: "100%",
-            height: "10vw",
+            height: "7vw",
             backgroundColor: "#00ffd6",
             display: "flex",
             flexDirection: "column",
