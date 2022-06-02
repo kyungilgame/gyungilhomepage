@@ -333,7 +333,7 @@ const Main = ({ menuState, SetMenuState }) => {
           처음인 당신도 시작할 수 있게
         </text> */}
         <text style={{ fontFamily: "SEBANG-Gothic-Bold", fontSize: "5vw" }}>
-          우리는 실패와 재도전에 전문가입니다
+          우리는 실패와 재도전의 전문가입니다
         </text>
       </div>
       <div

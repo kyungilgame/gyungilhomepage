@@ -317,7 +317,7 @@ const ImageWrapper = styled.img`
 
 const Main = ({ menuState, SetMenuState }) => {
   const textOne = "";
-  const textTwo = "우리는 실패와 재도전에 전문가입니다";
+  const textTwo = "우리는 실패와 재도전의 전문가입니다";
 
   return (
     <>
