@@ -134,13 +134,13 @@ const TextSizeFive = styled.div`
 
 const TextSizeSix = styled.div`
   font-family: "SEBANG-Gothic-Bold";
-  font-size: 2.5vw;
+  font-size: 4vw;
   color: #101010;
 `;
 
 const TextSizeSeven = styled.div`
   font-family: "SEBANG-Gothic-Bold";
-  font-size: 3.5vw;
+  font-size: 2vw;
   color: #101010;
 `;
 
@@ -284,7 +284,7 @@ const VideoPlayWrapper = styled.div`
   align-items: center;
   justify-items: center;
   background-color: #101010;
-  margin-top: 4vw;
+  margin: 4vw 0;
 `;
 
 const ColorBoxWrapper = styled.div`
@@ -316,8 +316,8 @@ const ImageWrapper = styled.img`
 `;
 
 const Main = ({ menuState, SetMenuState }) => {
-  const textOne = "처음인 당신도 시작할 수 있게";
-  const textTwo = "최고의 개발자로 만들어 드립니다";
+  const textOne = "";
+  const textTwo = "우리는 실패와 재도전에 전문가입니다";
 
   return (
     <>
@@ -348,7 +348,7 @@ const Main = ({ menuState, SetMenuState }) => {
               alignItems: "center",
             }}
           >
-            <TextSizeThree>현업인들이 육성하는 최정예 교육기관</TextSizeThree>
+            <TextSizeThree>당신의 취업을 책임지는 아카데미</TextSizeThree>
           </div>
         </div>
       </ContentsBoxOneContainer>
@@ -394,18 +394,18 @@ const Main = ({ menuState, SetMenuState }) => {
         <MainCarousel></MainCarousel>
       </ContentsBoxThreeContainer>
       <ContentsBoxFourContainer>
-        <TextSizeSix>KGA와 함께</TextSizeSix>
+        <TextSizeSix>KGA 코스소개</TextSizeSix>
         <div
           style={{
             width: "40vw",
-            height: "4.5vw",
+            height: "3vw",
             backgroundColor: "#00ffd6",
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
           }}
         >
-          <TextSizeSeven>수요 높은 인재로 성장하기</TextSizeSeven>
+          <TextSizeSeven>업계에서 인정받는 인재로 성장하기</TextSizeSeven>
         </div>
         <div
           style={{
@@ -563,8 +563,19 @@ const Main = ({ menuState, SetMenuState }) => {
             height="100%"
           />
         </VideoPlayWrapper>
-        <TextSizeFourteen>취업 치트키</TextSizeFourteen>
-        <TextSizeFifteen>KGA를 선택해야 하는 이유</TextSizeFifteen>
+        <TextSizeSix>취업 치트키</TextSizeSix>
+        <div
+          style={{
+            width: "40vw",
+            height: "3vw",
+            backgroundColor: "#00ffd6",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <TextSizeSeven>KGA를 선택해야 하는 이유</TextSizeSeven>
+        </div>
         <div
           style={{
             width: "70%",

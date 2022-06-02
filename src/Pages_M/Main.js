@@ -122,7 +122,7 @@ const TextSizeSix = styled.div`
 
 const TextSizeSeven = styled.div`
   font-family: "SEBANG-Gothic-Bold";
-  font-size: 4.5vw;
+  font-size: 3.5vw;
   color: #101010;
 `;
 
@@ -260,7 +260,7 @@ const VideoPlayWrapper = styled.div`
   align-items: center;
   justify-items: center;
   background-color: #101010;
-  margin-top: 4vw;
+  margin: 4vw 0;
 `;
 
 const ColorBoxWrapper = styled.div`
@@ -315,8 +315,8 @@ const Main = ({ menuState, SetMenuState }) => {
     <>
       <ContentsBoxOneContainer></ContentsBoxOneContainer>
       <ContentsBoxTwoContainer>
-        <TextSizeFour>처음인 당신도 시작할 수 있게</TextSizeFour>
-        <TextSizeFive>최고의 개발자로 만들어 드립니다</TextSizeFive>
+        {/* <TextSizeFour>처음인 당신도 시작할 수 있게</TextSizeFour> */}
+        {/* <TextSizeFive>최고의 개발자로 만들어 드립니다</TextSizeFive> */}
       </ContentsBoxTwoContainer>
       <div
         style={{
@@ -329,11 +329,11 @@ const Main = ({ menuState, SetMenuState }) => {
           alignItems: "center",
         }}
       >
-        <text style={{ fontFamily: "SEBANG-Gothic-Regular" }}>
+        {/* <text style={{ fontFamily: "SEBANG-Gothic-Regular" }}>
           처음인 당신도 시작할 수 있게
-        </text>
+        </text> */}
         <text style={{ fontFamily: "SEBANG-Gothic-Bold", fontSize: "5vw" }}>
-          최고의 개발자로 만들어 드립니다
+          우리는 실패와 재도전에 전문가입니다
         </text>
       </div>
       <div
@@ -362,7 +362,7 @@ const Main = ({ menuState, SetMenuState }) => {
         <MainCarousel_M></MainCarousel_M>
       </ContentsBoxThreeContainer>
       <ContentsBoxFourContainer>
-        <TextSizeSix>KGA와 함께</TextSizeSix>
+        <TextSizeSix>KGA 코스소개</TextSizeSix>
         <div
           style={{
             width: "53vw",
@@ -373,7 +373,7 @@ const Main = ({ menuState, SetMenuState }) => {
             alignItems: "center",
           }}
         >
-          <TextSizeSeven>수요 높은 인재로 성장하기</TextSizeSeven>
+          <TextSizeSeven>업계에서 인정받는 인재로 성장하기</TextSizeSeven>
         </div>
         <div
           style={{
@@ -497,8 +497,19 @@ const Main = ({ menuState, SetMenuState }) => {
             height="100%"
           />
         </VideoPlayWrapper>
-        <TextSizeFourteen>취업 치트키</TextSizeFourteen>
-        <TextSizeFifteen>KGA를 선택해야 하는 이유</TextSizeFifteen>
+        <TextSizeSix>취업 치트키</TextSizeSix>
+        <div
+          style={{
+            width: "53vw",
+            height: "6vw",
+            backgroundColor: "#00ffd6",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <TextSizeSeven>KGA를 선택해야 하는 이유</TextSizeSeven>
+        </div>
         <div
           style={{
             width: "70%",
