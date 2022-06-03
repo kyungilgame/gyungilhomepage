@@ -231,6 +231,7 @@ const TextSizeTwentyOne = styled.div`
 `;
 
 const BlackBoxWrapper = styled.div`
+  position: relative;
   width: 20vw;
   height: 15vw;
   background-color: #101010;
@@ -310,9 +311,9 @@ const MapWrapper = styled.div`
 const ImageWrapper = styled.img`
   width: 8vw;
   height: 2vw;
-  position: relative;
-  bottom: 2vw;
-  left: 6.6vw;
+  position: absolute;
+  top: -0.8vw;
+  right: -0.65vw;
 `;
 
 const Main = ({ menuState, SetMenuState }) => {
@@ -428,27 +429,11 @@ const Main = ({ menuState, SetMenuState }) => {
             }}
           >
             <BlackBoxWrapper>
-              <TextSizeEight style={{ marginTop: "2vw" }}>
-                국가기간전략훈련
-              </TextSizeEight>
+              <ImageWrapper src={RecrutingLabel}></ImageWrapper>
+              <TextSizeEight>국가기간전략훈련</TextSizeEight>
               <TextSizeNine>프로그래밍</TextSizeNine>
               <TextSizeTen>손 끝에서 구현되는 Unity 3D 게임</TextSizeTen>
-              <ApplyButton as={"a"} href={"https://kgaprogramming.oopy.io/"}>
-                <TextSizeEleven>자세히 보기</TextSizeEleven>
-                <img
-                  src={GreenArrow}
-                  style={{ width: "4vw", marginLeft: "1vw" }}
-                  alt="greenarrow"
-                ></img>
-              </ApplyButton>
-            </BlackBoxWrapper>
-            <BlackBoxWrapper>
-              <TextSizeEight style={{ marginTop: "2vw" }}>
-                국가기간전략훈련
-              </TextSizeEight>
-              <TextSizeNine>게임 기획</TextSizeNine>
-              <TextSizeTen>게임 시놉시스부터 상용화까지</TextSizeTen>
-              <ApplyButton as={"a"} href={"https://kgadesign.oopy.io/"}>
+              <ApplyButton as={"a"} href={"https://kgaprogramming.oopy.io"}>
                 <TextSizeEleven>자세히 보기</TextSizeEleven>
                 <img
                   src={GreenArrow}
@@ -459,7 +444,20 @@ const Main = ({ menuState, SetMenuState }) => {
             </BlackBoxWrapper>
             <BlackBoxWrapper>
               <ImageWrapper src={RecrutingLabel}></ImageWrapper>
-              <TextSizeEight style={{}}>국가기간전략훈련</TextSizeEight>
+              <TextSizeEight>국가기간전략훈련</TextSizeEight>
+              <TextSizeNine>게임 기획</TextSizeNine>
+              <TextSizeTen>게임 시놉시스부터 상용화까지</TextSizeTen>
+              <ApplyButton as={"a"} href={"https://kgadesign.oopy.io"}>
+                <TextSizeEleven>자세히 보기</TextSizeEleven>
+                <img
+                  src={GreenArrow}
+                  style={{ width: "4vw", marginLeft: "1vw" }}
+                  alt="greenarrow"
+                ></img>
+              </ApplyButton>
+            </BlackBoxWrapper>
+            <BlackBoxWrapper>
+              <TextSizeEight>국가기간전략훈련</TextSizeEight>
               <TextSizeNine>AR / VR</TextSizeNine>
               <TextSizeTen>비대면 시대의 핵심 기술</TextSizeTen>
               <ApplyButton as={"a"} href={"https://kgavr.oopy.io"}>
@@ -482,11 +480,10 @@ const Main = ({ menuState, SetMenuState }) => {
             }}
           >
             <BlackBoxWrapper>
-              <ImageWrapper src={RecrutingLabel}></ImageWrapper>
               <TextSizeEight style={{}}>K-디지털 트레이닝</TextSizeEight>
               <TextSizeNine>블록체인</TextSizeNine>
               <TextSizeTen>차별화 된 핀테크 개발자 되기</TextSizeTen>
-              <ApplyButton as={"a"} href={" http://landing.kiweb.or.kr/"}>
+              <ApplyButton as={"a"} href={"http://landing.kiweb.or.kr"}>
                 <TextSizeEleven>자세히 보기</TextSizeEleven>
                 <img
                   src={GreenArrow}
@@ -496,12 +493,11 @@ const Main = ({ menuState, SetMenuState }) => {
               </ApplyButton>
             </BlackBoxWrapper>
             <BlackBoxWrapper>
-              <TextSizeEight style={{ marginTop: "2vw" }}>
-                K-디지털 트레이닝
-              </TextSizeEight>
+              <ImageWrapper src={RecrutingLabel}></ImageWrapper>
+              <TextSizeEight>K-디지털 트레이닝</TextSizeEight>
               <TextSizeNine>메타버스</TextSizeNine>
               <TextSizeTen>미래 사회의 새로운 패러다임</TextSizeTen>
-              <ApplyButton as={"a"} href={"  https://kgaplan.oopy.io"}>
+              <ApplyButton as={"a"} href={"https://kgaplan.oopy.io"}>
                 <TextSizeEleven>자세히 보기</TextSizeEleven>
                 <img
                   src={GreenArrow}
@@ -515,7 +511,7 @@ const Main = ({ menuState, SetMenuState }) => {
               <TextSizeEight style={{}}>국가기간전략훈련</TextSizeEight>
               <TextSizeNine>웹개발</TextSizeNine>
               <TextSizeTen>공공데이터 개발자 되기</TextSizeTen>
-              <ApplyButton as={"a"} href={" https://kgaweb.oopy.io"}>
+              <ApplyButton as={"a"} href={"https://kgaweb.oopy.io"}>
                 <TextSizeEleven>자세히 보기</TextSizeEleven>
                 <img
                   src={GreenArrow}

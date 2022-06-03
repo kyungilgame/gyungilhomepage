@@ -18,6 +18,7 @@ const HeaderContainer = styled.div`
   background-color: transparent;
 `;
 const ContentWrapper = styled.div`
+  gap: 20px;
   width: 80%;
   display: flex;
   flex-direction: row;
@@ -26,7 +27,7 @@ const ContentWrapper = styled.div`
 `;
 
 const MenuWrapper = styled.div`
-  width: 6vw;
+  // width: 6vw;
   height: 3vw;
   display: flex;
   justify-content: end;
@@ -108,7 +109,6 @@ const Header = ({ menuState, SetMenuState }) => {
             onClick={() => {
               SetMenuState(3);
             }}
-            style={{ marginRight: "1vw" }}
             menuState={menuState}
           >
             Q{"&"}A

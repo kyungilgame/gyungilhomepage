@@ -88,7 +88,7 @@ const Apply = () => {
           <TextSizeTwo>이름</TextSizeTwo>
           <input
             type="text"
-            autofocus="autofocus"
+            autoFocus="autofocus"
             // onChange={this.handleChange}
             style={{
               border: "none",
@@ -100,7 +100,7 @@ const Apply = () => {
           <TextSizeTwo style={{ marginTop: "1.5vw" }}>나이</TextSizeTwo>
           <input
             type="text"
-            autofocus="autofocus"
+            autoFocus="autofocus"
             // onChange={this.handleChange}
             style={{
               border: "none",
@@ -121,7 +121,7 @@ const Apply = () => {
           >
             <input
               type="text"
-              autofocus="autofocus"
+              autoFocus="autofocus"
               // onChange={this.handleChange}
               style={{
                 border: "none",
@@ -139,7 +139,7 @@ const Apply = () => {
             />
             <input
               type="text"
-              autofocus="autofocus"
+              autoFocus="autofocus"
               // onChange={this.handleChange}
               style={{
                 border: "none",
@@ -157,7 +157,7 @@ const Apply = () => {
             />
             <input
               type="text"
-              autofocus="autofocus"
+              autoFocus="autofocus"
               // onChange={this.handleChange}
               style={{
                 border: "none",
@@ -179,7 +179,7 @@ const Apply = () => {
           >
             <input
               type="text"
-              autofocus="autofocus"
+              autoFocus="autofocus"
               // onChange={this.handleChange}
               style={{
                 border: "none",

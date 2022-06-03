@@ -1,6 +1,11 @@
 import styled from "styled-components";
 import "../Styles/css/App.css";
 import React, { useEffect, useState } from "react";
+import DesiredCourse from "../Component_D/DesiredCourse";
+import ApplyPrevNextBtn from "../Component_D/ApplyPrevNextBtn";
+import ApplyBirthSelector from "../Component_D/ApplyBirthSelector";
+import ApplyAddressAPI from "../Component_D/ApplyAddressAPI";
+import ApplySurvey from "../Component_D/ApplySurvey";
 
 const ContentsBoxOneContainer = styled.div`
   width: 100%;
@@ -17,7 +22,7 @@ const ContentsBoxOneContainer = styled.div`
 
 const ContentsBoxTwoContainer = styled.div`
   width: 100%;
-  height: 90vw;
+  min-height: 90vh;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -74,15 +79,32 @@ const ApplyBlackButton = styled.button`
 `;
 
 const Apply = () => {
-  const [isLogin, setIsLogin] = useState(false);
-  const [data, setData] = useState({ name: "", age: "", phone: "", email: "" });
+  const [applyStep, setApplyStep] = useState(1);
+  const [data, setData] = useState({
+    course: null,
+    name: null,
+    phone: null,
+    email: null,
+    birth: null,
+    address: null,
+    detailedAddress: null,
+  });
+  const [tempPhoneNumber1, setTempPhoneNumber1] = useState("");
+  const [tempPhoneNumber2, setTempPhoneNumber2] = useState("");
+  const [tempPhoneNumber3, setTempPhoneNumber3] = useState("");
+  const [tempMailId, setTempMailId] = useState("");
+  const [tempMailDomain, setTempMailDomain] = useState("");
 
   // handleChange: function (evt) {
   //     // this.setState({ value: evt.target.value.substr(0, 100) });
   //   }
 
   useEffect(() => {
-    const script = document.createElement("script");
+    console.log(data);
+  }, [data]);
+
+  useEffect(() => {
+    let script = document.createElement("script");
     script.src = "https://developers.kakao.com/sdk/js/kakao.js";
     script.defer = true;
     document.body.appendChild(script);
@@ -102,12 +124,13 @@ const Apply = () => {
             const kakao_account = res.kakao_account;
             console.log(kakao_account);
             console.log(res);
-            setIsLogin(true);
+            setApplyStep(2);
           },
         });
       },
     });
   }
+
   // 동의 내역 조회
   function qwer() {
     window.Kakao.API.request({
@@ -122,14 +145,10 @@ const Apply = () => {
         console.log(error);
       },
     });
-  }
-
-  // 동의 철회
-  function asdf() {
     window.Kakao.API.request({
-      url: "/v2/revoke/scopes",
+      url: "/v2/user/me",
       data: {
-        scopes: ["profile_nickname"],
+        property_keys: ["kakao_account.email", "kakao_account.gender"],
       },
       success: function (response) {
         console.log(response);
@@ -140,31 +159,116 @@ const Apply = () => {
     });
   }
 
+  // 동의 철회
+  function asdf() {
+    window.Kakao.API.request({
+      url: "/v2/user/revoke/scopes",
+      data: {
+        scopes: ["account_email"],
+      },
+      success: function (response) {
+        console.log(4444);
+        console.log(response);
+      },
+      fail: function (error) {
+        console.log(1234);
+        console.log(error);
+      },
+    });
+  }
+  /* input값 받아오는 함수들 */
+  // 이름
+  const getName = (e) => {
+    setData({ ...data, name: e.target.value });
+  };
+  // 연락처
+  const getPhoneNumber = (e) => {
+    // if (!tempPhoneNumber1 && tempPhoneNumber2 && tempPhoneNumber3) return;
+    if (e.target.name == "phone1") {
+      setTempPhoneNumber1(e.target.value);
+    } else if (e.target.name == "phone2") {
+      setTempPhoneNumber2(e.target.value);
+    } else if (e.target.name == "phone3") {
+      setTempPhoneNumber3(e.target.value);
+    }
+  };
+  useEffect(() => {
+    setData({
+      ...data,
+      phone: tempPhoneNumber1 + tempPhoneNumber2 + tempPhoneNumber3,
+    });
+  }, [tempPhoneNumber1, tempPhoneNumber2, tempPhoneNumber3]);
+  // 이메일
+  const getMail = (e) => {
+    if (e.target.name == "email") {
+      setTempMailId(e.target.value);
+    } else if (e.target.name == "emailDomain") {
+      setTempMailDomain(e.target.value);
+    }
+  };
+  useEffect(() => {
+    if (!tempMailId && !tempMailDomain) return;
+
+    setData({
+      ...data,
+      email: tempMailId + "@" + tempMailDomain,
+    });
+  }, [tempMailId, tempMailDomain]);
+
+  //주소
+  const getDetailedAddress = (e) => {
+    setData({ ...data, detailedAddress: e.target.value });
+  };
+
   return (
     <>
-      {isLogin ? (
+      {applyStep == 1 && (
         <>
-          <ContentsBoxOneContainer></ContentsBoxOneContainer>
+          <button
+            // href="javascript:kakaoLogin();"
+            onClick={kakaoLogin}
+            style={{ width: "200px", height: "200px" }}
+          >
+            카카오로 계속하기
+          </button>
+          <button onClick={qwer} style={{ width: "200px", height: "200px" }}>
+            확인
+          </button>
+          <button onClick={asdf} style={{ width: "200px", height: "200px" }}>
+            철회
+          </button>
+        </>
+      )}
+
+      {applyStep == 2 && (
+        <>
           <ContentsBoxTwoContainer>
-            <TextSizeOne>상담 신청서</TextSizeOne>
+            <div
+              style={{ width: "63vw", marginTop: "15vw", marginBottom: "3vw" }}
+            >
+              <DesiredCourse
+                data={data}
+                setData={setData}
+                applyStep={applyStep}
+                setApplyStep={setApplyStep}
+              />
+            </div>
+          </ContentsBoxTwoContainer>
+        </>
+      )}
+      {applyStep == 3 && (
+        <div style={{ width: "63vw", marginTop: "15vw", marginBottom: "3vw" }}>
+          {/* <ContentsBoxOneContainer></ContentsBoxOneContainer> */}
+          <ContentsBoxTwoContainer>
+            <TextSizeOne>{data.course} 과정 지원하기</TextSizeOne>
             <ApplyBoxWrapper>
               <TextSizeTwo>이름</TextSizeTwo>
               <input
                 type="text"
-                autofocus="autofocus"
-                // onChange={this.handleChange}
-                style={{
-                  border: "none",
-                  width: "10vw",
-                  height: "2vw",
-                  backgroundColor: "#f6f6f6",
-                }}
-              />
-              <TextSizeTwo style={{ marginTop: "1.5vw" }}>나이</TextSizeTwo>
-              <input
-                type="text"
-                autofocus="autofocus"
-                // onChange={this.handleChange}
+                autoFocus="autofocus"
+                name="name"
+                value={data.name}
+                onChange={getName}
                 style={{
                   border: "none",
                   width: "10vw",
@@ -184,8 +288,10 @@ const Apply = () => {
               >
                 <input
                   type="text"
-                  autofocus="autofocus"
-                  // onChange={this.handleChange}
+                  name="phone1"
+                  maxLength="3"
+                  value={tempPhoneNumber1}
+                  onChange={getPhoneNumber}
                   style={{
                     border: "none",
                     width: "7vw",
@@ -202,8 +308,10 @@ const Apply = () => {
                 />
                 <input
                   type="text"
-                  autofocus="autofocus"
-                  // onChange={this.handleChange}
+                  name="phone2"
+                  maxLength="4"
+                  value={tempPhoneNumber2}
+                  onChange={getPhoneNumber}
                   style={{
                     border: "none",
                     width: "7vw",
@@ -220,8 +328,11 @@ const Apply = () => {
                 />
                 <input
                   type="text"
-                  autofocus="autofocus"
-                  // onChange={this.handleChange}
+                  autoFocus="autofocus"
+                  name="phone3"
+                  maxLength="4"
+                  value={tempPhoneNumber3}
+                  onChange={getPhoneNumber}
                   style={{
                     border: "none",
                     width: "7vw",
@@ -230,7 +341,7 @@ const Apply = () => {
                   }}
                 />
               </div>
-              <TextSizeTwo style={{ marginTop: "1.5vw" }}>메일주소</TextSizeTwo>
+              <TextSizeTwo style={{ marginTop: "1.5vw" }}>이메일</TextSizeTwo>
               <div
                 style={{
                   display: "flex",
@@ -242,8 +353,10 @@ const Apply = () => {
               >
                 <input
                   type="text"
-                  autofocus="autofocus"
-                  // onChange={this.handleChange}
+                  autoFocus="autofocus"
+                  name="email"
+                  value={tempMailId}
+                  onChange={getMail}
                   style={{
                     border: "none",
                     width: "13vw",
@@ -253,7 +366,8 @@ const Apply = () => {
                 />
                 @
                 <select
-                  name="emailDomail"
+                  name="emailDomain"
+                  onChange={getMail}
                   style={{
                     border: "none",
                     backgroundColor: "#f6f6f6",
@@ -266,29 +380,58 @@ const Apply = () => {
                   <option value="hanmail.com">hanmail.com</option>
                 </select>
               </div>
-              <TextSizeTwo style={{ marginTop: "1.5vw" }}>희망분야</TextSizeTwo>
-              <select
-                name="emailDomail"
+
+              <TextSizeTwo style={{ marginTop: "1.5vw" }}>생년월일</TextSizeTwo>
+              <div
                 style={{
-                  border: "none",
-                  backgroundColor: "#f6f6f6",
+                  display: "flex",
+                  flexDirection: "row",
+                  alignItems: "center",
                   width: "25vw",
-                  height: "2vw",
+                  justifyContent: "space-between",
                 }}
               >
-                <option value="메타버스">메타버스</option>
-                <option value="블록체인">블록체인</option>
-                <option value="게임기획">게임기획</option>
-              </select>
-              <TextSizeTwo style={{ marginTop: "1.5vw" }}>메시지</TextSizeTwo>
-              <textarea
+                <ApplyBirthSelector />
+              </div>
+
+              <TextSizeTwo style={{ marginTop: "1.5vw" }}>주소</TextSizeTwo>
+              <div
                 style={{
-                  border: "none",
-                  width: "40vw",
-                  height: "15vw",
-                  resize: "none",
+                  display: "flex",
+                  flexDirection: "column",
+                  alignItems: "flex-end",
+                  width: "25vw",
+                  justifyContent: "space-between",
                 }}
-              />
+              >
+                <input
+                  style={{
+                    border: "none",
+                    width: "100%",
+                    marginTop: "5px",
+                    height: "2vw",
+                    backgroundColor: "#f6f6f6",
+                  }}
+                  value={data.address}
+                  disabled
+                  type="text"
+                  placeholder="주소"
+                />
+                <input
+                  style={{
+                    border: "none",
+                    width: "100%",
+                    marginTop: "5px",
+                    height: "2vw",
+                    backgroundColor: "#f6f6f6",
+                  }}
+                  onChange={getDetailedAddress}
+                  type="text"
+                  placeholder="상세주소"
+                />
+                <ApplyAddressAPI data={data} setData={setData} />
+              </div>
+
               <div
                 style={{
                   display: "flex",
@@ -349,22 +492,20 @@ const Apply = () => {
               </div>
             </ApplyBoxWrapper>
           </ContentsBoxTwoContainer>
-        </>
-      ) : (
+          <ApplyPrevNextBtn applyStep={applyStep} setApplyStep={setApplyStep} />
+        </div>
+      )}
+      {applyStep == 4 && (
         <>
-          <button
-            // href="javascript:kakaoLogin();"
-            onClick={kakaoLogin}
-            style={{ width: "200px", height: "200px" }}
+          <div
+            style={{ width: "63vw", marginTop: "15vw", marginBottom: "3vw" }}
           >
-            카카오로 계속하기
-          </button>
-          <button onClick={qwer} style={{ width: "200px", height: "200px" }}>
-            확인
-          </button>
-          <button onClick={asdf} style={{ width: "200px", height: "200px" }}>
-            철회
-          </button>
+            <ApplySurvey />
+            <ApplyPrevNextBtn
+              applyStep={applyStep}
+              setApplyStep={setApplyStep}
+            />
+          </div>
         </>
       )}
     </>
