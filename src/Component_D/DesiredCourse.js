@@ -67,7 +67,7 @@ const DesiredCourse = ({ data, setData, applyStep, setApplyStep }) => {
           ))}
         <button
           className={`${styles["course-unknown_button"]} 0`}
-          onClick={courseSelect}
+          onClick={() => courseSelect("모르겠어요")}
         >
           아모른직다
         </button>

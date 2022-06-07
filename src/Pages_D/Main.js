@@ -25,7 +25,7 @@ const ContentsBoxOneContainer = styled.div`
 
 const ContentsBoxTwoContainer = styled.div`
   width: 100%;
-  height: 63vw;
+  height: 62vw;
   display: flex;
   flex-direction: column;
   justify-content: flex-end;

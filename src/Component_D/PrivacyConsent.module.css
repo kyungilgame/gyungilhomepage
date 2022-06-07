@@ -1,0 +1,31 @@
+.privacy_consent-container {
+  padding: 30px;
+  border: 2px solid #101010;
+  box-shadow: 5px 5px 5px #101010;
+}
+.privacy_consent-content_box {
+  display: flex;
+  flex-direction: column;
+}
+.privacy_consent-content_box > h1 {
+  font-family: "Pretendard-Bold";
+  text-align: center;
+}
+.privacy_consent-container text {
+  font-size: 20px;
+  line-height: 25px;
+  font-family: "Pretendard-Regular";
+  margin-bottom: 10px;
+}
+.privacy_consent-container text:nth-child(4) {
+  padding: 10px;
+  line-height: 22px;
+  font-size: 16px;
+  font-family: "Pretendard-Regular";
+}
+.privacy_consent-radio_box {
+  margin: 30px 0;
+  display: flex;
+  justify-content: center;
+  gap: 5vw;
+}

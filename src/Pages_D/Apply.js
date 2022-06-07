@@ -6,6 +6,7 @@ import ApplyPrevNextBtn from "../Component_D/ApplyPrevNextBtn";
 import ApplyBirthSelector from "../Component_D/ApplyBirthSelector";
 import ApplyAddressAPI from "../Component_D/ApplyAddressAPI";
 import ApplySurvey from "../Component_D/ApplySurvey";
+import PrivacyConsent from "../Component_D/PrivacyConsent";
 
 const ContentsBoxOneContainer = styled.div`
   width: 100%;
@@ -81,19 +82,29 @@ const ApplyBlackButton = styled.button`
 const Apply = () => {
   const [applyStep, setApplyStep] = useState(1);
   const [data, setData] = useState({
-    course: null,
-    name: null,
-    phone: null,
-    email: null,
-    birth: null,
-    address: null,
-    detailedAddress: null,
+    course: "1",
+    name: "2",
+    phone: "3",
+    email: "4",
+    birth: "5",
+    address: "6",
+    detailedAddress: "7",
   });
+  // const [data, setData] = useState({
+  //   course: "",
+  //   name: "",
+  //   phone: "",
+  //   email: "",
+  //   birth: "",
+  //   address: "",
+  //   detailedAddress: "",
+  // });
   const [tempPhoneNumber1, setTempPhoneNumber1] = useState("");
   const [tempPhoneNumber2, setTempPhoneNumber2] = useState("");
   const [tempPhoneNumber3, setTempPhoneNumber3] = useState("");
   const [tempMailId, setTempMailId] = useState("");
   const [tempMailDomain, setTempMailDomain] = useState("");
+  const [surveyData, setSurveyData] = useState([]);
 
   // handleChange: function (evt) {
   //     // this.setState({ value: evt.target.value.substr(0, 100) });
@@ -260,7 +271,10 @@ const Apply = () => {
         <div style={{ width: "63vw", marginTop: "15vw", marginBottom: "3vw" }}>
           {/* <ContentsBoxOneContainer></ContentsBoxOneContainer> */}
           <ContentsBoxTwoContainer>
-            <TextSizeOne>{data.course} 과정 지원하기</TextSizeOne>
+            <TextSizeOne>
+              {data.course == "모르겠어요" ? null : `${data.course} 과정`}{" "}
+              지원하기
+            </TextSizeOne>
             <ApplyBoxWrapper>
               <TextSizeTwo>이름</TextSizeTwo>
               <input
@@ -391,7 +405,7 @@ const Apply = () => {
                   justifyContent: "space-between",
                 }}
               >
-                <ApplyBirthSelector />
+                <ApplyBirthSelector data={data} setData={setData} />
               </div>
 
               <TextSizeTwo style={{ marginTop: "1.5vw" }}>주소</TextSizeTwo>
@@ -421,7 +435,7 @@ const Apply = () => {
                   style={{
                     border: "none",
                     width: "100%",
-                    marginTop: "5px",
+                    margin: "5px 0",
                     height: "2vw",
                     backgroundColor: "#f6f6f6",
                   }}
@@ -431,68 +445,13 @@ const Apply = () => {
                 />
                 <ApplyAddressAPI data={data} setData={setData} />
               </div>
-
-              <div
-                style={{
-                  display: "flex",
-                  justifyContent: "flex-start",
-                  alignItems: "center",
-                  marginTop: "1vw",
-                }}
-              >
-                <RadioButton type="radio" />
-                <text
-                  style={{
-                    fontFamily: "SEBANG-Gothic-Bold",
-                    fontSize: "1vw",
-                    color: "#101010",
-                    marginLeft: "0.5vw",
-                  }}
-                >
-                  개인정보취급방침
-                </text>
-                <text
-                  style={{
-                    fontFamily: "SEBANG-Gothic-Regular",
-                    fontSize: "1vw",
-                    color: "#101010",
-                  }}
-                >
-                  에 등의합니다.
-                </text>
-              </div>
-              <div
-                style={{
-                  width: "100%",
-                  justifyContent: "center",
-                  alignItems: "center",
-                  display: "flex",
-                  marginTop: "5vw",
-                }}
-              >
-                <ApplyBlackButton>
-                  <text
-                    style={{
-                      color: "#f6f6f6",
-                      fontFamily: "SEBANG-Gothic-Bold",
-                      fontSize: "1.7vw",
-                    }}
-                  >
-                    제출하기
-                  </text>
-                  <text
-                    style={{
-                      color: "#f6f6f6",
-                      fontFamily: "SEBANG-Gothic-Bold",
-                      fontSize: "1.7vw",
-                      marginLeft: "1.5vw",
-                    }}
-                  >{`>`}</text>
-                </ApplyBlackButton>
-              </div>
             </ApplyBoxWrapper>
           </ContentsBoxTwoContainer>
-          <ApplyPrevNextBtn applyStep={applyStep} setApplyStep={setApplyStep} />
+          <ApplyPrevNextBtn
+            applyStep={applyStep}
+            setApplyStep={setApplyStep}
+            data={data}
+          />
         </div>
       )}
       {applyStep == 4 && (
@@ -500,7 +459,24 @@ const Apply = () => {
           <div
             style={{ width: "63vw", marginTop: "15vw", marginBottom: "3vw" }}
           >
-            <ApplySurvey />
+            <ApplySurvey
+              surveyData={surveyData}
+              setSurveyData={setSurveyData}
+            />
+            <ApplyPrevNextBtn
+              applyStep={applyStep}
+              setApplyStep={setApplyStep}
+              surveyData={surveyData}
+            />
+          </div>
+        </>
+      )}
+      {applyStep == 5 && (
+        <>
+          <div
+            style={{ width: "63vw", marginTop: "15vw", marginBottom: "3vw" }}
+          >
+            <PrivacyConsent />
             <ApplyPrevNextBtn
               applyStep={applyStep}
               setApplyStep={setApplyStep}

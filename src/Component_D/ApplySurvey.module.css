@@ -1,0 +1,23 @@
+.survey-board {
+  padding: 10px;
+  border: 2px solid #101010;
+  box-shadow: 5px 5px 5px #101010;
+}
+
+.survey-board > div:nth-child(n + 2) {
+  margin-top: 20px;
+}
+.question {
+  font-family: "Pretendard-Bold";
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.option {
+  font-family: "Pretendard-Regular";
+  padding-left: 30px;
+  line-height: 24px;
+}
+.survey-box:nth-child(4) p {
+  width: 300px;
+}
