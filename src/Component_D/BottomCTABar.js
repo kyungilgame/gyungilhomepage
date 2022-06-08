@@ -84,7 +84,7 @@ const ImageContainer = styled.div`
   background-repeat: no-repeat;
 `;
 
-const dday = new Date("2022-06-08, 00:00:00").getTime();
+const dday = new Date("2022-06-15, 00:00:00").getTime();
 
 const today = new Date().getTime(); // 밀리 초 단위
 const gap = dday - today;
