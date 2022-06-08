@@ -27,29 +27,77 @@ const ApplySurvey = ({ surveyData, setSurveyData }) => {
 
   const asdf = (e) => {};
 
-  const etcTag = document.querySelector(".survey1.etc_radio");
-  const etcDetailTag = document.querySelector(`.${styles["etc_detail"]}`);
+  const setAnswerDefault = (event, questionNum) => {
+    const answer = event.target.value;
+    setSurveyData(
+      Object.values({
+        ...surveyData,
+        [questionNum - 1]: { ...surveyData[questionNum - 1], A: answer },
+      })
+    );
+  };
 
   const setAnswer = (e) => {
     const questionNum = e.target.name.slice(-1);
-    if (questionNum != 1 || !etcTag.checked) {
-      const answer = e.target.value;
-      setSurveyData(
-        Object.values({
-          ...surveyData,
-          [questionNum - 1]: { ...surveyData[questionNum - 1], A: answer },
-        })
-      );
-    } else if (questionNum == 1 && etcTag.checked) {
-      const answer = etcDetailTag.value;
-      setSurveyData(
-        Object.values({
-          ...surveyData,
-          [questionNum - 1]: { ...surveyData[questionNum - 1], A: answer },
-        })
-      );
+    const etcTag = document.querySelector(".survey1.etc_radio");
+    const etcDetailTag = document.querySelector(`.${styles["etc_detail"]}`);
+    switch (questionNum) {
+      case "1":
+        if (!etcTag.checked) {
+          setAnswerDefault(e, questionNum);
+        } else {
+          const answer = etcDetailTag.value;
+          setSurveyData(
+            Object.values({
+              ...surveyData,
+              [questionNum - 1]: { ...surveyData[questionNum - 1], A: answer },
+            })
+          );
+        }
+        break;
+      case "2":
+        setAnswerDefault(e, questionNum);
+        break;
+      case "3":
+        setAnswerDefault(e, questionNum);
+        break;
+      case "4":
+        setAnswerDefault(e, questionNum);
+        break;
+      case "5":
+        const isChecked = e.target.checked;
+        console.log(isChecked);
+        const answer = e.target.value;
+        if (isChecked) {
+          setSurveyData(
+            Object.values({
+              ...surveyData,
+              [questionNum - 1]: {
+                ...surveyData[questionNum - 1],
+                A: [...surveyData[questionNum - 1].A, answer],
+              },
+            })
+          );
+        } else {
+          setSurveyData(
+            Object.values({
+              ...surveyData,
+              [questionNum - 1]: {
+                ...surveyData[questionNum - 1],
+                A: [
+                  ...surveyData[questionNum - 1].A.filter((a) => a !== answer),
+                ],
+              },
+            })
+          );
+        }
+        break;
+
+      default:
+        break;
     }
   };
+
   return (
     <div className={`${styles["survey-board"]}`}>
       <div className={`survey-box`}>
@@ -64,11 +112,20 @@ const ApplySurvey = ({ surveyData, setSurveyData }) => {
             type="radio"
             name="survey1"
             value="포털 사이트"
+            defaultChecked={
+              surveyData.length != 0 && surveyData[0].A == "포털 사이트"
+            }
           />
           <label>포털 사이트 (네이버, 구글 등)</label>
         </div>
         <div className={`${styles["option"]}`}>
-          <input onChange={setAnswer} type="radio" name="survey1" value="SNS" />
+          <input
+            onChange={setAnswer}
+            type="radio"
+            name="survey1"
+            value="SNS"
+            defaultChecked={surveyData.length != 0 && surveyData[0].A == "SNS"}
+          />
           <label>SNS (인스타그램, 페이스북 등)</label>
         </div>
         <div className={`${styles["option"]}`}>
@@ -77,6 +134,9 @@ const ApplySurvey = ({ surveyData, setSurveyData }) => {
             type="radio"
             name="survey1"
             value="지인 추천"
+            defaultChecked={
+              surveyData.length != 0 && surveyData[0].A == "지인 추천"
+            }
           />
           <label>지인 추천</label>
         </div>
@@ -87,6 +147,13 @@ const ApplySurvey = ({ surveyData, setSurveyData }) => {
             type="radio"
             name="survey1"
             value="etc"
+            defaultChecked={
+              surveyData.length != 0 &&
+              surveyData[0].A &&
+              surveyData[0].A != "포털 사이트" &&
+              surveyData[0].A != "SNS" &&
+              surveyData[0].A != "지인 추천"
+            }
           />
           <label>기타</label>
           <input
@@ -94,7 +161,15 @@ const ApplySurvey = ({ surveyData, setSurveyData }) => {
             className={`${styles["etc_detail"]}`}
             type="text"
             name="survey1"
-            // disabled={!isEtc}
+            defaultValue={
+              surveyData.length != 0 &&
+              surveyData[0].A &&
+              surveyData[0].A != "포털 사이트" &&
+              surveyData[0].A != "SNS" &&
+              surveyData[0].A != "지인 추천"
+                ? surveyData[0].A
+                : ""
+            }
           />
         </div>
       </div>
@@ -109,6 +184,7 @@ const ApplySurvey = ({ surveyData, setSurveyData }) => {
             type="radio"
             name="survey2"
             value="전공"
+            defaultChecked={surveyData.length != 0 && surveyData[1].A == "전공"}
           />
           <label>예</label>
         </div>
@@ -118,6 +194,9 @@ const ApplySurvey = ({ surveyData, setSurveyData }) => {
             type="radio"
             name="survey2"
             value="비전공"
+            defaultChecked={
+              surveyData.length != 0 && surveyData[1].A == "비전공"
+            }
           />
           <label>아니오</label>
         </div>
@@ -133,6 +212,10 @@ const ApplySurvey = ({ surveyData, setSurveyData }) => {
             value="2021년 이전 발급 받은 적 있어요"
             type="radio"
             name="survey3"
+            defaultChecked={
+              surveyData.length != 0 &&
+              surveyData[2].A == "2021년 이전 발급 받은 적 있어요"
+            }
           />
           <label>2020년 이전 발급 이력이 있어요</label>
         </div>
@@ -142,6 +225,10 @@ const ApplySurvey = ({ surveyData, setSurveyData }) => {
             value="2021년 이후 발급 받은 적 있어요"
             type="radio"
             name="survey3"
+            defaultChecked={
+              surveyData.length != 0 &&
+              surveyData[2].A == "2021년 이후 발급 받은 적 있어요"
+            }
           />
           <label>2021년 이후 발급 이력이 있어요</label>
         </div>
@@ -151,6 +238,9 @@ const ApplySurvey = ({ surveyData, setSurveyData }) => {
             value="발급 받은 적 없어요"
             type="radio"
             name="survey3"
+            defaultChecked={
+              surveyData.length != 0 && surveyData[2].A == "발급 받은 적 없어요"
+            }
           />
           <label>발급 받은 적 없어요</label>
         </div>
@@ -160,6 +250,9 @@ const ApplySurvey = ({ surveyData, setSurveyData }) => {
             value="잘 모르겠어요"
             type="radio"
             name="survey3"
+            defaultChecked={
+              surveyData.length != 0 && surveyData[2].A == "잘 모르겠어요"
+            }
           />
           <label>잘 모르겠어요</label>
         </div>
@@ -170,7 +263,12 @@ const ApplySurvey = ({ surveyData, setSurveyData }) => {
           4. 과정 신청 동기는 무엇인가요? (30자 이상 입력해주세요)
         </div>
         <div className={`${styles[("survey4", "option")]}`}>
-          <textarea onChange={setAnswer} name="survey4" rows="5"></textarea>
+          <textarea
+            onChange={setAnswer}
+            name="survey4"
+            rows="5"
+            defaultValue={surveyData.length != 0 && surveyData[3].A}
+          ></textarea>
         </div>
       </div>
 
@@ -184,6 +282,10 @@ const ApplySurvey = ({ surveyData, setSurveyData }) => {
             value="교육일자 및 시간"
             type="checkbox"
             name="survey5"
+            defaultChecked={
+              surveyData.length &&
+              surveyData[4].A.find((a) => a === "교육일자 및 시간")
+            }
           />
           <label>교육일자 및 시간</label>
         </div>
@@ -193,6 +295,10 @@ const ApplySurvey = ({ surveyData, setSurveyData }) => {
             value="교육환경(장소 및 공간)"
             type="checkbox"
             name="survey5"
+            defaultChecked={
+              surveyData.length &&
+              surveyData[4].A.find((a) => a === "교육환경(장소 및 공간)")
+            }
           />
           <label>교육환경(장소 및 공간)</label>
         </div>
@@ -202,6 +308,9 @@ const ApplySurvey = ({ surveyData, setSurveyData }) => {
             value="커리큘럼"
             type="checkbox"
             name="survey5"
+            defaultChecked={
+              surveyData.length && surveyData[4].A.find((a) => a === "커리큘럼")
+            }
           />
           <label>커리큘럼</label>
         </div>
@@ -211,6 +320,9 @@ const ApplySurvey = ({ surveyData, setSurveyData }) => {
             value="운영기관"
             type="checkbox"
             name="survey5"
+            defaultChecked={
+              surveyData.length && surveyData[4].A.find((a) => a === "운영기관")
+            }
           />
           <label>운영기관</label>
         </div>
@@ -220,6 +332,9 @@ const ApplySurvey = ({ surveyData, setSurveyData }) => {
             value="교육혜택"
             type="checkbox"
             name="survey5"
+            defaultChecked={
+              surveyData.length && surveyData[4].A.find((a) => a === "교육혜택")
+            }
           />
           <label>교육혜택</label>
         </div>

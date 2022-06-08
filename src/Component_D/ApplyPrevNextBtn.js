@@ -17,18 +17,32 @@ const ApplyPrevNextBtn = ({ applyStep, setApplyStep, data, surveyData }) => {
       data.address
     ) {
       setIsDataFilled(true);
+    } else {
+      setIsDataFilled(false);
     }
-    setIsDataFilled(true);
-
     return () => {
       setIsDataFilled(false);
     };
   }, [data]);
 
   useEffect(() => {
-    // if (surveyData) {
-    //   setIsDataFilled(true);
-    // }
+    if (!surveyData) return;
+    console.log("안녕");
+
+    if (
+      surveyData[0].A &&
+      surveyData[1].A &&
+      surveyData[2].A &&
+      surveyData[3].A &&
+      surveyData[4].A.length
+    ) {
+      setIsDataFilled(true);
+    } else {
+      setIsDataFilled(false);
+    }
+    return () => {
+      setIsDataFilled(false);
+    };
   }, [surveyData]);
 
   return (

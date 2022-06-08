@@ -81,30 +81,23 @@ const ApplyBlackButton = styled.button`
 
 const Apply = () => {
   const [applyStep, setApplyStep] = useState(1);
+
   const [data, setData] = useState({
-    course: "1",
-    name: "2",
-    phone: "3",
-    email: "4",
-    birth: "5",
-    address: "6",
-    detailedAddress: "7",
+    course: "",
+    name: "",
+    phone: "",
+    email: "",
+    birth: "",
+    address: "",
+    detailedAddress: "",
   });
-  // const [data, setData] = useState({
-  //   course: "",
-  //   name: "",
-  //   phone: "",
-  //   email: "",
-  //   birth: "",
-  //   address: "",
-  //   detailedAddress: "",
-  // });
+  const [surveyData, setSurveyData] = useState([]);
+
   const [tempPhoneNumber1, setTempPhoneNumber1] = useState("");
   const [tempPhoneNumber2, setTempPhoneNumber2] = useState("");
   const [tempPhoneNumber3, setTempPhoneNumber3] = useState("");
   const [tempMailId, setTempMailId] = useState("");
   const [tempMailDomain, setTempMailDomain] = useState("");
-  const [surveyData, setSurveyData] = useState([]);
 
   // handleChange: function (evt) {
   //     // this.setState({ value: evt.target.value.substr(0, 100) });
@@ -235,19 +228,31 @@ const Apply = () => {
     <>
       {applyStep == 1 && (
         <>
-          <button
-            // href="javascript:kakaoLogin();"
-            onClick={kakaoLogin}
-            style={{ width: "200px", height: "200px" }}
-          >
-            카카오로 계속하기
-          </button>
-          <button onClick={qwer} style={{ width: "200px", height: "200px" }}>
-            확인
-          </button>
-          <button onClick={asdf} style={{ width: "200px", height: "200px" }}>
-            철회
-          </button>
+          <ContentsBoxTwoContainer>
+            <div
+              style={{ width: "63vw", marginTop: "15vw", marginBottom: "3vw" }}
+            >
+              <button
+                // href="javascript:kakaoLogin();"
+                onClick={kakaoLogin}
+                style={{ width: "200px", height: "100px" }}
+              >
+                카카오로 계속하기
+              </button>
+              {/* <button
+                onClick={qwer}
+                style={{ width: "200px", height: "100px" }}
+              >
+                확인
+              </button>
+              <button
+                onClick={asdf}
+                style={{ width: "200px", height: "100px" }}
+              >
+                철회
+              </button> */}
+            </div>
+          </ContentsBoxTwoContainer>
         </>
       )}
 
