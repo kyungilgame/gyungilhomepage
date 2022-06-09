@@ -1,18 +1,12 @@
-import styled from "styled-components";
 import "../Styles/css/App.css";
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import styles from "./ApplySurvey.module.css";
 
 const ApplySurvey = ({ surveyData, setSurveyData }) => {
-  // const [survey, setSurvey] = useState([]);
-  const [A, setA] = useState("");
-  const [isEtc, setIsEtc] = useState(false);
-
   // 질문 데이터 채워넣기
   useEffect(() => {
     if (surveyData.length != 0) return;
     const questionsBox = document.querySelectorAll(`.survey-box`);
-    console.log(questionsBox);
     questionsBox.forEach((Q) => {
       setSurveyData((survey) => [
         ...survey,
@@ -20,12 +14,6 @@ const ApplySurvey = ({ surveyData, setSurveyData }) => {
       ]);
     });
   }, []);
-
-  useEffect(() => {
-    console.log(surveyData);
-  }, [surveyData]);
-
-  const asdf = (e) => {};
 
   const setAnswerDefault = (event, questionNum) => {
     const answer = event.target.value;
@@ -66,7 +54,6 @@ const ApplySurvey = ({ surveyData, setSurveyData }) => {
         break;
       case "5":
         const isChecked = e.target.checked;
-        console.log(isChecked);
         const answer = e.target.value;
         if (isChecked) {
           setSurveyData(

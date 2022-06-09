@@ -1,6 +1,6 @@
 import "../Styles/css/App.css";
 import React, { useEffect } from "react";
-import styles from "./PrivacyConsent.module.css";
+import styles from "./ApplyPrivacyConsent.module.css";
 
 const PrivacyConsent = ({ setConsent }) => {
   // 개인정보 동의 상태 풀어놓기

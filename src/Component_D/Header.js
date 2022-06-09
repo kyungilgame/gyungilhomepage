@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import "../Styles/css/App.css";
-import React, { useState, useEffect } from "react";
+import React from "react";
 
 import HeaderLogo from "../Image/HeaderLogo.png";
 import gyunilWhite from "../Image/gyungilWhite.png";

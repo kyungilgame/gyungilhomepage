@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import "../Styles/css/App.css";
-import React, { useState, useEffect } from "react";
+import React from "react";
 import styles from "./DesiredCourse.module.css";
 
 const DesiredCourse = ({ data, setData, applyStep, setApplyStep }) => {
@@ -69,7 +69,7 @@ const DesiredCourse = ({ data, setData, applyStep, setApplyStep }) => {
           className={`${styles["course-unknown_button"]} 0`}
           onClick={() => courseSelect("모르겠어요")}
         >
-          아모른직다
+          모르겠어요
         </button>
       </div>
 

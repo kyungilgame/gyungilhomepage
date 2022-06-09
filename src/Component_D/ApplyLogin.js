@@ -1,6 +1,5 @@
-import styled from "styled-components";
 import "../Styles/css/App.css";
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import styles from "./ApplyLogin.module.css";
 import gyungilBlack from "../Image/gyungilBlack.png";
 import kakaoTalkLogo from "../Image/kakao-talk.svg";
@@ -24,15 +23,13 @@ const ApplyLogin = ({ applyStep, setApplyStep }) => {
         window.Kakao.API.request({
           url: "/v2/user/me",
           success: (res) => {
-            const kakao_account = res.kakao_account;
-            console.log(kakao_account);
-            console.log(res);
             setApplyStep(2);
           },
         });
       },
     });
   }
+
   return (
     <>
       <div className={`${styles["container"]}`}>

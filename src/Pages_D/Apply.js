@@ -6,7 +6,7 @@ import ApplyPrevNextBtn from "../Component_D/ApplyPrevNextBtn";
 import ApplyBirthSelector from "../Component_D/ApplyBirthSelector";
 import ApplyAddressAPI from "../Component_D/ApplyAddressAPI";
 import ApplySurvey from "../Component_D/ApplySurvey";
-import PrivacyConsent from "../Component_D/PrivacyConsent";
+import ApplyPrivacyConsent from "../Component_D/ApplyPrivacyConsent";
 import ApplyLogin from "../Component_D/ApplyLogin";
 
 const ContentsBoxOneContainer = styled.div`
@@ -108,16 +108,6 @@ const Apply = () => {
   const [tempPhoneNumber1, setTempPhoneNumber1] = useState("");
   const [tempPhoneNumber2, setTempPhoneNumber2] = useState("");
   const [tempPhoneNumber3, setTempPhoneNumber3] = useState("");
-  const [tempMailId, setTempMailId] = useState("");
-  const [tempMailDomain, setTempMailDomain] = useState("");
-
-  // handleChange: function (evt) {
-  //     // this.setState({ value: evt.target.value.substr(0, 100) });
-  //   }
-
-  useEffect(() => {
-    console.log(data);
-  }, [data]);
 
   /* input값 받아오는 함수들 */
 
@@ -166,14 +156,6 @@ const Apply = () => {
       }
     }
   };
-  // useEffect(() => {
-  //   if (!tempMailId && !tempMailDomain) return;
-
-  //   setData({
-  //     ...data,
-  //     email: tempMailId + "@" + tempMailDomain,
-  //   });
-  // }, [tempMailId, tempMailDomain]);
 
   //주소
   const getDetailedAddress = (e) => {
@@ -431,7 +413,7 @@ const Apply = () => {
       {applyStep == 5 && (
         <>
           <ApplyContentsContainer>
-            <PrivacyConsent setConsent={setConsent} />
+            <ApplyPrivacyConsent setConsent={setConsent} />
             <ApplyPrevNextBtn
               applyStep={applyStep}
               setApplyStep={setApplyStep}

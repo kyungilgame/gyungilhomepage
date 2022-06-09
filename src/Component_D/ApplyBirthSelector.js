@@ -1,7 +1,5 @@
-import styled from "styled-components";
 import "../Styles/css/App.css";
 import React, { useState, useEffect } from "react";
-import styles from "./DesiredCourse.module.css";
 
 const ApplyBirthSelector = ({ data, setData }) => {
   const [tempYear, setTempYear] = useState(

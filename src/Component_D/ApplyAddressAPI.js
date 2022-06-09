@@ -1,6 +1,5 @@
-import styled from "styled-components";
 import "../Styles/css/App.css";
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import styles from "./ApplyAddressAPI.module.css";
 import DaumPostcode from "react-daum-postcode";
 

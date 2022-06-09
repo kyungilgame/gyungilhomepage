@@ -33,7 +33,6 @@ const ApplyPrevNextBtn = ({
 
   useEffect(() => {
     if (!surveyData) return;
-    console.log("안녕");
 
     if (
       surveyData.length &&
