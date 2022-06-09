@@ -33,10 +33,10 @@ const ApplyLogin = ({ applyStep, setApplyStep }) => {
   return (
     <>
       <div className={`${styles["container"]}`}>
+        {/* <div>당신의 꿈과 함께하는</div> */}
         <div>
           <img src={gyungilBlack} />
         </div>
-        <div>내 모습이 보이지 않아</div>
         <button
           className={`${styles["kakao_btn"]}`}
           onClick={kakaoLogin}
