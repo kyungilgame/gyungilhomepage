@@ -14,6 +14,10 @@ const Mobile = ({ children }) => {
 };
 function App() {
   const [menuState, SetMenuState] = useState(5);
+  useEffect(() => {
+    if (window.Kakao.isInitialized()) return;
+    window.Kakao.init("563910ae104ce06efb0b9f2b38f14cf7");
+  }, []);
   return (
     <>
       <Desktop>

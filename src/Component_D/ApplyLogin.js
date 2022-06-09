@@ -5,16 +5,6 @@ import gyungilBlack from "../Image/gyungilBlack.png";
 import kakaoTalkLogo from "../Image/kakao-talk.svg";
 
 const ApplyLogin = ({ applyStep, setApplyStep }) => {
-  useEffect(() => {
-    let script = document.createElement("script");
-    script.src = "https://developers.kakao.com/sdk/js/kakao.js";
-    script.defer = true;
-    document.body.appendChild(script);
-    return () => {
-      document.body.removeChild(script);
-    };
-  }, []);
-
   function kakaoLogin() {
     window.Kakao.Auth.login({
       scope: "profile_nickname",
