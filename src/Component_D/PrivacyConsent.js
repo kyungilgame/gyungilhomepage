@@ -1,9 +1,22 @@
-import styled from "styled-components";
 import "../Styles/css/App.css";
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import styles from "./PrivacyConsent.module.css";
 
-const PrivacyConsent = ({}) => {
+const PrivacyConsent = ({ setConsent }) => {
+  // 개인정보 동의 상태 풀어놓기
+  useEffect(() => {
+    setConsent(false);
+  }, []);
+
+  // 동의 체크하면 동의 상태 바꿔주기
+  const setIsPrivacyConsent = (e) => {
+    if (e.target.value === "agree") {
+      setConsent(true);
+    } else {
+      setConsent(false);
+    }
+  };
+
   return (
     <div className={`${styles["privacy_consent-container"]}`}>
       <div className={`${styles["privacy_consent-content_box"]}`}>
@@ -26,11 +39,21 @@ const PrivacyConsent = ({}) => {
       </div>
       <div className={`${styles["privacy_consent-radio_box"]}`}>
         <div className={`${styles[("privacy_consent-radio_box", "agree")]}`}>
-          <input type="radio" name="agree" />
+          <input
+            onChange={setIsPrivacyConsent}
+            type="radio"
+            name="Consent"
+            value="agree"
+          />
           <label>예</label>
         </div>
         <div className={`${styles[("privacy_consent-radio_box", "denial")]}`}>
-          <input type="radio" name="denial" />
+          <input
+            onChange={setIsPrivacyConsent}
+            type="radio"
+            name="Consent"
+            value="denial"
+          />
           <label>아니오</label>
         </div>
       </div>

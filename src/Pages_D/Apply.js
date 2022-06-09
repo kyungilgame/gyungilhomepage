@@ -7,6 +7,7 @@ import ApplyBirthSelector from "../Component_D/ApplyBirthSelector";
 import ApplyAddressAPI from "../Component_D/ApplyAddressAPI";
 import ApplySurvey from "../Component_D/ApplySurvey";
 import PrivacyConsent from "../Component_D/PrivacyConsent";
+import ApplyLogin from "../Component_D/ApplyLogin";
 
 const ContentsBoxOneContainer = styled.div`
   width: 100%;
@@ -30,30 +31,39 @@ const ContentsBoxTwoContainer = styled.div`
   align-items: center;
   background-color: #f6f6f6;
 `;
+const ApplyContentsContainer = styled.div`
+  width: 63vw;
+  margin-top: 15vw;
+  margin-bottom: 3vw;
+  min-height: 84vh;
+  position: relative;
+`;
 
 const TextSizeOne = styled.div`
   font-family: "SEBANG-Gothic-Bold";
   font-size: 3.5vw;
   color: #101010;
-  margin-top: 15vw;
-  margin-bottom: 3vw;
+  text-align: center;
+  // margin-top: 15vw;
+  // margin-bottom: 3vw;
 `;
 
 const TextSizeTwo = styled.div`
   font-family: "SEBANG-Gothic-Regular";
-  font-size: 1.5vw;
+  font-size: 18px;
   color: #101010;
 `;
 
 const ApplyBoxWrapper = styled.div`
-  width: 50%;
+  width: 100%;
   height: 70%;
   background-color: #f0f0f0;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  // justify-content: center;
   align-items: start;
   padding: 5vw;
+  // font-size: 16px;
 `;
 
 const RadioButton = styled.input`
@@ -87,11 +97,13 @@ const Apply = () => {
     name: "",
     phone: "",
     email: "",
+    emailDomain: "",
     birth: "",
     address: "",
     detailedAddress: "",
   });
   const [surveyData, setSurveyData] = useState([]);
+  const [consent, setConsent] = useState(false);
 
   const [tempPhoneNumber1, setTempPhoneNumber1] = useState("");
   const [tempPhoneNumber2, setTempPhoneNumber2] = useState("");
@@ -107,84 +119,13 @@ const Apply = () => {
     console.log(data);
   }, [data]);
 
-  useEffect(() => {
-    let script = document.createElement("script");
-    script.src = "https://developers.kakao.com/sdk/js/kakao.js";
-    script.defer = true;
-    document.body.appendChild(script);
-    return () => {
-      document.body.removeChild(script);
-    };
-  }, []);
-
-  function kakaoLogin() {
-    window.Kakao.Auth.login({
-      scope: "profile_nickname",
-      success: function (authObj) {
-        console.log(authObj);
-        window.Kakao.API.request({
-          url: "/v2/user/me",
-          success: (res) => {
-            const kakao_account = res.kakao_account;
-            console.log(kakao_account);
-            console.log(res);
-            setApplyStep(2);
-          },
-        });
-      },
-    });
-  }
-
-  // 동의 내역 조회
-  function qwer() {
-    window.Kakao.API.request({
-      url: "/v2/user/scopes",
-      // data: {
-      //   scopes: ["profile_nickname"],
-      // },
-      success: function (response) {
-        console.log(response);
-      },
-      fail: function (error) {
-        console.log(error);
-      },
-    });
-    window.Kakao.API.request({
-      url: "/v2/user/me",
-      data: {
-        property_keys: ["kakao_account.email", "kakao_account.gender"],
-      },
-      success: function (response) {
-        console.log(response);
-      },
-      fail: function (error) {
-        console.log(error);
-      },
-    });
-  }
-
-  // 동의 철회
-  function asdf() {
-    window.Kakao.API.request({
-      url: "/v2/user/revoke/scopes",
-      data: {
-        scopes: ["account_email"],
-      },
-      success: function (response) {
-        console.log(4444);
-        console.log(response);
-      },
-      fail: function (error) {
-        console.log(1234);
-        console.log(error);
-      },
-    });
-  }
   /* input값 받아오는 함수들 */
+
   // 이름
   const getName = (e) => {
     setData({ ...data, name: e.target.value });
   };
+
   // 연락처
   const getPhoneNumber = (e) => {
     // if (!tempPhoneNumber1 && tempPhoneNumber2 && tempPhoneNumber3) return;
@@ -202,22 +143,37 @@ const Apply = () => {
       phone: tempPhoneNumber1 + tempPhoneNumber2 + tempPhoneNumber3,
     });
   }, [tempPhoneNumber1, tempPhoneNumber2, tempPhoneNumber3]);
+
   // 이메일
   const getMail = (e) => {
     if (e.target.name == "email") {
-      setTempMailId(e.target.value);
+      setData({
+        ...data,
+        email: e.target.value,
+      });
     } else if (e.target.name == "emailDomain") {
-      setTempMailDomain(e.target.value);
+      console.log(e.target.value);
+      if (!e.target.value) {
+        setData({
+          ...data,
+          emailDomain: "",
+        });
+      } else {
+        setData({
+          ...data,
+          emailDomain: "@" + e.target.value,
+        });
+      }
     }
   };
-  useEffect(() => {
-    if (!tempMailId && !tempMailDomain) return;
+  // useEffect(() => {
+  //   if (!tempMailId && !tempMailDomain) return;
 
-    setData({
-      ...data,
-      email: tempMailId + "@" + tempMailDomain,
-    });
-  }, [tempMailId, tempMailDomain]);
+  //   setData({
+  //     ...data,
+  //     email: tempMailId + "@" + tempMailDomain,
+  //   });
+  // }, [tempMailId, tempMailDomain]);
 
   //주소
   const getDetailedAddress = (e) => {
@@ -229,16 +185,8 @@ const Apply = () => {
       {applyStep == 1 && (
         <>
           <ContentsBoxTwoContainer>
-            <div
-              style={{ width: "63vw", marginTop: "15vw", marginBottom: "3vw" }}
-            >
-              <button
-                // href="javascript:kakaoLogin();"
-                onClick={kakaoLogin}
-                style={{ width: "200px", height: "100px" }}
-              >
-                카카오로 계속하기
-              </button>
+            <ApplyContentsContainer>
+              <ApplyLogin applyStep={applyStep} setApplyStep={setApplyStep} />
               {/* <button
                 onClick={qwer}
                 style={{ width: "200px", height: "100px" }}
@@ -251,7 +199,7 @@ const Apply = () => {
               >
                 철회
               </button> */}
-            </div>
+            </ApplyContentsContainer>
           </ContentsBoxTwoContainer>
         </>
       )}
@@ -259,23 +207,22 @@ const Apply = () => {
       {applyStep == 2 && (
         <>
           <ContentsBoxTwoContainer>
-            <div
-              style={{ width: "63vw", marginTop: "15vw", marginBottom: "3vw" }}
-            >
+            <ApplyContentsContainer>
               <DesiredCourse
                 data={data}
                 setData={setData}
                 applyStep={applyStep}
                 setApplyStep={setApplyStep}
               />
-            </div>
+            </ApplyContentsContainer>
           </ContentsBoxTwoContainer>
         </>
       )}
       {applyStep == 3 && (
-        <div style={{ width: "63vw", marginTop: "15vw", marginBottom: "3vw" }}>
-          {/* <ContentsBoxOneContainer></ContentsBoxOneContainer> */}
-          <ContentsBoxTwoContainer>
+        <ContentsBoxTwoContainer>
+          <ApplyContentsContainer>
+            {/* <ContentsBoxOneContainer></ContentsBoxOneContainer> */}
+
             <TextSizeOne>
               {data.course == "모르겠어요" ? null : `${data.course} 과정`}{" "}
               지원하기
@@ -286,7 +233,7 @@ const Apply = () => {
                 type="text"
                 autoFocus="autofocus"
                 name="name"
-                value={data.name}
+                defaultValue={data.name}
                 onChange={getName}
                 style={{
                   border: "none",
@@ -309,7 +256,7 @@ const Apply = () => {
                   type="text"
                   name="phone1"
                   maxLength="3"
-                  value={tempPhoneNumber1}
+                  defaultValue={tempPhoneNumber1}
                   onChange={getPhoneNumber}
                   style={{
                     border: "none",
@@ -329,7 +276,7 @@ const Apply = () => {
                   type="text"
                   name="phone2"
                   maxLength="4"
-                  value={tempPhoneNumber2}
+                  defaultValue={tempPhoneNumber2}
                   onChange={getPhoneNumber}
                   style={{
                     border: "none",
@@ -347,10 +294,9 @@ const Apply = () => {
                 />
                 <input
                   type="text"
-                  autoFocus="autofocus"
                   name="phone3"
                   maxLength="4"
-                  value={tempPhoneNumber3}
+                  defaultValue={tempPhoneNumber3}
                   onChange={getPhoneNumber}
                   style={{
                     border: "none",
@@ -372,9 +318,8 @@ const Apply = () => {
               >
                 <input
                   type="text"
-                  autoFocus="autofocus"
                   name="email"
-                  value={tempMailId}
+                  defaultValue={data.email}
                   onChange={getMail}
                   style={{
                     border: "none",
@@ -386,6 +331,7 @@ const Apply = () => {
                 @
                 <select
                   name="emailDomain"
+                  defaultValue={data.emailDomain.slice(1)}
                   onChange={getMail}
                   style={{
                     border: "none",
@@ -394,9 +340,16 @@ const Apply = () => {
                     height: "2vw",
                   }}
                 >
-                  <option value="naver.com">naver.com</option>
-                  <option value="gmail.com">gmail.com</option>
-                  <option value="hanmail.com">hanmail.com</option>
+                  <option value="">이메일</option>
+                  <option>daum.net</option>
+                  <option>gmail.com</option>
+                  <option>hanmail.net</option>
+                  <option>icloud.com</option>
+                  <option>kakao.com</option>
+                  <option>mac.com</option>
+                  <option>me.com</option>
+                  <option>naver.com</option>
+                  <option>nate.com</option>
                 </select>
               </div>
 
@@ -431,7 +384,7 @@ const Apply = () => {
                     height: "2vw",
                     backgroundColor: "#f6f6f6",
                   }}
-                  value={data.address}
+                  defaultValue={data.address}
                   disabled
                   type="text"
                   placeholder="주소"
@@ -451,19 +404,18 @@ const Apply = () => {
                 <ApplyAddressAPI data={data} setData={setData} />
               </div>
             </ApplyBoxWrapper>
-          </ContentsBoxTwoContainer>
-          <ApplyPrevNextBtn
-            applyStep={applyStep}
-            setApplyStep={setApplyStep}
-            data={data}
-          />
-        </div>
+
+            <ApplyPrevNextBtn
+              applyStep={applyStep}
+              setApplyStep={setApplyStep}
+              data={data}
+            />
+          </ApplyContentsContainer>
+        </ContentsBoxTwoContainer>
       )}
       {applyStep == 4 && (
         <>
-          <div
-            style={{ width: "63vw", marginTop: "15vw", marginBottom: "3vw" }}
-          >
+          <ApplyContentsContainer>
             <ApplySurvey
               surveyData={surveyData}
               setSurveyData={setSurveyData}
@@ -473,20 +425,19 @@ const Apply = () => {
               setApplyStep={setApplyStep}
               surveyData={surveyData}
             />
-          </div>
+          </ApplyContentsContainer>
         </>
       )}
       {applyStep == 5 && (
         <>
-          <div
-            style={{ width: "63vw", marginTop: "15vw", marginBottom: "3vw" }}
-          >
-            <PrivacyConsent />
+          <ApplyContentsContainer>
+            <PrivacyConsent setConsent={setConsent} />
             <ApplyPrevNextBtn
               applyStep={applyStep}
               setApplyStep={setApplyStep}
+              consent={consent}
             />
-          </div>
+          </ApplyContentsContainer>
         </>
       )}
     </>

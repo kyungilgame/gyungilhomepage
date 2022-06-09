@@ -67,7 +67,6 @@ const ApplyBirthSelector = ({ data, setData }) => {
       <input
         onChange={getBirth}
         type="text"
-        autoFocus="autofocus"
         name="year"
         maxLength="4"
         defaultValue={data && data.birth.substring(0, 4)}

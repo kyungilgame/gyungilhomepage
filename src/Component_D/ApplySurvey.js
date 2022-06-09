@@ -113,7 +113,7 @@ const ApplySurvey = ({ surveyData, setSurveyData }) => {
             name="survey1"
             value="포털 사이트"
             defaultChecked={
-              surveyData.length != 0 && surveyData[0].A == "포털 사이트"
+              surveyData.length && surveyData[0].A == "포털 사이트"
             }
           />
           <label>포털 사이트 (네이버, 구글 등)</label>
@@ -124,7 +124,7 @@ const ApplySurvey = ({ surveyData, setSurveyData }) => {
             type="radio"
             name="survey1"
             value="SNS"
-            defaultChecked={surveyData.length != 0 && surveyData[0].A == "SNS"}
+            defaultChecked={surveyData.length && surveyData[0].A == "SNS"}
           />
           <label>SNS (인스타그램, 페이스북 등)</label>
         </div>
@@ -134,9 +134,7 @@ const ApplySurvey = ({ surveyData, setSurveyData }) => {
             type="radio"
             name="survey1"
             value="지인 추천"
-            defaultChecked={
-              surveyData.length != 0 && surveyData[0].A == "지인 추천"
-            }
+            defaultChecked={surveyData.length && surveyData[0].A == "지인 추천"}
           />
           <label>지인 추천</label>
         </div>
@@ -148,7 +146,7 @@ const ApplySurvey = ({ surveyData, setSurveyData }) => {
             name="survey1"
             value="etc"
             defaultChecked={
-              surveyData.length != 0 &&
+              surveyData.length &&
               surveyData[0].A &&
               surveyData[0].A != "포털 사이트" &&
               surveyData[0].A != "SNS" &&
@@ -162,7 +160,7 @@ const ApplySurvey = ({ surveyData, setSurveyData }) => {
             type="text"
             name="survey1"
             defaultValue={
-              surveyData.length != 0 &&
+              surveyData.length &&
               surveyData[0].A &&
               surveyData[0].A != "포털 사이트" &&
               surveyData[0].A != "SNS" &&
@@ -184,7 +182,7 @@ const ApplySurvey = ({ surveyData, setSurveyData }) => {
             type="radio"
             name="survey2"
             value="전공"
-            defaultChecked={surveyData.length != 0 && surveyData[1].A == "전공"}
+            defaultChecked={surveyData.length && surveyData[1].A == "전공"}
           />
           <label>예</label>
         </div>
@@ -194,9 +192,7 @@ const ApplySurvey = ({ surveyData, setSurveyData }) => {
             type="radio"
             name="survey2"
             value="비전공"
-            defaultChecked={
-              surveyData.length != 0 && surveyData[1].A == "비전공"
-            }
+            defaultChecked={surveyData.length && surveyData[1].A == "비전공"}
           />
           <label>아니오</label>
         </div>
@@ -213,7 +209,7 @@ const ApplySurvey = ({ surveyData, setSurveyData }) => {
             type="radio"
             name="survey3"
             defaultChecked={
-              surveyData.length != 0 &&
+              surveyData.length &&
               surveyData[2].A == "2021년 이전 발급 받은 적 있어요"
             }
           />
@@ -226,7 +222,7 @@ const ApplySurvey = ({ surveyData, setSurveyData }) => {
             type="radio"
             name="survey3"
             defaultChecked={
-              surveyData.length != 0 &&
+              surveyData.length &&
               surveyData[2].A == "2021년 이후 발급 받은 적 있어요"
             }
           />
@@ -239,7 +235,7 @@ const ApplySurvey = ({ surveyData, setSurveyData }) => {
             type="radio"
             name="survey3"
             defaultChecked={
-              surveyData.length != 0 && surveyData[2].A == "발급 받은 적 없어요"
+              surveyData.length && surveyData[2].A == "발급 받은 적 없어요"
             }
           />
           <label>발급 받은 적 없어요</label>
@@ -251,7 +247,7 @@ const ApplySurvey = ({ surveyData, setSurveyData }) => {
             type="radio"
             name="survey3"
             defaultChecked={
-              surveyData.length != 0 && surveyData[2].A == "잘 모르겠어요"
+              surveyData.length && surveyData[2].A == "잘 모르겠어요"
             }
           />
           <label>잘 모르겠어요</label>
@@ -267,7 +263,7 @@ const ApplySurvey = ({ surveyData, setSurveyData }) => {
             onChange={setAnswer}
             name="survey4"
             rows="5"
-            defaultValue={surveyData.length != 0 && surveyData[3].A}
+            defaultValue={surveyData.length && surveyData[3].A}
           ></textarea>
         </div>
       </div>
@@ -284,6 +280,7 @@ const ApplySurvey = ({ surveyData, setSurveyData }) => {
             name="survey5"
             defaultChecked={
               surveyData.length &&
+              surveyData[4].A &&
               surveyData[4].A.find((a) => a === "교육일자 및 시간")
             }
           />
@@ -297,6 +294,7 @@ const ApplySurvey = ({ surveyData, setSurveyData }) => {
             name="survey5"
             defaultChecked={
               surveyData.length &&
+              surveyData[4].A &&
               surveyData[4].A.find((a) => a === "교육환경(장소 및 공간)")
             }
           />
@@ -309,7 +307,9 @@ const ApplySurvey = ({ surveyData, setSurveyData }) => {
             type="checkbox"
             name="survey5"
             defaultChecked={
-              surveyData.length && surveyData[4].A.find((a) => a === "커리큘럼")
+              surveyData.length &&
+              surveyData[4].A &&
+              surveyData[4].A.find((a) => a === "커리큘럼")
             }
           />
           <label>커리큘럼</label>
@@ -321,7 +321,9 @@ const ApplySurvey = ({ surveyData, setSurveyData }) => {
             type="checkbox"
             name="survey5"
             defaultChecked={
-              surveyData.length && surveyData[4].A.find((a) => a === "운영기관")
+              surveyData.length &&
+              surveyData[4].A &&
+              surveyData[4].A.find((a) => a === "운영기관")
             }
           />
           <label>운영기관</label>
@@ -333,7 +335,9 @@ const ApplySurvey = ({ surveyData, setSurveyData }) => {
             type="checkbox"
             name="survey5"
             defaultChecked={
-              surveyData.length && surveyData[4].A.find((a) => a === "교육혜택")
+              surveyData.length &&
+              surveyData[4].A &&
+              surveyData[4].A.find((a) => a === "교육혜택")
             }
           />
           <label>교육혜택</label>

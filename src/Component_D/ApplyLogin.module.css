@@ -1,0 +1,11 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.kakao_btn {
+  background-color: #f9e000;
+}
+.kakao_logo {
+  width: 40px;
+}

@@ -1,5 +1,5 @@
 .privacy_consent-container {
-  padding: 30px;
+  padding: 5vw;
   border: 2px solid #101010;
   box-shadow: 5px 5px 5px #101010;
 }
@@ -10,6 +10,7 @@
 .privacy_consent-content_box > h1 {
   font-family: "Pretendard-Bold";
   text-align: center;
+  margin-bottom: 5vw;
 }
 .privacy_consent-container text {
   font-size: 20px;
@@ -18,7 +19,7 @@
   margin-bottom: 10px;
 }
 .privacy_consent-container text:nth-child(4) {
-  padding: 10px;
+  padding: 3vw;
   line-height: 22px;
   font-size: 16px;
   font-family: "Pretendard-Regular";

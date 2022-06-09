@@ -37,7 +37,7 @@ const MenuWrapper = styled.div`
 const Header = ({ menuState, SetMenuState }) => {
   const MenuText = styled.div`
     font-family: "SEBANG-Gothic-Regular";
-    font-size: 1vw;
+    font-size: 16px;
     cursor: pointer;
     ${({ menuState }) => {
       return menuState === 5 ? `color: #f6f6f6;` : `color: #101010;`;

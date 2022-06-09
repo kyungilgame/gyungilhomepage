@@ -84,17 +84,6 @@ const ImageContainer = styled.div`
   background-repeat: no-repeat;
 `;
 
-const dday = new Date("2022-06-15, 00:00:00").getTime();
-
-const today = new Date().getTime(); // 밀리 초 단위
-const gap = dday - today;
-const day = Math.floor(gap / (1000 * 60 * 60 * 24));
-const hour = Math.floor((gap % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
-const min = Math.floor((gap % (1000 * 60 * 60)) / (1000 * 60));
-const sec = Math.floor((gap % (1000 * 60)) / 1000);
-
-const countDate = { days: day, hours: hour, minutes: min, seconds: sec };
-
 const BottomCTABar = () => {
   const [CTAAtive, setCTAAtive] = useState(true);
 
@@ -156,7 +145,7 @@ const BottomCTABar = () => {
         >
           {/* <ThirdLine>마감까지</ThirdLine> */}
           <ThirdLine>
-            <Timer countDate={countDate}></Timer>
+            <Timer></Timer>
           </ThirdLine>
           <ThirdLine>{`\u00A0\u00A0`}남았어요!</ThirdLine>
         </div>
