@@ -214,9 +214,6 @@ const Footer = ({ menuState, SetMenuState }) => {
             marginTop: "12vw",
           }}
         >
-          <LineSizeTwo>
-            <text style={{ color: "white" }}>SNS</text>
-          </LineSizeTwo>
           <div
             style={{
               display: "flex",

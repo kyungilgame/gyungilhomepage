@@ -354,7 +354,7 @@ export default function AboutKGASlideSecond() {
                   height: "95%",
                 }}
               >
-                <ImageWrapper Image={Kimgeon}></ImageWrapper>
+                <ImageWrapper Image={Choiseonmoon}></ImageWrapper>
                 <div
                   style={{
                     display: "flex",
@@ -363,8 +363,8 @@ export default function AboutKGASlideSecond() {
                     alignItems: "center",
                   }}
                 >
-                  <TextOne>김건</TextOne>
-                  <TextTwo>웹,취업지원</TextTwo>
+                  <TextOne>최선문</TextOne>
+                  <TextTwo>게임 프로그래밍</TextTwo>
                 </div>
               </div>
 
@@ -377,13 +377,11 @@ export default function AboutKGASlideSecond() {
                 }}
               ></div>
               <TextBox>
-                빠르게 변하는 시대에 발 맞추기 위해 프로그래밍 공부를
-                시작했습니다. 꾸준한 시간 투자와 배우려는 자세가 개발자의 중요한
-                가치라고 생각합니다. KGA에서 새롭게 프로그래밍 공부를 시작하는
-                학생들이 지식을 잘 습득하고 취업할 수 있도록 지도하는 것이
-                목표입니다.
+                시프트업에서 데스티니차일드 서버 프로그래머로 시작하여, 가르치는 것을 좋아해 교육자가 되었다.  '원하는 기업 골라서 가자'를 교육 철학으로 삼고 있으며, 학생의 니즈에 최대한 부합할 수 있도록 물심양면으로 애쓰고 있다.
+                비전공자도 충분히 프로그래밍을 잘할 수 있다고 믿으며, 학생의 성장하는 모습에 뿌듯함을 느끼고 있다.
               </TextBox>
             </ItemWrapper>
+
             <ItemWrapper>
               <div
                 style={{
@@ -510,44 +508,7 @@ export default function AboutKGASlideSecond() {
                 배신하지 않으며 더 품격 있는 개발자의 길로 인도해 줄 것이다.
               </TextBox>
             </ItemWrapper>
-            <ItemWrapper>
-              <div
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  justifyContent: "space-around",
-                  alignItems: "center",
-                  width: "95%",
-                  height: "95%",
-                }}
-              >
-                <ImageWrapper Image={Choiseonmoon}></ImageWrapper>
-                <div
-                  style={{
-                    display: "flex",
-                    flexDirection: "column",
-                    justifyContent: "center",
-                    alignItems: "center",
-                  }}
-                >
-                  <TextOne>최선문</TextOne>
-                  <TextTwo>게임 프로그래밍</TextTwo>
-                </div>
-              </div>
 
-              <div
-                style={{
-                  width: "90%",
-                  height: "0.2vw",
-                  backgroundColor: "#lightgray",
-                  marginTop: "0.5vw",
-                }}
-              ></div>
-              <TextBox>
-                시프트업에서 데스티니차일드 서버 프로그래머로 시작하여, 가르치는 것을 좋아해 교육자가 되었다.  '원하는 기업 골라서 가자'를 교육 철학으로 삼고 있으며, 학생의 니즈에 최대한 부합할 수 있도록 물심양면으로 애쓰고 있다.
-                비전공자도 충분히 프로그래밍을 잘할 수 있다고 믿으며, 학생의 성장하는 모습에 뿌듯함을 느끼고 있다.
-              </TextBox>
-            </ItemWrapper>
             {/*  */}
 
             {/*  */}

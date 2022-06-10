@@ -229,9 +229,6 @@ const Footer = ({ menuState, SetMenuState }) => {
             alignItems: "start",
           }}
         >
-          <LineSizeTwo>
-            <text style={{ color: "white" }}>SNS</text>
-          </LineSizeTwo>
           <div
             style={{
               display: "flex",

@@ -156,14 +156,15 @@ export default function Slide() {
       </ItemWrapper>
       <ItemWrapper>
         <EachItemWrapper>
-          <EachItemImage Image={Kimgeon}></EachItemImage>
-          <EachItemName>김건</EachItemName>
-          <EachItemCourse>웹,취업지원</EachItemCourse>
+          <EachItemImage Image={Choiseonmoon}></EachItemImage>
+          <EachItemName>최선문</EachItemName>
+          <EachItemCourse>게임 프로그래밍</EachItemCourse>
           <EachItemComment>
-            빠르게 변하는 시대에 발 맞추기 위해 프로그래밍 공부를 시작했습니다.
-            꾸준한 시간 투자와 배우려는 자세가 개발자의 중요한 가치라고
-            생각합니다. KGA에서 새롭게 프로그래밍 공부를 시작하는 학생들이
-            지식을 잘 습득하고 취업할 수 있도록 지도하는 것이 목표입니다.
+            시프트업에서 데스티니차일드 서버 프로그래머로 시작하여, 가르치는
+            것을 좋아해 교육자가 되었다. '원하는 기업 골라서 가자'를 교육
+            철학으로 삼고 있으며, 학생의 니즈에 최대한 부합할 수 있도록
+            물심양면으로 애쓰고 있다. 비전공자도 충분히 프로그래밍을 잘할 수
+            있다고 믿으며, 학생의 성장하는 모습에 뿌듯함을 느끼고 있다.
           </EachItemComment>
         </EachItemWrapper>
         <EachItemWrapper>
@@ -195,18 +196,6 @@ export default function Slide() {
       </ItemWrapper>
       <ItemWrapper>
         <EachItemWrapper>
-          <EachItemImage Image={Choiseonmoon}></EachItemImage>
-          <EachItemName>최선문</EachItemName>
-          <EachItemCourse>게임 프로그래밍</EachItemCourse>
-          <EachItemComment>
-            시프트업에서 데스티니차일드 서버 프로그래머로 시작하여, 가르치는
-            것을 좋아해 교육자가 되었다. '원하는 기업 골라서 가자'를 교육
-            철학으로 삼고 있으며, 학생의 니즈에 최대한 부합할 수 있도록
-            물심양면으로 애쓰고 있다. 비전공자도 충분히 프로그래밍을 잘할 수
-            있다고 믿으며, 학생의 성장하는 모습에 뿌듯함을 느끼고 있다.
-          </EachItemComment>
-        </EachItemWrapper>
-        <EachItemWrapper>
           <EachItemImage Image={Joehanbyul}></EachItemImage>
           <EachItemName>조한별</EachItemName>
           <EachItemCourse>게임 프로그래밍</EachItemCourse>
@@ -228,62 +217,58 @@ export default function Slide() {
             최선의 진로 탐색을 도와드리겠습니다.
           </EachItemComment>
         </EachItemWrapper>
+        <EachItemWrapper>
+          <EachItemImage Image={Kimtaewan}></EachItemImage>
+          <EachItemName>김태완</EachItemName>
+          <EachItemCourse>Empolyment Support</EachItemCourse>
+          <EachItemComment>
+            경일게임아카데미 과정을 성공적으로 수료하신 분들의 취업을
+            응원합니다!
+          </EachItemComment>
+        </EachItemWrapper>
       </ItemWrapper>
       <ItemWrapper>
-        <ItemWrapper>
-          <EachItemWrapper>
-            <EachItemImage Image={Kimtaewan}></EachItemImage>
-            <EachItemName>김태완</EachItemName>
-            <EachItemCourse>Empolyment Support</EachItemCourse>
-            <EachItemComment>
-              경일게임아카데미 과정을 성공적으로 수료하신 분들의 취업을
-              응원합니다!
-            </EachItemComment>
-          </EachItemWrapper>
-          <EachItemWrapper>
-            <EachItemImage Image={Jeongjieun}></EachItemImage>
-            <EachItemName>정지은</EachItemName>
-            <EachItemCourse>Recruit Manager</EachItemCourse>
-            <EachItemComment>
-              무엇이든 물어보세요. 환한 미소로 답해 드리겠습니다. 하나부터
-              열까지 차근차근 설명해 드리겠습니다. 사소한 것도 좋으니 언제든
-              편하게 문의해 주세요.
-            </EachItemComment>
-          </EachItemWrapper>
-          <EachItemWrapper>
-            <EachItemImage Image={Kangmyunggyu}></EachItemImage>
-            <EachItemName>강명규</EachItemName>
-            <EachItemCourse>Administrative Staff</EachItemCourse>
-            <EachItemComment>
-              여러분들의 목표달성을 위해 보이지 않는 곳에서 항상 서포트하고
-              있겠습니다.
-            </EachItemComment>
-          </EachItemWrapper>
-        </ItemWrapper>
+        <EachItemWrapper>
+          <EachItemImage Image={Jeongjieun}></EachItemImage>
+          <EachItemName>정지은</EachItemName>
+          <EachItemCourse>Recruit Manager</EachItemCourse>
+          <EachItemComment>
+            무엇이든 물어보세요. 환한 미소로 답해 드리겠습니다. 하나부터 열까지
+            차근차근 설명해 드리겠습니다. 사소한 것도 좋으니 언제든 편하게
+            문의해 주세요.
+          </EachItemComment>
+        </EachItemWrapper>
+        <EachItemWrapper>
+          <EachItemImage Image={Kangmyunggyu}></EachItemImage>
+          <EachItemName>강명규</EachItemName>
+          <EachItemCourse>Administrative Staff</EachItemCourse>
+          <EachItemComment>
+            여러분들의 목표달성을 위해 보이지 않는 곳에서 항상 서포트하고
+            있겠습니다.
+          </EachItemComment>
+        </EachItemWrapper>
+        <EachItemWrapper>
+          <EachItemImage Image={Songjaeoh}></EachItemImage>
+          <EachItemName>송재오</EachItemName>
+          <EachItemCourse>Administrative Staff</EachItemCourse>
+          <EachItemComment>
+            꿈을 향해 1년이란 시간을 달리는 여러분을 위한 뉴스피드가
+            되어드리겠습니다.
+          </EachItemComment>
+        </EachItemWrapper>
       </ItemWrapper>
       <ItemWrapper>
-        <ItemWrapper>
-          <EachItemWrapper>
-            <EachItemImage Image={Songjaeoh}></EachItemImage>
-            <EachItemName>송재오</EachItemName>
-            <EachItemCourse>Administrative Staff</EachItemCourse>
-            <EachItemComment>
-              꿈을 향해 1년이란 시간을 달리는 여러분을 위한 뉴스피드가
-              되어드리겠습니다.
-            </EachItemComment>
-          </EachItemWrapper>
-          <EachItemWrapper>
-            <EachItemImage Image={Hansoyeon}></EachItemImage>
-            <EachItemName>한소연</EachItemName>
-            <EachItemCourse>Recruit Manager</EachItemCourse>
-            <EachItemComment>
-              아자아자 무엇이든 열심히 안내해드릴 수 있는 사람이 되겠습니다.
-            </EachItemComment>
-          </EachItemWrapper>
-          <EachItemWrapper
-            style={{ backgroundColor: "#f0f0f0" }}
-          ></EachItemWrapper>
-        </ItemWrapper>
+        <EachItemWrapper>
+          <EachItemImage Image={Hansoyeon}></EachItemImage>
+          <EachItemName>한소연</EachItemName>
+          <EachItemCourse>Administrative Staff</EachItemCourse>
+          <EachItemComment>
+            아자아자 무엇이든 열심히 안내해드릴 수 있는 사람이 되겠습니다.
+          </EachItemComment>
+        </EachItemWrapper>
+        <EachItemWrapper
+          style={{ backgroundColor: "#f0f0f0" }}
+        ></EachItemWrapper>
       </ItemWrapper>
     </>
   );
