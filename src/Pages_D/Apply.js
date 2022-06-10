@@ -4,10 +4,11 @@ import React, { useEffect, useState } from "react";
 import DesiredCourse from "../Component_D/DesiredCourse";
 import ApplyPrevNextBtn from "../Component_D/ApplyPrevNextBtn";
 import ApplyBirthSelector from "../Component_D/ApplyBirthSelector";
-import ApplyAddressAPI from "../Component_D/ApplyAddressAPI";
+import ApplyAddress from "../Component_D/ApplyAddress";
 import ApplySurvey from "../Component_D/ApplySurvey";
 import ApplyPrivacyConsent from "../Component_D/ApplyPrivacyConsent";
 import ApplyLogin from "../Component_D/ApplyLogin";
+import ApplyEmail from "../Component_D/ApplyEmail";
 
 const ContentsBoxOneContainer = styled.div`
   width: 100%;
@@ -31,13 +32,6 @@ const ContentsBoxTwoContainer = styled.div`
   align-items: center;
   background-color: #f6f6f6;
 `;
-const ApplyContentsContainer = styled.div`
-  width: 63vw;
-  margin-top: 15vw;
-  margin-bottom: 3vw;
-  min-height: 84vh;
-  position: relative;
-`;
 
 const TextSizeOne = styled.div`
   font-family: "SEBANG-Gothic-Bold";
@@ -52,12 +46,29 @@ const TextSizeTwo = styled.div`
   font-family: "SEBANG-Gothic-Regular";
   font-size: 18px;
   color: #101010;
+  margin-top: 3vh;
+  margin-bottom: 5px;
 `;
 
 const ApplyBoxWrapper = styled.div`
+  input,
+  select {
+    height: 2vw;
+    border-width: 2px;
+    border-top-color: rgb(200, 200, 200);
+    border-left-color: rgb(200, 200, 200);
+    border-right-color: rgb(180, 180, 180);
+    border-bottom-color: rgb(180, 180, 180);
+    outline: none;
+    font-size: 15px;
+  }
+  input:focus-within,
+  select:focus-visible {
+    border-color: black;
+  }
   width: 100%;
   height: 70%;
-  background-color: #f0f0f0;
+  // background-color: #f0f0f0;
   display: flex;
   flex-direction: column;
   // justify-content: center;
@@ -90,12 +101,24 @@ const ApplyBlackButton = styled.button`
 `;
 
 const Apply = () => {
+  const ApplyContentsContainer = styled.div`
+    padding: 5vw;
+    width: 63vw;
+    margin-top: 15vw;
+    margin-bottom: 3vw;
+    min-height: 84vh;
+    position: relative;
+
+    border: 2px solid #101010;
+    box-shadow: 5px 5px 5px #101010;
+  `;
   const [applyStep, setApplyStep] = useState(1);
 
   const [data, setData] = useState({
     course: "",
     name: "",
     phone: "",
+    kakaoEmail: "",
     email: "",
     emailDomain: "",
     birth: "",
@@ -134,295 +157,138 @@ const Apply = () => {
     });
   }, [tempPhoneNumber1, tempPhoneNumber2, tempPhoneNumber3]);
 
-  // 이메일
-  const getMail = (e) => {
-    if (e.target.name == "email") {
-      setData({
-        ...data,
-        email: e.target.value,
-      });
-    } else if (e.target.name == "emailDomain") {
-      console.log(e.target.value);
-      if (!e.target.value) {
-        setData({
-          ...data,
-          emailDomain: "",
-        });
-      } else {
-        setData({
-          ...data,
-          emailDomain: "@" + e.target.value,
-        });
-      }
-    }
-  };
-
-  //주소
-  const getDetailedAddress = (e) => {
-    setData({ ...data, detailedAddress: e.target.value });
-  };
-
   return (
-    <>
+    <ApplyContentsContainer>
       {applyStep == 1 && (
-        <>
-          <ContentsBoxTwoContainer>
-            <ApplyContentsContainer>
-              <ApplyLogin applyStep={applyStep} setApplyStep={setApplyStep} />
-              {/* <button
-                onClick={qwer}
-                style={{ width: "200px", height: "100px" }}
-              >
-                확인
-              </button>
-              <button
-                onClick={asdf}
-                style={{ width: "200px", height: "100px" }}
-              >
-                철회
-              </button> */}
-            </ApplyContentsContainer>
-          </ContentsBoxTwoContainer>
-        </>
+        <ApplyLogin
+          data={data}
+          setData={setData}
+          applyStep={applyStep}
+          setApplyStep={setApplyStep}
+        />
       )}
 
       {applyStep == 2 && (
-        <>
-          <ContentsBoxTwoContainer>
-            <ApplyContentsContainer>
-              <DesiredCourse
-                data={data}
-                setData={setData}
-                applyStep={applyStep}
-                setApplyStep={setApplyStep}
-              />
-            </ApplyContentsContainer>
-          </ContentsBoxTwoContainer>
-        </>
+        <DesiredCourse
+          data={data}
+          setData={setData}
+          applyStep={applyStep}
+          setApplyStep={setApplyStep}
+        />
       )}
-      {applyStep == 3 && (
-        <ContentsBoxTwoContainer>
-          <ApplyContentsContainer>
-            {/* <ContentsBoxOneContainer></ContentsBoxOneContainer> */}
 
-            <TextSizeOne>
-              {data.course == "모르겠어요" ? null : `${data.course} 과정`}{" "}
-              지원하기
-            </TextSizeOne>
-            <ApplyBoxWrapper>
-              <TextSizeTwo>이름</TextSizeTwo>
+      {applyStep == 3 && (
+        <>
+          <TextSizeOne>
+            {data.course == "모르겠어요" ? null : `${data.course} 과정`}{" "}
+            지원하기
+          </TextSizeOne>
+          <ApplyBoxWrapper>
+            <TextSizeTwo>이름</TextSizeTwo>
+            <input
+              type="text"
+              autoFocus="autofocus"
+              name="name"
+              defaultValue={data.name}
+              onChange={getName}
+              style={{
+                width: "10vw",
+              }}
+            />
+            <TextSizeTwo>연락처</TextSizeTwo>
+            <div
+              style={{
+                display: "flex",
+                flexDirection: "row",
+                alignItems: "center",
+                width: "25vw",
+                justifyContent: "space-between",
+              }}
+            >
               <input
                 type="text"
-                autoFocus="autofocus"
-                name="name"
-                defaultValue={data.name}
-                onChange={getName}
+                name="phone1"
+                maxLength="3"
+                defaultValue={tempPhoneNumber1}
+                onChange={getPhoneNumber}
                 style={{
-                  border: "none",
-                  width: "10vw",
-                  height: "2vw",
-                  backgroundColor: "#f6f6f6",
+                  width: "7vw",
                 }}
               />
-              <TextSizeTwo style={{ marginTop: "1.5vw" }}>연락처</TextSizeTwo>
               <div
                 style={{
-                  display: "flex",
-                  flexDirection: "row",
-                  alignItems: "center",
-                  width: "25vw",
-                  justifyContent: "space-between",
+                  width: "1.2vw",
+                  height: "0.2vw",
+                  backgroundColor: "#101010",
                 }}
-              >
-                <input
-                  type="text"
-                  name="phone1"
-                  maxLength="3"
-                  defaultValue={tempPhoneNumber1}
-                  onChange={getPhoneNumber}
-                  style={{
-                    border: "none",
-                    width: "7vw",
-                    height: "2vw",
-                    backgroundColor: "#f6f6f6",
-                  }}
-                />
-                <div
-                  style={{
-                    width: "1.2vw",
-                    height: "0.2vw",
-                    backgroundColor: "#101010",
-                  }}
-                />
-                <input
-                  type="text"
-                  name="phone2"
-                  maxLength="4"
-                  defaultValue={tempPhoneNumber2}
-                  onChange={getPhoneNumber}
-                  style={{
-                    border: "none",
-                    width: "7vw",
-                    height: "2vw",
-                    backgroundColor: "#f6f6f6",
-                  }}
-                />
-                <div
-                  style={{
-                    width: "1.2vw",
-                    height: "0.2vw",
-                    backgroundColor: "#101010",
-                  }}
-                />
-                <input
-                  type="text"
-                  name="phone3"
-                  maxLength="4"
-                  defaultValue={tempPhoneNumber3}
-                  onChange={getPhoneNumber}
-                  style={{
-                    border: "none",
-                    width: "7vw",
-                    height: "2vw",
-                    backgroundColor: "#f6f6f6",
-                  }}
-                />
-              </div>
-              <TextSizeTwo style={{ marginTop: "1.5vw" }}>이메일</TextSizeTwo>
+              />
+              <input
+                type="text"
+                name="phone2"
+                maxLength="4"
+                defaultValue={tempPhoneNumber2}
+                onChange={getPhoneNumber}
+                style={{
+                  width: "7vw",
+                }}
+              />
               <div
                 style={{
-                  display: "flex",
-                  flexDirection: "row",
-                  alignItems: "center",
-                  width: "25vw",
-                  justifyContent: "space-between",
+                  width: "1.2vw",
+                  height: "0.2vw",
+                  backgroundColor: "#101010",
                 }}
-              >
-                <input
-                  type="text"
-                  name="email"
-                  defaultValue={data.email}
-                  onChange={getMail}
-                  style={{
-                    border: "none",
-                    width: "13vw",
-                    height: "2vw",
-                    backgroundColor: "#f6f6f6",
-                  }}
-                />
-                @
-                <select
-                  name="emailDomain"
-                  defaultValue={data.emailDomain.slice(1)}
-                  onChange={getMail}
-                  style={{
-                    border: "none",
-                    backgroundColor: "#f6f6f6",
-                    width: "10vw",
-                    height: "2vw",
-                  }}
-                >
-                  <option value="">이메일</option>
-                  <option>daum.net</option>
-                  <option>gmail.com</option>
-                  <option>hanmail.net</option>
-                  <option>icloud.com</option>
-                  <option>kakao.com</option>
-                  <option>mac.com</option>
-                  <option>me.com</option>
-                  <option>naver.com</option>
-                  <option>nate.com</option>
-                </select>
-              </div>
+              />
+              <input
+                type="text"
+                name="phone3"
+                maxLength="4"
+                defaultValue={tempPhoneNumber3}
+                onChange={getPhoneNumber}
+                style={{
+                  width: "7vw",
+                }}
+              />
+            </div>
 
-              <TextSizeTwo style={{ marginTop: "1.5vw" }}>생년월일</TextSizeTwo>
-              <div
-                style={{
-                  display: "flex",
-                  flexDirection: "row",
-                  alignItems: "center",
-                  width: "25vw",
-                  justifyContent: "space-between",
-                }}
-              >
-                <ApplyBirthSelector data={data} setData={setData} />
-              </div>
+            <TextSizeTwo>이메일</TextSizeTwo>
+            <ApplyEmail data={data} setData={setData} />
 
-              <TextSizeTwo style={{ marginTop: "1.5vw" }}>주소</TextSizeTwo>
-              <div
-                style={{
-                  display: "flex",
-                  flexDirection: "column",
-                  alignItems: "flex-end",
-                  width: "25vw",
-                  justifyContent: "space-between",
-                }}
-              >
-                <input
-                  style={{
-                    border: "none",
-                    width: "100%",
-                    marginTop: "5px",
-                    height: "2vw",
-                    backgroundColor: "#f6f6f6",
-                  }}
-                  defaultValue={data.address}
-                  disabled
-                  type="text"
-                  placeholder="주소"
-                />
-                <input
-                  style={{
-                    border: "none",
-                    width: "100%",
-                    margin: "5px 0",
-                    height: "2vw",
-                    backgroundColor: "#f6f6f6",
-                  }}
-                  onChange={getDetailedAddress}
-                  type="text"
-                  placeholder="상세주소"
-                />
-                <ApplyAddressAPI data={data} setData={setData} />
-              </div>
-            </ApplyBoxWrapper>
+            <TextSizeTwo>생년월일</TextSizeTwo>
+            <ApplyBirthSelector data={data} setData={setData} />
 
-            <ApplyPrevNextBtn
-              applyStep={applyStep}
-              setApplyStep={setApplyStep}
-              data={data}
-            />
-          </ApplyContentsContainer>
-        </ContentsBoxTwoContainer>
+            <TextSizeTwo>주소</TextSizeTwo>
+            <ApplyAddress data={data} setData={setData} />
+          </ApplyBoxWrapper>
+
+          <ApplyPrevNextBtn
+            applyStep={applyStep}
+            setApplyStep={setApplyStep}
+            data={data}
+          />
+        </>
       )}
       {applyStep == 4 && (
         <>
-          <ApplyContentsContainer>
-            <ApplySurvey
-              surveyData={surveyData}
-              setSurveyData={setSurveyData}
-            />
-            <ApplyPrevNextBtn
-              applyStep={applyStep}
-              setApplyStep={setApplyStep}
-              surveyData={surveyData}
-            />
-          </ApplyContentsContainer>
+          <ApplySurvey surveyData={surveyData} setSurveyData={setSurveyData} />
+          <ApplyPrevNextBtn
+            applyStep={applyStep}
+            setApplyStep={setApplyStep}
+            surveyData={surveyData}
+          />
         </>
       )}
       {applyStep == 5 && (
         <>
-          <ApplyContentsContainer>
-            <ApplyPrivacyConsent setConsent={setConsent} />
-            <ApplyPrevNextBtn
-              applyStep={applyStep}
-              setApplyStep={setApplyStep}
-              consent={consent}
-            />
-          </ApplyContentsContainer>
+          <ApplyPrivacyConsent setConsent={setConsent} />
+          <ApplyPrevNextBtn
+            applyStep={applyStep}
+            setApplyStep={setApplyStep}
+            consent={consent}
+          />
         </>
       )}
-    </>
+    </ApplyContentsContainer>
   );
 };
 

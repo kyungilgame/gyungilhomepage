@@ -4,15 +4,19 @@ import styles from "./ApplyLogin.module.css";
 import gyungilBlack from "../Image/gyungilBlack.png";
 import kakaoTalkLogo from "../Image/kakao-talk.svg";
 
-const ApplyLogin = ({ applyStep, setApplyStep }) => {
+const ApplyLogin = ({ data, setData, applyStep, setApplyStep }) => {
   function kakaoLogin() {
     window.Kakao.Auth.login({
-      scope: "profile_nickname",
+      scope: "account_email",
       success: function (authObj) {
         console.log(authObj);
         window.Kakao.API.request({
           url: "/v2/user/me",
           success: (res) => {
+            setData({
+              ...data,
+              kakaoEmail: res.kakao_account.email,
+            });
             setApplyStep(2);
           },
         });
@@ -37,7 +41,7 @@ const ApplyLogin = ({ applyStep, setApplyStep }) => {
             src={kakaoTalkLogo}
             alt="(카카오톡 로고)"
           />
-          카카오로 인증하고 계속하기
+          카카오톡 인증하고 계속하기
         </button>
       </div>
     </>

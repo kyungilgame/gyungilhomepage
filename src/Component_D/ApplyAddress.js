@@ -42,9 +42,40 @@ const ApplyAddressAPI = ({ data, setData }) => {
   const closeModal = () => {
     setModalOpen(false);
   };
+  //주소
+  const getDetailedAddress = (e) => {
+    setData({ ...data, detailedAddress: e.target.value });
+  };
 
   return (
-    <>
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "flex-end",
+        width: "25vw",
+        justifyContent: "space-between",
+      }}
+    >
+      <input
+        style={{
+          width: "100%",
+        }}
+        defaultValue={data && data.address}
+        disabled
+        type="text"
+        placeholder="주소"
+      />
+      <input
+        style={{
+          width: "100%",
+          margin: "5px 0",
+        }}
+        onChange={getDetailedAddress}
+        defaultValue={data && data.detailedAddress}
+        type="text"
+        placeholder="상세주소"
+      />
       <div
         id="wrap"
         style={{
@@ -91,7 +122,7 @@ const ApplyAddressAPI = ({ data, setData }) => {
           </section>
         ) : null}
       </div>
-    </>
+    </div>
   );
 };
 

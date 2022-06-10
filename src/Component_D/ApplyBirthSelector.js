@@ -1,5 +1,19 @@
 import "../Styles/css/App.css";
 import React, { useState, useEffect } from "react";
+import styledComponents from "styled-components";
+
+const DateOfBirth = styledComponents.div`
+  display: flex;
+  align-items: center;
+  width: 25vw;
+  justify-content: space-between;
+
+  input,
+  select {
+    text-align: end;
+    padding-right: 5px;
+  }
+`;
 
 const ApplyBirthSelector = ({ data, setData }) => {
   const [tempYear, setTempYear] = useState(
@@ -16,18 +30,10 @@ const ApplyBirthSelector = ({ data, setData }) => {
   const dayData = [];
 
   for (let i = 1; i <= 12; i++) {
-    if (i < 10) {
-      monthData.push("0" + `${i}`);
-    } else {
-      monthData.push(`${i}`);
-    }
+    monthData.push(i);
   }
   for (let i = 1; i <= 31; i++) {
-    if (i < 10) {
-      dayData.push("0" + `${i}`);
-    } else {
-      dayData.push(`${i}`);
-    }
+    dayData.push(i);
   }
 
   // 생년월일 각 값들 담기
@@ -58,10 +64,13 @@ const ApplyBirthSelector = ({ data, setData }) => {
   // 생년월일 값 합쳐주기
   useEffect(() => {
     console.log(data.birth);
+    console.log(parseInt(data.birth.substring(4, 6)));
+    console.log(parseInt(data.birth.substring(4, 6)).toString());
+    console.dir(document.querySelector(".asdf"));
   }, [data.birth]);
 
   return (
-    <>
+    <DateOfBirth>
       <input
         onChange={getBirth}
         type="text"
@@ -69,27 +78,29 @@ const ApplyBirthSelector = ({ data, setData }) => {
         maxLength="4"
         defaultValue={data && data.birth.substring(0, 4)}
         style={{
-          border: "none",
           width: "7vw",
-          height: "2vw",
-          backgroundColor: "#f6f6f6",
         }}
       />
       년
       <select
+        className="asdf"
         onChange={getBirth}
         name="month"
         defaultValue={data && data.birth.substring(4, 6)}
         style={{
-          border: "none",
-          backgroundColor: "#f6f6f6",
           width: "10vw",
-          height: "2vw",
         }}
       >
         <option></option>
         {monthData.length &&
-          monthData.map((month, index) => <option key={index}>{month}</option>)}
+          monthData.map((month) => (
+            <option
+              value={month < 10 ? "0" + `${month}` : `${month}`}
+              key={month}
+            >
+              {month}
+            </option>
+          ))}
       </select>
       월
       <select
@@ -97,18 +108,19 @@ const ApplyBirthSelector = ({ data, setData }) => {
         name="day"
         defaultValue={data && data.birth.substring(6, 8)}
         style={{
-          border: "none",
-          backgroundColor: "#f6f6f6",
           width: "10vw",
-          height: "2vw",
         }}
       >
         <option></option>
         {dayData.length &&
-          dayData.map((day, index) => <option key={index}>{day}</option>)}
+          dayData.map((day) => (
+            <option value={day < 10 ? "0" + `${day}` : `${day}`} key={day}>
+              {day}
+            </option>
+          ))}
       </select>
       일
-    </>
+    </DateOfBirth>
   );
 };
 

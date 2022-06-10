@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import "../Styles/css/App.css";
-import React from "react";
+import React, { useEffect } from "react";
 import styles from "./DesiredCourse.module.css";
 
 const DesiredCourse = ({ data, setData, applyStep, setApplyStep }) => {
