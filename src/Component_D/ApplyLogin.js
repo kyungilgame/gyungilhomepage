@@ -29,20 +29,16 @@ const ApplyLogin = ({ data, setData, applyStep, setApplyStep }) => {
       <div className={`${styles["container"]}`}>
         {/* <div>당신의 꿈과 함께하는</div> */}
         <div>
-          <img src={gyungilBlack} />
+          <img src={gyungilBlack} alt="(KGA-Logo)" />
         </div>
-        <button
-          className={`${styles["kakao_btn"]}`}
-          onClick={kakaoLogin}
-          style={{ width: "200px", height: "100px" }}
-        >
+        <div className={`${styles["kakao_btn"]}`} onClick={kakaoLogin}>
           <img
             className={`${styles["kakao_logo"]}`}
             src={kakaoTalkLogo}
             alt="(카카오톡 로고)"
           />
           카카오톡 인증하고 계속하기
-        </button>
+        </div>
       </div>
     </>
   );

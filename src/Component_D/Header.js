@@ -18,7 +18,7 @@ const HeaderContainer = styled.div`
   background-color: transparent;
 `;
 const ContentWrapper = styled.div`
-  gap: 20px;
+  gap: 30px;
   width: 80%;
   display: flex;
   flex-direction: row;

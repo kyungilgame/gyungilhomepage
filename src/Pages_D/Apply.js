@@ -106,7 +106,7 @@ const Apply = () => {
     width: 63vw;
     margin-top: 15vw;
     margin-bottom: 3vw;
-    min-height: 84vh;
+    min-height: 70vh;
     position: relative;
 
     border: 2px solid #101010;

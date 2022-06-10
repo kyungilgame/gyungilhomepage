@@ -321,7 +321,8 @@ const Main = ({ menuState, SetMenuState }) => {
       <div
         style={{
           width: "100%",
-          height: "15vw",
+          height: "20vw",
+          padding: "0 20px",
           backgroundColor: "#00ffd6",
           display: "flex",
           flexDirection: "column",
@@ -329,11 +330,12 @@ const Main = ({ menuState, SetMenuState }) => {
           alignItems: "center",
         }}
       >
-        {/* <text style={{ fontFamily: "SEBANG-Gothic-Regular" }}>
-          처음인 당신도 시작할 수 있게
-        </text> */}
         <text style={{ fontFamily: "SEBANG-Gothic-Bold", fontSize: "5vw" }}>
-          우리는 실패와 재도전의 전문가입니다
+          100% 몰입형 교육 전문 아카데미
+        </text>
+        <text style={{ fontFamily: "SEBANG-Gothic-Regular", fontSize: "3vw" }}>
+          몰입형 교육 : 강도높고 집중적인 커리큘럼으로 <br />
+          비전공자를 주니어개발자까지 양성하는 체계적인 교육 프로그램
         </text>
       </div>
       <div

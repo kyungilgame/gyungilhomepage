@@ -122,6 +122,7 @@ const TextSizeThree = styled.div`
 `;
 
 const TextSizeFour = styled.div`
+  margin-top: 5px;
   font-family: "SEBANG-Gothic-Regular";
   font-size: 1.7vw;
   color: #101010;
@@ -317,8 +318,9 @@ const ImageWrapper = styled.img`
 `;
 
 const Main = ({ menuState, SetMenuState }) => {
-  const textOne = "";
-  const textTwo = "우리는 실패와 재도전의 전문가입니다";
+  const textOne =
+    "몰입형 교육 : 강도높고 집중적인 커리큘럼으로 비전공자를 주니어개발자까지 양성하는 체계적인 교육 프로그램";
+  const textTwo = "100% 몰입형 교육 전문 아카데미";
 
   return (
     <>
@@ -349,7 +351,7 @@ const Main = ({ menuState, SetMenuState }) => {
               alignItems: "center",
             }}
           >
-            <TextSizeThree>당신의 취업을 책임지는 아카데미</TextSizeThree>
+            <TextSizeThree>4차산업을 선도하는 아카데미</TextSizeThree>
           </div>
         </div>
       </ContentsBoxOneContainer>
@@ -357,7 +359,7 @@ const Main = ({ menuState, SetMenuState }) => {
         <div
           style={{
             width: "100%",
-            height: "7vw",
+            height: "8vw",
             backgroundColor: "#00ffd6",
             display: "flex",
             flexDirection: "column",
@@ -365,8 +367,8 @@ const Main = ({ menuState, SetMenuState }) => {
             alignItems: "center",
           }}
         >
-          <TextSizeFour>{textOne}</TextSizeFour>
           <TextSizeFive>{textTwo}</TextSizeFive>
+          <TextSizeFour>{textOne}</TextSizeFour>
         </div>
       </ContentsBoxTwoContainer>
       <div
