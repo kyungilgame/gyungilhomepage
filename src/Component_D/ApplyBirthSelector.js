@@ -53,6 +53,8 @@ const ApplyBirthSelector = ({ data, setData }) => {
     const birth = tempYear + tempMonth + tempDay;
     if (birth.length == 8) {
       setData({ ...data, birth: birth });
+    } else {
+      setData({ ...data, birth: "" });
     }
     return () => {
       if (birth.length < 8) {
@@ -61,14 +63,6 @@ const ApplyBirthSelector = ({ data, setData }) => {
     };
   }, [tempYear, tempMonth, tempDay]);
 
-  // 생년월일 값 합쳐주기
-  useEffect(() => {
-    console.log(data.birth);
-    console.log(parseInt(data.birth.substring(4, 6)));
-    console.log(parseInt(data.birth.substring(4, 6)).toString());
-    console.dir(document.querySelector(".asdf"));
-  }, [data.birth]);
-
   return (
     <DateOfBirth>
       <input
@@ -76,7 +70,7 @@ const ApplyBirthSelector = ({ data, setData }) => {
         type="text"
         name="year"
         maxLength="4"
-        defaultValue={data && data.birth.substring(0, 4)}
+        defaultValue={tempYear}
         style={{
           width: "7vw",
         }}
@@ -86,7 +80,7 @@ const ApplyBirthSelector = ({ data, setData }) => {
         className="asdf"
         onChange={getBirth}
         name="month"
-        defaultValue={data && data.birth.substring(4, 6)}
+        defaultValue={tempMonth}
         style={{
           width: "10vw",
         }}
@@ -106,7 +100,7 @@ const ApplyBirthSelector = ({ data, setData }) => {
       <select
         onChange={getBirth}
         name="day"
-        defaultValue={data && data.birth.substring(6, 8)}
+        defaultValue={tempDay}
         style={{
           width: "10vw",
         }}

@@ -9,6 +9,7 @@ import ApplySurvey from "../Component_D/ApplySurvey";
 import ApplyPrivacyConsent from "../Component_D/ApplyPrivacyConsent";
 import ApplyLogin from "../Component_D/ApplyLogin";
 import ApplyEmail from "../Component_D/ApplyEmail";
+import ApplyPhoneNum from "../Component_D/ApplyPhoneNum";
 
 const ContentsBoxOneContainer = styled.div`
   width: 100%;
@@ -34,7 +35,7 @@ const ContentsBoxTwoContainer = styled.div`
 `;
 
 const TextSizeOne = styled.div`
-  font-family: "SEBANG-Gothic-Bold";
+  font-family: "NanumGothicExtraBold";
   font-size: 3.5vw;
   color: #101010;
   text-align: center;
@@ -43,7 +44,7 @@ const TextSizeOne = styled.div`
 `;
 
 const TextSizeTwo = styled.div`
-  font-family: "SEBANG-Gothic-Regular";
+  font-family: "NanumGothic";
   font-size: 18px;
   color: #101010;
   margin-top: 3vh;
@@ -54,6 +55,7 @@ const ApplyBoxWrapper = styled.div`
   input,
   select {
     height: 2vw;
+    min-height: 22px;
     border-width: 2px;
     border-top-color: rgb(200, 200, 200);
     border-left-color: rgb(200, 200, 200);
@@ -120,7 +122,6 @@ const Apply = () => {
     phone: "",
     kakaoEmail: "",
     email: "",
-    emailDomain: "",
     birth: "",
     address: "",
     detailedAddress: "",
@@ -128,37 +129,30 @@ const Apply = () => {
   const [surveyData, setSurveyData] = useState([]);
   const [consent, setConsent] = useState(false);
 
-  const [tempPhoneNumber1, setTempPhoneNumber1] = useState("");
-  const [tempPhoneNumber2, setTempPhoneNumber2] = useState("");
-  const [tempPhoneNumber3, setTempPhoneNumber3] = useState("");
-
-  /* input값 받아오는 함수들 */
-
   // 이름
   const getName = (e) => {
     setData({ ...data, name: e.target.value });
   };
 
-  // 연락처
-  const getPhoneNumber = (e) => {
-    // if (!tempPhoneNumber1 && tempPhoneNumber2 && tempPhoneNumber3) return;
-    if (e.target.name == "phone1") {
-      setTempPhoneNumber1(e.target.value);
-    } else if (e.target.name == "phone2") {
-      setTempPhoneNumber2(e.target.value);
-    } else if (e.target.name == "phone3") {
-      setTempPhoneNumber3(e.target.value);
-    }
-  };
   useEffect(() => {
-    setData({
-      ...data,
-      phone: tempPhoneNumber1 + tempPhoneNumber2 + tempPhoneNumber3,
-    });
-  }, [tempPhoneNumber1, tempPhoneNumber2, tempPhoneNumber3]);
+    console.log(data);
+  }, [data]);
+  useEffect(() => {
+    console.log(surveyData);
+  }, [surveyData]);
 
   return (
-    <ApplyContentsContainer>
+    <div
+      style={{
+        padding: "5vw",
+        width: "63vw",
+        marginTop: "15vw",
+        marginBottom: "3vw",
+        minHeight: "70vh",
+        position: "relative",
+        fontFamily: "NanumGothic",
+      }}
+    >
       {applyStep == 1 && (
         <ApplyLogin
           data={data}
@@ -188,71 +182,21 @@ const Apply = () => {
             <input
               type="text"
               autoFocus="autofocus"
-              name="name"
-              defaultValue={data.name}
+              defaultValue={data.name ? data.name : ""}
               onChange={getName}
               style={{
                 width: "10vw",
               }}
             />
             <TextSizeTwo>연락처</TextSizeTwo>
-            <div
-              style={{
-                display: "flex",
-                flexDirection: "row",
-                alignItems: "center",
-                width: "25vw",
-                justifyContent: "space-between",
-              }}
-            >
-              <input
-                type="text"
-                name="phone1"
-                maxLength="3"
-                defaultValue={tempPhoneNumber1}
-                onChange={getPhoneNumber}
-                style={{
-                  width: "7vw",
-                }}
-              />
-              <div
-                style={{
-                  width: "1.2vw",
-                  height: "0.2vw",
-                  backgroundColor: "#101010",
-                }}
-              />
-              <input
-                type="text"
-                name="phone2"
-                maxLength="4"
-                defaultValue={tempPhoneNumber2}
-                onChange={getPhoneNumber}
-                style={{
-                  width: "7vw",
-                }}
-              />
-              <div
-                style={{
-                  width: "1.2vw",
-                  height: "0.2vw",
-                  backgroundColor: "#101010",
-                }}
-              />
-              <input
-                type="text"
-                name="phone3"
-                maxLength="4"
-                defaultValue={tempPhoneNumber3}
-                onChange={getPhoneNumber}
-                style={{
-                  width: "7vw",
-                }}
-              />
-            </div>
+            <ApplyPhoneNum data={data} setData={setData} />
 
-            <TextSizeTwo>이메일</TextSizeTwo>
-            <ApplyEmail data={data} setData={setData} />
+            {data.kakaoEmail ? null : (
+              <>
+                <TextSizeTwo>이메일</TextSizeTwo>
+                <ApplyEmail data={data} setData={setData} />
+              </>
+            )}
 
             <TextSizeTwo>생년월일</TextSizeTwo>
             <ApplyBirthSelector data={data} setData={setData} />
@@ -282,13 +226,15 @@ const Apply = () => {
         <>
           <ApplyPrivacyConsent setConsent={setConsent} />
           <ApplyPrevNextBtn
+            data={data}
+            surveyData={surveyData}
             applyStep={applyStep}
             setApplyStep={setApplyStep}
             consent={consent}
           />
         </>
       )}
-    </ApplyContentsContainer>
+    </div>
   );
 };
 

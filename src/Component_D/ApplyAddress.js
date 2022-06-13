@@ -1,6 +1,6 @@
 import "../Styles/css/App.css";
 import React, { useState } from "react";
-import styles from "./ApplyAddressAPI.module.css";
+import styles from "./ApplyAddress.module.css";
 import DaumPostcode from "react-daum-postcode";
 
 const Postcode = (closeModal, data, setData) => {
@@ -34,7 +34,7 @@ const Postcode = (closeModal, data, setData) => {
   );
 };
 
-const ApplyAddressAPI = ({ data, setData }) => {
+const ApplyAddress = ({ data, setData }) => {
   const [modalOpen, setModalOpen] = useState(false);
   const openModal = () => {
     setModalOpen(true);
@@ -126,4 +126,4 @@ const ApplyAddressAPI = ({ data, setData }) => {
   );
 };
 
-export default ApplyAddressAPI;
+export default ApplyAddress;

@@ -6,16 +6,14 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 50px;
 }
 
-.kakao_btn {
+.kakao_btn,
+.email_btn {
   display: flex;
-  background-color: #f9e000;
   font-family: "SEBANG-Gothic-Regular";
   align-items: center;
   justify-content: center;
-  gap: 10px;
   padding: 10px;
   width: 300px;
   height: 60px;
@@ -24,4 +22,15 @@
 }
 .kakao_logo {
   width: 40px;
+}
+
+.kakao_btn {
+  background-color: #f9e000;
+  gap: 10px;
+  margin-top: 50px;
+  margin-bottom: 10px;
+}
+
+.email_btn {
+  border: solid 2px #101010;
 }
