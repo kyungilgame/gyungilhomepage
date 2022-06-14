@@ -1,21 +1,8 @@
 import "../Styles/css/App.css";
 import React, { useState, useEffect } from "react";
-import styledComponents from "styled-components";
+import styles from "./ApplyBirthSelector.module.css";
 
-const DateOfBirth = styledComponents.div`
-  display: flex;
-  align-items: center;
-  width: 25vw;
-  justify-content: space-between;
-
-  input,
-  select {
-    text-align: end;
-    padding-right: 5px;
-  }
-`;
-
-const ApplyBirthSelector = ({ data, setData }) => {
+const ApplyBirthSelector = ({ data, setData, device }) => {
   const [tempYear, setTempYear] = useState(
     data.birth ? data.birth.substring(0, 4) : ""
   );
@@ -53,6 +40,8 @@ const ApplyBirthSelector = ({ data, setData }) => {
     const birth = tempYear + tempMonth + tempDay;
     if (birth.length == 8) {
       setData({ ...data, birth: birth });
+    } else {
+      setData({ ...data, birth: "" });
     }
     return () => {
       if (birth.length < 8) {
@@ -61,32 +50,28 @@ const ApplyBirthSelector = ({ data, setData }) => {
     };
   }, [tempYear, tempMonth, tempDay]);
 
-  // 생년월일 값 합쳐주기
-  useEffect(() => {
-    console.log(data.birth);
-    console.log(parseInt(data.birth.substring(4, 6)));
-    console.log(parseInt(data.birth.substring(4, 6)).toString());
-    console.dir(document.querySelector(".asdf"));
-  }, [data.birth]);
-
   return (
-    <DateOfBirth>
+    <div
+      className={`${styles["birth-box"]}`}
+      style={{
+        minWidth: `${device == "mobile" ? "70%" : ""}`,
+      }}
+    >
       <input
         onChange={getBirth}
         type="text"
         name="year"
         maxLength="4"
-        defaultValue={data && data.birth.substring(0, 4)}
+        defaultValue={tempYear}
         style={{
-          width: "7vw",
+          width: `${device == "mobile" ? "18vw" : "7vw"}`,
         }}
       />
       년
       <select
-        className="asdf"
         onChange={getBirth}
         name="month"
-        defaultValue={data && data.birth.substring(4, 6)}
+        defaultValue={tempMonth}
         style={{
           width: "10vw",
         }}
@@ -106,7 +91,7 @@ const ApplyBirthSelector = ({ data, setData }) => {
       <select
         onChange={getBirth}
         name="day"
-        defaultValue={data && data.birth.substring(6, 8)}
+        defaultValue={tempDay}
         style={{
           width: "10vw",
         }}
@@ -120,7 +105,7 @@ const ApplyBirthSelector = ({ data, setData }) => {
           ))}
       </select>
       일
-    </DateOfBirth>
+    </div>
   );
 };
 

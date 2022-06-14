@@ -4,6 +4,10 @@ import { useMediaQuery } from "react-responsive";
 import DesktopContainer from "./Display/DesktopContainer";
 import MobileContainer from "./Display/MobileContainer";
 
+import Amplify, { API, graphqlOperation } from "aws-amplify";
+import awsconfig from "./aws-exports";
+Amplify.configure(awsconfig);
+
 const Desktop = ({ children }) => {
   const isDesktop = useMediaQuery({ minWidth: 767 });
   return isDesktop ? children : null;

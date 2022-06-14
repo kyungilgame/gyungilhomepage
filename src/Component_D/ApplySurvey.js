@@ -1,8 +1,28 @@
 import "../Styles/css/App.css";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import styles from "./ApplySurvey.module.css";
 
 const ApplySurvey = ({ surveyData, setSurveyData }) => {
+  const [isEtcSeleted, setIsEtcSeleted] = useState(false);
+  const [etcDetail, setEtcDetail] = useState("");
+
+  // 기타 선택, 답변 작성 시 데이터 담기
+  useEffect(() => {
+    setEtcAnswer();
+  }, [isEtcSeleted, etcDetail]);
+
+  // 기타 답변 데이터 담아주는 함수
+  const setEtcAnswer = () => {
+    if (isEtcSeleted) {
+      setSurveyData(
+        Object.values({
+          ...surveyData,
+          [0]: { ...surveyData[0], A: etcDetail },
+        })
+      );
+    }
+  };
+
   // 질문 데이터 채워넣기
   useEffect(() => {
     if (surveyData.length != 0) return;
@@ -15,6 +35,7 @@ const ApplySurvey = ({ surveyData, setSurveyData }) => {
     });
   }, []);
 
+  // 라디오박스 선택 시 데이터 담기
   const setAnswerDefault = (event, questionNum) => {
     const answer = event.target.value;
     setSurveyData(
@@ -28,20 +49,14 @@ const ApplySurvey = ({ surveyData, setSurveyData }) => {
   const setAnswer = (e) => {
     const questionNum = e.target.name.slice(-1);
     const etcTag = document.querySelector(".survey1.etc_radio");
-    const etcDetailTag = document.querySelector(`.${styles["etc_detail"]}`);
     switch (questionNum) {
       case "1":
         if (!etcTag.checked) {
           setAnswerDefault(e, questionNum);
         } else {
-          const answer = etcDetailTag.value;
-          setSurveyData(
-            Object.values({
-              ...surveyData,
-              [questionNum - 1]: { ...surveyData[questionNum - 1], A: answer },
-            })
-          );
+          setEtcAnswer();
         }
+
         break;
       case "2":
         setAnswerDefault(e, questionNum);
@@ -127,7 +142,10 @@ const ApplySurvey = ({ surveyData, setSurveyData }) => {
         </div>
         <div className={`${styles["option"]}`}>
           <input
-            onChange={setAnswer}
+            onChange={(e) => {
+              setIsEtcSeleted(!isEtcSeleted);
+              setAnswer(e);
+            }}
             className="survey1 etc_radio"
             type="radio"
             name="survey1"
@@ -142,7 +160,7 @@ const ApplySurvey = ({ surveyData, setSurveyData }) => {
           />
           <label>기타</label>
           <input
-            onChange={setAnswer}
+            onChange={(e) => setEtcDetail(e.target.value)}
             className={`${styles["etc_detail"]}`}
             type="text"
             name="survey1"
@@ -243,7 +261,7 @@ const ApplySurvey = ({ surveyData, setSurveyData }) => {
 
       <div className={`survey-box`}>
         <div className={`${styles["question"]}`}>
-          4. 과정 신청 동기는 무엇인가요? (30자 이상 입력해주세요)
+          4. 과정 신청 동기는 무엇인가요?
         </div>
         <div className={`${styles[("survey4", "option")]}`}>
           <textarea

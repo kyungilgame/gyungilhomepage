@@ -1,6 +1,15 @@
 import styled from "styled-components";
 import "../Styles/css/App.css";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
+import ApplyLogin from "../Component_D/ApplyLogin";
+import DesiredCourse from "../Component_D/DesiredCourse";
+import ApplyPhoneNum from "../Component_D/ApplyPhoneNum";
+import ApplyEmail from "../Component_D/ApplyEmail";
+import ApplyBirthSelector from "../Component_D/ApplyBirthSelector";
+import ApplyAddress from "../Component_D/ApplyAddress";
+import ApplyPrevNextBtn from "../Component_D/ApplyPrevNextBtn";
+import ApplySurvey from "../Component_D/ApplySurvey";
+import ApplyPrivacyConsent from "../Component_D/ApplyPrivacyConsent";
 
 const ContentsBoxOneContainer = styled.div`
   width: 100%;
@@ -26,26 +35,41 @@ const ContentsBoxTwoContainer = styled.div`
 `;
 
 const TextSizeOne = styled.div`
-  font-family: "SEBANG-Gothic-Bold";
+  font-family: "NanumGothicExtraBold";
   font-size: 6vw;
   color: #101010;
-  margin-top: 15vw;
-  margin-bottom: 3vw;
+  text-align: center;
 `;
 
 const TextSizeTwo = styled.div`
-  font-family: "SEBANG-Gothic-Regular";
-  font-size: 3vw;
+  font-family: "NanumGothic";
+  font-size: 18px;
   color: #101010;
+  margin-top: 3vh;
+  margin-bottom: 5px;
 `;
 
 const ApplyBoxWrapper = styled.div`
-  width: 80%;
+  input,
+  select {
+    height: 2vw;
+    min-height: 22px;
+    border-width: 2px;
+    border-top-color: rgb(200, 200, 200);
+    border-left-color: rgb(200, 200, 200);
+    border-right-color: rgb(180, 180, 180);
+    border-bottom-color: rgb(180, 180, 180);
+    outline: none;
+    font-size: 15px;
+  }
+  input:focus-within,
+  select:focus-visible {
+    border-color: black;
+  }
+  width: 100%;
   height: 70%;
-  background-color: #f0f0f0;
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
   align-items: start;
   padding: 5vw;
 `;
@@ -73,220 +97,138 @@ const ApplyBlackButton = styled.button`
   cursor: pointer;
 `;
 
-const Apply = () => {
-  const [data, setData] = useState({ name: "", age: "", phone: "", email: "" });
+const Apply = ({ SetMenuState }) => {
+  const device = "mobile";
+  const [applyStep, setApplyStep] = useState(1);
 
-  // handleChange: function (evt) {
-  //     // this.setState({ value: evt.target.value.substr(0, 100) });
-  //   }
+  const [data, setData] = useState({
+    course: "",
+    name: "",
+    phone: "",
+    kakaoEmail: "",
+    email: "",
+    birth: "",
+    address: "",
+    detailedAddress: "",
+  });
+  const [surveyData, setSurveyData] = useState([]);
+  const [consent, setConsent] = useState(false);
+
+  const getName = (e) => {
+    setData({ ...data, name: e.target.value });
+  };
+
+  // useEffect(() => {
+  //   console.log(data);
+  // }, [data]);
+  // useEffect(() => {
+  //   console.log(surveyData);
+  // }, [surveyData]);
+
   return (
-    <>
-      <ContentsBoxOneContainer></ContentsBoxOneContainer>
-      <ContentsBoxTwoContainer>
-        <TextSizeOne>상담 신청서</TextSizeOne>
-        <ApplyBoxWrapper>
-          <TextSizeTwo>이름</TextSizeTwo>
-          <input
-            type="text"
-            autoFocus="autofocus"
-            // onChange={this.handleChange}
-            style={{
-              border: "none",
-              width: "50%",
-              height: "3vw",
-              backgroundColor: "#f6f6f6",
-            }}
+    <div
+      style={{
+        padding: "7vw",
+        width: "100vw",
+        marginTop: "15vw",
+        marginBottom: "3vw",
+        minHeight: "70vh",
+        position: "relative",
+        fontFamily: "NanumGothic",
+      }}
+    >
+      {applyStep == 1 && (
+        <ApplyLogin
+          data={data}
+          setData={setData}
+          applyStep={applyStep}
+          setApplyStep={setApplyStep}
+        />
+      )}
+
+      {applyStep == 2 && (
+        <DesiredCourse
+          data={data}
+          setData={setData}
+          applyStep={applyStep}
+          setApplyStep={setApplyStep}
+        />
+      )}
+
+      {applyStep == 3 && (
+        <>
+          <TextSizeOne>
+            {data.course == "모르겠어요" ? null : `${data.course} 과정`}{" "}
+            지원하기
+          </TextSizeOne>
+          <ApplyBoxWrapper>
+            <TextSizeTwo>이름</TextSizeTwo>
+            <input
+              type="text"
+              autoFocus="autofocus"
+              defaultValue={data.name ? data.name : ""}
+              onChange={getName}
+              style={{
+                width: "30vw",
+              }}
+            />
+            <TextSizeTwo>연락처</TextSizeTwo>
+            <ApplyPhoneNum data={data} setData={setData} device={device} />
+
+            {data.kakaoEmail ? null : (
+              <>
+                <TextSizeTwo>이메일</TextSizeTwo>
+                <ApplyEmail data={data} setData={setData} device={device} />
+              </>
+            )}
+
+            <TextSizeTwo>생년월일</TextSizeTwo>
+            <ApplyBirthSelector data={data} setData={setData} device={device} />
+
+            <TextSizeTwo>주소</TextSizeTwo>
+            <ApplyAddress data={data} setData={setData} device={device} />
+          </ApplyBoxWrapper>
+
+          <ApplyPrevNextBtn
+            applyStep={applyStep}
+            setApplyStep={setApplyStep}
+            data={data}
+            device={device}
           />
-          <TextSizeTwo style={{ marginTop: "1.5vw" }}>나이</TextSizeTwo>
-          <input
-            type="text"
-            autoFocus="autofocus"
-            // onChange={this.handleChange}
-            style={{
-              border: "none",
-              width: "50%",
-              height: "3vw",
-              backgroundColor: "#f6f6f6",
-            }}
+        </>
+      )}
+
+      {applyStep == 4 && (
+        <>
+          <ApplySurvey
+            surveyData={surveyData}
+            setSurveyData={setSurveyData}
+            device={device}
           />
-          <TextSizeTwo style={{ marginTop: "1.5vw" }}>연락처</TextSizeTwo>
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "row",
-              alignItems: "center",
-              width: "70vw",
-              justifyContent: "space-between",
-            }}
-          >
-            <input
-              type="text"
-              autoFocus="autofocus"
-              // onChange={this.handleChange}
-              style={{
-                border: "none",
-                width: "30%",
-                height: "3vw",
-                backgroundColor: "#f6f6f6",
-              }}
-            />
-            <div
-              style={{
-                width: "1.2vw",
-                height: "0.2vw",
-                backgroundColor: "#101010",
-              }}
-            />
-            <input
-              type="text"
-              autoFocus="autofocus"
-              // onChange={this.handleChange}
-              style={{
-                border: "none",
-                width: "30%",
-                height: "3vw",
-                backgroundColor: "#f6f6f6",
-              }}
-            />
-            <div
-              style={{
-                width: "1.2vw",
-                height: "0.2vw",
-                backgroundColor: "#101010",
-              }}
-            />
-            <input
-              type="text"
-              autoFocus="autofocus"
-              // onChange={this.handleChange}
-              style={{
-                border: "none",
-                width: "30%",
-                height: "3vw",
-                backgroundColor: "#f6f6f6",
-              }}
-            />
-          </div>
-          <TextSizeTwo style={{ marginTop: "1.5vw" }}>메일주소</TextSizeTwo>
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "row",
-              alignItems: "center",
-              width: "100%",
-              justifyContent: "space-between",
-            }}
-          >
-            <input
-              type="text"
-              autoFocus="autofocus"
-              // onChange={this.handleChange}
-              style={{
-                border: "none",
-                width: "45%",
-                height: "3vw",
-                backgroundColor: "#f6f6f6",
-              }}
-            />
-            @
-            <select
-              name="emailDomail"
-              style={{
-                border: "none",
-                backgroundColor: "#f6f6f6",
-                width: "45%",
-                height: "3vw",
-              }}
-            >
-              <option value="naver.com">naver.com</option>
-              <option value="gmail.com">gmail.com</option>
-              <option value="hanmail.com">hanmail.com</option>
-            </select>
-          </div>
-          <TextSizeTwo style={{ marginTop: "1.5vw" }}>희망분야</TextSizeTwo>
-          <select
-            name="emailDomail"
-            style={{
-              border: "none",
-              backgroundColor: "#f6f6f6",
-              width: "100%",
-              height: "3vw",
-            }}
-          >
-            <option value="메타버스">메타버스</option>
-            <option value="블록체인">블록체인</option>
-            <option value="게임기획">게임기획</option>
-          </select>
-          <TextSizeTwo style={{ marginTop: "1.5vw" }}>메시지</TextSizeTwo>
-          <textarea
-            style={{
-              border: "none",
-              width: "100%",
-              height: "30vw",
-              resize: "none",
-            }}
+          <ApplyPrevNextBtn
+            applyStep={applyStep}
+            setApplyStep={setApplyStep}
+            surveyData={surveyData}
+            device={device}
           />
-          <div
-            style={{
-              display: "flex",
-              justifyContent: "flex-start",
-              alignItems: "center",
-              marginTop: "1vw",
-            }}
-          >
-            <RadioButton type="radio" />
-            <text
-              style={{
-                fontFamily: "SEBANG-Gothic-Bold",
-                fontSize: "1vw",
-                color: "#101010",
-                marginLeft: "0.5vw",
-              }}
-            >
-              개인정보취급방침
-            </text>
-            <text
-              style={{
-                fontFamily: "SEBANG-Gothic-Regular",
-                fontSize: "1vw",
-                color: "#101010",
-              }}
-            >
-              에 등의합니다.
-            </text>
-          </div>
-          <div
-            style={{
-              width: "100%",
-              justifyContent: "center",
-              alignItems: "center",
-              display: "flex",
-              marginTop: "5vw",
-            }}
-          >
-            <ApplyBlackButton>
-              <text
-                style={{
-                  color: "#f6f6f6",
-                  fontFamily: "SEBANG-Gothic-Bold",
-                  fontSize: "3vw",
-                }}
-              >
-                제출하기
-              </text>
-              <text
-                style={{
-                  color: "#f6f6f6",
-                  fontFamily: "SEBANG-Gothic-Bold",
-                  fontSize: "3vw",
-                  marginLeft: "3vw",
-                }}
-              >{`>`}</text>
-            </ApplyBlackButton>
-          </div>
-        </ApplyBoxWrapper>
-      </ContentsBoxTwoContainer>
-    </>
+        </>
+      )}
+
+      {applyStep == 5 && (
+        <>
+          <ApplyPrivacyConsent setConsent={setConsent} />
+          <ApplyPrevNextBtn
+            data={data}
+            surveyData={surveyData}
+            applyStep={applyStep}
+            setApplyStep={setApplyStep}
+            consent={consent}
+            device={device}
+            SetMenuState={SetMenuState}
+          />
+        </>
+      )}
+    </div>
   );
 };
 

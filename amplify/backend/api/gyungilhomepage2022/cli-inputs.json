@@ -1,0 +1,12 @@
+{
+  "version": 1,
+  "serviceConfiguration": {
+    "apiName": "gyungilhomepage2022",
+    "serviceName": "AppSync",
+    "gqlSchemaPath": "C:\\Users\\KGA_\\Desktop\\sm\\homepage_2022\\KGA_homepage_2022\\gyungilhomepage\\amplify\\backend\\api\\gyungilhomepage2022\\schema.graphql",
+    "defaultAuthType": {
+      "mode": "API_KEY",
+      "expirationTime": 7
+    }
+  }
+}

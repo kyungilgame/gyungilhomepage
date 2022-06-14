@@ -1,9 +1,8 @@
 .btn_box {
   display: flex;
-  justify-content: flex-end;
-  position: absolute;
   right: 1vw;
   bottom: 1vw;
+  justify-content: center;
 }
 
 .btn_box button {

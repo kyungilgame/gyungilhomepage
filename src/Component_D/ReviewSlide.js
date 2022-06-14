@@ -377,7 +377,7 @@ export default function ReviewSlide({ ReviewSelect }) {
   switch (ReviewSelect) {
     case 0:
       return (
-        <Draggable axis="x">
+        <Draggable axis="none">
           <SlideWrapper>
             <SlideRowWrapper>
               {sectionAll.map((element) =>
@@ -421,7 +421,7 @@ export default function ReviewSlide({ ReviewSelect }) {
       break;
     case 1:
       return (
-        <Draggable axis="x">
+        <Draggable axis="none">
           <SlideWrapper>
             <CaseOneSlideRowWrapper>
               {sectionOne.map((element) =>
@@ -465,7 +465,7 @@ export default function ReviewSlide({ ReviewSelect }) {
       break;
     case 2:
       return (
-        <Draggable axis="x">
+        <Draggable axis="none">
           <SlideWrapper>
             <CaseTwoSlideRowWrapper>
               {sectionTwo.map((element) =>
@@ -509,7 +509,7 @@ export default function ReviewSlide({ ReviewSelect }) {
       break;
     case 3:
       return (
-        <Draggable axis="x">
+        <Draggable axis="none">
           <SlideWrapper>
             <CaseThreeSlideRowWrapper>
               {sectionThree.map((element) =>
@@ -553,7 +553,7 @@ export default function ReviewSlide({ ReviewSelect }) {
       break;
     case 4:
       return (
-        <Draggable axis="x">
+        <Draggable axis="none">
           <SlideWrapper>
             <CaseFourSlideRowWrapper>
               {sectionFour.map((element) =>
@@ -597,7 +597,7 @@ export default function ReviewSlide({ ReviewSelect }) {
       break;
     case 5:
       return (
-        <Draggable axis="x">
+        <Draggable axis="none">
           <SlideWrapper>
             <CaseFiveSlideRowWrapper>
               {sectionFive.map((element) =>
@@ -641,7 +641,7 @@ export default function ReviewSlide({ ReviewSelect }) {
       break;
     case 6:
       return (
-        <Draggable axis="x">
+        <Draggable axis="none">
           <SlideWrapper>
             <CaseSixSlideRowWrapper>
               {sectionUrl.map((element) =>

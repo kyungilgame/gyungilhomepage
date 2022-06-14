@@ -24,6 +24,10 @@ const ApplyLogin = ({ data, setData, applyStep, setApplyStep }) => {
     });
   }
 
+  const emailLogin = () => {
+    setApplyStep(2);
+  };
+
   return (
     <>
       <div className={`${styles["container"]}`}>
@@ -37,7 +41,10 @@ const ApplyLogin = ({ data, setData, applyStep, setApplyStep }) => {
             src={kakaoTalkLogo}
             alt="(카카오톡 로고)"
           />
-          카카오톡 인증하고 계속하기
+          카카오톡으로 계정으로 진행하기
+        </div>
+        <div className={`${styles["email_btn"]}`} onClick={emailLogin}>
+          이메일로 진행하기
         </div>
       </div>
     </>

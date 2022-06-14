@@ -2,7 +2,7 @@ import "../Styles/css/App.css";
 import React, { useEffect } from "react";
 import styles from "./ApplyPrivacyConsent.module.css";
 
-const PrivacyConsent = ({ setConsent }) => {
+const ApplyPrivacyConsent = ({ setConsent }) => {
   // 개인정보 동의 상태 풀어놓기
   useEffect(() => {
     setConsent(false);
@@ -61,4 +61,4 @@ const PrivacyConsent = ({ setConsent }) => {
   );
 };
 
-export default PrivacyConsent;
+export default ApplyPrivacyConsent;

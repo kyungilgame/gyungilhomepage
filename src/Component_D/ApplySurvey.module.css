@@ -2,16 +2,19 @@
   margin-top: 20px;
 }
 .question {
-  font-family: "Pretendard-Bold";
-  font-size: 18px;
+  font-family: "NanumGothicBold";
+  font-size: 16px;
   margin-bottom: 10px;
 }
 
 .option {
-  font-family: "Pretendard-Regular";
   padding-left: 30px;
   line-height: 24px;
 }
 .survey-box:nth-child(4) p {
   width: 300px;
+}
+textarea {
+  resize: none;
+  width: 80%;
 }

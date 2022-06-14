@@ -1,6 +1,5 @@
 .notice {
   color: #101010;
-  font-family: "SEBANG-Gothic-Regular";
 }
 
 .course-list {
@@ -16,7 +15,7 @@
   letter-spacing: 5px;
   min-width: 120px;
   min-height: 40px;
-  font-family: "SEBANG-Gothic-Bold";
+  font-family: "NanumGothicExtraBold";
   font-size: 20px;
 }
 

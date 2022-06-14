@@ -10,7 +10,7 @@ import Draggable from "react-draggable";
 
 const Container = styled.div`
   width: 100%;
-  overflow: hidden; // 선을 넘어간 이미지들은 보이지 않도록 처리합니다.
+  overflow: hidden;
 `;
 const Button = styled.button`
   all: unset;
@@ -119,7 +119,7 @@ export default function IntroductionCarousel() {
           Image={leftArrow}
         ></Button>
         <Container>
-          <Draggable axis="x">
+          <Draggable axis="none">
             <SliderContainer ref={slideRef}>
               <IntroductionSlide />
             </SliderContainer>

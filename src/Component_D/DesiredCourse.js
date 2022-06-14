@@ -3,7 +3,7 @@ import "../Styles/css/App.css";
 import React, { useEffect } from "react";
 import styles from "./DesiredCourse.module.css";
 
-const DesiredCourse = ({ data, setData, applyStep, setApplyStep }) => {
+const DesiredCourse = ({ data, setData, applyStep, setApplyStep, device }) => {
   const courseSelectWrapper = styled.div`
     width: 10vw;
     height: 10vw;
@@ -53,6 +53,9 @@ const DesiredCourse = ({ data, setData, applyStep, setApplyStep }) => {
         본 과정은 고용노동부와 직업능력심사평가원에서 인증하는 우수훈련과정이며
         취업까지 이루어지는 모든 과정은 ‘무료’입니다.
       </text>
+      <h2 className={`${styles["courses-title"]}`}>
+        어떤 과정을 수강하고 싶으신가요?
+      </h2>
 
       <div className={`${styles["course-list"]}`}>
         {courseList &&

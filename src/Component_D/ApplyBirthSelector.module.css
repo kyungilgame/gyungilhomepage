@@ -1,0 +1,11 @@
+.birth-box {
+  display: flex;
+  align-items: center;
+  width: 25vw;
+  justify-content: space-between;
+}
+.birth-box input,
+.birth-box select {
+  text-align: end;
+  padding-right: 5px;
+}

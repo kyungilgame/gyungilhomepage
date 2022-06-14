@@ -28,7 +28,6 @@ const ItemWrapper = styled.div`
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  cursor: grabbing;
 `;
 
 const EachItemWrapper = styled.div`

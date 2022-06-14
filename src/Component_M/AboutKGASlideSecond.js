@@ -87,7 +87,7 @@ const TextBox = styled.div`
 export default function AboutKGASlideSecond() {
   return (
     <>
-      <Draggable axis="x">
+      <Draggable axis="none">
         <SlideWrapper>
           <SlideColumnWrapper>
             <ItemWrapper>
