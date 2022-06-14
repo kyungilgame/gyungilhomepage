@@ -70,11 +70,11 @@ const ApplyPrevNextBtn = ({
           birth: data.birth,
           address: data.address,
           detailedAddress: data.detailedAddress,
-          surveyData1: surveyData[0].A,
-          surveyData2: surveyData[1].A,
-          surveyData3: surveyData[2].A,
-          surveyData4: surveyData[3].A,
-          surveyData5: surveyData[4].A,
+          survey1: surveyData[0].A,
+          survey2: surveyData[1].A,
+          survey3: surveyData[2].A,
+          survey4: surveyData[3].A,
+          survey5: surveyData[4].A,
         },
       })
     ).then((res) => {

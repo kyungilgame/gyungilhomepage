@@ -74,7 +74,7 @@ const TextBox = styled.div`
 export default function AboutKGASlideFirst() {
   return (
     <>
-      <Draggable axis="x">
+      <Draggable axis="none">
         <SlideWrapper>
           <SlideColumnWrapper>
             <ItemWrapper>

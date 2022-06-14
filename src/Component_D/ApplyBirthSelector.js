@@ -1,6 +1,6 @@
 import "../Styles/css/App.css";
 import React, { useState, useEffect } from "react";
-import styledComponents from "styled-components";
+import styles from "./ApplyBirthSelector.module.css";
 
 const ApplyBirthSelector = ({ data, setData, device }) => {
   const [tempYear, setTempYear] = useState(
@@ -35,20 +35,6 @@ const ApplyBirthSelector = ({ data, setData, device }) => {
     }
   };
 
-  const DateOfBirth = styledComponents.div`
-  display: flex;
-  align-items: center;
-  width: 25vw;
-  min-width: ${device == "mobile" ? "70%" : ""};
-  justify-content: space-between;
-
-  input,
-  select {
-    text-align: end;
-    padding-right: 5px;
-  }
-`;
-
   // 생년월일 값 합쳐주기
   useEffect(() => {
     const birth = tempYear + tempMonth + tempDay;
@@ -65,7 +51,12 @@ const ApplyBirthSelector = ({ data, setData, device }) => {
   }, [tempYear, tempMonth, tempDay]);
 
   return (
-    <DateOfBirth>
+    <div
+      className={`${styles["birth-box"]}`}
+      style={{
+        minWidth: `${device == "mobile" ? "70%" : ""}`,
+      }}
+    >
       <input
         onChange={getBirth}
         type="text"
@@ -78,7 +69,6 @@ const ApplyBirthSelector = ({ data, setData, device }) => {
       />
       년
       <select
-        className="asdf"
         onChange={getBirth}
         name="month"
         defaultValue={tempMonth}
@@ -115,7 +105,7 @@ const ApplyBirthSelector = ({ data, setData, device }) => {
           ))}
       </select>
       일
-    </DateOfBirth>
+    </div>
   );
 };
 

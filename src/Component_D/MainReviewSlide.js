@@ -46,7 +46,7 @@ const SlideColumnWrapper = styled.div`
 
 export default function MainSlide() {
   return (
-    <Draggable axis="x">
+    <Draggable axis="none">
       <SlideWrapper>
         <SlideColumnWrapper>
           <MainReviewPlain

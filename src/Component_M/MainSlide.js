@@ -63,7 +63,7 @@ const TextSizeTwo = styled.div`
 
 export default function MainSlide() {
   return (
-    <Draggable axis="x">
+    <Draggable axis="none">
       <SlideWrapper>
         <SlideRowWrapper>
           <ImageContainer Image={MainCarouselImageOne}></ImageContainer>

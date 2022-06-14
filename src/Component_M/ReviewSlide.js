@@ -132,7 +132,7 @@ export default function ReviewSlide({ ReviewSelect }) {
   switch (ReviewSelect) {
     case 0:
       return (
-        <Draggable axis="x">
+        <Draggable axis="none">
           <SlideWrapper>
             {sectionAll.map((element) =>
               element.url ? (
@@ -160,7 +160,7 @@ export default function ReviewSlide({ ReviewSelect }) {
       break;
     case 1:
       return (
-        <Draggable axis="x">
+        <Draggable axis="none">
           <SlideWrapper>
             {sectionOne.map((element) =>
               element.url ? (
@@ -188,7 +188,7 @@ export default function ReviewSlide({ ReviewSelect }) {
       break;
     case 2:
       return (
-        <Draggable axis="x">
+        <Draggable axis="none">
           <SlideWrapper>
             {sectionTwo.map((element) =>
               element.url ? (
@@ -216,7 +216,7 @@ export default function ReviewSlide({ ReviewSelect }) {
       break;
     case 3:
       return (
-        <Draggable axis="x">
+        <Draggable axis="none">
           <SlideWrapper>
             {sectionThree.map((element) =>
               element.url ? (
@@ -244,7 +244,7 @@ export default function ReviewSlide({ ReviewSelect }) {
       break;
     case 4:
       return (
-        <Draggable axis="x">
+        <Draggable axis="none">
           <SlideWrapper>
             {sectionFour.map((element) =>
               element.url ? (
@@ -272,7 +272,7 @@ export default function ReviewSlide({ ReviewSelect }) {
       break;
     case 5:
       return (
-        <Draggable axis="x">
+        <Draggable axis="none">
           <SlideWrapper>
             {sectionFive.map((element) =>
               element.url ? (
@@ -300,7 +300,7 @@ export default function ReviewSlide({ ReviewSelect }) {
       break;
     case 6:
       return (
-        <Draggable axis="x">
+        <Draggable axis="none">
           <SlideWrapper>
             {sectionUrl.map((element) =>
               element.url ? (
