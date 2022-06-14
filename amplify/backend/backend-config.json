@@ -1,12 +1,6 @@
 {
-  "storage": {
-    "dynamof7825f1c": {
-      "service": "DynamoDB",
-      "providerPlugin": "awscloudformation"
-    }
-  },
   "api": {
-    "gyungilhomepage": {
+    "gyungilhomepage2022": {
       "service": "AppSync",
       "providerPlugin": "awscloudformation",
       "dependsOn": [],

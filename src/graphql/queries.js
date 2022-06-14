@@ -13,11 +13,11 @@ export const getUser = /* GraphQL */ `
       birth
       address
       detailedAddress
-      surveyData1
-      surveyData2
-      surveyData3
-      surveyData4
-      surveyData5
+      survey1
+      survey2
+      survey3
+      survey4
+      survey5
       createdAt
       updatedAt
     }
@@ -40,11 +40,11 @@ export const listUsers = /* GraphQL */ `
         birth
         address
         detailedAddress
-        surveyData1
-        surveyData2
-        surveyData3
-        surveyData4
-        surveyData5
+        survey1
+        survey2
+        survey3
+        survey4
+        survey5
         createdAt
         updatedAt
       }
