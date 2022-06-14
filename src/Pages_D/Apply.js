@@ -39,8 +39,6 @@ const TextSizeOne = styled.div`
   font-size: 3.5vw;
   color: #101010;
   text-align: center;
-  // margin-top: 15vw;
-  // margin-bottom: 3vw;
 `;
 
 const TextSizeTwo = styled.div`
@@ -102,7 +100,7 @@ const ApplyBlackButton = styled.button`
   cursor: pointer;
 `;
 
-const Apply = () => {
+const Apply = ({ SetMenuState }) => {
   const ApplyContentsContainer = styled.div`
     padding: 5vw;
     width: 63vw;
@@ -134,12 +132,12 @@ const Apply = () => {
     setData({ ...data, name: e.target.value });
   };
 
-  useEffect(() => {
-    console.log(data);
-  }, [data]);
-  useEffect(() => {
-    console.log(surveyData);
-  }, [surveyData]);
+  // useEffect(() => {
+  //   console.log(data);
+  // }, [data]);
+  // useEffect(() => {
+  //   console.log(surveyData);
+  // }, [surveyData]);
 
   return (
     <div
@@ -231,6 +229,7 @@ const Apply = () => {
             applyStep={applyStep}
             setApplyStep={setApplyStep}
             consent={consent}
+            SetMenuState={SetMenuState}
           />
         </>
       )}

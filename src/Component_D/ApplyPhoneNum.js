@@ -1,7 +1,7 @@
 import "../Styles/css/App.css";
 import React, { useState, useEffect } from "react";
 
-const ApplyPhoneNum = ({ data, setData }) => {
+const ApplyPhoneNum = ({ data, setData, device }) => {
   const [tempPhoneNumber1, setTempPhoneNumber1] = useState("");
   const [tempPhoneNumber2, setTempPhoneNumber2] = useState("");
   const [tempPhoneNumber3, setTempPhoneNumber3] = useState("");
@@ -15,11 +15,21 @@ const ApplyPhoneNum = ({ data, setData }) => {
       setTempPhoneNumber3(e.target.value);
     }
   };
+
+  // 입력한 전화번호 11자리 충족되면 데이터에 담기
   useEffect(() => {
-    setData({
-      ...data,
-      phone: tempPhoneNumber1 + tempPhoneNumber2 + tempPhoneNumber3,
-    });
+    const phoneNum = tempPhoneNumber1 + tempPhoneNumber2 + tempPhoneNumber3;
+    if (phoneNum.length < 11) {
+      setData({
+        ...data,
+        phone: "",
+      });
+    } else if (phoneNum.length == 11) {
+      setData({
+        ...data,
+        phone: phoneNum,
+      });
+    }
   }, [tempPhoneNumber1, tempPhoneNumber2, tempPhoneNumber3]);
 
   return (
@@ -28,8 +38,9 @@ const ApplyPhoneNum = ({ data, setData }) => {
         display: "flex",
         flexDirection: "row",
         alignItems: "center",
-        width: "25vw",
-        justifyContent: "space-between",
+        minWidth: "70%",
+        width: `${device == "mobile" ? "50vw" : "25vw"}`,
+        gap: "8px",
       }}
     >
       <input
@@ -39,12 +50,13 @@ const ApplyPhoneNum = ({ data, setData }) => {
         defaultValue={data.phone.substring(0, 3)}
         onChange={getPhoneNumber}
         style={{
-          width: "7vw",
+          width: `${device == "mobile" ? "30%" : "7vw"}`,
         }}
       />
       <div
         style={{
           width: "1.2vw",
+          minWidth: "10px",
           height: "0.2vw",
           backgroundColor: "#101010",
         }}
@@ -56,12 +68,13 @@ const ApplyPhoneNum = ({ data, setData }) => {
         defaultValue={data.phone.substring(3, 7)}
         onChange={getPhoneNumber}
         style={{
-          width: "7vw",
+          width: `${device == "mobile" ? "30%" : "7vw"}`,
         }}
       />
       <div
         style={{
           width: "1.2vw",
+          minWidth: "10px",
           height: "0.2vw",
           backgroundColor: "#101010",
         }}
@@ -73,7 +86,7 @@ const ApplyPhoneNum = ({ data, setData }) => {
         defaultValue={data.phone.substring(7, 11)}
         onChange={getPhoneNumber}
         style={{
-          width: "7vw",
+          width: `${device == "mobile" ? "30%" : "7vw"}`,
         }}
       />
     </div>

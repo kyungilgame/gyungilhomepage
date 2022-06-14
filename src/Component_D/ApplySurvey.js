@@ -261,7 +261,7 @@ const ApplySurvey = ({ surveyData, setSurveyData }) => {
 
       <div className={`survey-box`}>
         <div className={`${styles["question"]}`}>
-          4. 과정 신청 동기는 무엇인가요? (30자 이상 입력해주세요)
+          4. 과정 신청 동기는 무엇인가요?
         </div>
         <div className={`${styles[("survey4", "option")]}`}>
           <textarea

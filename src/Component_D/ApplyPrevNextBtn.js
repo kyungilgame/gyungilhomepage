@@ -11,6 +11,8 @@ const ApplyPrevNextBtn = ({
   data,
   surveyData,
   consent,
+  device,
+  SetMenuState,
 }) => {
   const [isDataFilled, setIsDataFilled] = useState(false);
 
@@ -75,11 +77,21 @@ const ApplyPrevNextBtn = ({
           surveyData5: surveyData[4].A,
         },
       })
-    );
+    ).then((res) => {
+      console.log(res);
+      alert("지원이 완료되었습니다.");
+      SetMenuState(5);
+      window.scrollTo(0, 0);
+    });
   };
 
   return (
-    <div className={`${styles["btn_box"]}`}>
+    <div
+      className={`${styles["btn_box"]}`}
+      style={{
+        position: `${device == "mobile" ? "" : "absolute"}`,
+      }}
+    >
       <button onClick={() => setApplyStep(applyStep - 1)}>이전</button>
       {applyStep === 5 ? (
         <button onClick={submit} disabled={!consent}>

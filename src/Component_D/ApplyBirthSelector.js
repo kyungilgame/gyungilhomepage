@@ -2,20 +2,7 @@ import "../Styles/css/App.css";
 import React, { useState, useEffect } from "react";
 import styledComponents from "styled-components";
 
-const DateOfBirth = styledComponents.div`
-  display: flex;
-  align-items: center;
-  width: 25vw;
-  justify-content: space-between;
-
-  input,
-  select {
-    text-align: end;
-    padding-right: 5px;
-  }
-`;
-
-const ApplyBirthSelector = ({ data, setData }) => {
+const ApplyBirthSelector = ({ data, setData, device }) => {
   const [tempYear, setTempYear] = useState(
     data.birth ? data.birth.substring(0, 4) : ""
   );
@@ -48,6 +35,20 @@ const ApplyBirthSelector = ({ data, setData }) => {
     }
   };
 
+  const DateOfBirth = styledComponents.div`
+  display: flex;
+  align-items: center;
+  width: 25vw;
+  min-width: ${device == "mobile" ? "70%" : ""};
+  justify-content: space-between;
+
+  input,
+  select {
+    text-align: end;
+    padding-right: 5px;
+  }
+`;
+
   // 생년월일 값 합쳐주기
   useEffect(() => {
     const birth = tempYear + tempMonth + tempDay;
@@ -72,7 +73,7 @@ const ApplyBirthSelector = ({ data, setData }) => {
         maxLength="4"
         defaultValue={tempYear}
         style={{
-          width: "7vw",
+          width: `${device == "mobile" ? "18vw" : "7vw"}`,
         }}
       />
       년

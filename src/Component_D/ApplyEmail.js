@@ -1,8 +1,7 @@
 import "../Styles/css/App.css";
 import React, { useEffect, useState } from "react";
-// import styles from "./ApplyEmail.module.css";
 
-const ApplyEmail = ({ data, setData }) => {
+const ApplyEmail = ({ data, setData, device }) => {
   const [emailId, setEmailId] = useState(
     data.email ? data.email.split("@")[0] : ""
   );
@@ -31,6 +30,7 @@ const ApplyEmail = ({ data, setData }) => {
           flexDirection: "row",
           alignItems: "center",
           width: "25vw",
+          minWidth: `${device == "mobile" ? "70%" : ""}`,
           justifyContent: "space-between",
         }}
       >
@@ -41,7 +41,7 @@ const ApplyEmail = ({ data, setData }) => {
           defaultValue={emailId}
           onChange={getMailId}
           style={{
-            width: "13vw",
+            width: `${device == "mobile" ? "45%" : "13vw"}`,
           }}
         />
         @
@@ -51,7 +51,7 @@ const ApplyEmail = ({ data, setData }) => {
           defaultValue={emailDomain}
           onChange={getMailDomain}
           style={{
-            width: "10vw",
+            width: `${device == "mobile" ? "45%" : "10vw"}`,
           }}
         >
           <option value="">이메일</option>

@@ -78,7 +78,7 @@ function MobileContainer({ menuState, SetMenuState }) {
     1: <CourseIntro></CourseIntro>,
     2: <CourseReview></CourseReview>,
     3: <QA></QA>,
-    4: <Apply></Apply>,
+    4: <Apply menuState={menuState} SetMenuState={SetMenuState}></Apply>,
     5: <Main menuState={menuState} SetMenuState={SetMenuState}></Main>,
   };
   return (

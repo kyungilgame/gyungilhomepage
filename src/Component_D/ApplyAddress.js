@@ -34,7 +34,7 @@ const Postcode = (closeModal, data, setData) => {
   );
 };
 
-const ApplyAddress = ({ data, setData }) => {
+const ApplyAddress = ({ data, setData, device }) => {
   const [modalOpen, setModalOpen] = useState(false);
   const openModal = () => {
     setModalOpen(true);
@@ -53,7 +53,7 @@ const ApplyAddress = ({ data, setData }) => {
         display: "flex",
         flexDirection: "column",
         alignItems: "flex-end",
-        width: "25vw",
+        width: `${device == "mobile" ? "70%" : "25vw"}`,
         justifyContent: "space-between",
       }}
     >
