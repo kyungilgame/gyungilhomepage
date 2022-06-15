@@ -13,6 +13,8 @@ import ReactPlayer from "react-player/youtube";
 import BackVideo from "../Function/BackVideo";
 import Header from "../Component_D/Header";
 import Footer from "../Component_D/Footer";
+import { useParams } from "react-router-dom";
+import { useEffect } from "react";
 
 const ContentsBoxOneContainer = styled.div`
   width: 100%;
@@ -321,6 +323,16 @@ const ImageWrapper = styled.img`
 `;
 
 const Main = ({ menuState, SetMenuState }) => {
+  // 페이지 초기 스크롤 코스소개로 만들기
+  let params = useParams();
+  useEffect(() => {
+    if (params.scroll === "course-intro") {
+      document
+        .getElementById(`${params.scroll}`)
+        .scrollIntoView({ behavior: "smooth" });
+    }
+  }, []);
+
   const currentPage = "main";
   const textOne =
     "몰입형 교육 : 강도높고 집중적인 커리큘럼으로 비전공자를 주니어개발자까지 양성하는 체계적인 교육 프로그램";
@@ -403,7 +415,7 @@ const Main = ({ menuState, SetMenuState }) => {
         <MainCarousel></MainCarousel>
       </ContentsBoxThreeContainer>
       <ContentsBoxFourContainer>
-        <TextSizeSix>KGA 코스소개</TextSizeSix>
+        <TextSizeSix id="course-intro">KGA 코스소개</TextSizeSix>
         <div
           style={{
             width: "40vw",

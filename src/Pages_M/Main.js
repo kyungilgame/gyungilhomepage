@@ -12,6 +12,8 @@ import ReactPlayer from "react-player/youtube";
 import Header from "../Component_M/Header";
 import Footer from "../Component_M/Footer";
 import BackVideo from "../Function/BackVideo";
+import { useParams } from "react-router-dom";
+import { useEffect } from "react";
 
 const ContentsBoxOneContainer = styled.div`
   width: 100%;
@@ -315,6 +317,15 @@ const ImageWrapperTwo = styled.img`
 
 const Main = ({ menuState, SetMenuState }) => {
   const currentPage = "main";
+  // 페이지 초기스크롤 코스소개로 만들기
+  let params = useParams();
+  useEffect(() => {
+    if (params.scroll === "course-intro") {
+      document
+        .getElementById(`${params.scroll}`)
+        .scrollIntoView({ behavior: "smooth" });
+    }
+  }, []);
 
   return (
     <>
@@ -371,7 +382,7 @@ const Main = ({ menuState, SetMenuState }) => {
         <MainCarousel_M></MainCarousel_M>
       </ContentsBoxThreeContainer>
       <ContentsBoxFourContainer>
-        <TextSizeSix>KGA 코스소개</TextSizeSix>
+        <TextSizeSix id="course-intro">KGA 코스소개</TextSizeSix>
         <div
           style={{
             width: "53vw",

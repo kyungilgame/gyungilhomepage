@@ -14,6 +14,7 @@ import BottomCTABar from "../Component_D/BottomCTABar";
 import LinkArtclass from "../Image/LinkArtclass.png";
 import LinkPhoneCall from "../Image/LinkPhoneCall.png";
 import LinkProgamer from "../Image/LinkProgamer.png";
+import NotFound from "../Pages_D/NotFound";
 
 const AppContainer = styled.div`
   &,
@@ -70,6 +71,8 @@ const LinkBoxThree = styled.button`
 
 function DesktopContainer({ menuState, SetMenuState, SetIsLoading }) {
   const [CTAAtive, setCTAAtive] = useState(true);
+
+  // 기존 스크롤 감지하던 코드
   const [scroll, setScroll] = useState(0);
 
   const handleFollow = () => {
@@ -110,7 +113,6 @@ function DesktopContainer({ menuState, SetMenuState, SetIsLoading }) {
       <HashRouter>
         <Routes>
           <Route path="/" element={<Main menuState={menuState} />} />
-          <Route path="/:scroll" element={<Main menuState={menuState} />} />
           <Route path="/aboutKGA" element={<AboutKGA />} />
           <Route path="/courseIntro" element={<CourseIntro />} />
           <Route path="/courseReview" element={<CourseReview />} />
@@ -120,6 +122,8 @@ function DesktopContainer({ menuState, SetMenuState, SetIsLoading }) {
           />
           <Route path="/apply/success" element={<ApplySuccess />} />
           <Route path="/qna" element={<QA />} />
+          <Route path="/:scroll" element={<Main menuState={menuState} />} />
+          <Route path="/*" element={<NotFound />} />
         </Routes>
       </HashRouter>
       <BottomCTABar />
