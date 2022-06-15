@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, HashRouter, Route, Routes } from "react-router-dom";
 import styled from "styled-components";
 import "../Styles/css/App.css";
 
@@ -107,9 +107,10 @@ function DesktopContainer({ menuState, SetMenuState, SetIsLoading }) {
 
   return (
     <AppContainer>
-      <BrowserRouter>
+      <HashRouter>
         <Routes>
           <Route path="/" element={<Main menuState={menuState} />} />
+          <Route path="/:scroll" element={<Main menuState={menuState} />} />
           <Route path="/aboutKGA" element={<AboutKGA />} />
           <Route path="/courseIntro" element={<CourseIntro />} />
           <Route path="/courseReview" element={<CourseReview />} />
@@ -120,7 +121,7 @@ function DesktopContainer({ menuState, SetMenuState, SetIsLoading }) {
           <Route path="/apply/success" element={<ApplySuccess />} />
           <Route path="/qna" element={<QA />} />
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
       <BottomCTABar />
       {CTAAtive === true ? (
         <>
