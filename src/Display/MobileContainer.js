@@ -1,5 +1,5 @@
 import React from "react";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { BrowserRouter, HashRouter, Route, Routes } from "react-router-dom";
 import styled from "styled-components";
 import "../Styles/css/App.css";
 
@@ -88,7 +88,7 @@ function MobileContainer({ menuState, SetMenuState, SetIsLoading }) {
   // };
   return (
     <AppContainer>
-      <BrowserRouter>
+      <HashRouter>
         <Routes>
           <Route path="/" element={<Main menuState={menuState} />} />
           <Route path="/aboutKGA" element={<AboutKGA />} />
@@ -101,7 +101,7 @@ function MobileContainer({ menuState, SetMenuState, SetIsLoading }) {
           <Route path="/apply/success" element={<ApplySuccess />} />
           <Route path="/qna" element={<QA />} />
         </Routes>
-      </BrowserRouter>
+      </HashRouter>
       <BottomCTABar></BottomCTABar>
       <LinkBoxOne as={"a"} href={"tel:02-479-4050"}></LinkBoxOne>
       <LinkBoxTwo as={"a"} href={"https://www.kyungilart.com/"}></LinkBoxTwo>
