@@ -72,13 +72,19 @@ const LinkBoxThree = styled.button`
   cursor: pointer;
 `;
 
-function MobileContainer({ menuState, SetMenuState }) {
+function MobileContainer({ menuState, SetMenuState, SetIsLoading }) {
   const pagesObj = {
     0: <AboutKGA></AboutKGA>,
     1: <CourseIntro></CourseIntro>,
     2: <CourseReview></CourseReview>,
     3: <QA></QA>,
-    4: <Apply menuState={menuState} SetMenuState={SetMenuState}></Apply>,
+    4: (
+      <Apply
+        menuState={menuState}
+        SetMenuState={SetMenuState}
+        SetIsLoading={SetIsLoading}
+      ></Apply>
+    ),
     5: <Main menuState={menuState} SetMenuState={SetMenuState}></Main>,
   };
   return (

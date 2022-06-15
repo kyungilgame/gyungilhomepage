@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import styles from "./ApplyAddress.module.css";
 import DaumPostcode from "react-daum-postcode";
 
-const Postcode = (closeModal, data, setData) => {
+const Postcode = (closeModal, setAddress, data, setData) => {
   const handleComplete = (postData) => {
     let fullAddress = postData.address;
     let extraAddress = "";
@@ -23,7 +23,8 @@ const Postcode = (closeModal, data, setData) => {
     closeModal();
     console.log(postData);
     console.log(fullAddress); // e.g. '서울 성동구 왕십리로2길 20 (성수동1가)'
-    setData({ ...data, address: fullAddress });
+    // setData({ ...data, address: fullAddress });
+    setAddress(fullAddress);
   };
 
   return (
@@ -34,7 +35,15 @@ const Postcode = (closeModal, data, setData) => {
   );
 };
 
-const ApplyAddress = ({ data, setData, device }) => {
+const ApplyAddress = ({
+  address,
+  setAddress,
+  detailedAddress,
+  setDetailedAddress,
+  data,
+  setData,
+  device,
+}) => {
   const [modalOpen, setModalOpen] = useState(false);
   const openModal = () => {
     setModalOpen(true);
@@ -61,7 +70,7 @@ const ApplyAddress = ({ data, setData, device }) => {
         style={{
           width: "100%",
         }}
-        defaultValue={data && data.address}
+        defaultValue={address}
         disabled
         type="text"
         placeholder="주소"
@@ -71,8 +80,8 @@ const ApplyAddress = ({ data, setData, device }) => {
           width: "100%",
           margin: "5px 0",
         }}
-        onChange={getDetailedAddress}
-        defaultValue={data && data.detailedAddress}
+        onChange={(e) => setDetailedAddress(e.target.value)}
+        defaultValue={detailedAddress}
         type="text"
         placeholder="상세주소"
       />
@@ -110,10 +119,9 @@ const ApplyAddress = ({ data, setData, device }) => {
             : `${styles["modal"]}`
         }
       >
-        ??
         {modalOpen ? (
           <section>
-            <main>{Postcode(closeModal, data, setData)}</main>
+            <main>{Postcode(closeModal, setAddress, data, setData)}</main>
             <footer>
               <button className="close" onClick={closeModal}>
                 close

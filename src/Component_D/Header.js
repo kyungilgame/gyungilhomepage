@@ -116,34 +116,12 @@ const Header = ({ menuState, SetMenuState }) => {
         </MenuWrapper>
         <MenuWrapper>
           <MenuText
-          // onClick={() => {
-          //   SetMenuState(4);
-          // }}
-          // menuState={menuState}
+            onClick={() => {
+              SetMenuState(4);
+            }}
+            menuState={menuState}
           >
-            {menuState === 5 ? (
-              <a
-                style={{
-                  fontFamily: "SEBANG-Gothic-Regular",
-                  color: "#f6f6f6",
-                }}
-                href="https://forms.gle/Xj9q3QqjQs1qWy2D7"
-                target="_blank"
-              >
-                지원하기
-              </a>
-            ) : (
-              <a
-                style={{
-                  fontFamily: "SEBANG-Gothic-Regular",
-                  color: "#101010",
-                }}
-                href="https://forms.gle/Xj9q3QqjQs1qWy2D7"
-                target="_blank"
-              >
-                지원하기
-              </a>
-            )}
+            지원하기
           </MenuText>
         </MenuWrapper>
       </ContentWrapper>

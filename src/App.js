@@ -18,25 +18,33 @@ const Mobile = ({ children }) => {
 };
 function App() {
   const [menuState, SetMenuState] = useState(5);
+  const [IsLoading, SetIsLoading] = useState(false);
+
   useEffect(() => {
     if (window.Kakao.isInitialized()) return;
     window.Kakao.init("563910ae104ce06efb0b9f2b38f14cf7");
   }, []);
   return (
-    <>
+    <div
+      style={{
+        backgroundColor: `${IsLoading ? "rgba(0, 0, 0, 0.6)" : ""}`,
+      }}
+    >
       <Desktop>
         <DesktopContainer
           menuState={menuState}
           SetMenuState={SetMenuState}
+          SetIsLoading={SetIsLoading}
         ></DesktopContainer>
       </Desktop>
       <Mobile>
         <MobileContainer
           menuState={menuState}
           SetMenuState={SetMenuState}
+          SetIsLoading={SetIsLoading}
         ></MobileContainer>
       </Mobile>
-    </>
+    </div>
   );
 }
 

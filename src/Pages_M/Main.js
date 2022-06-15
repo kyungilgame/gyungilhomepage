@@ -663,14 +663,7 @@ const Main = ({ menuState, SetMenuState }) => {
         </TextSizeNineteen>
       </ContentsBoxEightContainer>
       <ContentsBoxNineContainer>
-        <TextSizeTwenty
-          onClick={() => {
-            console.log("버튼");
-            SetMenuState(4);
-          }}
-        >
-          IT 인재로 급성장
-        </TextSizeTwenty>
+        <TextSizeTwenty>IT 인재로 급성장</TextSizeTwenty>
         <TextSizeTwentyOne>KGA와 함께라면 가능합니다</TextSizeTwentyOne>
         <ApplyBlackButton
           as={"a"}

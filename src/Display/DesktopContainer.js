@@ -72,7 +72,7 @@ const LinkBoxThree = styled.button`
   cursor: pointer;
 `;
 
-function DesktopContainer({ menuState, SetMenuState }) {
+function DesktopContainer({ menuState, SetMenuState, SetIsLoading }) {
   const [CTAAtive, setCTAAtive] = useState(true);
   const [scroll, setScroll] = useState(0);
 
@@ -98,7 +98,13 @@ function DesktopContainer({ menuState, SetMenuState }) {
     1: <CourseIntro></CourseIntro>,
     2: <CourseReview></CourseReview>,
     3: <QA></QA>,
-    4: <Apply menuState={menuState} SetMenuState={SetMenuState}></Apply>,
+    4: (
+      <Apply
+        menuState={menuState}
+        SetMenuState={SetMenuState}
+        SetIsLoading={SetIsLoading}
+      ></Apply>
+    ),
     5: <Main menuState={menuState} SetMenuState={SetMenuState}></Main>,
   };
 

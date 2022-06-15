@@ -6,6 +6,7 @@ import { API, graphqlOperation } from "aws-amplify";
 import { createUser, updateUser, deleteUser } from "../graphql/mutations";
 
 const ApplyPrevNextBtn = ({
+  SetIsLoading,
   applyStep,
   setApplyStep,
   data,
@@ -13,27 +14,25 @@ const ApplyPrevNextBtn = ({
   consent,
   device,
   SetMenuState,
+  course,
+  name,
+  phone,
+  email,
+  kakaoEmail,
+  birth,
+  address,
+  detailedAddress,
 }) => {
   const [isDataFilled, setIsDataFilled] = useState(false);
+  const [IsWaiting, setIsWaiting] = useState(false);
 
   useEffect(() => {
-    if (!data) return;
-    if (
-      data.course &&
-      data.name &&
-      data.phone &&
-      (data.kakaoEmail || data.email) &&
-      data.birth &&
-      data.address
-    ) {
+    if (name && phone && (kakaoEmail || email) && birth && address) {
       setIsDataFilled(true);
     } else {
       setIsDataFilled(false);
     }
-    return () => {
-      setIsDataFilled(false);
-    };
-  }, [data]);
+  }, [name, phone, email, kakaoEmail, birth, address]);
 
   useEffect(() => {
     if (!surveyData) return;
@@ -50,26 +49,23 @@ const ApplyPrevNextBtn = ({
     } else {
       setIsDataFilled(false);
     }
-    return () => {
-      setIsDataFilled(false);
-    };
   }, [surveyData]);
 
   // 사용자 정보 DB에 저장
   const submit = async () => {
-    console.log(data);
-    console.log(surveyData);
+    SetIsLoading(true);
+
     await API.graphql(
       graphqlOperation(createUser, {
         input: {
-          course: data.course,
-          name: data.name,
-          phone: data.phone,
-          kakaoEmail: data.kakaoEmail,
-          email: data.email,
-          birth: data.birth,
-          address: data.address,
-          detailedAddress: data.detailedAddress,
+          course: course,
+          name: name,
+          phone: phone,
+          kakaoEmail: kakaoEmail,
+          email: email,
+          birth: birth,
+          address: address,
+          detailedAddress: detailedAddress,
           survey1: surveyData[0].A,
           survey2: surveyData[1].A,
           survey3: surveyData[2].A,
@@ -79,6 +75,7 @@ const ApplyPrevNextBtn = ({
       })
     ).then((res) => {
       console.log(res);
+      SetIsLoading(false);
       alert("지원이 완료되었습니다.");
       SetMenuState(5);
       window.scrollTo(0, 0);
@@ -88,9 +85,9 @@ const ApplyPrevNextBtn = ({
   return (
     <div
       className={`${styles["btn_box"]}`}
-      style={{
-        position: `${device == "mobile" ? "" : "absolute"}`,
-      }}
+      // style={{
+      //   position: `${device == "mobile" ? "" : "absolute"}`,
+      // }}
     >
       <button onClick={() => setApplyStep(applyStep - 1)}>이전</button>
       {applyStep === 5 ? (

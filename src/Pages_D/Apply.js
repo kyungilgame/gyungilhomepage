@@ -100,7 +100,7 @@ const ApplyBlackButton = styled.button`
   cursor: pointer;
 `;
 
-const Apply = ({ SetMenuState }) => {
+const Apply = ({ SetMenuState, SetIsLoading }) => {
   const ApplyContentsContainer = styled.div`
     padding: 5vw;
     width: 63vw;
@@ -114,30 +114,31 @@ const Apply = ({ SetMenuState }) => {
   `;
   const [applyStep, setApplyStep] = useState(1);
 
-  const [data, setData] = useState({
-    course: "",
-    name: "",
-    phone: "",
-    kakaoEmail: "",
-    email: "",
-    birth: "",
-    address: "",
-    detailedAddress: "",
-  });
+  const [course, setCourse] = useState("");
+  const [name, setName] = useState("");
+  const [phone, setPhone] = useState("");
+  const [email, setEmail] = useState("");
+  const [kakaoEmail, setKakaoEmail] = useState("");
+  const [birth, setBirth] = useState("");
+  const [address, setAddress] = useState("");
+  const [detailedAddress, setDetailedAddress] = useState("");
   const [surveyData, setSurveyData] = useState([]);
   const [consent, setConsent] = useState(false);
 
-  // 이름
-  const getName = (e) => {
-    setData({ ...data, name: e.target.value });
-  };
+  useEffect(() => {
+    console.log("코스-", course);
+    console.log("이름-", name);
+    console.log("번호-", phone);
+    console.log("메일-", email);
+    console.log("카톡-", kakaoEmail);
+    console.log("생일-", birth);
+    console.log("주소-", address);
+    console.log("상세-", detailedAddress);
+  }, [course, name, phone, email, kakaoEmail, birth, address, detailedAddress]);
 
-  // useEffect(() => {
-  //   console.log(data);
-  // }, [data]);
-  // useEffect(() => {
-  //   console.log(surveyData);
-  // }, [surveyData]);
+  useEffect(() => {
+    console.log(surveyData);
+  }, [surveyData]);
 
   return (
     <div
@@ -153,8 +154,8 @@ const Apply = ({ SetMenuState }) => {
     >
       {applyStep == 1 && (
         <ApplyLogin
-          data={data}
-          setData={setData}
+          kakaoEmail={kakaoEmail}
+          setKakaoEmail={setKakaoEmail}
           applyStep={applyStep}
           setApplyStep={setApplyStep}
         />
@@ -162,8 +163,8 @@ const Apply = ({ SetMenuState }) => {
 
       {applyStep == 2 && (
         <DesiredCourse
-          data={data}
-          setData={setData}
+          course={course}
+          setCourse={setCourse}
           applyStep={applyStep}
           setApplyStep={setApplyStep}
         />
@@ -172,41 +173,50 @@ const Apply = ({ SetMenuState }) => {
       {applyStep == 3 && (
         <>
           <TextSizeOne>
-            {data.course == "모르겠어요" ? null : `${data.course} 과정`}{" "}
-            지원하기
+            {course == "모르겠어요" ? null : `${course} 과정`} 지원하기
           </TextSizeOne>
           <ApplyBoxWrapper>
             <TextSizeTwo>이름</TextSizeTwo>
             <input
               type="text"
               autoFocus="autofocus"
-              defaultValue={data.name ? data.name : ""}
-              onChange={getName}
+              defaultValue={name}
+              onChange={(e) => setName(e.target.value)}
               style={{
                 width: "10vw",
               }}
             />
             <TextSizeTwo>연락처</TextSizeTwo>
-            <ApplyPhoneNum data={data} setData={setData} />
+            <ApplyPhoneNum phone={phone} setPhone={setPhone} />
 
-            {data.kakaoEmail ? null : (
+            {kakaoEmail ? null : (
               <>
                 <TextSizeTwo>이메일</TextSizeTwo>
-                <ApplyEmail data={data} setData={setData} />
+                <ApplyEmail email={email} setEmail={setEmail} />
               </>
             )}
 
             <TextSizeTwo>생년월일</TextSizeTwo>
-            <ApplyBirthSelector data={data} setData={setData} />
+            <ApplyBirthSelector birth={birth} setBirth={setBirth} />
 
             <TextSizeTwo>주소</TextSizeTwo>
-            <ApplyAddress data={data} setData={setData} />
+            <ApplyAddress
+              address={address}
+              setAddress={setAddress}
+              detailedAddress={detailedAddress}
+              setDetailedAddress={setDetailedAddress}
+            />
           </ApplyBoxWrapper>
 
           <ApplyPrevNextBtn
+            name={name}
+            phone={phone}
+            email={email}
+            kakaoEmail={kakaoEmail}
+            birth={birth}
+            address={address}
             applyStep={applyStep}
             setApplyStep={setApplyStep}
-            data={data}
           />
         </>
       )}
@@ -224,12 +234,20 @@ const Apply = ({ SetMenuState }) => {
         <>
           <ApplyPrivacyConsent setConsent={setConsent} />
           <ApplyPrevNextBtn
-            data={data}
+            course={course}
+            name={name}
+            phone={phone}
+            email={email}
+            kakaoEmail={kakaoEmail}
+            birth={birth}
+            address={address}
+            detailedAddress={detailedAddress}
             surveyData={surveyData}
             applyStep={applyStep}
             setApplyStep={setApplyStep}
             consent={consent}
             SetMenuState={SetMenuState}
+            SetIsLoading={SetIsLoading}
           />
         </>
       )}

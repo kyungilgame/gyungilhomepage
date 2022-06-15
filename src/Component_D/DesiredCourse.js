@@ -1,14 +1,16 @@
-import styled from "styled-components";
 import "../Styles/css/App.css";
 import React, { useEffect } from "react";
 import styles from "./DesiredCourse.module.css";
 
-const DesiredCourse = ({ data, setData, applyStep, setApplyStep, device }) => {
-  const courseSelectWrapper = styled.div`
-    width: 10vw;
-    height: 10vw;
-  `;
-
+const DesiredCourse = ({
+  course,
+  setCourse,
+  data,
+  setData,
+  applyStep,
+  setApplyStep,
+  device,
+}) => {
   const courseList = [
     {
       id: 1,
@@ -42,8 +44,9 @@ const DesiredCourse = ({ data, setData, applyStep, setApplyStep, device }) => {
     },
   ];
 
-  function courseSelect(courseName) {
-    setData({ ...data, course: courseName });
+  function courseSelect(e, courseName) {
+    setCourse(e.target.textContent);
+    // setData({ ...data, course: courseName });
     setApplyStep(3);
   }
 
@@ -63,14 +66,20 @@ const DesiredCourse = ({ data, setData, applyStep, setApplyStep, device }) => {
             <button
               key={course.id}
               className={`${styles["course-button"]}`}
-              onClick={() => courseSelect(course.name)}
+              onClick={(e) => {
+                setCourse(e.target.textContent);
+                setApplyStep(3);
+              }}
             >
               {course.name}
             </button>
           ))}
         <button
           className={`${styles["course-unknown_button"]} 0`}
-          onClick={() => courseSelect("모르겠어요")}
+          onClick={(e) => {
+            setCourse(e.target.textContent);
+            setApplyStep(3);
+          }}
         >
           모르겠어요
         </button>

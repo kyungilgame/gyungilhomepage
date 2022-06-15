@@ -2,16 +2,12 @@ import "../Styles/css/App.css";
 import React, { useState, useEffect } from "react";
 import styles from "./ApplyBirthSelector.module.css";
 
-const ApplyBirthSelector = ({ data, setData, device }) => {
-  const [tempYear, setTempYear] = useState(
-    data.birth ? data.birth.substring(0, 4) : ""
-  );
+const ApplyBirthSelector = ({ birth, setBirth, data, setData, device }) => {
+  const [tempYear, setTempYear] = useState(birth ? birth.substring(0, 4) : "");
   const [tempMonth, setTempMonth] = useState(
-    data.birth ? data.birth.substring(4, 6) : ""
+    birth ? birth.substring(4, 6) : ""
   );
-  const [tempDay, setTempDay] = useState(
-    data.birth ? data.birth.substring(6, 8) : ""
-  );
+  const [tempDay, setTempDay] = useState(birth ? birth.substring(6, 8) : "");
 
   const monthData = [];
   const dayData = [];
@@ -37,17 +33,12 @@ const ApplyBirthSelector = ({ data, setData, device }) => {
 
   // 생년월일 값 합쳐주기
   useEffect(() => {
-    const birth = tempYear + tempMonth + tempDay;
-    if (birth.length == 8) {
-      setData({ ...data, birth: birth });
-    } else {
-      setData({ ...data, birth: "" });
+    const tempBirth = tempYear + tempMonth + tempDay;
+    if (tempBirth.length < 8) {
+      setBirth("");
+    } else if (tempBirth.length == 8) {
+      setBirth(tempBirth);
     }
-    return () => {
-      if (birth.length < 8) {
-        setData({ ...data, birth: "" });
-      }
-    };
   }, [tempYear, tempMonth, tempDay]);
 
   return (
@@ -58,7 +49,9 @@ const ApplyBirthSelector = ({ data, setData, device }) => {
       }}
     >
       <input
-        onChange={getBirth}
+        onChange={(e) => {
+          setTempYear(e.target.value);
+        }}
         type="text"
         name="year"
         maxLength="4"
@@ -69,7 +62,9 @@ const ApplyBirthSelector = ({ data, setData, device }) => {
       />
       년
       <select
-        onChange={getBirth}
+        onChange={(e) => {
+          setTempMonth(e.target.value);
+        }}
         name="month"
         defaultValue={tempMonth}
         style={{
@@ -89,7 +84,9 @@ const ApplyBirthSelector = ({ data, setData, device }) => {
       </select>
       월
       <select
-        onChange={getBirth}
+        onChange={(e) => {
+          setTempDay(e.target.value);
+        }}
         name="day"
         defaultValue={tempDay}
         style={{

@@ -1,12 +1,10 @@
 import "../Styles/css/App.css";
 import React, { useEffect, useState } from "react";
 
-const ApplyEmail = ({ data, setData, device }) => {
-  const [emailId, setEmailId] = useState(
-    data.email ? data.email.split("@")[0] : ""
-  );
+const ApplyEmail = ({ email, setEmail, data, setData, device }) => {
+  const [emailId, setEmailId] = useState(email ? email.split("@")[0] : "");
   const [emailDomain, setEmailDomain] = useState(
-    data.email ? data.email.split("@")[1] : ""
+    email ? email.split("@")[1] : ""
   );
 
   const getMailId = (e) => {
@@ -17,8 +15,11 @@ const ApplyEmail = ({ data, setData, device }) => {
   };
 
   useEffect(() => {
-    if (emailId && emailDomain) {
-      setData({ ...data, email: emailId + "@" + emailDomain });
+    if (!(emailId && emailDomain)) {
+      setEmail("");
+    } else if (emailId && emailDomain) {
+      setEmail(emailId + "@" + emailDomain);
+      // setData({ ...data, email: emailId + "@" + emailDomain });
     }
   }, [emailId, emailDomain]);
 
@@ -39,7 +40,9 @@ const ApplyEmail = ({ data, setData, device }) => {
           type="text"
           name="emailId"
           defaultValue={emailId}
-          onChange={getMailId}
+          onChange={(e) => {
+            setEmailId(e.target.value);
+          }}
           style={{
             width: `${device == "mobile" ? "45%" : "13vw"}`,
           }}
@@ -49,7 +52,9 @@ const ApplyEmail = ({ data, setData, device }) => {
           className="input-domain"
           name="emailDomain"
           defaultValue={emailDomain}
-          onChange={getMailDomain}
+          onChange={(e) => {
+            setEmailDomain(e.target.value);
+          }}
           style={{
             width: `${device == "mobile" ? "45%" : "10vw"}`,
           }}

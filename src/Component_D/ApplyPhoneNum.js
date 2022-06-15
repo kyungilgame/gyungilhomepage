@@ -1,10 +1,16 @@
 import "../Styles/css/App.css";
 import React, { useState, useEffect } from "react";
 
-const ApplyPhoneNum = ({ data, setData, device }) => {
-  const [tempPhoneNumber1, setTempPhoneNumber1] = useState("");
-  const [tempPhoneNumber2, setTempPhoneNumber2] = useState("");
-  const [tempPhoneNumber3, setTempPhoneNumber3] = useState("");
+const ApplyPhoneNum = ({ phone, setPhone, data, setData, device }) => {
+  const [tempPhoneNumber1, setTempPhoneNumber1] = useState(
+    phone ? phone.substring(0, 3) : ""
+  );
+  const [tempPhoneNumber2, setTempPhoneNumber2] = useState(
+    phone ? phone.substring(3, 7) : ""
+  );
+  const [tempPhoneNumber3, setTempPhoneNumber3] = useState(
+    phone ? phone.substring(7, 11) : ""
+  );
 
   const getPhoneNumber = (e) => {
     if (e.target.name == "phone1") {
@@ -19,16 +25,21 @@ const ApplyPhoneNum = ({ data, setData, device }) => {
   // 입력한 전화번호 11자리 충족되면 데이터에 담기
   useEffect(() => {
     const phoneNum = tempPhoneNumber1 + tempPhoneNumber2 + tempPhoneNumber3;
+    // if (phoneNum.length < 11) {
+    //   setData({
+    //     ...data,
+    //     phone: "",
+    //   });
+    // } else if (phoneNum.length == 11) {
+    //   setData({
+    //     ...data,
+    //     phone: phoneNum,
+    //   });
+    // }
     if (phoneNum.length < 11) {
-      setData({
-        ...data,
-        phone: "",
-      });
+      setPhone("");
     } else if (phoneNum.length == 11) {
-      setData({
-        ...data,
-        phone: phoneNum,
-      });
+      setPhone(phoneNum);
     }
   }, [tempPhoneNumber1, tempPhoneNumber2, tempPhoneNumber3]);
 
@@ -47,8 +58,10 @@ const ApplyPhoneNum = ({ data, setData, device }) => {
         type="text"
         name="phone1"
         maxLength="3"
-        defaultValue={data.phone.substring(0, 3)}
-        onChange={getPhoneNumber}
+        defaultValue={tempPhoneNumber1}
+        onChange={(e) => {
+          setTempPhoneNumber1(e.target.value);
+        }}
         style={{
           width: `${device == "mobile" ? "30%" : "7vw"}`,
         }}
@@ -65,8 +78,10 @@ const ApplyPhoneNum = ({ data, setData, device }) => {
         type="text"
         name="phone2"
         maxLength="4"
-        defaultValue={data.phone.substring(3, 7)}
-        onChange={getPhoneNumber}
+        defaultValue={tempPhoneNumber2}
+        onChange={(e) => {
+          setTempPhoneNumber2(e.target.value);
+        }}
         style={{
           width: `${device == "mobile" ? "30%" : "7vw"}`,
         }}
@@ -83,8 +98,10 @@ const ApplyPhoneNum = ({ data, setData, device }) => {
         type="text"
         name="phone3"
         maxLength="4"
-        defaultValue={data.phone.substring(7, 11)}
-        onChange={getPhoneNumber}
+        defaultValue={tempPhoneNumber3}
+        onChange={(e) => {
+          setTempPhoneNumber3(e.target.value);
+        }}
         style={{
           width: `${device == "mobile" ? "30%" : "7vw"}`,
         }}

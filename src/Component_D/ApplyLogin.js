@@ -4,7 +4,14 @@ import styles from "./ApplyLogin.module.css";
 import gyungilBlack from "../Image/gyungilBlack.png";
 import kakaoTalkLogo from "../Image/kakao-talk.svg";
 
-const ApplyLogin = ({ data, setData, applyStep, setApplyStep }) => {
+const ApplyLogin = ({
+  kakaoEmail,
+  setKakaoEmail,
+  data,
+  setData,
+  applyStep,
+  setApplyStep,
+}) => {
   function kakaoLogin() {
     window.Kakao.Auth.login({
       scope: "account_email",
@@ -13,20 +20,17 @@ const ApplyLogin = ({ data, setData, applyStep, setApplyStep }) => {
         window.Kakao.API.request({
           url: "/v2/user/me",
           success: (res) => {
-            setData({
-              ...data,
-              kakaoEmail: res.kakao_account.email,
-            });
+            // setData({
+            //   ...data,
+            //   kakaoEmail: res.kakao_account.email,
+            // });
+            setKakaoEmail(res.kakao_account.email);
             setApplyStep(2);
           },
         });
       },
     });
   }
-
-  const emailLogin = () => {
-    setApplyStep(2);
-  };
 
   return (
     <>
@@ -43,7 +47,10 @@ const ApplyLogin = ({ data, setData, applyStep, setApplyStep }) => {
           />
           카카오톡으로 계정으로 진행하기
         </div>
-        <div className={`${styles["email_btn"]}`} onClick={emailLogin}>
+        <div
+          className={`${styles["email_btn"]}`}
+          onClick={() => setApplyStep(2)}
+        >
           이메일로 진행하기
         </div>
       </div>

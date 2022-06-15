@@ -64,7 +64,7 @@ const HamburgerMenu = ({ menuState, SetMenuState }) => {
           top: "5vw",
         },
         bmCross: {
-          background: "black",
+          background: `${menuState == 5 ? "rgb(0, 255, 214)" : "black"}`,
         },
       }}
     >
@@ -109,11 +109,11 @@ const HamburgerMenu = ({ menuState, SetMenuState }) => {
         Q{`&`}A
       </a>
       <a
-        // onClick={() => {
-        //   SetMenuState(4);
-        //   setIsOpen(false);
-        // }}
-        href="https://forms.gle/Xj9q3QqjQs1qWy2D7"
+        onClick={() => {
+          SetMenuState(4);
+          setIsOpen(false);
+        }}
+        // href="https://forms.gle/Xj9q3QqjQs1qWy2D7"
         className="Apply"
         style={{ cursor: "pointer" }}
         target="_blank"
