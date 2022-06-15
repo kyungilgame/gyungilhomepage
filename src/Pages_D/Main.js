@@ -10,6 +10,9 @@ import GreenArrow from "../Image/GreenArrow.png";
 import MapImage from "../Function/Map";
 
 import ReactPlayer from "react-player/youtube";
+import BackVideo from "../Function/BackVideo";
+import Header from "../Component_D/Header";
+import Footer from "../Component_D/Footer";
 
 const ContentsBoxOneContainer = styled.div`
   width: 100%;
@@ -318,12 +321,15 @@ const ImageWrapper = styled.img`
 `;
 
 const Main = ({ menuState, SetMenuState }) => {
+  const currentPage = "main";
   const textOne =
     "몰입형 교육 : 강도높고 집중적인 커리큘럼으로 비전공자를 주니어개발자까지 양성하는 체계적인 교육 프로그램";
   const textTwo = "100% 몰입형 교육 전문 아카데미";
 
   return (
     <>
+      <Header currentPage={currentPage} />
+      <BackVideo />
       <ContentsBoxOneContainer>
         <div
           style={{
@@ -748,6 +754,7 @@ const Main = ({ menuState, SetMenuState }) => {
           >{`>`}</text>
         </ApplyBlackButton>
       </ContentsBoxNineContainer>
+      <Footer menuState={menuState} SetMenuState={SetMenuState} />
     </>
   );
 };

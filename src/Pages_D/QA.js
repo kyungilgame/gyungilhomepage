@@ -2,6 +2,8 @@ import styled from "styled-components";
 import "../Styles/css/App.css";
 import React, { useState } from "react";
 import Faq from "react-faq-component";
+import Header from "../Component_D/Header";
+import Footer from "../Component_D/Footer";
 
 const ContentsBoxOneContainer = styled.div`
   width: 100%;
@@ -381,6 +383,7 @@ const QA = () => {
   const [ReviewSelect, setReviewSelect] = useState(0);
   return (
     <>
+      <Header />
       <ContentsBoxOneContainer></ContentsBoxOneContainer>
       <ContentsBoxTwoContainer>
         <TextSizeOne>자주 묻는 질문</TextSizeOne>
@@ -551,6 +554,7 @@ const QA = () => {
           </div>
         </FAQBoardContainer>
       </ContentsBoxTwoContainer>
+      <Footer />
     </>
   );
 };

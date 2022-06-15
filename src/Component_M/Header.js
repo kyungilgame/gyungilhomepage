@@ -4,6 +4,7 @@ import "../Styles/css/App.css";
 import HamburgerMenu from "./HamburgerMenu";
 import HeaderLogo from "../Image/HeaderLogo.png";
 import gyunilWhite from "../Image/gyungilWhite.png";
+import { Link } from "react-router-dom";
 
 const HeaderContainer = styled.div`
   width: 95%;
@@ -33,7 +34,7 @@ const MenuWrapper = styled.div`
   align-items: center;
 `;
 
-const Header = ({ menuState, SetMenuState }) => {
+const Header = ({ currentPage }) => {
   const LogoWrapper = styled.div`
     width: 15vw;
     height: 8vw;
@@ -47,27 +48,18 @@ const Header = ({ menuState, SetMenuState }) => {
   `;
   return (
     <HeaderContainer>
-      {menuState === 5 ? (
-        <LogoWrapper
-          Image={gyunilWhite}
-          onClick={() => {
-            SetMenuState(5);
-          }}
-        ></LogoWrapper>
+      {currentPage === "main" ? (
+        <Link to="/">
+          <LogoWrapper Image={gyunilWhite}></LogoWrapper>
+        </Link>
       ) : (
-        <LogoWrapper
-          Image={HeaderLogo}
-          onClick={() => {
-            SetMenuState(5);
-          }}
-        ></LogoWrapper>
+        <Link to="/">
+          <LogoWrapper Image={HeaderLogo}></LogoWrapper>
+        </Link>
       )}
       <ContentWrapper>
         <MenuWrapper>
-          <HamburgerMenu
-            menuState={menuState}
-            SetMenuState={SetMenuState}
-          ></HamburgerMenu>
+          <HamburgerMenu currentPage={currentPage}></HamburgerMenu>
         </MenuWrapper>
       </ContentWrapper>
     </HeaderContainer>

@@ -6,6 +6,7 @@ import SNSfacebook from "../Image/SNSfacebook.png";
 import SNSinsta from "../Image/SNSinsta.png";
 import SNSnaver from "../Image/SNSnaver.png";
 import gyungilWhite from "../Image/gyungilWhite.png";
+import { Link } from "react-router-dom";
 
 const FooterContainer = styled.div`
   width: 100%;
@@ -164,13 +165,10 @@ const Footer = ({ menuState, SetMenuState }) => {
               alignItems: "start",
             }}
           >
-            <LinkText
-              onClick={() => {
-                SetMenuState(1);
-                window.scrollTo(0, 0);
-              }}
-            >
-              <text style={{ color: "white" }}>About KGA</text>
+            <LinkText>
+              <Link to="/aboutKGA">
+                <text style={{ color: "white" }}>About KGA</text>
+              </Link>
             </LinkText>
             <LinkText
               as={"a"}

@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from "react";
 import { slide as Menu } from "react-burger-menu";
+import { Link } from "react-router-dom";
 
-const HamburgerMenu = ({ menuState, SetMenuState }) => {
+const HamburgerMenu = ({ currentPage }) => {
   const [isOpen, setIsOpen] = useState(false);
   const [menuColor, setMenuColor] = useState("#f6f6f6");
 
   useEffect(() => {
-    menuState === 5 ? setMenuColor("#f6f6f6") : setMenuColor("#101010");
+    currentPage === "main" ? setMenuColor("#f6f6f6") : setMenuColor("#101010");
   });
 
   return (
@@ -64,62 +65,38 @@ const HamburgerMenu = ({ menuState, SetMenuState }) => {
           top: "5vw",
         },
         bmCross: {
-          background: `${menuState == 5 ? "rgb(0, 255, 214)" : "black"}`,
+          background: `${currentPage == "main" ? "rgb(0, 255, 214)" : "black"}`,
         },
       }}
     >
-      <a
-        onClick={() => {
-          SetMenuState(0);
-          setIsOpen(false);
-        }}
-        className="About KGA"
-        style={{ cursor: "pointer" }}
-      >
+      <Link to="/aboutKGA" className="About KGA" style={{ cursor: "pointer" }}>
         about KGA
-      </a>
-      <a
-        onClick={() => {
-          SetMenuState(1);
-          setIsOpen(false);
-        }}
+      </Link>
+      <Link
+        to="/courseIntro"
         className="CourseIntro"
         style={{ cursor: "pointer" }}
       >
         코스 소개
-      </a>
-      <a
-        onClick={() => {
-          SetMenuState(2);
-          setIsOpen(false);
-        }}
+      </Link>
+      <Link
+        to="/courseReview"
         className="CourseReview"
         style={{ cursor: "pointer" }}
       >
         수강 후기
-      </a>
-      <a
-        onClick={() => {
-          SetMenuState(3);
-          setIsOpen(false);
-        }}
-        className="QNA"
-        style={{ cursor: "pointer" }}
-      >
+      </Link>
+      <Link to="/qna" className="QNA" style={{ cursor: "pointer" }}>
         Q{`&`}A
-      </a>
-      <a
-        onClick={() => {
-          SetMenuState(4);
-          setIsOpen(false);
-        }}
-        // href="https://forms.gle/Xj9q3QqjQs1qWy2D7"
+      </Link>
+      <Link
+        to="/apply"
+        // href="https://forms.gle/Xj9q3QqjQs1qWy2D7" // 자체 지원하기 제작 전 구글설문양식
         className="Apply"
         style={{ cursor: "pointer" }}
-        target="_blank"
       >
         지원하기
-      </a>
+      </Link>
     </Menu>
   );
 };

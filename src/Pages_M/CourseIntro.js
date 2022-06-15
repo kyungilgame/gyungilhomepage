@@ -7,6 +7,8 @@ import backImage_planing from "../Image/backImage_planing.png";
 import backImage_programing from "../Image/backImage_programing.png";
 import backImage_VRAR from "../Image/backImage_VRAR.png";
 import backImage_WEB from "../Image/backImage_WEB.png";
+import Footer from "../Component_M/Footer";
+import Header from "../Component_M/Header";
 
 const ContentsBoxOneContainer = styled.div`
   width: 100%;
@@ -111,6 +113,7 @@ const ApplyButton = styled.button`
 const CourseIntro = () => {
   return (
     <>
+      <Header />
       <ContentsBoxOneContainer></ContentsBoxOneContainer>
       <ContentsBoxTwoContainer>
         <TextSizeOne>KGA SYSTEM</TextSizeOne>
@@ -400,6 +403,7 @@ const CourseIntro = () => {
           </ApplyButton>
         </CourseWrapper>
       </ContentsBoxThreeContainer>
+      <Footer />
     </>
   );
 };

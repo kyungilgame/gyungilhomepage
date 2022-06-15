@@ -22,7 +22,10 @@ function App() {
 
   useEffect(() => {
     if (window.Kakao.isInitialized()) return;
+    // 배포용 앱 키
     window.Kakao.init("563910ae104ce06efb0b9f2b38f14cf7");
+    // 테스트용 앱 키
+    // window.Kakao.init("5960cf0fe2bc66f118d89845ea92c444");
   }, []);
   return (
     <div
@@ -35,14 +38,14 @@ function App() {
           menuState={menuState}
           SetMenuState={SetMenuState}
           SetIsLoading={SetIsLoading}
-        ></DesktopContainer>
+        />
       </Desktop>
       <Mobile>
         <MobileContainer
           menuState={menuState}
           SetMenuState={SetMenuState}
           SetIsLoading={SetIsLoading}
-        ></MobileContainer>
+        />
       </Mobile>
     </div>
   );

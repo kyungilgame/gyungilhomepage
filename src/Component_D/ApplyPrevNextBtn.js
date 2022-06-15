@@ -4,16 +4,15 @@ import styles from "./ApplyPrevNextBtn.module.css";
 
 import { API, graphqlOperation } from "aws-amplify";
 import { createUser, updateUser, deleteUser } from "../graphql/mutations";
+import { useNavigate } from "react-router-dom";
 
 const ApplyPrevNextBtn = ({
   SetIsLoading,
   applyStep,
   setApplyStep,
-  data,
   surveyData,
   consent,
   device,
-  SetMenuState,
   course,
   name,
   phone,
@@ -23,8 +22,8 @@ const ApplyPrevNextBtn = ({
   address,
   detailedAddress,
 }) => {
+  let navigate = useNavigate();
   const [isDataFilled, setIsDataFilled] = useState(false);
-  const [IsWaiting, setIsWaiting] = useState(false);
 
   useEffect(() => {
     if (name && phone && (kakaoEmail || email) && birth && address) {
@@ -53,8 +52,21 @@ const ApplyPrevNextBtn = ({
 
   // 사용자 정보 DB에 저장
   const submit = async () => {
+    if (
+      surveyData.length != 5 &&
+      course &&
+      name &&
+      phone &&
+      email &&
+      kakaoEmail &&
+      birth &&
+      address &&
+      detailedAddress
+    ) {
+      alert("잘못된 정보입니다");
+      return;
+    }
     SetIsLoading(true);
-
     await API.graphql(
       graphqlOperation(createUser, {
         input: {
@@ -76,9 +88,7 @@ const ApplyPrevNextBtn = ({
     ).then((res) => {
       console.log(res);
       SetIsLoading(false);
-      alert("지원이 완료되었습니다.");
-      SetMenuState(5);
-      window.scrollTo(0, 0);
+      navigate("success", { state: { device: device } });
     });
   };
 

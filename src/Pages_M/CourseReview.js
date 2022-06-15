@@ -11,6 +11,8 @@ import ArrowDown from "../Image/ArrowDown.png";
 import ArrowUp from "../Image/ArrowUp.png";
 
 import CompanysLogos from "../Image/CompanysLogos.png";
+import Footer from "../Component_M/Footer";
+import Header from "../Component_M/Header";
 
 const ContentsBoxOneContainer = styled.div`
   width: 100%;
@@ -195,6 +197,7 @@ const CourseReview = () => {
 
   return (
     <>
+      <Header />
       <ContentsBoxOneContainer></ContentsBoxOneContainer>
       <ContentsBoxTwoContainer>
         <VideoPlayWrapper>
@@ -346,6 +349,7 @@ const CourseReview = () => {
         </div>
         <ReviewCarousel ReviewSelect={ReviewSelect}></ReviewCarousel>
       </ContentsBoxSixContainer>
+      <Footer />
     </>
   );
 };

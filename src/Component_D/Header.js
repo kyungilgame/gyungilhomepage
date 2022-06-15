@@ -4,6 +4,7 @@ import React from "react";
 
 import HeaderLogo from "../Image/HeaderLogo.png";
 import gyunilWhite from "../Image/gyungilWhite.png";
+import { Link } from "react-router-dom";
 
 const HeaderContainer = styled.div`
   width: 95%;
@@ -34,14 +35,20 @@ const MenuWrapper = styled.div`
   align-items: center;
 `;
 
-const Header = ({ menuState, SetMenuState }) => {
+const Header = ({ currentPage }) => {
   const MenuText = styled.div`
     font-family: "SEBANG-Gothic-Regular";
     font-size: 16px;
     cursor: pointer;
-    ${({ menuState }) => {
-      return menuState === 5 ? `color: #f6f6f6;` : `color: #101010;`;
-    }}
+
+    a:focus,
+    a:hover,
+    a:visited,
+    a:link,
+    a:active {
+      text-decoration: none;
+      color: ${currentPage === "main" ? "#f6f6f6" : "#101010"};
+    }
   `;
 
   const LogoWrapper = styled.div`
@@ -55,73 +62,43 @@ const Header = ({ menuState, SetMenuState }) => {
       return Image ? `background-image: url(${Image})` : null;
     }}
   `;
+
   return (
     <HeaderContainer>
-      {menuState === 5 ? (
-        <LogoWrapper
-          Image={gyunilWhite}
-          onClick={() => {
-            SetMenuState(5);
-          }}
-        ></LogoWrapper>
+      {currentPage === "main" ? (
+        <Link to="/">
+          <LogoWrapper Image={gyunilWhite}></LogoWrapper>
+        </Link>
       ) : (
-        <LogoWrapper
-          Image={HeaderLogo}
-          onClick={() => {
-            SetMenuState(5);
-          }}
-        ></LogoWrapper>
+        <Link to="/">
+          <LogoWrapper Image={HeaderLogo}></LogoWrapper>
+        </Link>
       )}
 
       <ContentWrapper>
         <MenuWrapper>
-          <MenuText
-            onClick={() => {
-              SetMenuState(0);
-            }}
-            menuState={menuState}
-          >
-            about KGA
+          <MenuText>
+            <Link to="/aboutKGA">about KGA</Link>
           </MenuText>
         </MenuWrapper>
         <MenuWrapper>
-          <MenuText
-            onClick={() => {
-              SetMenuState(1);
-            }}
-            menuState={menuState}
-          >
-            코스 소개
+          <MenuText>
+            <Link to="/courseIntro">코스 소개</Link>
           </MenuText>
         </MenuWrapper>
         <MenuWrapper>
-          <MenuText
-            onClick={() => {
-              SetMenuState(2);
-            }}
-            menuState={menuState}
-          >
-            수강 후기
+          <MenuText>
+            <Link to="/courseReview">수강 후기</Link>
           </MenuText>
         </MenuWrapper>
         <MenuWrapper>
-          <MenuText
-            onClick={() => {
-              SetMenuState(3);
-            }}
-            menuState={menuState}
-          >
-            Q{"&"}A
+          <MenuText>
+            <Link to="/qna">Q{"&"}A</Link>
           </MenuText>
         </MenuWrapper>
         <MenuWrapper>
-          <MenuText
-            onClick={() => {
-              SetMenuState(4);
-            }}
-            menuState={menuState}
-          >
-            지원하기
+          <MenuText>
+            <Link to="/apply">지원하기</Link>
           </MenuText>
         </MenuWrapper>
       </ContentWrapper>

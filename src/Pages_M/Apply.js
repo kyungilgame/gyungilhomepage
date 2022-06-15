@@ -10,6 +10,8 @@ import ApplyAddress from "../Component_D/ApplyAddress";
 import ApplyPrevNextBtn from "../Component_D/ApplyPrevNextBtn";
 import ApplySurvey from "../Component_D/ApplySurvey";
 import ApplyPrivacyConsent from "../Component_D/ApplyPrivacyConsent";
+import Header from "../Component_M/Header";
+import Footer from "../Component_M/Footer";
 
 const ContentsBoxOneContainer = styled.div`
   width: 100%;
@@ -128,131 +130,143 @@ const Apply = ({ SetMenuState, SetIsLoading }) => {
   }, [surveyData]);
 
   return (
-    <div
-      style={{
-        padding: "7vw",
-        width: "100vw",
-        marginTop: "15vw",
-        marginBottom: "3vw",
-        minHeight: "70vh",
-        position: "relative",
-        fontFamily: "NanumGothic",
-      }}
-    >
-      {applyStep == 1 && (
-        <ApplyLogin
-          kakaoEmail={kakaoEmail}
-          setKakaoEmail={setKakaoEmail}
-          applyStep={applyStep}
-          setApplyStep={setApplyStep}
-        />
-      )}
-
-      {applyStep == 2 && (
-        <DesiredCourse
-          course={course}
-          setCourse={setCourse}
-          applyStep={applyStep}
-          setApplyStep={setApplyStep}
-        />
-      )}
-
-      {applyStep == 3 && (
-        <>
-          <TextSizeOne>
-            {course == "모르겠어요" ? null : `${course} 과정`} 지원하기
-          </TextSizeOne>
-          <ApplyBoxWrapper>
-            <TextSizeTwo>이름</TextSizeTwo>
-            <input
-              type="text"
-              autoFocus="autofocus"
-              defaultValue={name}
-              onChange={(e) => setName(e.target.value)}
-              style={{
-                width: "30vw",
-              }}
-            />
-            <TextSizeTwo>연락처</TextSizeTwo>
-            <ApplyPhoneNum phone={phone} setPhone={setPhone} device={device} />
-
-            {kakaoEmail ? null : (
-              <>
-                <TextSizeTwo>이메일</TextSizeTwo>
-                <ApplyEmail email={email} setEmail={setEmail} device={device} />
-              </>
-            )}
-
-            <TextSizeTwo>생년월일</TextSizeTwo>
-            <ApplyBirthSelector
-              birth={birth}
-              setBirth={setBirth}
-              device={device}
-            />
-
-            <TextSizeTwo>주소</TextSizeTwo>
-            <ApplyAddress
-              address={address}
-              setAddress={setAddress}
-              detailedAddress={detailedAddress}
-              setDetailedAddress={setDetailedAddress}
-              device={device}
-            />
-          </ApplyBoxWrapper>
-
-          <ApplyPrevNextBtn
-            name={name}
-            phone={phone}
-            email={email}
+    <>
+      <Header />
+      <div
+        style={{
+          padding: "7vw",
+          width: "100vw",
+          marginTop: "15vw",
+          marginBottom: "3vw",
+          minHeight: "70vh",
+          position: "relative",
+          fontFamily: "NanumGothic",
+        }}
+      >
+        {applyStep == 1 && (
+          <ApplyLogin
             kakaoEmail={kakaoEmail}
-            birth={birth}
-            address={address}
+            setKakaoEmail={setKakaoEmail}
             applyStep={applyStep}
             setApplyStep={setApplyStep}
-            device={device}
           />
-        </>
-      )}
+        )}
 
-      {applyStep == 4 && (
-        <>
-          <ApplySurvey
-            surveyData={surveyData}
-            setSurveyData={setSurveyData}
-            device={device}
-          />
-          <ApplyPrevNextBtn
-            applyStep={applyStep}
-            setApplyStep={setApplyStep}
-            surveyData={surveyData}
-            device={device}
-          />
-        </>
-      )}
-
-      {applyStep == 5 && (
-        <>
-          <ApplyPrivacyConsent setConsent={setConsent} />
-          <ApplyPrevNextBtn
+        {applyStep == 2 && (
+          <DesiredCourse
             course={course}
-            name={name}
-            phone={phone}
-            email={email}
-            kakaoEmail={kakaoEmail}
-            birth={birth}
-            address={address}
-            detailedAddress={detailedAddress}
-            surveyData={surveyData}
+            setCourse={setCourse}
             applyStep={applyStep}
             setApplyStep={setApplyStep}
-            consent={consent}
-            SetMenuState={SetMenuState}
-            SetIsLoading={SetIsLoading}
-            device={device}
           />
-        </>
-      )}
-    </div>
+        )}
+
+        {applyStep == 3 && (
+          <>
+            <TextSizeOne>
+              {course == "모르겠어요" ? null : `${course} 과정`} 지원하기
+            </TextSizeOne>
+            <ApplyBoxWrapper>
+              <TextSizeTwo>이름</TextSizeTwo>
+              <input
+                type="text"
+                autoFocus="autofocus"
+                defaultValue={name}
+                onChange={(e) => setName(e.target.value)}
+                style={{
+                  width: "30vw",
+                }}
+              />
+              <TextSizeTwo>연락처</TextSizeTwo>
+              <ApplyPhoneNum
+                phone={phone}
+                setPhone={setPhone}
+                device={device}
+              />
+
+              {kakaoEmail ? null : (
+                <>
+                  <TextSizeTwo>이메일</TextSizeTwo>
+                  <ApplyEmail
+                    email={email}
+                    setEmail={setEmail}
+                    device={device}
+                  />
+                </>
+              )}
+
+              <TextSizeTwo>생년월일</TextSizeTwo>
+              <ApplyBirthSelector
+                birth={birth}
+                setBirth={setBirth}
+                device={device}
+              />
+
+              <TextSizeTwo>주소</TextSizeTwo>
+              <ApplyAddress
+                address={address}
+                setAddress={setAddress}
+                detailedAddress={detailedAddress}
+                setDetailedAddress={setDetailedAddress}
+                device={device}
+              />
+            </ApplyBoxWrapper>
+
+            <ApplyPrevNextBtn
+              name={name}
+              phone={phone}
+              email={email}
+              kakaoEmail={kakaoEmail}
+              birth={birth}
+              address={address}
+              applyStep={applyStep}
+              setApplyStep={setApplyStep}
+              device={device}
+            />
+          </>
+        )}
+
+        {applyStep == 4 && (
+          <>
+            <ApplySurvey
+              surveyData={surveyData}
+              setSurveyData={setSurveyData}
+              device={device}
+            />
+            <ApplyPrevNextBtn
+              applyStep={applyStep}
+              setApplyStep={setApplyStep}
+              surveyData={surveyData}
+              device={device}
+            />
+          </>
+        )}
+
+        {applyStep == 5 && (
+          <>
+            <ApplyPrivacyConsent setConsent={setConsent} />
+            <ApplyPrevNextBtn
+              course={course}
+              name={name}
+              phone={phone}
+              email={email}
+              kakaoEmail={kakaoEmail}
+              birth={birth}
+              address={address}
+              detailedAddress={detailedAddress}
+              surveyData={surveyData}
+              applyStep={applyStep}
+              setApplyStep={setApplyStep}
+              consent={consent}
+              SetMenuState={SetMenuState}
+              SetIsLoading={SetIsLoading}
+              device={device}
+            />
+          </>
+        )}
+      </div>
+      <Footer />
+    </>
   );
 };
 

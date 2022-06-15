@@ -1,9 +1,8 @@
 import React from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import styled from "styled-components";
 import "../Styles/css/App.css";
 
-import Header from "../Component_M/Header";
-import Footer from "../Component_M/Footer";
 import BottomCTABar from "../Component_M/BottomCTABar";
 
 import Main from "../Pages_M/Main";
@@ -12,12 +11,11 @@ import CourseIntro from "../Pages_M/CourseIntro";
 import CourseReview from "../Pages_M/CourseReview";
 import QA from "../Pages_M/QA";
 import Apply from "../Pages_M/Apply";
+import ApplySuccess from "../Pages_D/ApplySuccess";
 
 import LinkMobileArt from "../Image/LinkMobileArt.png";
 import LinkMobileGame from "../Image/LinkMobileGame.png";
 import LinkMobilePhone from "../Image/LinkMobilePhone.png";
-
-import BackVideo from "../Function/BackVideo";
 
 const AppContainer = styled.div`
   &,
@@ -73,25 +71,37 @@ const LinkBoxThree = styled.button`
 `;
 
 function MobileContainer({ menuState, SetMenuState, SetIsLoading }) {
-  const pagesObj = {
-    0: <AboutKGA></AboutKGA>,
-    1: <CourseIntro></CourseIntro>,
-    2: <CourseReview></CourseReview>,
-    3: <QA></QA>,
-    4: (
-      <Apply
-        menuState={menuState}
-        SetMenuState={SetMenuState}
-        SetIsLoading={SetIsLoading}
-      ></Apply>
-    ),
-    5: <Main menuState={menuState} SetMenuState={SetMenuState}></Main>,
-  };
+  // 기존에 페이지 라우터 사용 전 코드
+  // const pagesObj = {
+  //   0: <AboutKGA></AboutKGA>,
+  //   1: <CourseIntro></CourseIntro>,
+  //   2: <CourseReview></CourseReview>,
+  //   3: <QA></QA>,
+  //   4: (
+  //     <Apply
+  //       menuState={menuState}
+  //       SetMenuState={SetMenuState}
+  //       SetIsLoading={SetIsLoading}
+  //     ></Apply>
+  //   ),
+  //   5: <Main menuState={menuState} SetMenuState={SetMenuState}></Main>,
+  // };
   return (
     <AppContainer>
-      <Header menuState={menuState} SetMenuState={SetMenuState}></Header>
-      {menuState === 5 ? <BackVideo /> : null}
-      {pagesObj[menuState]}
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Main menuState={menuState} />} />
+          <Route path="/aboutKGA" element={<AboutKGA />} />
+          <Route path="/courseIntro" element={<CourseIntro />} />
+          <Route path="/courseReview" element={<CourseReview />} />
+          <Route
+            path="/apply"
+            element={<Apply SetIsLoading={SetIsLoading} />}
+          />
+          <Route path="/apply/success" element={<ApplySuccess />} />
+          <Route path="/qna" element={<QA />} />
+        </Routes>
+      </BrowserRouter>
       <BottomCTABar></BottomCTABar>
       <LinkBoxOne as={"a"} href={"tel:02-479-4050"}></LinkBoxOne>
       <LinkBoxTwo as={"a"} href={"https://www.kyungilart.com/"}></LinkBoxTwo>
@@ -99,7 +109,6 @@ function MobileContainer({ menuState, SetMenuState, SetIsLoading }) {
         as={"a"}
         href={"https://www.kgaprogamer.com/"}
       ></LinkBoxThree>
-      <Footer menuState={menuState} SetMenuState={SetMenuState}></Footer>
     </AppContainer>
   );
 }

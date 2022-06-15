@@ -1,9 +1,7 @@
 import React, { useState, useEffect } from "react";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import styled from "styled-components";
 import "../Styles/css/App.css";
-
-import Header from "../Component_D/Header";
-import Footer from "../Component_D/Footer";
 
 import AboutKGA from "../Pages_D/AboutKGA";
 import CourseIntro from "../Pages_D/CourseIntro";
@@ -11,13 +9,11 @@ import CourseReview from "../Pages_D/CourseReview";
 import Main from "../Pages_D/Main";
 import QA from "../Pages_D/QA";
 import Apply from "../Pages_D/Apply";
+import ApplySuccess from "../Pages_D/ApplySuccess";
 import BottomCTABar from "../Component_D/BottomCTABar";
-
 import LinkArtclass from "../Image/LinkArtclass.png";
 import LinkPhoneCall from "../Image/LinkPhoneCall.png";
 import LinkProgamer from "../Image/LinkProgamer.png";
-
-import BackVideo from "../Function/BackVideo";
 
 const AppContainer = styled.div`
   &,
@@ -93,27 +89,39 @@ function DesktopContainer({ menuState, SetMenuState, SetIsLoading }) {
     scroll < 500 ? setCTAAtive(false) : setCTAAtive(true);
   }, [scroll]);
 
-  const pagesObj = {
-    0: <AboutKGA></AboutKGA>,
-    1: <CourseIntro></CourseIntro>,
-    2: <CourseReview></CourseReview>,
-    3: <QA></QA>,
-    4: (
-      <Apply
-        menuState={menuState}
-        SetMenuState={SetMenuState}
-        SetIsLoading={SetIsLoading}
-      ></Apply>
-    ),
-    5: <Main menuState={menuState} SetMenuState={SetMenuState}></Main>,
-  };
+  // 기존에 페이지 라우터 사용 전 코드
+  // const pagesObj = {
+  //   0: <AboutKGA></AboutKGA>,
+  //   1: <CourseIntro></CourseIntro>,
+  //   2: <CourseReview></CourseReview>,
+  //   3: <QA></QA>,
+  //   4: (
+  //     <Apply
+  //       menuState={menuState}
+  //       SetMenuState={SetMenuState}
+  //       SetIsLoading={SetIsLoading}
+  //     ></Apply>
+  //   ),
+  //   5: <Main menuState={menuState} SetMenuState={SetMenuState}></Main>,
+  // };
 
   return (
     <AppContainer>
-      <Header menuState={menuState} SetMenuState={SetMenuState}></Header>
-      {menuState === 5 ? <BackVideo /> : null}
-      {pagesObj[menuState]}
-      <BottomCTABar></BottomCTABar>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Main menuState={menuState} />} />
+          <Route path="/aboutKGA" element={<AboutKGA />} />
+          <Route path="/courseIntro" element={<CourseIntro />} />
+          <Route path="/courseReview" element={<CourseReview />} />
+          <Route
+            path="/apply"
+            element={<Apply SetIsLoading={SetIsLoading} />}
+          />
+          <Route path="/apply/success" element={<ApplySuccess />} />
+          <Route path="/qna" element={<QA />} />
+        </Routes>
+      </BrowserRouter>
+      <BottomCTABar />
       {CTAAtive === true ? (
         <>
           <LinkBoxOne
@@ -132,8 +140,6 @@ function DesktopContainer({ menuState, SetMenuState, SetIsLoading }) {
       ) : (
         <></>
       )}
-
-      <Footer menuState={menuState} SetMenuState={SetMenuState}></Footer>
     </AppContainer>
   );
 }

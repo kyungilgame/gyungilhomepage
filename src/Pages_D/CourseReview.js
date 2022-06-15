@@ -8,6 +8,8 @@ import VideoCarousel from "../Function/VideoCarousel";
 import ReviewCarousel from "../Function/ReviewCarousel";
 
 import CompanysLogos from "../Image/CompanysLogos.png";
+import Header from "../Component_D/Header";
+import Footer from "../Component_D/Footer";
 
 const ContentsBoxOneContainer = styled.div`
   width: 100%;
@@ -152,6 +154,7 @@ const CourseReview = () => {
 
   return (
     <>
+      <Header />
       <ContentsBoxOneContainer></ContentsBoxOneContainer>
       <ContentsBoxTwoContainer>
         <VideoPlayWrapper>
@@ -249,6 +252,7 @@ const CourseReview = () => {
         </div>
         <ReviewCarousel ReviewSelect={ReviewSelect}></ReviewCarousel>
       </ContentsBoxSixContainer>
+      <Footer />
     </>
   );
 };

@@ -13,6 +13,9 @@ import Parkbyungjun from "../Image/Empoloee/Parkbyungjun.png";
 import Seohyeokjun from "../Image/Empoloee/Seohyeokjun.png";
 import YangHyunseok from "../Image/Empoloee/YangHyunseok.png";
 
+import Header from "../Component_D/Header";
+import Footer from "../Component_D/Footer";
+
 //https://github.com/farbenmeer/react-spring-slider
 
 const ContentsBoxOneContainer = styled.div`
@@ -147,6 +150,7 @@ const IntroduceBoxImage = styled.div`
 const AboutKGA = () => {
   return (
     <>
+      <Header />
       <ContentsBoxOneContainer></ContentsBoxOneContainer>
       <ContentsBoxTwoContainer>
         <TextSizeOne>about KGA</TextSizeOne>
@@ -312,6 +316,7 @@ const AboutKGA = () => {
           }}
         ></div>
       </ContentsBoxFiveContainer>
+      <Footer />
     </>
   );
 };

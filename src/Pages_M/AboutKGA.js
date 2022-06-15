@@ -20,6 +20,8 @@ import Leechanghee from "../Image/Empoloee/Leechanghee.png";
 import Limyonggyu from "../Image/Empoloee/Limyonggyu.png";
 import Ohjunhwan from "../Image/Empoloee/Ohjunhwan.png";
 import Songjaeoh from "../Image/Empoloee/Songjaeoh.png";
+import Header from "../Component_M/Header";
+import Footer from "../Component_M/Footer";
 
 //https://github.com/farbenmeer/react-spring-slider
 
@@ -96,6 +98,7 @@ const TextSizeSeven = styled.div`
 const AboutKGA = () => {
   return (
     <>
+      <Header />
       <ContentsBoxOneContainer></ContentsBoxOneContainer>
       <ContentsBoxTwoContainer>
         <TextSizeOne>about KGA</TextSizeOne>
@@ -138,6 +141,7 @@ const AboutKGA = () => {
         <TextSizeSeven>KGA Teammates</TextSizeSeven>
         <AboutKGACarousel_M first={false}></AboutKGACarousel_M>
       </ContentsBoxFourContainer>
+      <Footer />
     </>
   );
 };

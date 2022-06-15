@@ -9,6 +9,9 @@ import RecrutingLabel from "../Image/RecrutingLabel.png";
 import MapImage from "../Function/Map";
 
 import ReactPlayer from "react-player/youtube";
+import Header from "../Component_M/Header";
+import Footer from "../Component_M/Footer";
+import BackVideo from "../Function/BackVideo";
 
 const ContentsBoxOneContainer = styled.div`
   width: 100%;
@@ -311,8 +314,12 @@ const ImageWrapperTwo = styled.img`
 `;
 
 const Main = ({ menuState, SetMenuState }) => {
+  const currentPage = "main";
+
   return (
     <>
+      <Header currentPage={currentPage} />
+      <BackVideo />
       <ContentsBoxOneContainer></ContentsBoxOneContainer>
       <ContentsBoxTwoContainer>
         {/* <TextSizeFour>처음인 당신도 시작할 수 있게</TextSizeFour> */}
@@ -690,6 +697,7 @@ const Main = ({ menuState, SetMenuState }) => {
           >{`>`}</text>
         </ApplyBlackButton>
       </ContentsBoxNineContainer>
+      <Footer menuState={menuState} SetMenuState={SetMenuState}></Footer>
     </>
   );
 };

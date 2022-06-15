@@ -4,14 +4,7 @@ import styles from "./ApplyLogin.module.css";
 import gyungilBlack from "../Image/gyungilBlack.png";
 import kakaoTalkLogo from "../Image/kakao-talk.svg";
 
-const ApplyLogin = ({
-  kakaoEmail,
-  setKakaoEmail,
-  data,
-  setData,
-  applyStep,
-  setApplyStep,
-}) => {
+const ApplyLogin = ({ setKakaoEmail, setApplyStep }) => {
   function kakaoLogin() {
     window.Kakao.Auth.login({
       scope: "account_email",
@@ -20,10 +13,6 @@ const ApplyLogin = ({
         window.Kakao.API.request({
           url: "/v2/user/me",
           success: (res) => {
-            // setData({
-            //   ...data,
-            //   kakaoEmail: res.kakao_account.email,
-            // });
             setKakaoEmail(res.kakao_account.email);
             setApplyStep(2);
           },
@@ -35,7 +24,6 @@ const ApplyLogin = ({
   return (
     <>
       <div className={`${styles["container"]}`}>
-        {/* <div>당신의 꿈과 함께하는</div> */}
         <div>
           <img src={gyungilBlack} alt="(KGA-Logo)" />
         </div>
