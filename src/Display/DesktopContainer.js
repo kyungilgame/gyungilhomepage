@@ -71,6 +71,7 @@ const LinkBoxThree = styled.button`
 
 function DesktopContainer({ menuState, SetMenuState, SetIsLoading }) {
   const [CTAAtive, setCTAAtive] = useState(true);
+  const [isApplying, setIsApplying] = useState(false);
 
   // 기존 스크롤 감지하던 코드
   const [scroll, setScroll] = useState(0);
@@ -118,7 +119,12 @@ function DesktopContainer({ menuState, SetMenuState, SetIsLoading }) {
           <Route path="/courseReview" element={<CourseReview />} />
           <Route
             path="/apply"
-            element={<Apply SetIsLoading={SetIsLoading} />}
+            element={
+              <Apply
+                SetIsLoading={SetIsLoading}
+                setIsApplying={setIsApplying}
+              />
+            }
           />
           <Route path="/apply/success" element={<ApplySuccess />} />
           <Route path="/qna" element={<QA />} />
@@ -126,7 +132,7 @@ function DesktopContainer({ menuState, SetMenuState, SetIsLoading }) {
           <Route path="/*" element={<NotFound />} />
         </Routes>
       </HashRouter>
-      <BottomCTABar />
+      <BottomCTABar isApplying={isApplying} />
       {CTAAtive === true ? (
         <>
           <LinkBoxOne

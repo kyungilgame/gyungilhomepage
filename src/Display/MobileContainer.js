@@ -17,6 +17,7 @@ import LinkMobileArt from "../Image/LinkMobileArt.png";
 import LinkMobileGame from "../Image/LinkMobileGame.png";
 import LinkMobilePhone from "../Image/LinkMobilePhone.png";
 import NotFound from "../Pages_D/NotFound";
+import { useState } from "react";
 
 const AppContainer = styled.div`
   &,
@@ -73,6 +74,8 @@ const LinkBoxThree = styled.button`
 
 function MobileContainer({ menuState, SetMenuState, SetIsLoading }) {
   const device = "mobile";
+  const [isApplying, setIsApplying] = useState(false);
+
   // 기존에 페이지 라우터 사용 전 코드
   // const pagesObj = {
   //   0: <AboutKGA></AboutKGA>,
@@ -98,7 +101,12 @@ function MobileContainer({ menuState, SetMenuState, SetIsLoading }) {
           <Route path="/courseReview" element={<CourseReview />} />
           <Route
             path="/apply"
-            element={<Apply SetIsLoading={SetIsLoading} />}
+            element={
+              <Apply
+                SetIsLoading={SetIsLoading}
+                setIsApplying={setIsApplying}
+              />
+            }
           />
           <Route path="/apply/success" element={<ApplySuccess />} />
           <Route path="/qna" element={<QA />} />
@@ -106,7 +114,7 @@ function MobileContainer({ menuState, SetMenuState, SetIsLoading }) {
           <Route path="/*" element={<NotFound device={device} />} />
         </Routes>
       </HashRouter>
-      <BottomCTABar></BottomCTABar>
+      <BottomCTABar isApplying={isApplying} />
       <LinkBoxOne as={"a"} href={"tel:02-479-4050"}></LinkBoxOne>
       <LinkBoxTwo as={"a"} href={"https://www.kyungilart.com/"}></LinkBoxTwo>
       <LinkBoxThree

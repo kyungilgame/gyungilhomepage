@@ -84,7 +84,7 @@ const ImageContainer = styled.div`
   background-repeat: no-repeat;
 `;
 
-const BottomCTABar = () => {
+const BottomCTABar = ({ isApplying }) => {
   const [CTAAtive, setCTAAtive] = useState(true);
 
   const [closeButtonActive, setCloseButtonActive] = useState(false);
@@ -108,7 +108,7 @@ const BottomCTABar = () => {
   }, [scroll]);
 
   // CTA 버튼 화면 최상단에서는 없애기
-  return CTAAtive === true && closeButtonActive === false ? (
+  return !isApplying && CTAAtive === true && closeButtonActive === false ? (
     <ContentsOneContainer>
       <div
         style={{

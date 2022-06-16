@@ -102,7 +102,7 @@ const ApplyBlackButton = styled.button`
   cursor: pointer;
 `;
 
-const Apply = ({ SetMenuState, SetIsLoading }) => {
+const Apply = ({ SetMenuState, SetIsLoading, setIsApplying }) => {
   const device = "mobile";
   const [applyStep, setApplyStep] = useState(1);
 
@@ -131,6 +131,13 @@ const Apply = ({ SetMenuState, SetIsLoading }) => {
   useEffect(() => {
     console.log(surveyData);
   }, [surveyData]);
+
+  useEffect(() => {
+    setIsApplying(true);
+    return () => {
+      setIsApplying(false);
+    };
+  }, []);
 
   return (
     <>

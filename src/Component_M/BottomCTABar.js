@@ -95,9 +95,9 @@ const sec = Math.floor((gap % (1000 * 60)) / 1000);
 
 const countDate = { days: day, hours: hour, minutes: min, seconds: sec };
 
-const BottomCTABar = () => {
+const BottomCTABar = ({ isApplying }) => {
   const [CTAAtive, setCTAAtive] = useState(true);
-  return CTAAtive === true ? (
+  return !isApplying && CTAAtive === true ? (
     <ContentsOneContainer>
       <div
         style={{

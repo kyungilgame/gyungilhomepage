@@ -101,7 +101,7 @@ const ApplyBlackButton = styled.button`
   cursor: pointer;
 `;
 
-const Apply = ({ SetMenuState, SetIsLoading }) => {
+const Apply = ({ SetMenuState, SetIsLoading, setIsApplying }) => {
   const ApplyContentsContainer = styled.div`
     padding: 5vw;
     width: 63vw;
@@ -140,6 +140,13 @@ const Apply = ({ SetMenuState, SetIsLoading }) => {
   useEffect(() => {
     console.log(surveyData);
   }, [surveyData]);
+
+  useEffect(() => {
+    setIsApplying(true);
+    return () => {
+      setIsApplying(false);
+    };
+  }, []);
 
   return (
     <>
