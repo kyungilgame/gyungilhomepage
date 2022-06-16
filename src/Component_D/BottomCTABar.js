@@ -160,7 +160,13 @@ const BottomCTABar = () => {
           alignItems: "center",
         }}
       >
-        <ApplyButton as={"a"} href={"https://forms.gle/j846cmmRtftkoXge7"}>
+        <ApplyButton
+          as={"a"}
+          href={"/#/apply"}
+          onClick={() => {
+            window.scrollTo(0, 0);
+          }}
+        >
           <FourthLine>수강신청 {`\u00A0 >`}</FourthLine>
         </ApplyButton>
       </div>
