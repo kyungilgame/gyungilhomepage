@@ -203,7 +203,7 @@ const CourseIntro = () => {
                 게임 프로그래머 커리어를 바로 시작할 수 있는 부트캠프
               </TextSizeFive>
             </div>
-            <ApplyButton as={"a"} href={"/"}>
+            <ApplyButton as={"a"} href={"https://kgaprogramming.oopy.io/"}>
               바로가기
             </ApplyButton>
           </CourseWrapper>
@@ -243,7 +243,7 @@ const CourseIntro = () => {
                 게임 기획자 지망생이 반드시 거쳐야 할 코스
               </TextSizeFive>
             </div>
-            <ApplyButton as={"a"} href={"/"}>
+            <ApplyButton as={"a"} href={"https://kgadesign.oopy.io/"}>
               바로가기
             </ApplyButton>
           </CourseWrapper>
