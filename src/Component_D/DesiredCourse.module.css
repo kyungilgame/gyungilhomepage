@@ -1,5 +1,8 @@
 .notice {
   color: #101010;
+  margin: 0 auto;
+  max-width: 400px;
+  font-size: 14px;
 }
 
 .course-list {
@@ -7,27 +10,31 @@
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
+  align-items: center;
   gap: 2vw;
 }
 
 .course-button,
 .course-unknown_button {
   letter-spacing: 5px;
-  min-width: 120px;
+  width: 20vw;
+  min-width: 250px;
   min-height: 40px;
+  max-width: 300px;
   font-family: "NanumGothicExtraBold";
   font-size: 20px;
 }
 
 .course-description_list {
-  padding-left: 10px;
+  width: 180px;
+  margin: 30px auto 10px;
+  gap: 10px;
   display: flex;
   flex-direction: column;
 }
 
-.course-description_list {
-  margin: 10px 0;
-  gap: 10px;
+.course-description_list a {
+  width: 180px;
 }
 .course-description_list text:hover {
   text-decoration: underline;

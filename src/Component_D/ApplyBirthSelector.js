@@ -19,18 +19,6 @@ const ApplyBirthSelector = ({ birth, setBirth, data, setData, device }) => {
     dayData.push(i);
   }
 
-  // 생년월일 각 값들 담기
-  const getBirth = (e) => {
-    console.log(e.target.value);
-    if (e.target.name == "year") {
-      setTempYear(e.target.value);
-    } else if (e.target.name == "month") {
-      setTempMonth(e.target.value);
-    } else if (e.target.name == "day") {
-      setTempDay(e.target.value);
-    }
-  };
-
   // 생년월일 값 합쳐주기
   useEffect(() => {
     const tempBirth = tempYear + tempMonth + tempDay;
@@ -45,7 +33,7 @@ const ApplyBirthSelector = ({ birth, setBirth, data, setData, device }) => {
     <div
       className={`${styles["birth-box"]}`}
       style={{
-        minWidth: `${device == "mobile" ? "70%" : ""}`,
+        minWidth: `${device == "mobile" ? "70%" : "100%"}`,
       }}
     >
       <input
@@ -57,7 +45,7 @@ const ApplyBirthSelector = ({ birth, setBirth, data, setData, device }) => {
         maxLength="4"
         defaultValue={tempYear}
         style={{
-          width: `${device == "mobile" ? "18vw" : "7vw"}`,
+          width: `${device == "mobile" ? "18vw" : "30%"}`,
         }}
       />
       년
@@ -68,7 +56,7 @@ const ApplyBirthSelector = ({ birth, setBirth, data, setData, device }) => {
         name="month"
         defaultValue={tempMonth}
         style={{
-          width: "10vw",
+          width: "30%",
         }}
       >
         <option></option>
@@ -90,7 +78,7 @@ const ApplyBirthSelector = ({ birth, setBirth, data, setData, device }) => {
         name="day"
         defaultValue={tempDay}
         style={{
-          width: "10vw",
+          width: "30%",
         }}
       >
         <option></option>

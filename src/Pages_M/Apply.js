@@ -54,6 +54,7 @@ const TextSizeTwo = styled.div`
 const ApplyBoxWrapper = styled.div`
   input,
   select {
+    width: 100%;
     height: 2vw;
     min-height: 22px;
     border-width: 2px;
@@ -69,11 +70,13 @@ const ApplyBoxWrapper = styled.div`
     border-color: black;
   }
   width: 100%;
+  max-width: 600px;
   height: 70%;
   display: flex;
   flex-direction: column;
   align-items: start;
   padding: 5vw;
+  margin: 0 auto;
 `;
 
 const RadioButton = styled.input`

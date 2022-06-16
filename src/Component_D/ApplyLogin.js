@@ -1,7 +1,7 @@
 import "../Styles/css/App.css";
 import React, { useEffect } from "react";
 import styles from "./ApplyLogin.module.css";
-import gyungilBlack from "../Image/gyungilBlack.png";
+import gyungilLogo from "../Image/gyungilLogo.png";
 import kakaoTalkLogo from "../Image/kakao-talk.svg";
 
 const ApplyLogin = ({ setKakaoEmail, setApplyStep }) => {
@@ -25,7 +25,11 @@ const ApplyLogin = ({ setKakaoEmail, setApplyStep }) => {
     <>
       <div className={`${styles["container"]}`}>
         <div>
-          <img src={gyungilBlack} alt="(KGA-Logo)" />
+          <img
+            className={`${styles["KGA-logo"]}`}
+            src={gyungilLogo}
+            alt="(KGA-Logo)"
+          />
         </div>
         <div className={`${styles["kakao_btn"]}`} onClick={kakaoLogin}>
           <img

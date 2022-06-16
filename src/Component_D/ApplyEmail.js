@@ -7,13 +7,6 @@ const ApplyEmail = ({ email, setEmail, data, setData, device }) => {
     email ? email.split("@")[1] : ""
   );
 
-  const getMailId = (e) => {
-    setEmailId(e.target.value);
-  };
-  const getMailDomain = (e) => {
-    setEmailDomain(e.target.value);
-  };
-
   useEffect(() => {
     if (!(emailId && emailDomain)) {
       setEmail("");
@@ -30,8 +23,9 @@ const ApplyEmail = ({ email, setEmail, data, setData, device }) => {
           display: "flex",
           flexDirection: "row",
           alignItems: "center",
-          width: "25vw",
-          minWidth: `${device == "mobile" ? "70%" : ""}`,
+          width: "100%",
+          gap: "10px",
+          // minWidth: `${device == "mobile" ? "100%" : "100%"}`,
           justifyContent: "space-between",
         }}
       >
@@ -44,7 +38,7 @@ const ApplyEmail = ({ email, setEmail, data, setData, device }) => {
             setEmailId(e.target.value);
           }}
           style={{
-            width: `${device == "mobile" ? "45%" : "13vw"}`,
+            width: `${device == "mobile" ? "45%" : "70%"}`,
           }}
         />
         @
@@ -56,7 +50,7 @@ const ApplyEmail = ({ email, setEmail, data, setData, device }) => {
             setEmailDomain(e.target.value);
           }}
           style={{
-            width: `${device == "mobile" ? "45%" : "10vw"}`,
+            width: `${device == "mobile" ? "45%" : "30%"}`,
           }}
         >
           <option value="">이메일</option>

@@ -49,8 +49,9 @@ const ApplyPhoneNum = ({ phone, setPhone, data, setData, device }) => {
         display: "flex",
         flexDirection: "row",
         alignItems: "center",
-        minWidth: "70%",
-        width: `${device == "mobile" ? "50vw" : "25vw"}`,
+        // minWidth: "100%",
+        width: "100%",
+        // width: `${device == "mobile" ? "50vw" : "25vw"}`,
         gap: "8px",
       }}
     >
@@ -63,7 +64,7 @@ const ApplyPhoneNum = ({ phone, setPhone, data, setData, device }) => {
           setTempPhoneNumber1(e.target.value);
         }}
         style={{
-          width: `${device == "mobile" ? "30%" : "7vw"}`,
+          width: `${device == "mobile" ? "33%" : "33%"}`,
         }}
       />
       <div
@@ -83,7 +84,7 @@ const ApplyPhoneNum = ({ phone, setPhone, data, setData, device }) => {
           setTempPhoneNumber2(e.target.value);
         }}
         style={{
-          width: `${device == "mobile" ? "30%" : "7vw"}`,
+          width: `${device == "mobile" ? "33%" : "33%"}`,
         }}
       />
       <div
@@ -103,7 +104,7 @@ const ApplyPhoneNum = ({ phone, setPhone, data, setData, device }) => {
           setTempPhoneNumber3(e.target.value);
         }}
         style={{
-          width: `${device == "mobile" ? "30%" : "7vw"}`,
+          width: `${device == "mobile" ? "33%" : "33%"}`,
         }}
       />
     </div>

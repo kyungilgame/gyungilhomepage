@@ -52,10 +52,10 @@ const DesiredCourse = ({
 
   return (
     <>
-      <text className={`${styles["notice"]}`}>
+      <h5 className={`${styles["notice"]}`}>
         본 과정은 고용노동부와 직업능력심사평가원에서 인증하는 우수훈련과정이며
         취업까지 이루어지는 모든 과정은 ‘무료’입니다.
-      </text>
+      </h5>
       <h2 className={`${styles["courses-title"]}`}>
         어떤 과정을 수강하고 싶으신가요?
       </h2>
@@ -91,11 +91,12 @@ const DesiredCourse = ({
       <div className={`${styles["course-description_list"]}`}>
         {courseList &&
           courseList.map((course) => (
-            <text key={course.id}>
-              <a target="_blank" href={course.href}>
-                ❗ {course.name}
-              </a>
-            </text>
+            <a key={course.id} target="_blank" href={course.href}>
+              <div> {course.name} </div>
+
+              {/* <div>❗</div> <div>{course.name}</div>
+              <div>❗</div> */}
+            </a>
           ))}
       </div>
     </>

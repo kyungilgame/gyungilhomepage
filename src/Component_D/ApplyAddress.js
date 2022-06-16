@@ -62,7 +62,7 @@ const ApplyAddress = ({
         display: "flex",
         flexDirection: "column",
         alignItems: "flex-end",
-        width: `${device == "mobile" ? "70%" : "25vw"}`,
+        width: `${device == "mobile" ? "70%" : "100%"}`,
         justifyContent: "space-between",
       }}
     >
@@ -110,8 +110,8 @@ const ApplyAddress = ({
           alt="접기 버튼"
         />
       </div>
-
       <button onClick={openModal}>주소검색</button>
+
       <div
         className={
           modalOpen

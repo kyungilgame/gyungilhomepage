@@ -1,7 +1,8 @@
 .birth-box {
   display: flex;
   align-items: center;
-  width: 25vw;
+  width: 100%;
+  gap: 10px;
   justify-content: space-between;
 }
 .birth-box input,

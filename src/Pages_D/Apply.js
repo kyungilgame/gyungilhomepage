@@ -69,14 +69,13 @@ const ApplyBoxWrapper = styled.div`
     border-color: black;
   }
   width: 100%;
+  max-width: 600px;
   height: 70%;
-  // background-color: #f0f0f0;
   display: flex;
   flex-direction: column;
-  // justify-content: center;
   align-items: start;
   padding: 5vw;
-  // font-size: 16px;
+  margin: 0 auto;
 `;
 
 const RadioButton = styled.input`
@@ -166,12 +165,18 @@ const Apply = ({ SetMenuState, SetIsLoading }) => {
         )}
 
         {applyStep == 2 && (
-          <DesiredCourse
-            course={course}
-            setCourse={setCourse}
-            applyStep={applyStep}
-            setApplyStep={setApplyStep}
-          />
+          <div
+            style={{
+              textAlign: "center",
+            }}
+          >
+            <DesiredCourse
+              course={course}
+              setCourse={setCourse}
+              applyStep={applyStep}
+              setApplyStep={setApplyStep}
+            />
+          </div>
         )}
 
         {applyStep == 3 && (
