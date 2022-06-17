@@ -5,6 +5,7 @@ import Header_M from "../Component_M/Header";
 import Footer from "../Component_D/Footer";
 import Footer_M from "../Component_M/Footer";
 import { useLocation } from "react-router-dom";
+import NA_transition from "../Function/NA_transition";
 
 const ApplySuccess = ({}) => {
   const device = useLocation().state.device;
@@ -34,6 +35,7 @@ const ApplySuccess = ({}) => {
           막연함의 끝, 완전한 확신의 준비! 경일게임아카데미에서 시작하세요.
         </div>
       </div>
+      <NA_transition />
       {device === "mobile" ? <Footer_M /> : <Footer />}
     </>
   );
