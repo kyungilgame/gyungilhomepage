@@ -3,23 +3,6 @@ import "../Styles/css/App.css";
 
 import AboutKGACarousel_M from "../Function/AboutKGACarousel_M";
 
-import Kimgeon from "../Image/Empoloee/Kimgeon.png";
-import KwakIngoo from "../Image/Empoloee/KwakIngoo.png";
-import Choiseonmoon from "../Image/Empoloee/Choiseonmoon.png";
-import Choisunglak from "../Image/Empoloee/Choisunglak.png";
-import Hansoyeon from "../Image/Empoloee/Hansoyeon.png";
-import HwangIngyung from "../Image/Empoloee/HwangIngyung.png";
-import Jeongjieun from "../Image/Empoloee/Jeongjieun.png";
-import Joehanbyul from "../Image/Empoloee/Joehanbyul.png";
-import Kangmyunggyu from "../Image/Empoloee/Kangmyunggyu.png";
-import Kimjinhwang from "../Image/Empoloee/Kimjinhwang.png";
-import Kimjungtaek from "../Image/Empoloee/Kimjungtaek.png";
-import Kimkiwon from "../Image/Empoloee/Kimkiwon.png";
-import Kimtaewan from "../Image/Empoloee/Kimtaewan.png";
-import Leechanghee from "../Image/Empoloee/Leechanghee.png";
-import Limyonggyu from "../Image/Empoloee/Limyonggyu.png";
-import Ohjunhwan from "../Image/Empoloee/Ohjunhwan.png";
-import Songjaeoh from "../Image/Empoloee/Songjaeoh.png";
 import Header from "../Component_M/Header";
 import Footer from "../Component_M/Footer";
 
@@ -40,12 +23,14 @@ const ContentsBoxOneContainer = styled.div`
 
 const ContentsBoxTwoContainer = styled.div`
   width: 100%;
-  height: 70vw;
+  // height: 70vw;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
   background-color: #00ffd6;
+  text-align: center;
+  padding-bottom: 2vh;
 `;
 
 const ContentsBoxThreeContainer = styled.div`
@@ -77,7 +62,7 @@ const TextSizeOne = styled.div`
 
 const TextSizeTwo = styled.div`
   font-family: "Pretendard-Regular";
-  font-size: 2.5vw;
+  font-size: 3.5vw;
   color: #101010;
 `;
 

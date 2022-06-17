@@ -70,14 +70,14 @@ const TextOne = styled.div`
 
 const TextTwo = styled.div`
   font-family: "SEBANG-Gothic-Regular";
-  font-size: 2.5vw;
+  font-size: 3vw;
   color: #101010;
   margin-top: 0.5vw;
 `;
 
 const TextBox = styled.div`
   font-family: "Pretendard-Regular";
-  font-size: 2.5vw;
+  font-size: 3.5vw;
   color: #101010;
   width: 90%;
   height: 30%;

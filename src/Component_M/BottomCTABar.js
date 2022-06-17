@@ -130,7 +130,7 @@ const BottomCTABar = ({ isApplying }) => {
           style={{
             display: "flex",
             width: "75%",
-            flexDirection: "row",
+            flexDirection: "column",
             justifyContent: "center",
             alignItems: "center",
           }}

@@ -61,11 +61,14 @@ const HamburgerMenu = ({ currentPage }) => {
         bmCrossButton: {
           height: "10vw",
           width: "10vw",
-          right: "85vw",
-          top: "5vw",
+          right: "8vw",
+          top: "4vw",
         },
         bmCross: {
           background: `${currentPage == "main" ? "rgb(0, 255, 214)" : "black"}`,
+          width: "5px",
+          height: "25px",
+          backgroundColor: "#00ffd6",
         },
       }}
     >
