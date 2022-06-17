@@ -48,7 +48,7 @@ const ContentsBoxThreeContainer = styled.div`
 
 const ContentsBoxFourContainer = styled.div`
   width: 100%;
-  height: 90vw;
+  height: 100%;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -78,7 +78,7 @@ const ContentsBoxSixContainer = styled.div`
 
 const ContentsBoxSevenContainer = styled.div`
   width: 100%;
-  height: 80vw;
+  // height: 80vw;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -121,37 +121,38 @@ const TextSizeFive = styled.div`
 
 const TextSizeSix = styled.div`
   font-family: "SEBANG-Gothic-Bold";
-  font-size: 3.5vw;
+  font-size: 5.5vw;
   color: #101010;
 `;
 
 const TextSizeSeven = styled.div`
+  padding: 0 10px;
   font-family: "SEBANG-Gothic-Bold";
-  font-size: 3.5vw;
+  font-size: 4vw;
   color: #101010;
 `;
 
 const TextSizeEight = styled.div`
   font-family: "SEBANG-Gothic-Regular";
-  font-size: 1.5vw;
+  font-size: 4vw;
   color: #00ffd6;
 `;
 
 const TextSizeNine = styled.div`
   font-family: "SEBANG-Gothic-Bold";
-  font-size: 4vw;
+  font-size: 7vw;
   color: #f6f6f6;
 `;
 
 const TextSizeTen = styled.div`
   font-family: "Pretendard-Regular";
-  font-size: 2vw;
+  font-size: 4vw;
   color: #f6f6f6;
 `;
 
 const TextSizeEleven = styled.div`
   font-family: "SEBANG-Gothic-Regular";
-  font-size: 1.2vw;
+  font-size: 3vw;
   color: #00ffd6;
 `;
 
@@ -163,7 +164,7 @@ const TextSizeTwelve = styled.div`
 
 const TextSizeThirteen = styled.div`
   font-family: "SEBANG-Gothic-Bold";
-  font-size: 3vw;
+  font-size: 3.5vw;
   color: #00887c;
   margin-top: 1vw;
 `;
@@ -178,18 +179,19 @@ const TextSizeFifteen = styled.div`
   font-family: "SEBANG-Gothic-Bold";
   font-size: 5vw;
   color: #101010;
+  margin-top: 2vh;
 `;
 
 const TextSizeSixteen = styled.div`
   font-family: "Pretendard-Bold";
-  font-size: 2.5vw;
+  font-size: 3.5vw;
   color: #101010;
   margin-top: 1vw;
 `;
 
 const TextSizeEightteen = styled.div`
   font-family: "Pretendard-Regular";
-  font-size: 2vw;
+  font-size: 3vw;
   color: #101010;
   margin-top: 1vw;
 `;
@@ -213,8 +215,11 @@ const TextSizeTwentyOne = styled.div`
 `;
 
 const BlackBoxWrapper = styled.div`
-  width: 33vw;
-  height: 20vw;
+  position: relative;
+  padding: 4vw 0;
+  width: 100%;
+  // height: 40vh;
+  gap: 8px;
   background-color: #101010;
   display: flex;
   flex-direction: column;
@@ -224,8 +229,7 @@ const BlackBoxWrapper = styled.div`
 `;
 
 const ApplyButton = styled.button`
-  width: 25vw;
-  height: 3.5vw;
+  padding: 5px 10vw;
   background-color: #101010;
   border-radius: 1vw;
   border-color: #00ffd6;
@@ -241,7 +245,7 @@ const ApplyButton = styled.button`
 const ApplyBlackButton = styled.button`
   all: unset;
   width: 30vw;
-  height: 6vw;
+  padding: 0.7vh 1vw;
   background-color: #101010;
   display: flex;
   justify-content: center;
@@ -270,7 +274,7 @@ const VideoPlayWrapper = styled.div`
 
 const ColorBoxWrapper = styled.div`
   width: 85%;
-  height: 20vw;
+  // height: 20vw;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -292,19 +296,18 @@ const MapWrapper = styled.div`
 `;
 
 const ImageWrapper = styled.img`
-  width: 10vw;
-  height: 3vw;
+  width: 30%;
   position: absolute;
-  right: 11.7vw;
-  top: 161vw;
+  right: -2.5%;
+  top: -1vh;
 `;
 
 const ImageWrapperOne = styled.img`
   width: 10vw;
   height: 3vw;
   position: absolute;
-  right: 51.7vw;
-  top: 213vw;
+  right: 0;
+  top: 0;
 `;
 
 const ImageWrapperTwo = styled.img`
@@ -385,7 +388,6 @@ const Main = ({ menuState, SetMenuState }) => {
         <TextSizeSix id="course-intro">KGA 코스소개</TextSizeSix>
         <div
           style={{
-            width: "53vw",
             height: "6vw",
             backgroundColor: "#00ffd6",
             display: "flex",
@@ -398,9 +400,9 @@ const Main = ({ menuState, SetMenuState }) => {
         <div
           style={{
             width: "80vw",
-            height: "80vw",
+            // height: "80vw",
             display: "flex",
-            flexDirection: "row",
+            flexDirection: "column",
             justifyContent: "flex-start",
             alignItems: "center",
             marginTop: "2vw",
@@ -408,44 +410,8 @@ const Main = ({ menuState, SetMenuState }) => {
         >
           <div
             style={{
-              width: "50%",
-              height: "100%",
-              display: "flex",
-              flexDirection: "column",
-              justifyContent: "flex-start",
-              alignItems: "center",
-            }}
-          >
-            <BlackBoxWrapper>
-              <TextSizeEight>국가기간전략훈련</TextSizeEight>
-              <TextSizeNine>프로그래밍</TextSizeNine>
-              <TextSizeTen>손 끝에서 구현되는 Unity 3D 게임</TextSizeTen>
-              <ApplyButton as={"a"} href={"https://kgaprogramming.oopy.io/"}>
-                <TextSizeEleven>자세히 보기</TextSizeEleven>
-              </ApplyButton>
-            </BlackBoxWrapper>
-            <BlackBoxWrapper>
-              <TextSizeEight>국가기간전략훈련</TextSizeEight>
-              <TextSizeNine>게임 기획</TextSizeNine>
-              <TextSizeTen>게임 시놉시스부터 상용화까지</TextSizeTen>
-              <ApplyButton as={"a"} href={"https://kgadesign.oopy.io/"}>
-                <TextSizeEleven>자세히 보기</TextSizeEleven>
-              </ApplyButton>
-            </BlackBoxWrapper>
-            <BlackBoxWrapper>
-              <ImageWrapperOne src={RecrutingLabel}></ImageWrapperOne>
-              <TextSizeEight style={{}}>국가기간전략훈련</TextSizeEight>
-              <TextSizeNine>AR / VR</TextSizeNine>
-              <TextSizeTen>비대면 시대의 핵심 기술</TextSizeTen>
-              <ApplyButton as={"a"} href={"https://kgavr.oopy.io"}>
-                <TextSizeEleven>자세히 보기</TextSizeEleven>
-              </ApplyButton>
-            </BlackBoxWrapper>
-          </div>
-          <div
-            style={{
-              width: "50%",
-              height: "100%",
+              width: "100%",
+              // height: "100%",
               display: "flex",
               flexDirection: "column",
               justifyContent: "flex-start",
@@ -454,6 +420,31 @@ const Main = ({ menuState, SetMenuState }) => {
           >
             <BlackBoxWrapper>
               <ImageWrapper src={RecrutingLabel}></ImageWrapper>
+              <TextSizeEight>국가기간전략훈련</TextSizeEight>
+              <TextSizeNine>프로그래밍</TextSizeNine>
+              <TextSizeTen>손 끝에서 구현되는 Unity 3D 게임</TextSizeTen>
+              <ApplyButton as={"a"} href={"https://kgaprogramming.oopy.io/"}>
+                <TextSizeEleven>자세히 보기</TextSizeEleven>
+              </ApplyButton>
+            </BlackBoxWrapper>
+            <BlackBoxWrapper>
+              <ImageWrapper src={RecrutingLabel}></ImageWrapper>
+              <TextSizeEight>국가기간전략훈련</TextSizeEight>
+              <TextSizeNine>게임 기획</TextSizeNine>
+              <TextSizeTen>게임 시놉시스부터 상용화까지</TextSizeTen>
+              <ApplyButton as={"a"} href={"https://kgadesign.oopy.io/"}>
+                <TextSizeEleven>자세히 보기</TextSizeEleven>
+              </ApplyButton>
+            </BlackBoxWrapper>
+            <BlackBoxWrapper>
+              <TextSizeEight style={{}}>국가기간전략훈련</TextSizeEight>
+              <TextSizeNine>AR / VR</TextSizeNine>
+              <TextSizeTen>비대면 시대의 핵심 기술</TextSizeTen>
+              <ApplyButton as={"a"} href={"https://kgavr.oopy.io"}>
+                <TextSizeEleven>자세히 보기</TextSizeEleven>
+              </ApplyButton>
+            </BlackBoxWrapper>
+            <BlackBoxWrapper>
               <TextSizeEight style={{}}>K-디지털 트레이닝</TextSizeEight>
               <TextSizeNine>블록체인</TextSizeNine>
               <TextSizeTen>차별화 된 핀테크 개발자 되기</TextSizeTen>
@@ -462,6 +453,7 @@ const Main = ({ menuState, SetMenuState }) => {
               </ApplyButton>
             </BlackBoxWrapper>
             <BlackBoxWrapper>
+              <ImageWrapper src={RecrutingLabel}></ImageWrapper>
               <TextSizeEight style={{}}>K-디지털 트레이닝</TextSizeEight>
               <TextSizeNine>메타버스</TextSizeNine>
               <TextSizeTen>미래 사회의 새로운 패러다임</TextSizeTen>
@@ -470,7 +462,7 @@ const Main = ({ menuState, SetMenuState }) => {
               </ApplyButton>
             </BlackBoxWrapper>
             <BlackBoxWrapper>
-              <ImageWrapperTwo src={RecrutingLabel}></ImageWrapperTwo>
+              <ImageWrapper src={RecrutingLabel}></ImageWrapper>
               <TextSizeEight style={{}}>국가기간전략훈련</TextSizeEight>
               <TextSizeNine>웹개발</TextSizeNine>
               <TextSizeTen>공공데이터 개발자 되기</TextSizeTen>
@@ -500,7 +492,8 @@ const Main = ({ menuState, SetMenuState }) => {
             <TextSizeThirteen>91%</TextSizeThirteen>
           </MiddleTextBox>
           <MiddleTextBox>
-            <TextSizeTwelve>수료생 전체 평균 연봉</TextSizeTwelve>
+            <TextSizeTwelve>수료생 전체</TextSizeTwelve>
+            <TextSizeTwelve>평균 연봉</TextSizeTwelve>
             <TextSizeThirteen>3,500만원</TextSizeThirteen>
           </MiddleTextBox>
           <MiddleTextBox>
@@ -532,19 +525,19 @@ const Main = ({ menuState, SetMenuState }) => {
         </div>
         <div
           style={{
-            width: "70%",
-            height: "75vw",
+            margin: "1vh 0",
+            width: "85%",
             display: "flex",
             flexDirection: "column",
             justifyContent: "space-around",
             alignItems: "center",
+            gap: "1vh",
           }}
         >
           <ColorBoxWrapper color={"#b5fff3"}>
             <div
               style={{
                 width: "3vw",
-                height: "3vw",
                 backgroundColor: "#101010",
                 borderRadius: "2vw",
                 display: "flex",
@@ -643,7 +636,7 @@ const Main = ({ menuState, SetMenuState }) => {
             style={{
               color: "#f6f6f6",
               fontFamily: "SEBANG-Gothic-Bold",
-              fontSize: "2.5vw",
+              fontSize: "4vw",
             }}
           >
             상담 신청하기

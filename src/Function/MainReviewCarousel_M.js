@@ -66,8 +66,7 @@ const SlideSelectedCircle = styled.div`
 
 const ApplyBlackButton = styled.button`
   all: unset;
-  width: 30vw;
-  height: 6vw;
+  padding: 0 2vw;
   background-color: #101010;
   display: flex;
   justify-content: center;
@@ -107,7 +106,7 @@ export default function MainReviewCarousel({ menuState, SetMenuState }) {
     <div
       style={{
         width: "100%",
-        height: "60vw",
+        // height: "60vw",
         display: "flex",
         flexDirection: "column",
         justifyContent: "flex-start",
@@ -202,7 +201,8 @@ export default function MainReviewCarousel({ menuState, SetMenuState }) {
           style={{
             color: "#f6f6f6",
             fontFamily: "SEBANG-Gothic-Bold",
-            fontSize: "2.5vw",
+            fontSize: "4vw",
+            padding: "0.7vh 1vw",
           }}
         >
           더 많은 후기 보기

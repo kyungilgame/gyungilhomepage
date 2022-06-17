@@ -94,7 +94,7 @@ export default function MainCarousel() {
     <div
       style={{
         width: "100%",
-        height: "50vw",
+        // height: "50vw",
         display: "flex",
         flexDirection: "column",
         justifyContent: "flex-start",
