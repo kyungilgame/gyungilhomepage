@@ -5,6 +5,7 @@ import rightArrow from "../Image/rightArrow.png";
 import leftArrow from "../Image/leftArrow.png";
 
 import styled from "styled-components";
+import { Link } from "react-router-dom";
 
 const Container = styled.div`
   width: 90%;
@@ -171,29 +172,32 @@ export default function MainReviewCarousel({ menuState, SetMenuState }) {
           <SlideNotSelectedCircle onClick={() => setCurrentSlide(5)} />
         )}
       </SlideSelectorWrapper>
+
       <ApplyBlackButton
         onClick={() => {
-          SetMenuState(2);
+          // SetMenuState(2);
           window.scrollTo(0, 0);
         }}
       >
-        <text
-          style={{
-            color: "#f6f6f6",
-            fontFamily: "SEBANG-Gothic-Bold",
-            fontSize: "1.7vw",
-          }}
-        >
-          더 많은 후기 보기
-        </text>
-        <text
-          style={{
-            color: "#f6f6f6",
-            fontFamily: "SEBANG-Gothic-Bold",
-            fontSize: "1.7vw",
-            marginLeft: "1.5vw",
-          }}
-        >{`>`}</text>
+        <Link to="/courseReview">
+          <text
+            style={{
+              color: "#f6f6f6",
+              fontFamily: "SEBANG-Gothic-Bold",
+              fontSize: "1.7vw",
+            }}
+          >
+            더 많은 후기 보기
+          </text>
+          <text
+            style={{
+              color: "#f6f6f6",
+              fontFamily: "SEBANG-Gothic-Bold",
+              fontSize: "1.7vw",
+              marginLeft: "1.5vw",
+            }}
+          >{`>`}</text>
+        </Link>
       </ApplyBlackButton>
     </div>
   );

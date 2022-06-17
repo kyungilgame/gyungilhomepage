@@ -7,6 +7,7 @@ import leftArrow from "../Image/leftArrow.png";
 import styled from "styled-components";
 
 import Draggable from "react-draggable";
+import { Link } from "react-router-dom";
 
 const Container = styled.div`
   width: 90%;
@@ -66,7 +67,7 @@ const SlideSelectedCircle = styled.div`
 
 const ApplyBlackButton = styled.button`
   all: unset;
-  padding: 0 2vw;
+  padding: 1vw 2vw;
   background-color: #101010;
   display: flex;
   justify-content: center;
@@ -193,28 +194,30 @@ export default function MainReviewCarousel({ menuState, SetMenuState }) {
       </SlideSelectorWrapper>
       <ApplyBlackButton
         onClick={() => {
-          SetMenuState(2);
+          // SetMenuState(2);
           window.scrollTo(0, 0);
         }}
       >
-        <text
-          style={{
-            color: "#f6f6f6",
-            fontFamily: "SEBANG-Gothic-Bold",
-            fontSize: "4vw",
-            padding: "0.7vh 1vw",
-          }}
-        >
-          더 많은 후기 보기
-        </text>
-        <text
-          style={{
-            color: "#f6f6f6",
-            fontFamily: "SEBANG-Gothic-Bold",
-            fontSize: "1.7vw",
-            marginLeft: "2.5vw",
-          }}
-        >{`>`}</text>
+        <Link to="/courseReview">
+          <text
+            style={{
+              color: "#f6f6f6",
+              fontFamily: "SEBANG-Gothic-Bold",
+              fontSize: "4vw",
+              padding: "0.7vh 1vw",
+            }}
+          >
+            더 많은 후기 보기
+          </text>
+          <text
+            style={{
+              color: "#f6f6f6",
+              fontFamily: "SEBANG-Gothic-Bold",
+              fontSize: "1.7vw",
+              marginLeft: "2.5vw",
+            }}
+          >{`>`}</text>
+        </Link>
       </ApplyBlackButton>
     </div>
   );

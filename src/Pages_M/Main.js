@@ -12,7 +12,7 @@ import ReactPlayer from "react-player/youtube";
 import Header from "../Component_M/Header";
 import Footer from "../Component_M/Footer";
 import BackVideo from "../Function/BackVideo";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { useEffect } from "react";
 
 const ContentsBoxOneContainer = styled.div`
@@ -673,28 +673,30 @@ const Main = ({ menuState, SetMenuState }) => {
         <TextSizeTwenty>IT 인재로 급성장</TextSizeTwenty>
         <TextSizeTwentyOne>KGA와 함께라면 가능합니다</TextSizeTwentyOne>
         <ApplyBlackButton
-          as={"a"}
-          href={"https://forms.gle/Xj9q3QqjQs1qWy2D7"}
+          // as={"a"}
+          // href={"https://forms.gle/Xj9q3QqjQs1qWy2D7"}
           style={{ marginTop: "4vw" }}
-          target={"_blank"}
+          // target={"_blank"}
         >
-          <text
-            style={{
-              color: "#f6f6f6",
-              fontFamily: "SEBANG-Gothic-Bold",
-              fontSize: "2.5vw",
-            }}
-          >
-            지원하러가기
-          </text>
-          <text
-            style={{
-              color: "#f6f6f6",
-              fontFamily: "SEBANG-Gothic-Bold",
-              fontSize: "1.7vw",
-              marginLeft: "2.5vw",
-            }}
-          >{`>`}</text>
+          <Link to="/apply">
+            <text
+              style={{
+                color: "#f6f6f6",
+                fontFamily: "SEBANG-Gothic-Bold",
+                fontSize: "3.5vw",
+              }}
+            >
+              지원하러가기
+            </text>
+            <text
+              style={{
+                color: "#f6f6f6",
+                fontFamily: "SEBANG-Gothic-Bold",
+                fontSize: "1.7vw",
+                marginLeft: "2.5vw",
+              }}
+            >{`>`}</text>
+          </Link>
         </ApplyBlackButton>
       </ContentsBoxNineContainer>
       <Footer menuState={menuState} SetMenuState={SetMenuState}></Footer>
