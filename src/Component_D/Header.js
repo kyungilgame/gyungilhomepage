@@ -65,15 +65,11 @@ const Header = ({ currentPage }) => {
 
   return (
     <HeaderContainer>
-      {currentPage === "main" ? (
-        <Link to="/">
-          <LogoWrapper Image={gyunilWhite}></LogoWrapper>
-        </Link>
-      ) : (
-        <Link to="/">
-          <LogoWrapper Image={HeaderLogo}></LogoWrapper>
-        </Link>
-      )}
+      <Link to="/">
+        <LogoWrapper
+          Image={currentPage === "main" ? gyunilWhite : HeaderLogo}
+        ></LogoWrapper>
+      </Link>
 
       <ContentWrapper>
         <MenuWrapper>

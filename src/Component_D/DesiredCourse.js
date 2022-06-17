@@ -44,12 +44,6 @@ const DesiredCourse = ({
     },
   ];
 
-  function courseSelect(e, courseName) {
-    setCourse(e.target.textContent);
-    // setData({ ...data, course: courseName });
-    setApplyStep(3);
-  }
-
   return (
     <>
       <h5 className={`${styles["notice"]}`}>
