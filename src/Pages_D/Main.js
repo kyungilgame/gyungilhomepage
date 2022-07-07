@@ -335,8 +335,8 @@ const Main = ({ menuState, SetMenuState }) => {
 
   const currentPage = "main";
   const textOne =
-    "몰입형 교육 : 강도높고 집중적인 커리큘럼으로 비전공자를 주니어개발자까지 양성하는 체계적인 교육 프로그램";
-  const textTwo = "100% 몰입형 교육 전문 아카데미";
+    "우리는 누구보다 강도 높고, 집중적으로, 오랫동안 당신을 책임지는 교육 기관입니다.";
+  const textTwo = "한 번에 제대로 준비하세요.";
 
   return (
     <>
