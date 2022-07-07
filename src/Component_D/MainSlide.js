@@ -51,7 +51,7 @@ const ContentContainer = styled.div`
 
 const TextSizeOne = styled.div`
   font-family: "SEBANG-Gothic-Bold";
-  font-size: 1.6vw;
+  font-size: 1.4vw;
   color: #101010;
 `;
 
@@ -71,14 +71,15 @@ export default function MainSlide() {
         <SlideColumnWrapper>
           <ContentContainer>
             <TextSizeOne></TextSizeOne>
-            <TextSizeOne>8년간 축적해 온 취업성과</TextSizeOne>
+            <TextSizeOne>4차 산업 혁명이 불러온 변화 - 블록체인</TextSizeOne>
             <div style={{ marginTop: "2vw" }}></div>
             <TextSizeTwo>
-              KGA의 수준높은 교육, 압도적인 성과는 하루 아침에 완성되지
-              않습니다. 8년간 최고의 자리를 지켜왔던 역량과 경험, 아무도 흉내낼
-              수 없는 KGA의 강점입니다. 업계가 KGA의 수료생들을 극찬하고 정부가
-              우수훈련기관을 인증했습니다. 검증된 커리큘럼, 검증된 관리 기법,
-              검증된 취업 지원 노하우. 우리는 청년의 미래로 실험하지 않습니다.
+              블록체인 기술이 현재 IT 업종은 물론 다양한 사업 분야에서
+              혁신을 이루고 있습니다. 수많은 대기업이 블록체인 기술을 
+              앞다투어 활용하고 있으며, 2021년 블록체인 관련 채용 비중이 
+              전년 대비 385% 이상 증가했습니다. 경일게임아카데미에서는 
+              블록체인 기술 개발 과정을 통해 국내에 경쟁력 있는 개발자를 
+              양성하고 현업에 가장 많은 취업률을 기록하고 있습니다.
             </TextSizeTwo>
           </ContentContainer>
         </SlideColumnWrapper>
