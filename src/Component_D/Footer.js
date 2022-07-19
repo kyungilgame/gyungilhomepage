@@ -244,7 +244,7 @@ const Footer = ({ menuState, SetMenuState }) => {
               ></ImageContainer>
               <ImageContainer
                 as={"a"}
-                href={"https://blog.naver.com/kigsnet"}
+                href={"https://blog.naver.com/kigame"}
                 src={SNSnaver}
                 target="_blank"
               ></ImageContainer>
