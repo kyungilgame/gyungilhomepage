@@ -449,7 +449,7 @@ const Main = ({ menuState, SetMenuState }) => {
               <TextSizeEight style={{}}>K-디지털 트레이닝</TextSizeEight>
               <TextSizeNine>블록체인</TextSizeNine>
               <TextSizeTen>차별화 된 핀테크 개발자 되기</TextSizeTen>
-              <ApplyButton as={"a"} href={"https://kgablockchain.oopy.io/"}>
+              <ApplyButton as={"a"} href={"https://kgablockchain.com/"}>
                 <TextSizeEleven>자세히 보기</TextSizeEleven>
               </ApplyButton>
             </BlackBoxWrapper>
