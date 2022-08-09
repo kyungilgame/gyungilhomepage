@@ -69,15 +69,15 @@ export default function MainSlide() {
           <ImageContainer Image={MainCarouselImageOne}></ImageContainer>
           <ContentContainer>
             <TextSizeOne></TextSizeOne>
-            <TextSizeOne>4차 산업 혁명이 불러온 변화 - 블록체인</TextSizeOne>
+            <TextSizeOne>4차 산업 혁명이 불러온 변화 - 블록체인 </TextSizeOne>
             <div style={{ marginTop: "2vw" }}></div>
             <TextSizeTwo>
-              블록체인 기술이 현재 IT 업종은 물론 다양한 사업 분야에서
-              혁신을 이루고 있습니다. 수많은 대기업이 블록체인 기술을 
-              앞다투어 활용하고 있으며, 2021년 블록체인 관련 채용 비중이 
-              전년 대비 385% 이상 증가했습니다. 경일게임아카데미에서는 
-              블록체인 기술 개발 과정을 통해 국내에 경쟁력 있는 개발자를 
-              양성하고 현업에 가장 많은 취업률을 기록하고 있습니다.
+              블록체인 기술이 현재 IT 업종은 물론 다양한 사업 분야에서 혁신을
+              이루고 있습니다. 수많은 대기업이 블록체인 기술을 앞다투어 활용하고
+              있으며, 2021년 블록체인 관련 채용 비중이 전년 대비 385% 이상
+              증가했습니다. 경일게임아카데미에서는 블록체인 기술 개발 과정을
+              통해 국내에 경쟁력 있는 개발자를 양성하고 현업에 가장 많은
+              취업률을 기록하고 있습니다.
             </TextSizeTwo>
           </ContentContainer>
         </SlideRowWrapper>
