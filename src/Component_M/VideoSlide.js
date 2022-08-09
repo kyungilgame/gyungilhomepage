@@ -31,7 +31,7 @@ export default function Slide() {
         <EachItemWrapper>
           <ReactPlayer
             url="https://youtu.be/n0KEoy53BRw"
-            width="100%"
+            width="65.75vw"
             height="100%"
           />
         </EachItemWrapper>
@@ -40,7 +40,7 @@ export default function Slide() {
         <EachItemWrapper>
           <ReactPlayer
             url="https://www.youtube.com/watch?v=PBpC_W-UP6c"
-            width="100%"
+            width="65.75vw"
             height="100%"
           />
         </EachItemWrapper>
@@ -49,7 +49,79 @@ export default function Slide() {
         <EachItemWrapper>
           <ReactPlayer
             url="https://youtu.be/dR8YaZLBmTQ"
-            width="100%"
+            width="65.75vw"
+            height="100%"
+          />
+        </EachItemWrapper>
+      </ItemWrapper>
+      <ItemWrapper>
+        <EachItemWrapper>
+          <ReactPlayer
+            url="https://youtu.be/ZSwDO-0G-X4"
+            width="65.75vw"
+            height="100%"
+          />
+        </EachItemWrapper>
+      </ItemWrapper>
+      <ItemWrapper>
+        <EachItemWrapper>
+          <ReactPlayer
+            url="https://youtu.be/KlZVbnst0m4"
+            width="65.75vw"
+            height="100%"
+          />
+        </EachItemWrapper>
+      </ItemWrapper>
+      <ItemWrapper>
+        <EachItemWrapper>
+          <ReactPlayer
+            url="https://youtu.be/Kz6CCuQ_cGs"
+            width="65.75vw"
+            height="100%"
+          />
+        </EachItemWrapper>
+      </ItemWrapper>
+      <ItemWrapper>
+        <EachItemWrapper>
+          <ReactPlayer
+            url="https://youtu.be/kWmt9QuMAv8"
+            width="65.75vw"
+            height="100%"
+          />
+        </EachItemWrapper>
+      </ItemWrapper>
+      <ItemWrapper>
+        <EachItemWrapper>
+          <ReactPlayer
+            url="https://youtu.be/f6sZ5zfkWWE"
+            width="65.75vw"
+            height="100%"
+          />
+        </EachItemWrapper>
+      </ItemWrapper>
+      <ItemWrapper>
+        <EachItemWrapper>
+          <ReactPlayer
+            url="https://youtu.be/haoimJJukUw"
+            width="65.75vw"
+            height="100%"
+          />
+        </EachItemWrapper>
+      </ItemWrapper>
+      <ItemWrapper>
+        <EachItemWrapper>
+          <ReactPlayer
+            url="https://youtu.be/HvNR-wpQXOc"
+            width="65.75vw"
+            height="100%"
+          />
+        </EachItemWrapper>
+      </ItemWrapper>
+      <ItemWrapper>
+        <EachItemWrapper>
+          <ReactPlayer
+            url="https://youtu.be/QPqOJkZkRMk"
+            width="65.75vw"
             height="100%"
           />
         </EachItemWrapper>
