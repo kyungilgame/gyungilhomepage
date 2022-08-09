@@ -156,7 +156,7 @@ const CourseReview = () => {
     <>
       <Header />
       <ContentsBoxOneContainer></ContentsBoxOneContainer>
-      <ContentsBoxTwoContainer>
+      {/* <ContentsBoxTwoContainer>
         <VideoPlayWrapper>
           <ReactPlayer
             url="https://youtu.be/n0KEoy53BRw"
@@ -164,12 +164,8 @@ const CourseReview = () => {
             height="30vw"
           />
         </VideoPlayWrapper>
-      </ContentsBoxTwoContainer>
+      </ContentsBoxTwoContainer> */}
       <ContentsBoxThreeContainer></ContentsBoxThreeContainer>
-      <ContentsBoxFourContainer>
-        <TextSizeThree>KGA 수료생을 선택한 기업</TextSizeThree>
-        <CompanyImage></CompanyImage>
-      </ContentsBoxFourContainer>
       <ContentsBoxFiveContainer>
         <TextSizeFour>수강생 후기 인터뷰</TextSizeFour>
         <VideoCarousel></VideoCarousel>
@@ -252,6 +248,11 @@ const CourseReview = () => {
         </div>
         <ReviewCarousel ReviewSelect={ReviewSelect}></ReviewCarousel>
       </ContentsBoxSixContainer>
+      <ContentsBoxFourContainer>
+        <TextSizeThree>KGA 수료생을 선택한 기업</TextSizeThree>
+        <CompanyImage></CompanyImage>
+      </ContentsBoxFourContainer>
+
       <Footer />
     </>
   );

@@ -22,6 +22,7 @@ const EachItemWrapper = styled.div`
   justify-content: center;
   align-items: center;
   background-color: #f6f6f6;
+  margin: 1.198vw;
 `;
 
 export default function Slide() {
@@ -31,21 +32,77 @@ export default function Slide() {
         <EachItemWrapper>
           <ReactPlayer
             url="https://youtu.be/n0KEoy53BRw"
-            width="90%"
+            width="20.417vw"
             height="70%"
           />
         </EachItemWrapper>
         <EachItemWrapper>
           <ReactPlayer
             url="https://www.youtube.com/watch?v=PBpC_W-UP6c"
-            width="90%"
+            width="20.417vw"
             height="70%"
           />
         </EachItemWrapper>
         <EachItemWrapper>
           <ReactPlayer
             url="https://youtu.be/dR8YaZLBmTQ"
-            width="90%"
+            width="20.417vw"
+            height="70%"
+          />
+        </EachItemWrapper>
+        <EachItemWrapper>
+          <ReactPlayer
+            url="https://youtu.be/ZSwDO-0G-X4"
+            width="20.417vw"
+            height="70%"
+          />
+        </EachItemWrapper>
+        <EachItemWrapper>
+          <ReactPlayer
+            url="https://youtu.be/KlZVbnst0m4"
+            width="20.417vw"
+            height="70%"
+          />
+        </EachItemWrapper>
+        <EachItemWrapper>
+          <ReactPlayer
+            url="https://youtu.be/Kz6CCuQ_cGs"
+            width="20.417vw"
+            height="70%"
+          />
+        </EachItemWrapper>
+        <EachItemWrapper>
+          <ReactPlayer
+            url="https://youtu.be/kWmt9QuMAv8"
+            width="20.417vw"
+            height="70%"
+          />
+        </EachItemWrapper>
+        <EachItemWrapper>
+          <ReactPlayer
+            url="https://youtu.be/f6sZ5zfkWWE"
+            width="20.417vw"
+            height="70%"
+          />
+        </EachItemWrapper>
+        <EachItemWrapper>
+          <ReactPlayer
+            url="https://youtu.be/haoimJJukUw"
+            width="20.417vw"
+            height="70%"
+          />
+        </EachItemWrapper>
+        <EachItemWrapper>
+          <ReactPlayer
+            url="https://youtu.be/HvNR-wpQXOc"
+            width="20.417vw"
+            height="70%"
+          />
+        </EachItemWrapper>
+        <EachItemWrapper>
+          <ReactPlayer
+            url="https://youtu.be/QPqOJkZkRMk"
+            width="20.417vw"
             height="70%"
           />
         </EachItemWrapper>

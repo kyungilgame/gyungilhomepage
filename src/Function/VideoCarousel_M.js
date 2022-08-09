@@ -63,7 +63,7 @@ const SlideSelectedCircle = styled.div`
   cursor: pointer;
 `;
 
-const TOTAL_SLIDES = 2; // 7장 19명
+const TOTAL_SLIDES = 10; // 7장 19명
 
 export default function Index() {
   const [currentSlide, setCurrentSlide] = useState(0);
@@ -143,6 +143,46 @@ export default function Index() {
           <SlideSelectedCircle onClick={() => setCurrentSlide(2)} />
         ) : (
           <SlideNotSelectedCircle onClick={() => setCurrentSlide(2)} />
+        )}
+        {currentSlide === 3 ? (
+          <SlideSelectedCircle onClick={() => setCurrentSlide(3)} />
+        ) : (
+          <SlideNotSelectedCircle onClick={() => setCurrentSlide(3)} />
+        )}
+        {currentSlide === 4 ? (
+          <SlideSelectedCircle onClick={() => setCurrentSlide(4)} />
+        ) : (
+          <SlideNotSelectedCircle onClick={() => setCurrentSlide(4)} />
+        )}
+        {currentSlide === 5 ? (
+          <SlideSelectedCircle onClick={() => setCurrentSlide(5)} />
+        ) : (
+          <SlideNotSelectedCircle onClick={() => setCurrentSlide(5)} />
+        )}
+        {currentSlide === 6 ? (
+          <SlideSelectedCircle onClick={() => setCurrentSlide(6)} />
+        ) : (
+          <SlideNotSelectedCircle onClick={() => setCurrentSlide(6)} />
+        )}
+        {currentSlide === 7 ? (
+          <SlideSelectedCircle onClick={() => setCurrentSlide(7)} />
+        ) : (
+          <SlideNotSelectedCircle onClick={() => setCurrentSlide(7)} />
+        )}
+        {currentSlide === 8 ? (
+          <SlideSelectedCircle onClick={() => setCurrentSlide(8)} />
+        ) : (
+          <SlideNotSelectedCircle onClick={() => setCurrentSlide(8)} />
+        )}
+        {currentSlide === 9 ? (
+          <SlideSelectedCircle onClick={() => setCurrentSlide(9)} />
+        ) : (
+          <SlideNotSelectedCircle onClick={() => setCurrentSlide(9)} />
+        )}
+        {currentSlide === 10 ? (
+          <SlideSelectedCircle onClick={() => setCurrentSlide(10)} />
+        ) : (
+          <SlideNotSelectedCircle onClick={() => setCurrentSlide(10)} />
         )}
       </SlideSelectorWrapper>
     </div>

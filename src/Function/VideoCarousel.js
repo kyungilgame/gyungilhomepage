@@ -62,7 +62,7 @@ const SlideSelectedCircle = styled.div`
   cursor: pointer;
 `;
 
-const TOTAL_SLIDES = 0; // 7장 19명
+const TOTAL_SLIDES = 3; // 7장 19명
 
 export default function Index() {
   const [currentSlide, setCurrentSlide] = useState(0);

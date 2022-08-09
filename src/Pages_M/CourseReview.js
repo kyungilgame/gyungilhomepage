@@ -199,7 +199,7 @@ const CourseReview = () => {
     <>
       <Header />
       <ContentsBoxOneContainer></ContentsBoxOneContainer>
-      <ContentsBoxTwoContainer>
+      {/* <ContentsBoxTwoContainer>
         <VideoPlayWrapper>
           <ReactPlayer
             url="https://youtu.be/n0KEoy53BRw"
@@ -207,35 +207,7 @@ const CourseReview = () => {
             height="85%"
           />
         </VideoPlayWrapper>
-      </ContentsBoxTwoContainer>
-      <ContentsBoxThreeContainer>
-        <TextSizeOne>블록체인 코스</TextSizeOne>
-        <TextSizeTwo>취업률 91% 달성!</TextSizeTwo>
-      </ContentsBoxThreeContainer>
-      <ContentsBoxFourContainer>
-        <TextSizeThree>KGA 수료생을 선택한 기업</TextSizeThree>
-
-        {CompanySelect === false ? (
-          <ArrowButton
-            onClick={() =>
-              CompanySelect === false
-                ? setCompanySelect(true)
-                : setCompanySelect(false)
-            }
-            Image={ArrowDown}
-          ></ArrowButton>
-        ) : (
-          <ArrowButton
-            onClick={() =>
-              CompanySelect === false
-                ? setCompanySelect(true)
-                : setCompanySelect(false)
-            }
-            Image={ArrowUp}
-          ></ArrowButton>
-        )}
-        {CompanySelect && <CampanyWrapper />}
-      </ContentsBoxFourContainer>
+      </ContentsBoxTwoContainer> */}
       <ContentsBoxFiveContainer>
         <TextSizeFour style={{ marginBottom: "2vw" }}>
           수강생 후기 인터뷰
@@ -349,6 +321,34 @@ const CourseReview = () => {
         </div>
         <ReviewCarousel ReviewSelect={ReviewSelect}></ReviewCarousel>
       </ContentsBoxSixContainer>
+      <ContentsBoxThreeContainer>
+        <TextSizeOne>블록체인 코스</TextSizeOne>
+        <TextSizeTwo>취업률 91% 달성!</TextSizeTwo>
+      </ContentsBoxThreeContainer>
+      <ContentsBoxFourContainer>
+        <TextSizeThree>KGA 수료생을 선택한 기업</TextSizeThree>
+
+        {CompanySelect === false ? (
+          <ArrowButton
+            onClick={() =>
+              CompanySelect === false
+                ? setCompanySelect(true)
+                : setCompanySelect(false)
+            }
+            Image={ArrowDown}
+          ></ArrowButton>
+        ) : (
+          <ArrowButton
+            onClick={() =>
+              CompanySelect === false
+                ? setCompanySelect(true)
+                : setCompanySelect(false)
+            }
+            Image={ArrowUp}
+          ></ArrowButton>
+        )}
+        {CompanySelect && <CampanyWrapper />}
+      </ContentsBoxFourContainer>
       <Footer />
     </>
   );
