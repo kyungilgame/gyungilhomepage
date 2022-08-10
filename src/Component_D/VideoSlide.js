@@ -31,27 +31,6 @@ export default function Slide() {
       <ItemWrapper>
         <EachItemWrapper>
           <ReactPlayer
-            url="https://youtu.be/n0KEoy53BRw"
-            width="20.417vw"
-            height="70%"
-          />
-        </EachItemWrapper>
-        <EachItemWrapper>
-          <ReactPlayer
-            url="https://www.youtube.com/watch?v=PBpC_W-UP6c"
-            width="20.417vw"
-            height="70%"
-          />
-        </EachItemWrapper>
-        <EachItemWrapper>
-          <ReactPlayer
-            url="https://youtu.be/dR8YaZLBmTQ"
-            width="20.417vw"
-            height="70%"
-          />
-        </EachItemWrapper>
-        <EachItemWrapper>
-          <ReactPlayer
             url="https://youtu.be/ZSwDO-0G-X4"
             width="20.417vw"
             height="70%"
@@ -102,6 +81,27 @@ export default function Slide() {
         <EachItemWrapper>
           <ReactPlayer
             url="https://youtu.be/QPqOJkZkRMk"
+            width="20.417vw"
+            height="70%"
+          />
+        </EachItemWrapper>
+        <EachItemWrapper>
+          <ReactPlayer
+            url="https://youtu.be/n0KEoy53BRw"
+            width="20.417vw"
+            height="70%"
+          />
+        </EachItemWrapper>
+        <EachItemWrapper>
+          <ReactPlayer
+            url="https://www.youtube.com/watch?v=PBpC_W-UP6c"
+            width="20.417vw"
+            height="70%"
+          />
+        </EachItemWrapper>
+        <EachItemWrapper>
+          <ReactPlayer
+            url="https://youtu.be/dR8YaZLBmTQ"
             width="20.417vw"
             height="70%"
           />
