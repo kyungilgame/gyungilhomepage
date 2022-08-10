@@ -30,6 +30,33 @@ export default function Slide() {
       <ItemWrapper>
         <EachItemWrapper>
           <ReactPlayer
+            url="https://youtu.be/haoimJJukUw"
+            width="65.75vw"
+            height="100%"
+          />
+        </EachItemWrapper>
+      </ItemWrapper>
+      <ItemWrapper>
+        <EachItemWrapper>
+          <ReactPlayer
+            url="https://youtu.be/HvNR-wpQXOc"
+            width="65.75vw"
+            height="100%"
+          />
+        </EachItemWrapper>
+      </ItemWrapper>
+      <ItemWrapper>
+        <EachItemWrapper>
+          <ReactPlayer
+            url="https://youtu.be/QPqOJkZkRMk"
+            width="65.75vw"
+            height="100%"
+          />
+        </EachItemWrapper>
+      </ItemWrapper>
+      <ItemWrapper>
+        <EachItemWrapper>
+          <ReactPlayer
             url="https://youtu.be/ZSwDO-0G-X4"
             width="65.75vw"
             height="100%"
@@ -67,33 +94,6 @@ export default function Slide() {
         <EachItemWrapper>
           <ReactPlayer
             url="https://youtu.be/f6sZ5zfkWWE"
-            width="65.75vw"
-            height="100%"
-          />
-        </EachItemWrapper>
-      </ItemWrapper>
-      <ItemWrapper>
-        <EachItemWrapper>
-          <ReactPlayer
-            url="https://youtu.be/haoimJJukUw"
-            width="65.75vw"
-            height="100%"
-          />
-        </EachItemWrapper>
-      </ItemWrapper>
-      <ItemWrapper>
-        <EachItemWrapper>
-          <ReactPlayer
-            url="https://youtu.be/HvNR-wpQXOc"
-            width="65.75vw"
-            height="100%"
-          />
-        </EachItemWrapper>
-      </ItemWrapper>
-      <ItemWrapper>
-        <EachItemWrapper>
-          <ReactPlayer
-            url="https://youtu.be/QPqOJkZkRMk"
             width="65.75vw"
             height="100%"
           />
