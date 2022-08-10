@@ -325,7 +325,7 @@ const CourseIntro = () => {
                 기초부터 탄탄한 블록체인 선두주자 되기
               </TextSizeFive>
             </div>
-            <ApplyButton as={"a"} href={"http://landing.kiweb.or.kr/"}>
+            <ApplyButton as={"a"} href={"https://kgablockchain.oopy.io/"}>
               바로가기
             </ApplyButton>
           </CourseWrapper>
