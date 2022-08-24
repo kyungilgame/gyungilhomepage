@@ -698,7 +698,7 @@ const Main = ({ menuState, SetMenuState }) => {
             </TextSizeEightteen>
           </ColorBoxWrapper>
         </div>
-        <ApplyBlackButton as={"a"} href={"/#/apply"}>
+        <ApplyBlackButton as={"a"} href={"https://forms.gle/tf29emczqnuLrCmZ9"}>
           <text
             style={{
               color: "#f6f6f6",
