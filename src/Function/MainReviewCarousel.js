@@ -180,8 +180,8 @@ export default function MainReviewCarousel({ menuState, SetMenuState }) {
         }}
       >
         <Link
-          //to="/courseReview"
-          href="https://forms.gle/tf29emczqnuLrCmZ9"
+          to="/courseReview"
+          // href="https://forms.gle/tf29emczqnuLrCmZ9"
         >
           <text
             style={{

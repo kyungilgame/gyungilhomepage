@@ -92,7 +92,7 @@ const HamburgerMenu = ({ currentPage }) => {
       <Link to="/qna" className="QNA" style={{ cursor: "pointer" }}>
         Q{`&`}A
       </Link>
-      <Link
+      <a
         // to="/apply"
         href="https://forms.gle/tf29emczqnuLrCmZ9
         " // 자체 지원하기 제작 전 구글설문양식
@@ -100,7 +100,7 @@ const HamburgerMenu = ({ currentPage }) => {
         style={{ cursor: "pointer" }}
       >
         지원하기
-      </Link>
+      </a>
     </Menu>
   );
 };

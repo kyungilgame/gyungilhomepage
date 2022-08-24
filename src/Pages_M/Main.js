@@ -679,7 +679,7 @@ const Main = ({ menuState, SetMenuState }) => {
           style={{ marginTop: "4vw" }}
           // target={"_blank"}
         >
-          <Link
+          <a
             //to="/apply"
             href="https://forms.gle/tf29emczqnuLrCmZ9"
           >
@@ -700,7 +700,7 @@ const Main = ({ menuState, SetMenuState }) => {
                 marginLeft: "2.5vw",
               }}
             >{`>`}</text>
-          </Link>
+          </a>
         </ApplyBlackButton>
       </ContentsBoxNineContainer>
       <Footer menuState={menuState} SetMenuState={SetMenuState}></Footer>
