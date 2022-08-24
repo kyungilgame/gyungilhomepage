@@ -94,7 +94,13 @@ const Header = ({ currentPage }) => {
         </MenuWrapper>
         <MenuWrapper>
           <MenuText>
-            <Link to="/apply">지원하기</Link>
+            <Link
+              // to="/apply"
+              href="https://forms.gle/tf29emczqnuLrCmZ9
+        " // 자체 지원하기 제작 전 구글설문양식
+            >
+              지원하기
+            </Link>
           </MenuText>
         </MenuWrapper>
       </ContentWrapper>

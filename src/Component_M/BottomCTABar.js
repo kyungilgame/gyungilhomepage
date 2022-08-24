@@ -143,7 +143,8 @@ const BottomCTABar = ({ isApplying }) => {
         </div>
         <ApplyButton
           as={"a"}
-          href={"/#/apply"}
+          href={"https://forms.gle/tf29emczqnuLrCmZ9"}
+          //href={"/#/apply"}
           onClick={() => {
             window.scrollTo(0, 0);
           }}

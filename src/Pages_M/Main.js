@@ -679,7 +679,10 @@ const Main = ({ menuState, SetMenuState }) => {
           style={{ marginTop: "4vw" }}
           // target={"_blank"}
         >
-          <Link to="/apply">
+          <Link
+            //to="/apply"
+            href="https://forms.gle/tf29emczqnuLrCmZ9"
+          >
             <text
               style={{
                 color: "#f6f6f6",

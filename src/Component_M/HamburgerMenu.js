@@ -93,8 +93,9 @@ const HamburgerMenu = ({ currentPage }) => {
         Q{`&`}A
       </Link>
       <Link
-        to="/apply"
-        // href="https://forms.gle/Xj9q3QqjQs1qWy2D7" // 자체 지원하기 제작 전 구글설문양식
+        // to="/apply"
+        href="https://forms.gle/tf29emczqnuLrCmZ9
+        " // 자체 지원하기 제작 전 구글설문양식
         className="Apply"
         style={{ cursor: "pointer" }}
       >

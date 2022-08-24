@@ -179,7 +179,10 @@ export default function MainReviewCarousel({ menuState, SetMenuState }) {
           window.scrollTo(0, 0);
         }}
       >
-        <Link to="/courseReview">
+        <Link
+          //to="/courseReview"
+          href="https://forms.gle/tf29emczqnuLrCmZ9"
+        >
           <text
             style={{
               color: "#f6f6f6",
